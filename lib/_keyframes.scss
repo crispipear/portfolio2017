@@ -1,0 +1,62 @@
+@include keyframes(scrollbtn){
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@include keyframes(slideUp){
+  0%{
+    top: 10%;
+    opacity: 0;
+  }
+  100%{
+    top:0;
+    opacity: 1;
+  }
+}
+
+@include keyframes (slideIn) {
+  0%{
+    right: 10%;
+    opacity: 0;
+  }
+  100%{
+    right:0;
+    opacity: 1;
+  }
+}
+
+@include keyframes (slideOut) {
+  0%{
+    right: 0%;
+    opacity: 1;
+  }
+  100%{
+    right: 10%;
+    opacity: 0;
+  }
+}
+
+
+@include keyframes (fadeOut) {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@include keyframes (fadeIn) {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
