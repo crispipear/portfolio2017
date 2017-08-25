@@ -6,6 +6,7 @@
     transform: rotate(-45deg) translate(-10px, 10px); }
   40% {
     transform: rotate(-45deg) translate(0, 0); } }
+
 @-moz-keyframes scrollbtn {
   0% {
     transform: rotate(-45deg) translate(0, 0); }
@@ -13,6 +14,7 @@
     transform: rotate(-45deg) translate(-10px, 10px); }
   40% {
     transform: rotate(-45deg) translate(0, 0); } }
+
 @-ms-keyframes scrollbtn {
   0% {
     transform: rotate(-45deg) translate(0, 0); }
@@ -20,6 +22,7 @@
     transform: rotate(-45deg) translate(-10px, 10px); }
   40% {
     transform: rotate(-45deg) translate(0, 0); } }
+
 @keyframes scrollbtn {
   0% {
     transform: rotate(-45deg) translate(0, 0); }
@@ -27,6 +30,7 @@
     transform: rotate(-45deg) translate(-10px, 10px); }
   40% {
     transform: rotate(-45deg) translate(0, 0); } }
+
 @-webkit-keyframes slideUp {
   0% {
     top: 10%;
@@ -34,6 +38,7 @@
   100% {
     top: 0;
     opacity: 1; } }
+
 @-moz-keyframes slideUp {
   0% {
     top: 10%;
@@ -41,6 +46,7 @@
   100% {
     top: 0;
     opacity: 1; } }
+
 @-ms-keyframes slideUp {
   0% {
     top: 10%;
@@ -48,6 +54,7 @@
   100% {
     top: 0;
     opacity: 1; } }
+
 @keyframes slideUp {
   0% {
     top: 10%;
@@ -55,6 +62,7 @@
   100% {
     top: 0;
     opacity: 1; } }
+
 @-webkit-keyframes slideIn {
   0% {
     right: 10%;
@@ -62,6 +70,7 @@
   100% {
     right: 0;
     opacity: 1; } }
+
 @-moz-keyframes slideIn {
   0% {
     right: 10%;
@@ -69,6 +78,7 @@
   100% {
     right: 0;
     opacity: 1; } }
+
 @-ms-keyframes slideIn {
   0% {
     right: 10%;
@@ -76,6 +86,7 @@
   100% {
     right: 0;
     opacity: 1; } }
+
 @keyframes slideIn {
   0% {
     right: 10%;
@@ -83,6 +94,7 @@
   100% {
     right: 0;
     opacity: 1; } }
+
 @-webkit-keyframes slideOut {
   0% {
     right: 0%;
@@ -90,6 +102,7 @@
   100% {
     right: 10%;
     opacity: 0; } }
+
 @-moz-keyframes slideOut {
   0% {
     right: 0%;
@@ -97,6 +110,7 @@
   100% {
     right: 10%;
     opacity: 0; } }
+
 @-ms-keyframes slideOut {
   0% {
     right: 0%;
@@ -104,6 +118,7 @@
   100% {
     right: 10%;
     opacity: 0; } }
+
 @keyframes slideOut {
   0% {
     right: 0%;
@@ -111,46 +126,55 @@
   100% {
     right: 10%;
     opacity: 0; } }
+
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
 @-moz-keyframes fadeOut {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
 @-ms-keyframes fadeOut {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
 @keyframes fadeOut {
   0% {
     opacity: 1; }
   100% {
     opacity: 0; } }
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 @-moz-keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 @-ms-keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 @keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
 body::-webkit-scrollbar {
   width: 0.65em; }
 
@@ -210,21 +234,22 @@ a {
   opacity: 1; }
 
 #nav {
-  margin-left: -25%;
-  width: 12.25%;
-  transition: margin .75s;
+  margin-left: -100%;
+  width: 100%;
+  transition: margin .85s;
   height: 100vh;
-  background: #1f1f1f;
+  background-color: rgba(36, 46, 105, 0.95);
   letter-spacing: 0.15em;
   z-index: 10;
   position: fixed; }
   #nav span {
+    display: inline-block;
     text-align: center;
-    color: #89acda;
-    transition: color 0.25s;
-    font-size: 1.5em;
-    padding-top: 7.5%;
-    padding-bottom: 7.5%;
+    color: rgba(254, 254, 254, 0.25);
+    transition: color 0.5s;
+    font-size: 4em;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
     cursor: pointer;
     display: block;
     font-weight: 400; }
@@ -233,24 +258,29 @@ a {
   #nav #cr {
     width: 100%;
     text-align: center;
-    font-size: 0.9em;
     position: absolute;
     left: 0;
-    bottom: 1.5%;
+    bottom: 2.5%;
     font-weight: 200;
-    color: #8a8a8a; }
+    color: rgba(254, 254, 254, 0.5); }
+  #nav #nav-close {
+    font-size: 2em;
+    position: absolute;
+    left: 3.5%; }
+  #nav #nav-home {
+    padding-top: 12.25%; }
 
 #nav-toggle {
   transition: all 0.25s;
   cursor: pointer;
   transition: color 0.25s;
-  color: #fefefe;
+  color: #2b2d60;
   font-size: 2em;
-  padding: 2.5%;
+  padding: 3.5%;
   position: fixed;
   z-index: 9; }
   #nav-toggle:hover {
-    color: #1f1f1f; }
+    color: #fefefe; }
 
 #scroll {
   cursor: pointer;
@@ -312,6 +342,7 @@ a {
   @media (min-width: 1024px) and (max-width: 1600px) {
     #about h1, #projs h1 {
       font-size: 3em; } }
+
 #about p, #projs p {
   font-size: 1.35em; }
   @media (min-width: 1024px) and (max-width: 1600px) {
@@ -367,6 +398,7 @@ a {
   transform: scaleX(0);
   -webkit-transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out; }
+
 .underline:hover:after {
   transform: scaleX(1); }
 
@@ -403,5 +435,3 @@ a {
 .fadeIn {
   z-index: 10;
   animation: 0.5s fadeIn 0.25s ease-in-out forwards; }
-
-/*# sourceMappingURL=style.css.map */

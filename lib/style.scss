@@ -68,21 +68,22 @@ a {
 }
 
 #nav{
-  margin-left: -25%;
-  width: 12.25%;
-  transition: margin .75s;
+  margin-left: -100%;
+  width: 100%;
+  transition: margin .85s;
   height: 100vh;
-  background: #1f1f1f;
+  background-color: rgba(#242e69, 0.95);
   letter-spacing: 0.15em;
   z-index: 10;
   position: fixed;
   span{
+    display: inline-block;
     text-align: center;
-    color:#89acda;
-    transition: color 0.25s;
-    font-size: $baseSize*1.5;
-    padding-top: 7.5%;
-    padding-bottom: 7.5%;
+    color:rgba($light,0.25);
+    transition: color 0.5s;
+    font-size: $baseSize*4;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
     cursor: pointer;
     display: block;
     font-weight: 400;
@@ -93,25 +94,32 @@ a {
   #cr{
     width: 100%;
     text-align: center;
-    font-size: $baseSize*0.9;
     position: absolute;
     left: 0;
-    bottom: 1.5%;
+    bottom: 2.5%;
     font-weight: 200;
-    color: #8a8a8a;
+    color: rgba($light,0.5);
+  }
+  #nav-close{
+    font-size: $headerSize;
+    position: absolute;
+    left: 3.5%;
+  }
+  #nav-home{
+    padding-top: 12.25%;
   }
 }
 #nav-toggle{
   transition: all 0.25s;
   cursor: pointer;
   transition: color 0.25s;
-  color: $light;
+  color: $dark;
   font-size: $headerSize;
-  padding: 2.5%;
+  padding: 3.5%;
   position: fixed;
   z-index: 9;
   &:hover{
-    color: #1f1f1f;
+    color: $light;
   }
 }
 #scroll {
