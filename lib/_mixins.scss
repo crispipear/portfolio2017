@@ -15,7 +15,17 @@
   color: $light;
   display: inline-block;
 }
-
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
 @mixin bgGrad($color1, $color2) {
   background: $color1;
   background: -webkit-linear-gradient(145deg, $color1, $color2);
