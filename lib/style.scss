@@ -1,8 +1,10 @@
-@import url( 'https://fonts.googleapis.com/css?family=Roboto:300');
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import "mixins";
 @import "keyframes";
-$dark: #2b2d60;
+$dark: #2a3b61;
 $light: #fefefe;
+$blue: #93c2d6;
+$purple: #8891d1;
 $baseText: 'Roboto';
 $baseSize: 1em;
 $headerSize: 2em;
@@ -17,7 +19,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba($dark, 0.75);
+  background-color: rgba($light, 0.8);
 }
 
 * {
@@ -25,9 +27,11 @@ body::-webkit-scrollbar-thumb {
   font-size: $baseSize;
   cursor: default;
   letter-spacing: $letterSpacing;
+  font-weight: 200;
 }
 
 body {
+  background-color: #1b1b1b;
   margin: 0;
   overflow-x: hidden;
 }
@@ -36,7 +40,6 @@ p,
 span {
   text-align: left;
   font-size: $baseSize;
-  font-weight: 200;
 }
 
 a {
@@ -65,16 +68,17 @@ a {
 }
 
 #bgOne {
-  @include bgGrad(#89acda, #9a8fcf);
+  @include bgGrad($blue, $purple);
   opacity: 1;
+  @include transition(all .5s);
 }
 
 #nav {
-  margin-left: -100%;
-  width: 100%;
-  transition: margin 0.85s;
+  margin-left: -30%;
+  width: 25%;
+  transition: margin 0.75s;
   height: 100vh;
-  background-color: rgba(#242e69, 0.95);
+  background-color: rgba($dark, 0.95);
   letter-spacing: 0.15em;
   z-index: 10;
   position: fixed;
@@ -89,24 +93,18 @@ a {
     color: rgba($light,0.25);
     transition: color 0.5s;
     font-size: $baseSize*4;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
+    width: $baseSize*3;
+    padding-top: 12.25%;
+    padding-bottom: 12.25%;
     cursor: pointer;
     display: block;
     font-weight: 400;
-
-    sup {
-      font-size: $baseSize*0.5;
-      margin-right: 2.5%;
-      color: rgba($light, 0.25);
-    }
 
     &:hover {
       color: $light;
     }
     @include laptop {
-      font-size: $baseSize*3;
-      width: $baseSize*3.5;
+      font-size: $baseSize*2.5;
     }
   }
 
@@ -119,18 +117,19 @@ a {
     font-weight: 200;
     color: rgba($light,0.5);
     @include laptop {
-      font-size: $baseSize*0.9;
+      font-size: $baseSize*0.85;
     }
   }
 
   #nav-close {
     font-size: $headerSize;
     position: absolute;
-    left: 3.5%;
+    left: 14%;
+    top: 1%;
   }
 
   #nav-home {
-    padding-top: 12.25%;
+    padding-top: 50%;
   }
 }
 
@@ -157,19 +156,30 @@ a {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 2px solid #fff;
-  border-bottom: 2px solid #fff;
+  border-left: 3px solid $light;
+  border-bottom: 3px solid $light;
+  @include transition(all 0.25s);
   @include transform(rotate(-45deg));
-  -webkit-animation: scrollbtn 2s infinite;
-  animation: scrollbtn 2s infinite;
+  @include animation(scrollbtn 2s infinite);
   box-sizing: border-box;
+
+  &:hover {
+    border-color: $dark;
+  }
 }
 
-#about,
-#landpg,
-#projs {
+section {
   @include full;
-  z-index: 0;
+}
+
+h1,
+p {
+  color: $light;
+  letter-spacing: $letterSpacing*1.5;
+  font-size: $baseSize*2.5;
+  font-weight: 200;
+  line-height: 2em;
+  margin-top: 0;
 }
 
 .content {
@@ -180,92 +190,105 @@ a {
   @include laptop {
     width: 65%;
   }
+}
 
-  h1,
-  p {
-    color: $light;
-    letter-spacing: $letterSpacing*1.5;
-  }
-
+#landpg {
   h1 {
-    font-size: $headerSize*3.5;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    font-size: $headerSize*18;
     font-weight: 200;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     @include laptop {
-      font-size: $headerSize*2.75;
+      font-size: $headerSize*12.25;
     }
   }
 
   p {
-    font-size: $baseSize*2.5;
-    font-weight: 200;
-    line-height: 2em;
-
-    span {
-      color: $dark;
-      font-weight: 200;
-    }
+    font-size: $headerSize*2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    margin: 0;
+    color: $dark;
     @include laptop {
       line-height: 1.5em;
-      font-size: $baseSize*2;
+      font-size: $headerSize*1.25;
     }
   }
 }
 
 .proj-item {
+  display: inline-block;
+  vertical-align: middle;
+  @include transform(perspective(1px) translateZ(0));
+  box-shadow: 0 0 1px transparent;
+  position: relative;
   cursor: pointer;
   margin-bottom: 5%;
-  width: 100%;
-  height: 40%;
-  position: relative;
+  width: 95%;
+  height: 75%;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
-  background-image: url('../files/thumbnails/ph.png');
-  -webkit-transition : -webkit-filter 350ms linear;
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(43,61,96,0.15);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(43,61,96,0.15);
-  box-shadow: 0px 0px 18px 0px rgba(43,61,96,0.15);
-  &:hover .proj-overlay {
-    width: 100%;
-  }
-  .proj-overlay {
-    cursor: pointer;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba($dark,0.75);
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    overflow: hidden;
-    transition: width 0.75s ease;
+  @include transition(border 0.3s);
+  .proj-overlay{
+    @include boxshadow(0 0 18px 0 rgba(43,61,96,0.15));
+    @include transition(all 0.25s);
     p{
-      cursor: pointer;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      @include transform(translate(-50%,-50%));
-      white-space: nowrap;
-      color: $light;
-      font-size: $baseSize;
-      line-height: 2.5em;
+      font-size: $baseSize*1.25;
+      padding: 7.5%;
       span{
-        cursor: pointer;
-        color: $light;
-        font-size: $headerSize;
+        font-size: $baseSize*1.75;
+      }
+      @include laptop{
+        font-size: $baseSize;
       }
     }
+    background-color: rgba($blue, 0.9);
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 40%;
+    height: 40%;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    border: $light solid 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include transition(top, right, bottom, left);
+    -webkit-transition-duration: 0.45s;
+    transition-duration: 0.45s;
+  }
+  &:active:before,
+  &:focus:before,
+  &:hover:before {
+    top: -25px;
+    right: -25px;
+    bottom: -25px;
+    left: -25px;
+  }
+  &:hover .proj-overlay{
+    background-color: rgba($purple,0.9);
   }
 }
 
 #about {
   h1 {
     font-size: $headerSize*2;
+    margin-bottom: 1.5%;
     @include laptop {
-      font-size: $headerSize*1.25;
+      font-size: $headerSize*1.5;
     }
   }
 }
@@ -280,14 +303,16 @@ a {
     position: relative;
     transition: color 0.25s;
     color: $light;
-    font-weight: 400;
   }
 
   p {
-    line-height: 1.75em;
+    font-weight: 400;
+    line-height: 3.25rem;
     color: $dark;
+    font-size: $baseSize*1.45;
     @include laptop {
-      font-size: $baseSize*1.125;
+      font-size: $baseSize*1.2;
+      line-height: 2.25rem;
     }
   }
 
@@ -332,25 +357,25 @@ a {
 }
 
 .slideUp {
-  animation: 1s slideUp 0.25s ease-in-out forwards;
+  @include animation(1s slideUp 0.15s ease-in-out forwards);
 }
 
 .slideIn {
   z-index: 5;
-  animation: 1s slideIn ease-in-out forwards;
+  @include animation(1s slideIn ease-in-out forwards);
 }
 
 .slideOut {
   z-index: 0;
-  animation: 1s slideOut ease-in-out forwards;
+  @include animation(1s slideOut ease-in-out forwards);
 }
 
 .fadeOut {
   z-index: 0;
-  animation: fadeOut 0.25s ease-in-out forwards;
+  @include animation(fadeOut 0.25s ease-in-out forwards);
 }
 
 .fadeIn {
   z-index: 10;
-  animation: 0.5s fadeIn 0.25s ease-in-out forwards;
+  @include animation(0.5s fadeIn 0.25s ease-in-out forwards);
 }

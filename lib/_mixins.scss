@@ -37,6 +37,10 @@
   -webkit-transition: $transition;
   transition: $transition;
 }
+@mixin animation($animation...) {
+  -webkit-animation: $animation;
+  animation: $animation;
+}
 @mixin transform($transfrom...){
   -ms-transform: $transfrom;
   -webkit-transform: $transfrom;
@@ -51,6 +55,9 @@
   width: 100%;
   height: 100vh;
   display: block;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
 }
 @mixin autoMarginDiv($width){
   text-align: left;
