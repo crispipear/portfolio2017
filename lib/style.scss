@@ -16,10 +16,11 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+  background-color: $light;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba($light, 0.8);
+  background-color: rgba($dark, 0.9);
 }
 
 * {
@@ -78,7 +79,7 @@ a {
   width: 25%;
   transition: margin 0.75s;
   height: 100vh;
-  background-color: rgba($dark, 0.95);
+  background-color: rgba($dark, .99);
   letter-spacing: 0.15em;
   z-index: 10;
   position: fixed;
@@ -229,6 +230,7 @@ p {
   display: inline-block;
   vertical-align: middle;
   @include transform(perspective(1px) translateZ(0));
+  @include boxshadow(0 0 18px 0 rgba(43,61,96,0.25));
   box-shadow: 0 0 1px transparent;
   position: relative;
   cursor: pointer;
@@ -239,11 +241,12 @@ p {
   background-position: center;
   @include transition(border 0.3s);
   .proj-overlay{
-    @include boxshadow(0 0 18px 0 rgba(43,61,96,0.15));
-    @include transition(all 0.25s);
+    @include boxshadow(0 0 18px 0 rgba(43,61,96,0.25));
     p{
+      @include transition(all 0.25s);
       font-size: $baseSize*1.25;
       padding: 7.5%;
+      color: $dark;
       span{
         font-size: $baseSize*1.75;
       }
@@ -251,7 +254,7 @@ p {
         font-size: $baseSize;
       }
     }
-    background-color: rgba($blue, 0.9);
+    background-color: rgba($light, 0.98);
     position: absolute;
     bottom: -10%;
     right: -10%;
@@ -278,8 +281,8 @@ p {
     bottom: -25px;
     left: -25px;
   }
-  &:hover .proj-overlay{
-    background-color: rgba($purple,0.9);
+  &:hover .proj-overlay p{
+    color: $purple;
   }
 }
 
@@ -357,25 +360,10 @@ p {
 }
 
 .slideUp {
-  @include animation(1s slideUp 0.15s ease-in-out forwards);
+  @include animation(1s slideUp ease-in-out forwards);
 }
 
 .slideIn {
   z-index: 5;
   @include animation(1s slideIn ease-in-out forwards);
-}
-
-.slideOut {
-  z-index: 0;
-  @include animation(1s slideOut ease-in-out forwards);
-}
-
-.fadeOut {
-  z-index: 0;
-  @include animation(fadeOut 0.25s ease-in-out forwards);
-}
-
-.fadeIn {
-  z-index: 10;
-  @include animation(0.5s fadeIn 0.25s ease-in-out forwards);
 }
