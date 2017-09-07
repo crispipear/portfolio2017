@@ -74,80 +74,6 @@ a {
   @include transition(all .5s);
 }
 
-#nav {
-  margin-left: -30%;
-  width: 25%;
-  transition: margin 0.75s;
-  height: 100vh;
-  background-color: rgba($dark, .99);
-  letter-spacing: 0.15em;
-  z-index: 10;
-  position: fixed;
-
-  span {
-    display: inline-block;
-    position: relative;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    color: rgba($light,0.25);
-    transition: color 0.5s;
-    font-size: $baseSize*4;
-    width: $baseSize*3;
-    padding-top: 12.25%;
-    padding-bottom: 12.25%;
-    cursor: pointer;
-    display: block;
-    font-weight: 400;
-
-    &:hover {
-      color: $light;
-    }
-    @include laptop {
-      font-size: $baseSize*2.5;
-    }
-  }
-
-  #cr {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    left: 0;
-    bottom: 2.5%;
-    font-weight: 200;
-    color: rgba($light,0.5);
-    @include laptop {
-      font-size: $baseSize*0.85;
-    }
-  }
-
-  #nav-close {
-    font-size: $headerSize;
-    position: absolute;
-    left: 14%;
-    top: 1%;
-  }
-
-  #nav-home {
-    padding-top: 50%;
-  }
-}
-
-#nav-toggle {
-  transition: all 0.25s;
-  cursor: pointer;
-  transition: color 0.25s;
-  color: $dark;
-  font-size: $headerSize;
-  padding: 3.5%;
-  position: fixed;
-  z-index: 9;
-
-  &:hover {
-    color: $light;
-  }
-}
 
 #scroll {
   cursor: pointer;
@@ -190,6 +116,24 @@ p {
   @include autoMarginDiv(60%);
   @include laptop {
     width: 65%;
+  }
+}
+#nav{
+  opacity: 0;
+  @include transition(all, 0.15s);
+  width: 100%;
+  position: fixed;
+  text-align: right;
+  z-index: 50;
+  a{
+    letter-spacing: $letterSpacing*4.5;
+    margin: 2.5%;
+    margin-left: 0%;
+    display: inline-block;
+    position: relative;
+    &:after{
+      margin-top: 7.5%;
+    }
   }
 }
 
