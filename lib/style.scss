@@ -1,6 +1,7 @@
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import "mixins";
 @import "keyframes";
+@import url("sutemplate.css");
 $dark: #2a3b61;
 $light: #fefefe;
 $blue: #93c2d6;
@@ -98,7 +99,6 @@ a {
 section {
   @include full;
 }
-
 h1,
 p {
   color: $light;
@@ -118,25 +118,29 @@ p {
     width: 65%;
   }
 }
-#nav{
-  opacity: 0;
+.nav{
   @include transition(all, 0.15s);
-  width: 100%;
+  width: auto;
   position: fixed;
-  text-align: right;
   z-index: 50;
-  a{
-    letter-spacing: $letterSpacing*4.5;
-    margin: 2.5%;
-    margin-left: 0%;
-    display: inline-block;
-    position: relative;
-    &:after{
-      margin-top: 7.5%;
-    }
+  letter-spacing: $letterSpacing*4.5;
+  margin: 2.5%;
+  margin-left: 0%;
+  display: inline-block;
+  &:after{
+    margin-top: 7.5%;
   }
 }
-
+#nav-about{
+  right: 0;
+}
+#nav-work{
+  left: 2.5%;
+}
+#nav-home{
+  bottom: 0;
+  right: 0;
+}
 #landpg {
   h1 {
     text-align: center;
@@ -236,15 +240,32 @@ p {
     margin-bottom: 1.5%;
     @include laptop {
       font-size: $headerSize*1.5;
+    }1
+  }
+}
+#cr{
+  color: $dark;
+  font-size: $baseSize*1.15;
+  font-weight: 400;
+  letter-spacing: $letterSpacing*1.5;
+  position: absolute;
+  bottom: 4.5%;
+  left: 2.5%;
+  width: 100%;
+  i{
+    cursor: pointer;
+    @include transition(color 0.25s);
+    color: $dark;
+    font-size: 1.5rem;
+    &:hover{
+      color: $light;
     }
   }
 }
-
 .left,
 .right {
   display: inline-block;
   vertical-align: top;
-
   a {
     display: inline-block;
     position: relative;
@@ -274,16 +295,6 @@ p {
     }
   }
 }
-
-.left {
-  width: 65%;
-  margin-right: 2.5%;
-}
-
-.right {
-  width: 30%;
-}
-
 .underline {
   &:after {
     content: '';

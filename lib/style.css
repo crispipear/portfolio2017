@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
+@import url("sutemplate.css");
 @-webkit-keyframes scrollbtn {
   0% {
     transform: rotate(-45deg) translate(0, 0); }
@@ -244,22 +245,28 @@ p {
     .content {
       width: 65%; } }
 
-#nav {
-  opacity: 0;
+.nav {
   -webkit-transition: all, 0.15s;
   transition: all, 0.15s;
-  width: 100%;
+  width: auto;
   position: fixed;
-  text-align: right;
-  z-index: 50; }
-  #nav a {
-    letter-spacing: 0.3375em;
-    margin: 2.5%;
-    margin-left: 0%;
-    display: inline-block;
-    position: relative; }
-    #nav a:after {
-      margin-top: 7.5%; }
+  z-index: 50;
+  letter-spacing: 0.3375em;
+  margin: 2.5%;
+  margin-left: 0%;
+  display: inline-block; }
+  .nav:after {
+    margin-top: 7.5%; }
+
+#nav-about {
+  right: 0; }
+
+#nav-work {
+  left: 2.5%; }
+
+#nav-home {
+  bottom: 0;
+  right: 0; }
 
 #landpg h1 {
   text-align: center;
@@ -356,6 +363,24 @@ p {
   @media (min-width: 1024px) and (max-width: 1600px) {
     #about h1 {
       font-size: 3em; } }
+
+#cr {
+  color: #2a3b61;
+  font-size: 1.15em;
+  font-weight: 400;
+  letter-spacing: 0.1125em;
+  position: absolute;
+  bottom: 4.5%;
+  left: 2.5%;
+  width: 100%; }
+  #cr i {
+    cursor: pointer;
+    -webkit-transition: color 0.25s;
+    transition: color 0.25s;
+    color: #2a3b61;
+    font-size: 1.5rem; }
+    #cr i:hover {
+      color: #fefefe; }
 
 .left,
 .right {
