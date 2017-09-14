@@ -2,10 +2,8 @@
 @import "mixins";
 @import "keyframes";
 @import url("sutemplate.css");
-$dark: #2a3b61;
-$light: #fefefe;
-$blue: #93c2d6;
-$purple: #8891d1;
+$dark: #1f1f1f;
+$light: #9fb6e2;
 $baseText: 'Roboto';
 $baseSize: 1em;
 $headerSize: 2em;
@@ -17,11 +15,10 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
-  background-color: $light;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba($dark, 0.9);
+  background-color: $light
 }
 
 * {
@@ -29,11 +26,10 @@ body::-webkit-scrollbar-thumb {
   font-size: $baseSize;
   cursor: default;
   letter-spacing: $letterSpacing;
-  font-weight: 200;
 }
 
 body {
-  background-color: #1b1b1b;
+  background-color: white;
   margin: 0;
   overflow-x: hidden;
 }
@@ -52,14 +48,6 @@ a {
   }
 }
 
-.background {
-  @include full;
-  @include transition(opacity 0.5s);
-  z-index: -5;
-  position: fixed;
-  opacity: 0;
-}
-
 #particle {
   position: fixed;
   top: 0;
@@ -68,14 +56,6 @@ a {
   left: 0;
   z-index: -4;
 }
-
-#bgOne {
-  @include bgGrad($blue, $purple);
-  opacity: 1;
-  @include transition(all .5s);
-}
-
-
 #scroll {
   cursor: pointer;
   position: absolute;
@@ -123,7 +103,8 @@ p {
   width: auto;
   position: fixed;
   z-index: 50;
-  letter-spacing: $letterSpacing*4.5;
+  letter-spacing: $letterSpacing*3.5;
+  font-size: $baseSize*1.15;
   margin: 2.5%;
   margin-left: 0%;
   display: inline-block;
@@ -175,23 +156,20 @@ p {
 }
 
 .proj-item {
-  display: inline-block;
   vertical-align: middle;
-  @include transform(perspective(1px) translateZ(0));
-  @include boxshadow(0 0 18px 0 rgba(43,61,96,0.25));
   box-shadow: 0 0 1px transparent;
   position: relative;
-  cursor: pointer;
   margin-bottom: 5%;
   width: 95%;
   height: 75%;
   background-size: cover;
   background-position: center;
-  @include transition(border 0.3s);
+  @include transition(all 0.25s);
+  @include boxshadow(0 0 18px 0 rgba(43,61,96,0.5));
   .proj-overlay{
-    @include boxshadow(0 0 18px 0 rgba(43,61,96,0.25));
+    @include transition(all 0.25s);
+    @include boxshadow(0 0 18px 0 rgba(43,61,96,0.15));
     p{
-      @include transition(all 0.25s);
       font-size: $baseSize*1.25;
       padding: 7.5%;
       color: $dark;
@@ -201,36 +179,14 @@ p {
       @include laptop{
         font-size: $baseSize;
       }
+      cursor: pointer;
     }
-    background-color: rgba($light, 0.98);
+    background-color: white;
     position: absolute;
     bottom: -10%;
     right: -10%;
     width: 40%;
     height: 40%;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    border: $light solid 5px;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    @include transition(top, right, bottom, left);
-    -webkit-transition-duration: 0.45s;
-    transition-duration: 0.45s;
-  }
-  &:active:before,
-  &:focus:before,
-  &:hover:before {
-    top: -25px;
-    right: -25px;
-    bottom: -25px;
-    left: -25px;
-  }
-  &:hover .proj-overlay p{
-    color: $purple;
   }
 }
 
@@ -240,7 +196,7 @@ p {
     margin-bottom: 1.5%;
     @include laptop {
       font-size: $headerSize*1.5;
-    }1
+    }
   }
 }
 #cr{
