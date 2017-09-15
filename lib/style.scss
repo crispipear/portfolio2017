@@ -41,6 +41,8 @@ span {
 }
 
 a {
+  display: inline-block;
+  position: relative;
   @include links;
 
   &:visited {
@@ -97,7 +99,6 @@ p {
   letter-spacing: $letterSpacing*3.5;
   font-size: $baseSize*1.15;
   margin: 2.5% 2.5% 2.5% 0;
-  display: inline-block;
 
   &:after {
     margin-top: 7.5%;
@@ -174,6 +175,9 @@ p {
     font-size: $headerSize*1.25;
     letter-spacing: 0.25rem;
     color: $light;
+    @include laptop {
+      font-size: $headerSize;
+    }
   }
   a {
     @include transition(all 0.45s);
@@ -190,6 +194,10 @@ p {
     font-size: $baseSize*0.9;
     margin-top: 12.25%;
     overflow: hidden;
+    @include laptop {
+      font-size: $baseSize*0.8;
+      max-width: 125px;
+    }
     &:after {
       @include transition(all 0.45s);
       content: '';
@@ -214,6 +222,9 @@ p {
   p {
     margin-top: 7.5%;
     font-size: $baseSize*1.25;
+    @include laptop {
+      font-size: $baseSize;
+    }
   }
   &:hover h2:after {
     width: 100%;
@@ -229,14 +240,18 @@ p {
       font-size: $headerSize*1.5;
     }
   }
-  .row {
-    justify-content: center;
-  }
 }
 .container{
-  opacity: 1;
+  opacity: 0;
 }
+
 .proj-sec{
+  .row{
+    &:hover h2:after{
+      width: 20%;
+    }
+    margin-bottom: 5%;
+  }
   display: flex;
   flex-flow: column;
   overflow: visible;
@@ -248,32 +263,45 @@ p {
     &:hover .bg{
       opacity: 0.9
     }
+    &:hover h1{
+      color: $dark;
+    }
+  }
+  a{
+    font-weight: 400;
   }
   h1{
     font-size: $headerSize*3.5;
-    color: $dark;
+    color: $light;
     margin-top: -5%;
     margin-bottom: 0%;
+    @include laptop {
+      font-size: $headerSize*2.5;
+    }
   }
   h2{
     font-weight: 400;
     font-size: $headerSize*1.75;
     color: $dark;
-    margin-top: 5%;
+    margin-top: 0.5%;
     margin-bottom: 3.5%;
     &:after{
       width: 7.5%;
       margin-top: 1.25%;
     }
+    @include laptop {
+      font-size: $headerSize*1.25;
+    }
   }
-  &:hover h2:after{
-    width: 20%;
-  }
+
   p{
     font-size: $baseSize*1.25;
     b,q{
       color: $light;
       font-weight: 600;
+    }
+    @include laptop {
+      font-size: $baseSize*1.05;
     }
   }
   .bg{
@@ -287,26 +315,33 @@ p {
     right: 0%;
     top: 20%;
   }
+  img{
+    width: 100%;
+    height: 100%;
+    @include boxshadow(0 0 45px 0 rgba(16, 29, 54, 0.25));
+  }
 }
-
-#cr {
-  color: $dark;
-  font-size: $baseSize*1.15;
-  font-weight: 400;
-  letter-spacing: $letterSpacing*1.5;
-  position: absolute;
-  bottom: 4.5%;
-  left: 2.5%;
-  width: 100%;
-
-  i {
-    cursor: pointer;
-    @include transition(color 0.25s);
+#footer {
+  position: relative;
+  padding-top: 5%;
+  padding-left: 2.5%;
+  padding-bottom: 2.5%;
+  span{
     color: $dark;
-    font-size: 1.5rem;
+    font-size: $baseSize*1.15;
+    font-weight: 400;
+    letter-spacing: $letterSpacing*1.5;
+    width: auto;
+    height: auto;
+    i {
+      cursor: pointer;
+      @include transition(color 0.25s);
+      color: $dark;
+      font-size: 1.5rem;
 
-    &:hover {
-      color: $light;
+      &:hover {
+        color: $light;
+      }
     }
   }
 }
@@ -317,8 +352,6 @@ p {
   height: 50vh;
 
   a {
-    display: inline-block;
-    position: relative;
     transition: color 0.25s;
     color: $light;
   }

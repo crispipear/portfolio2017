@@ -11,33 +11,11 @@
 }
 @include keyframes(slideUp){
   0%{
-    top: 10%;
+    margin-top: 7.5%;
     opacity: 0;
   }
   100%{
-    top:0;
+    margin-top:0;
     opacity: 1;
-  }
-}
-
-@include keyframes (slideIn) {
-  0%{
-    right: 10%;
-    opacity: 0;
-  }
-  100%{
-    right:0;
-    opacity: 1;
-  }
-}
-
-@include keyframes (slideOut) {
-  0%{
-    right: 0%;
-    opacity: 1;
-  }
-  100%{
-    right: 10%;
-    opacity: 0;
   }
 }
