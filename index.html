@@ -26,48 +26,56 @@
 </head>
 
 <body>
-  <div class="background" id="bgOne"></div>
-    <a id = "nav-home" class="underline nav">home</a>
-    <a id = "nav-work" class="underline nav">work</a>
-    <a id = "nav-about" class="underline nav">about</a>
+  <a id="nav-home" class="underline nav">home</a>
+  <a id="nav-work" class="underline nav">work</a>
+  <a id="nav-about" class="underline nav">about</a>
   <div id="particle"></div>
   <section id="landpg">
-      <h1>SU LI</h1>
-      <p>Interactive Designer &amp; Front-end Developer</p>
-      <span id="scroll"></span>
+    <h1>SU LI</h1>
+    <p>Interactive Designer &amp; Front-end Developer</p>
+    <span id="scroll"></span>
   </section>
   <section id="projs">
-    <div class="content">
-      <div class="proj-item">
-        <div class="proj-overlay">
-          <p><span>Pocket Husky</span><br>case study: engaging campus interaction with augmented reality</p>
+    <div class="container">
+      <div class="row">
+        <div class="proj-item col-8"></div>
+        <div class="proj-des col-4">
+          <h2 class="underline2">Pocket Husky</h2>
+          <p>
+            Mobile app concept that engages student interaction and exploration on the UW Bothell campus.
+          </p>
+          <a href="pages/pockethusky.html">view case study</a>
         </div>
       </div>
     </div>
   </section>
   <section id="about">
-    <div class="content">
-      <h1>I Design and Develop Stuff</h1>
-      <div class="col col-8 left">
-        <p>I'm currently working as an <a href="http://isoftstoneinc.com/" target="_blank" class="underline">Interactive/Web Designer &#64; iSoftStone North America</a></p>
-        <p>I am an undergraduate student at University of Washington studying Interactive Media Design.</p>
-        <p>I play a lot of games on my free time. </p>
-        <p>Got more questions? <a class="underline" href="mailto:suli7497@gmail.com">Shoot me an email</a>(ENG/&#20013;&#25991;)</p>
+    <div class="container">
+      <div class="row">
+        <h1>I Design and Develop Stuff :^)</h1>
       </div>
-      <div class="col col-4 right">
-        <p>Some tools that I use:</p>
-        <i class="devicon-photoshop-line"></i>
-        <i class="devicon-illustrator-line"></i>
-        <i class="devicon-git-plain"></i>
-        <i class="devicon-html5-plain-wordmark"></i>
-        <i class="devicon-css3-plain-wordmark"></i>
-        <i class="devicon-javascript-plain"></i>
-        <i class="devicon-jquery-plain-wordmark"></i>
-        <i class="devicon-react-original-wordmark"></i>
-        <i class="devicon-gulp-plain"></i>
+      <div class="row">
+        <div class="left col-7">
+          <p>I'm currently working as an <a style="cursor:default">Interactive/Web Designer</a> &#64; <a href="http://isoftstoneinc.com/" target="_blank" class="underline">iSoftStone North America</a></p>
+          <p>I am an undergraduate student at University of Washington studying Interactive Media Design.</p>
+          <p>You can see more of my visual design work on <a class="underline" href="https://www.behance.net/suli7497807f" target="_blank">Behance</a>.</p>
+          <p>Got more questions? <a class="underline" href="mailto:suli7497@gmail.com">Shoot me an email</a>(ENG/&#20013;&#25991;)</p>
+        </div>
+        <div class="right col-3">
+          <p>Some tools that I use:</p>
+          <i class="devicon-photoshop-line"></i>
+          <i class="devicon-illustrator-line"></i>
+          <i class="devicon-git-plain"></i>
+          <i class="devicon-html5-plain-wordmark"></i>
+          <i class="devicon-css3-plain-wordmark"></i>
+          <i class="devicon-javascript-plain"></i>
+          <i class="devicon-jquery-plain-wordmark"></i>
+          <i class="devicon-react-original-wordmark"></i>
+          <i class="devicon-gulp-plain"></i>
+        </div>
       </div>
     </div>
-      <span id="cr">2017 &copy; Design and Development by Su Li
+    <span id="cr">2017 &copy; Design and Development by Su Li
         <a href="https://www.behance.net/suli7497807f" target="_blank"><i class="fa fa-behance" aria-hidden="true"></i></a>
         <a href="https://github.com/crispipear" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
         <a href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -79,5 +87,38 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="lib/behavior.js"></script>
+<script>
+  (function() {
+    var delay = false;
+    $(document).on('mousewheel DOMMouseScroll', function(event) {
+      event.preventDefault();
+      if (delay) return;
+      delay = true;
+      setTimeout(function() {
+        delay = false
+      }, 250)
+
+      var scrollDir = event.originalEvent.wheelDelta || -event.originalEvent.detail;
+
+      var section = document.getElementsByTagName('section');
+      if (scrollDir < 0) {
+        for (var i = 0; i < section.length; i++) {
+          var t = section[i].getClientRects()[0].top;
+          if (t >= 40) break;
+        }
+      } else {
+        for (var i = section.length - 1; i >= 0; i--) {
+          var t = section[i].getClientRects()[0].top;
+          if (t < -20) break;
+        }
+      }
+      if (i >= 0 && i < section.length) {
+        $('html,body').animate({
+          scrollTop: section[i].offsetTop
+        }, 750);
+      }
+    });
+  })();
+</script>
 
 </html>

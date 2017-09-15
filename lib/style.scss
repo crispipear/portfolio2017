@@ -1,9 +1,9 @@
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import "mixins";
 @import "keyframes";
-@import url("sutemplate.css");
+@import url("subasecss.css");
 $dark: #1f1f1f;
-$light: #9fb6e2;
+$light: #7592cb;
 $baseText: 'Roboto';
 $baseSize: 1em;
 $headerSize: 2em;
@@ -18,7 +18,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $light
+  background-color: $light;
 }
 
 * {
@@ -56,6 +56,7 @@ a {
   left: 0;
   z-index: -4;
 }
+
 #scroll {
   cursor: pointer;
   position: absolute;
@@ -79,72 +80,63 @@ a {
 section {
   @include full;
 }
+
 h1,
 p {
-  color: $light;
   letter-spacing: $letterSpacing*1.5;
   font-size: $baseSize*2.5;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 2em;
   margin-top: 0;
 }
-
-.content {
-  height: 85%;
-  padding-top: 7.5%;
-  opacity: 0;
-  @include autoMarginDiv(60%);
-  @include laptop {
-    width: 65%;
-  }
-}
-.nav{
+.nav {
   @include transition(all, 0.15s);
   width: auto;
   position: fixed;
   z-index: 50;
   letter-spacing: $letterSpacing*3.5;
   font-size: $baseSize*1.15;
-  margin: 2.5%;
-  margin-left: 0%;
+  margin: 2.5% 2.5% 2.5% 0;
   display: inline-block;
-  &:after{
+
+  &:after {
     margin-top: 7.5%;
   }
 }
-#nav-about{
+
+#nav-about {
   right: 0;
 }
-#nav-work{
+
+#nav-work {
   left: 2.5%;
 }
-#nav-home{
+
+#nav-home,#nav-top {
   bottom: 0;
   right: 0;
 }
+
 #landpg {
   h1 {
     text-align: center;
     width: 100%;
     position: absolute;
-    font-size: $headerSize*18;
+    font-size: $headerSize*17;
     font-weight: 200;
     margin: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     @include laptop {
-      font-size: $headerSize*12.25;
+      font-size: $headerSize*11.25;
     }
   }
 
   p {
-    font-size: $headerSize*2;
+    font-size: $headerSize*1.75;
     text-align: center;
-    top: 50%;
-    left: 50%;
     width: 100%;
-    transform: translate(-50%,-50%);
     position: absolute;
     margin: 0;
     color: $dark;
@@ -155,38 +147,76 @@ p {
   }
 }
 
+.proj-des,
 .proj-item {
-  vertical-align: middle;
-  box-shadow: 0 0 1px transparent;
-  position: relative;
-  margin-bottom: 5%;
-  width: 95%;
-  height: 75%;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  height: 60vh;
+}
+
+.proj-item {
   @include transition(all 0.25s);
-  @include boxshadow(0 0 18px 0 rgba(43,61,96,0.5));
-  .proj-overlay{
-    @include transition(all 0.25s);
-    @include boxshadow(0 0 18px 0 rgba(43,61,96,0.15));
-    p{
-      font-size: $baseSize*1.25;
-      padding: 7.5%;
-      color: $dark;
-      span{
-        font-size: $baseSize*1.75;
-      }
-      @include laptop{
-        font-size: $baseSize;
-      }
-      cursor: pointer;
+  @include boxshadow(0 0 25px 0 rgba(16, 29, 54, 0.45));
+  border-radius: 0;
+
+  &:hover {
+    border-radius: 30px;
+  }
+}
+
+.proj-des {
+  box-sizing: border-box;
+  padding-left: 2.5%;
+
+  h2 {
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    font-size: $headerSize*1.25;
+    letter-spacing: 0.25rem;
+    color: $light;
+  }
+  a {
+    @include transition(all 0.45s);
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: center;
+    max-width: 145px;
+    padding: 2.5%;
+    border: 2px $light solid;
+    font-weight: 700;
+    font-size: $baseSize*0.9;
+    margin-top: 12.25%;
+    overflow: hidden;
+    &:after {
+      @include transition(all 0.45s);
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: -50px;
+      bottom: 0;
+      left: 0;
+      border-right: 50px solid transparent;
+      border-bottom: 50px solid $light;
+      @include transform(translateX(-100%));
     }
-    background-color: white;
-    position: absolute;
-    bottom: -10%;
-    right: -10%;
-    width: 40%;
-    height: 40%;
+    &:hover{
+      color: white;
+    }
+    &:hover:after {
+      @include transform(translateX(0));
+    }
+  }
+
+  p {
+    margin-top: 7.5%;
+    font-size: $baseSize*1.25;
+  }
+  &:hover h2:after {
+    width: 100%;
   }
 }
 
@@ -194,12 +224,72 @@ p {
   h1 {
     font-size: $headerSize*2;
     margin-bottom: 1.5%;
+    color: $light;
     @include laptop {
       font-size: $headerSize*1.5;
     }
   }
+  .row {
+    justify-content: center;
+  }
 }
-#cr{
+.container{
+  opacity: 1;
+}
+.proj-sec{
+  display: flex;
+  flex-flow: column;
+  overflow: visible;
+  .title{
+    width: 75%;
+    margin: auto;
+  }
+  .container{
+    &:hover .bg{
+      opacity: 0.9
+    }
+  }
+  h1{
+    font-size: $headerSize*3.5;
+    color: $dark;
+    margin-top: -5%;
+    margin-bottom: 0%;
+  }
+  h2{
+    font-weight: 400;
+    font-size: $headerSize*1.75;
+    color: $dark;
+    margin-top: 5%;
+    margin-bottom: 3.5%;
+    &:after{
+      width: 7.5%;
+      margin-top: 1.25%;
+    }
+  }
+  &:hover h2:after{
+    width: 20%;
+  }
+  p{
+    font-size: $baseSize*1.25;
+    b,q{
+      color: $light;
+      font-weight: 600;
+    }
+  }
+  .bg{
+    @include transition(opacity 0.15s);
+    opacity: 0;
+    height: 40vh;
+    width: 40vw;
+    background-color: $light;
+    position: absolute;
+    z-index: -1;
+    right: 0%;
+    top: 20%;
+  }
+}
+
+#cr {
   color: $dark;
   font-size: $baseSize*1.15;
   font-weight: 400;
@@ -208,20 +298,24 @@ p {
   bottom: 4.5%;
   left: 2.5%;
   width: 100%;
-  i{
+
+  i {
     cursor: pointer;
     @include transition(color 0.25s);
     color: $dark;
     font-size: 1.5rem;
-    &:hover{
+
+    &:hover {
       color: $light;
     }
   }
 }
+
 .left,
 .right {
-  display: inline-block;
-  vertical-align: top;
+  width: 100%;
+  height: 50vh;
+
   a {
     display: inline-block;
     position: relative;
@@ -251,6 +345,7 @@ p {
     }
   }
 }
+
 .underline {
   &:after {
     content: '';
@@ -269,7 +364,19 @@ p {
     left: 0;
   }
 }
-
+.underline2{
+  &:after {
+    @include transition(all 0.25s);
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 5px;
+    display: block;
+    margin-top: 7.5%;
+    left: 0;
+    background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
+  }
+}
 .slideUp {
   @include animation(1s slideUp ease-in-out forwards);
 }
