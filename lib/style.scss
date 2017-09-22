@@ -1,3 +1,4 @@
+// Designed and Developed by Su Li 2017🍐
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import "mixins";
 @import "keyframes";
@@ -335,10 +336,9 @@ p {
     height: auto;
     i {
       cursor: pointer;
-      @include transition(color 0.25s);
+      @include transition(color 0.15s);
       color: $dark;
       font-size: 1.5rem;
-
       &:hover {
         color: $light;
       }
@@ -354,6 +354,11 @@ p {
   a {
     transition: color 0.25s;
     color: $light;
+    index:10;
+    padding:0.5%;
+    i{
+      cursor: pointer;
+    }
   }
 
   p {
@@ -370,11 +375,14 @@ p {
   i {
     color: $light;
     transition: all 0.25s;
-    font-size: $headerSize*1.75;
-    padding: 5%;
-    line-height: 1.5em;
+    font-size: $headerSize*1.5;
+    padding: 1.5%;
+    line-height: 1.25em;
     @include laptop {
-      font-size: $headerSize*1.5;
+      font-size: $headerSize*1.25;
+    }
+    &:hover {
+      color: lighten($light, 15%);
     }
   }
 }

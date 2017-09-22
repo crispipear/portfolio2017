@@ -360,8 +360,8 @@ p {
     height: auto; }
     #footer span i {
       cursor: pointer;
-      -webkit-transition: color 0.25s;
-      transition: color 0.25s;
+      -webkit-transition: color 0.15s;
+      transition: color 0.15s;
       color: #1f1f1f;
       font-size: 1.5rem; }
       #footer span i:hover {
@@ -374,7 +374,12 @@ p {
   .left a,
   .right a {
     transition: color 0.25s;
-    color: #7592cb; }
+    color: #7592cb;
+    index: 10;
+    padding: 0.5%; }
+    .left a i,
+    .right a i {
+      cursor: pointer; }
   .left p,
   .right p {
     font-weight: 400;
@@ -390,13 +395,16 @@ p {
   .right i {
     color: #7592cb;
     transition: all 0.25s;
-    font-size: 3.5em;
-    padding: 5%;
-    line-height: 1.5em; }
+    font-size: 3em;
+    padding: 1.5%;
+    line-height: 1.25em; }
     @media (min-width: 1024px) and (max-width: 1600px) {
       .left i,
       .right i {
-        font-size: 3em; } }
+        font-size: 2.5em; } }
+    .left i:hover,
+    .right i:hover {
+      color: #adbee0; }
 
 .underline:after {
   content: '';
