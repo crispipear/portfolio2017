@@ -64,6 +64,19 @@
     margin-top: 0;
     opacity: 1; } }
 
+#load {
+  position: absolute;
+  z-index: 125;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  height: 100vh;
+  width: 100%;
+  background: #8ea7d7;
+  background: -webkit-linear-gradient(145deg, #8ea7d7, #a3d7d9);
+  background: -o-linear-gradient(145deg, #8ea7d7, #a3d7d9);
+  background: -moz-linear-gradient(145deg, #8ea7d7, #a3d7d9);
+  background: linear-gradient(145deg, #8ea7d7, #a3d7d9); }
+
 body::-webkit-scrollbar {
   width: 0.65em; }
 
@@ -82,7 +95,7 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: white;
   margin: 0;
-  overflow-x: hidden; }
+  overflow: hidden; }
 
 p,
 span {

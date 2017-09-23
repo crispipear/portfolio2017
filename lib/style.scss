@@ -10,6 +10,16 @@ $baseSize: 1em;
 $headerSize: 2em;
 $letterSpacing: 0.075em;
 
+
+#load{
+  position: absolute;
+  z-index: 125;
+  @include transition(all 1.5s);
+  height: 100vh;
+  width: 100%;
+  @include bgGrad(#8ea7d7, #a3d7d9);
+}
+
 body::-webkit-scrollbar {
   width: 0.65em;
 }
@@ -32,7 +42,7 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: white;
   margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 p,
