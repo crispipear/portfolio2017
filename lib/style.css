@@ -170,6 +170,9 @@ p {
   margin: 2.5% 2.5% 2.5% 0; }
   .nav:after {
     margin-top: 7.5%; }
+  @media (min-width: 1024px) and (max-width: 1550px) {
+    .nav {
+      font-size: 1em; } }
 
 #nav-about {
   right: 0; }
@@ -191,7 +194,7 @@ p {
   background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
-  @media (min-width: 1024px) and (max-width: 1600px) {
+  @media (min-width: 1024px) and (max-width: 1550px) {
     #landpg h1 {
       font-size: 22.5em; } }
 
@@ -202,7 +205,7 @@ p {
   position: absolute;
   margin: 0;
   color: #1f1f1f; }
-  @media (min-width: 1024px) and (max-width: 1600px) {
+  @media (min-width: 1024px) and (max-width: 1550px) {
     #landpg p {
       line-height: 1.5em;
       font-size: 2.5em; } }
@@ -210,7 +213,7 @@ p {
 .proj-des,
 .proj-item {
   width: 100%;
-  height: 60vh; }
+  height: 50vh; }
 
 .proj-item {
   -webkit-transition: all 0.25s;
@@ -232,7 +235,7 @@ p {
     font-size: 2.5em;
     letter-spacing: 0.25rem;
     color: #7592cb; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-des h2 {
         font-size: 2em; } }
   .proj-des a {
@@ -251,7 +254,7 @@ p {
     font-size: 0.9em;
     margin-top: 12.25%;
     overflow: hidden; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-des a {
         font-size: 0.8em;
         max-width: 125px; } }
@@ -262,11 +265,11 @@ p {
       position: absolute;
       z-index: -1;
       top: 0;
-      right: -50px;
       bottom: 0;
       left: 0;
-      border-right: 50px solid transparent;
-      border-bottom: 50px solid #7592cb;
+      right: -75px;
+      border-right: 75px solid transparent;
+      border-bottom: 75px solid #7592cb;
       -ms-transform: translateX(-100%);
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%); }
@@ -279,7 +282,7 @@ p {
   .proj-des p {
     margin-top: 7.5%;
     font-size: 1.25em; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-des p {
         font-size: 1em; } }
   .proj-des:hover h2:after {
@@ -289,7 +292,7 @@ p {
   font-size: 4em;
   margin-bottom: 1.5%;
   color: #7592cb; }
-  @media (min-width: 1024px) and (max-width: 1600px) {
+  @media (min-width: 1024px) and (max-width: 1550px) {
     #about h1 {
       font-size: 3em; } }
 
@@ -318,7 +321,7 @@ p {
     color: #7592cb;
     margin-top: -5%;
     margin-bottom: 0%; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h1 {
         font-size: 5em; } }
   .proj-sec h2 {
@@ -330,7 +333,7 @@ p {
     .proj-sec h2:after {
       width: 7.5%;
       margin-top: 1.25%; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
         font-size: 2.5em; } }
   .proj-sec p {
@@ -338,7 +341,7 @@ p {
     .proj-sec p b, .proj-sec p q {
       color: #7592cb;
       font-weight: 600; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec p {
         font-size: 1.05em; } }
   .proj-sec .bg {
@@ -371,14 +374,9 @@ p {
     letter-spacing: 0.1125em;
     width: auto;
     height: auto; }
-    #footer span i {
-      cursor: pointer;
-      -webkit-transition: color 0.15s;
-      transition: color 0.15s;
-      color: #1f1f1f;
-      font-size: 1.5rem; }
-      #footer span i:hover {
-        color: #7592cb; }
+    @media (min-width: 1024px) and (max-width: 1550px) {
+      #footer span {
+        font-size: 1em; } }
 
 .left,
 .right {
@@ -396,14 +394,14 @@ p {
   .left p,
   .right p {
     font-weight: 400;
-    line-height: 3.25rem;
+    line-height: 3rem;
     color: #1f1f1f;
     font-size: 1.45em; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .left p,
       .right p {
-        font-size: 1.2em;
-        line-height: 2.25rem; } }
+        font-size: 1.15em;
+        line-height: 2rem; } }
   .left i,
   .right i {
     color: #7592cb;
@@ -411,10 +409,10 @@ p {
     font-size: 3em;
     padding: 1.5%;
     line-height: 1.25em; }
-    @media (min-width: 1024px) and (max-width: 1600px) {
+    @media (min-width: 1024px) and (max-width: 1550px) {
       .left i,
       .right i {
-        font-size: 2.5em; } }
+        font-size: 2em; } }
     .left i:hover,
     .right i:hover {
       color: #adbee0; }
