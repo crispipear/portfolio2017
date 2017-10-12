@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Su Li : Portfolio</title>
+  <link href = "style.css" type = "text/css" rel = "stylesheet">
+  <link rel = "icon" href = "logo.png">
+</head>
+<body>
+  <div id = "loadscreen">
+    <div id = "loadcontent" class = "mid">
+      <div id="loader">
+        <span></span><span></span><span></span><span></span><span></span><br>
+        <p>recommended browsers: chrome or safari</p>
+      </div>
+    </div>
+  </div>
+  <div id="navmenu" class="nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+    <a class = "menuitem" href="#landpg">home</a>
+    <a class = "menuitem" href="#projsec">work</a>
+    <a class = "menuitem" href="#about">about</a>
+    <a class = "menuitem" href="#contact">contact</a>
+  </div>
+  <span id = "menu" onclick="openMenu()">&#9778;</span>
+  <div id = "landpg">
+    <div id = "content">
+      <b id = "title">Hi it's Su</b>
+      <p id = "subtitle">an interaction designer who likes to make life easier</p>
+      <p class = "linkbutton"><a href = "#projsec">see my work</a></p>
+    </div>
+  </div>
+  <div id = "projsec">
+      <div id = "projs">
+      <a href = "./work/pocket-husky.html"><div class="box" id = "projfp5"><div class="overlay"><p class = "boxtitle">Pocket Husky</p><p>campus interaction mobile app</p></div></div></a>
+      <a href = "./work/uwbhs.html"><div class="box" id = "projfp3"><div class="overlay"><p class = "boxtitle">UWB Hackathon Series</p><p>marketing and branding materials</p></div></div></a>
+      <a href = "./work/dfl.html"><div class="box" id = "projfp6"><div class="overlay"><p class = "boxtitle">Digital Future Lab</p><p>game level designs</p></div></div></a>
+      <a href = "./work/the-chosen-one.html"><div class="box" id = "projfp4"><div class="overlay"><p class = "boxtitle">The Chosen One</p><p>2d platformer game</p></div></div></a>
+      <a href = "./work/clouds.html"><div class="box" id = "projfp1"><div class="overlay"><p class = "boxtitle">Clouds</p><p>weather mobile app interface design</p></div></div></a>
+      <a href = "./work/jovian-planets.html"><div class="box" id = "projfp2"><div class="overlay"><p class = "boxtitle">Jovian Planets</p><p>astronomy infographic</p></div></div></a>
+    </div>
+  </div>
+  <div id = "about">
+    <div id = "aboutcontent">
+        <img src = "me.png" style = 'max-width:100%;'/><br>
+          <b id = "aboutheader">Hi there! My name is Su</b><br>
+          <h1>What I do</h1>
+          <p> I work in the interaction design field with specializations in <b>UI/UX design</b>, <b>visual design</b>, <b>web design/development</b>.</p>
+          <p> I am currently a <b>Game Designer</b> for <b>Digital Future Lab</b> and <b>Digital Media Designer</b> for <b>UWB Hackathon Series</b> at University of Washington, Bothell.</p>
+          <p class = "linkbutton"><a href = "suli_resume.pdf" target = "blank">see my resume</a></p>
+          <br>
+          <h1>A little more about me...</h1>
+          <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>  Currently an undergraduate student at University of Washington, Bothell.</p>
+          <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>  Born in Guangdong, China; live in Renton, WA(Greater Seattle Area).</p>
+          <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>  Story of my passion in digital design began with my parents <s>got me addicted to games</s> taught me how to play games in first grade.</p>
+          <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>  The pronunciation of "crispy pear" in Mandarin Chinese is also  <q>Su Li</q>. I like sticky rice cakes and pears.</p>
+          <p><i class="fa fa-angle-double-right" aria-hidden="true"></i>  I spend my free time on playing games, practicing piano and painting, but mostly games.</p>
+        </div>
+  </div>
+  <div id = "contact">
+    <div id = "contactcontent">
+      <b id = "contactheader">Thank you for your time</b>
+      <p>Got more questions? Let me know what I can help you with!</p>
+      <form action="form-to-email.php" method="POST" name="contactform">
+        <input name="name" type="text" class="feedback" placeholder="Name" />
+        <input name="email" type="text" class="feedback" placeholder="Email" />
+        <input name="subject" type="text" class="feedback" placeholder="Subject" />
+        <textarea name="message" class="feedback" placeholder="Message(English/Chinese)"></textarea>
+        <input name = 'submit' id = "submit" type="submit" value="SUBMIT"/>
+    </form>
+    <p><i class="fa fa-envelope" aria-hidden="true"></i> rice74@uw.edu  |  <i class="fa fa-phone" aria-hidden="true"></i> 206-631-9402</p>
+    </div>
+  </div>
+  <div class = "footer">
+    <div class = "footercontent">
+      <p><i class="fa fa-copyright" aria-hidden="true"></i> Design and Development by Su Li 2017 |
+        <a href="mailto:rice74@uw.edu"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+        <a href = "https://www.instagram.com/crispipear/" target="_blank"><i class="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
+        <a href = "https://www.linkedin.com/in/su-li-4b3403130" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+      </p>
+    </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="zenscroll-min.js"></script>
+<script src="loader.js"></script>
+</html>
