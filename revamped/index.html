@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Su Li : Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href = "style.css" type = "text/css" rel = "stylesheet">
+  <link rel = "icon" href = "logo.png">
+  <style>
+  ::-webkit-scrollbar {
+      display: none;
+  }
+  </style>
+</head>
+<body>
+
+<div id = "navbar">
+  <a href = "#landpg"><div class = "navitem"><span>home</span></div></a>
+  <a href = "#projs"><div class = "navitem"><span>work</span></div></a>
+  <a href = "#contact"><div class = "navitem"><span>contact</span></div></a>
+</div>
+<div id = "landpg">
+  <div id = "lpcontent">
+  <h1 id = "btop">Hi it's Su Li</h1>
+  <p>Interaction designer based in Seattle/Renton, Washington.</p>
+  <p>My work involves with UI/UX design, visual design, web design/development.</p>
+  <a href = "suli_resume.pdf" target="_blank">see my resume</a>
+  <p>Currently working as UI/UX Designer for Digital Future Lab and Digital Media Designer for UWB Hackathon Series.</p>
+</div>
+</div>
+<div id = "projs">
+  <div class = "content">
+  <h1>Work</h1>
+  <a href = "pages/pocket-husky.html"><div class="box" id = "projfp5"><div class="overlay"><p class = "boxtitle">Pocket Husky</p><p>campus interaction mobile app</p></div></div></a>
+  <a href = "pages/uwbhs.html"><div class="box" id = "projfp3"><div class="overlay"><p class = "boxtitle">UWB Hackathon Series</p><p>marketing and branding materials</p></div></div></a>
+  <a href = "#projs"><div class="box" id = "projfp6"><div class="overlay"><p class = "boxtitle">Digital Future Lab</p><p>Coming Soon</p></div></div></a>
+  <a href = "pages/the-chosen-one.html"><div class="box" id = "projfp4"><div class="overlay"><p class = "boxtitle">The Chosen One</p><p>2d platformer game</p></div></div></a>
+  <a href = "pages/clouds.html"><div class="box" id = "projfp1"><div class="overlay"><p class = "boxtitle">Clouds</p><p>weather mobile app interface design</p></div></div></a>
+  <a href = "pages/jovian-planets.html"><div class="box" id = "projfp2"><div class="overlay"><p class = "boxtitle">Jovian Planets</p><p>astronomy infographic</p></div></div></a>
+</div>
+</div>
+<div id = "contact">
+  <div class = "content">
+      <h1>Talk to Me</h1>
+  <div class = "left">
+  <p>Got more questions? Let me know!</p>
+  <form action="form-to-email.php" method="POST" name="contactform">
+    <input name="name" type="text" class="feedback" placeholder="Name" />
+    <input name="email" type="text" class="feedback" placeholder="Email" />
+    <input name="subject" type="text" class="feedback" placeholder="Subject" />
+    <textarea name="message" class="feedback" placeholder="Message(English/Chinese)"></textarea>
+    <input name = 'submit' id = "submit" type="submit" value="SEND"/>
+  </form>
+</div>
+<div class = "right">
+  <p>My Socials: </p>
+  <p><i class="fa fa-envelope-square" aria-hidden="true"></i> <a href="mailto:rice74@uw.edu">rice74@uw.edu</a></p>
+  <p><i class="fa fa-linkedin-square" aria-hidden="true"></i> <a href = "https://www.linkedin.com/in/su-li-4b3403130" target="_blank">LinkedIn</a></p>
+  <p><i class="fa fa-instagram" aria-hidden="true"></i> <a href = "https://www.instagram.com/crispipear/" target="_blank">Instagram</a></p>
+  <p><i class="fa fa-tumblr-square" aria-hidden="true"></i> <a href = "https://crispipear.tumblr.com/" target="_blank">Tumblr</a></p>
+</div>
+</div>
+</div>
+<div class = "footer">
+  <div class = "footercontent">
+    <p>2017 <i class="fa fa-copyright" aria-hidden="true"></i> Design and Development by Su Li
+    </p>
+  </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="zenscroll-min.js"></script>
+<script src="loader.js"></script>
+</html>

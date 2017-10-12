@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+*{
+  font-family: 'Roboto',Arial,Microsoft YaHei;
+  transition-duration: 0.25s;
+}
+p{
+  color: rgb(80, 80, 80);
+  text-align: left;
+}
+body{
+  background-color: rgb(245, 245, 245);
+  cursor: default;
+  letter-spacing: 0.05em;
+  margin: 0;
+  overflow:auto;
+}
+a{
+  font-family: 'Roboto Slab';
+  text-decoration: none;
+}
+a:visited{
+  color: inherit;
+}
+.content{
+  margin-left: 12.25%;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 80%;
+}
+#landpg{
+  height: 100vh;
+  background-color: rgb(245, 245, 245);
+}
+
+#projs,#contact{
+  width: 92.5%;
+  margin-top: 2.5%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(245, 245, 245);
+}
+#lpcontent h1{
+  font-family: 'Roboto Slab';
+  margin-bottom: 2.5%;
+  color: rgb(30, 30, 30);
+}
+#lpcontent{
+  position: absolute;
+  top: 20%;
+  left: 12.25%;
+}
+#projs h1, #contact h1{
+  font-family: 'Roboto Slab';
+  margin-bottom: 2.5%;
+  color: rgb(30, 30, 30);
+}
+#lpcontent p, #contact p{
+  width: 75%;
+}
+#lpcontent a, #contact a{
+  display: inline-block;
+  font-weight: bold;
+  color: inherit;
+}
+#contact a{
+  margin-left: 5%;
+}
+#navbar{
+  z-index:5;
+  width: 150px;
+  position: fixed;
+  right: 1%;
+  top: 7.5%;
+}
+.navitem{
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  padding-bottom: 35px;
+  color: white;
+  margin-top: 45px;
+  margin-left: 155px;
+  background-color: rgb(30, 30, 30);
+}
+.navitem span{
+  font-family: 'Roboto Slab';
+  position: absolute;
+  right:25px;
+  color: #868686;
+}
+.navitem:hover span{
+  color: white;
+}
+.navitem:hover{
+  margin-left: 0%;
+  background-color: #43C6AC;
+}
+#projs, #contact,#lpcontent,.header{
+  opacity: 0;
+  margin-bottom: 2.5%;
+}
+.box{
+  float: left;
+  margin:1% 1% 1% 1%!important;
+  width: 30%;
+  height: 45vh;
+  background-size:cover;
+  background-position: center;
+  overflow:hidden;
+  -webkit-filter: grayscale(100%) contrast(75%) brightness(105%);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.15);
+}
+.overlay{
+  text-align:left;
+  padding:45px 0 66px 0;
+  opacity:0;
+  height: 100%;
+}
+.box:hover{
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.35);
+  -webkit-filter: none;
+}
+.box:hover .overlay {
+    opacity:1;
+    background-color:rgba(59, 71, 128, 0.5);
+}
+.box:hover .overlay p, .box:hover .overlay b{
+    animation: overlaytext 0.25s ease-in-out;
+}
+.overlay p{
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+.overlay p{
+  margin-top: 1.5%;
+  font-weight:400;
+  color:rgba(255,255,255,0.75);
+  font-size:1em;
+}
+.boxtitle{
+  color:rgb(255,255,255)!important;
+  font-size:1.5em!important;
+  font-weight:600!important;
+}
+.contentfadein{
+  animation: contentfadein 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes contentfadein{
+  0%{
+    opacity: 0;
+    margin-top: 10%;
+  }
+  100%{
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
+@-webkit-keyframes overlaytext{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+form{
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  width: 100%;
+}
+.left,.right{
+  display: inline-block;
+  vertical-align: top;
+}
+.left{
+  width: 50%;
+  margin-right: 7.5%;
+}
+.right{
+  width: 30%;
+}
+.feedback{
+  font-size: 1em;
+  color:rgb(90,90,90);
+  border-radius: 10px;
+  background-color: transparent;
+  border:2px solid #9f9f9f;
+  padding: 10px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+.feedback:focus, .feedback:hover{
+  border-color: #43C6AC; }
+
+textarea {
+  height: 125px;
+  line-height: 150%;
+  resize:vertical;
+}
+#submit{
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(0,0,0,0.15);
+  margin-top: 2.5%;
+  cursor:pointer;
+  letter-spacing: 0.25em;
+  width: 100%;
+  background:rgb(30,30,30);
+  border-radius:10px;
+  border:0;
+  color:white;
+  font-size:150%;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-weight:700;
+}
+#submit:hover{
+  background-color:  #43C6AC;
+}
+div.description{
+ text-align: center;
+  float: left;
+  margin-bottom: 2.5%;
+  display: block;
+  opacity: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+div.description p{
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+div.description h1{
+  margin-top: 5%;
+  margin-bottom: 2.5%;
+  font-family: 'Roboto Slab';
+}
+div.description h3{
+  color:rgb(100, 100, 100);
+}
+div.description p,div.description h1, div.description h3,div.description h2 ,div.description img,div.header{
+  margin-left: 12.25%;
+  margin-right: auto;
+  max-width: 60%;
+}
+div.description img{
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  display: block;
+}
+div.header{
+  opacity: 1;
+  height: auto;
+  margin-bottom: 2.5%;
+}
+div.title h1{
+  padding: 0!important;
+  font-family: 'Roboto Slab';
+  font-weight: bold!important;
+  letter-spacing: 0.1em;
+  margin-top: 5%;
+  margin-bottom: 2.5%;
+  padding: 20px;
+  color: rgb(30,30,30);
+}
+.title h1:after, .header:after{
+  display:block;
+  content: '';
+  margin-top: 2.5%;
+  border-bottom: solid 3px #43C6AC;
+}
+.header b{
+ color:rgb(30,30,30);
+}
+.header p{
+  margin-top: 2.5%;
+  letter-spacing: 0.09em;
+}
+.description a, .header a{
+  cursor: pointer;
+  display: inline-block;
+  color: #43C6AC;
+  font-weight: bold;
+}
+p.quotes{
+  width: 45%!important;
+  margin-top: 2.5%;
+  font-weight: 600;
+  color: rgb(70, 70, 70);
+  -webkit-box-shadow: 0px 7px 5px -3px rgba(0,0,0,0.1);
+  padding: 1%;
+  border-left: 10px solid #43C6AC;
+}
+.quotes b{
+  color: rgb(150, 150, 150);
+  margin-bottom: 2.5%;
+}
+.description a:after, .header a:after, #contact a:after, #lpcontent a:after{
+  display: block;
+  content: '';
+  border-bottom: solid 3px #43C6AC;
+  transform: scaleX(0);
+  transition: transform 0.275s ease-in-out;
+}
+.description a:hover:after, .header a:hover:after,  #contact a:hover:after, #lpcontent a:hover:after{
+  transform: scaleX(1);
+}
+iframe{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*footer*/
+.footer{
+  margin-bottom: 2.5%;
+  height: 60px;
+  width:87.75%;
+}
+.footercontent{
+  padding-top: 5px;
+  margin-left: 12.25%;
+  margin-bottom: 2.5%;
+}
+.footer p{
+  color:rgb(120,120,120);
+}
+.footer i{
+  padding-left: 1.5px;
+  padding-right: 1.5px;
+  color:rgb(120,120,120);
+}
+.footer i:hover{
+  color: #43C6AC;
+}
+/*responsive controls*/
+@media screen and (min-width: 581px) and (max-width: 1760px){
+    #lpcontent h1{
+        font-size: 6em;
+    }
+     #contact h1, #projs h1{
+       font-size: 5em;
+     }
+    .description h1{
+        font-size: 2.5em;
+    }
+    p, a{
+      line-height: 1.75em;
+      font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1761px){
+    #lpcontent h1, #contact h1, #projs h1{
+        font-size: 7.5em;
+
+    }
+    .description h1{
+        font-size: 5.5em;
+    }
+    p, a, b{
+        line-height: 2em;
+        font-size: 1.05em;
+    }
+}
+
+@media screen and (max-width: 580px){
+    #lpcontent h1{
+        font-size: 2em;
+    }
+    p, a, b{
+        line-height: 20px;
+        font-size: 12.5px;
+    }
+    .description h1, .title h1{
+        font-size: 1.5em;
+    }
+    .header{
+      margin-top: 50px;
+    }
+    div.description p,div.description h1, div.description h3,div.description h2 ,div.description img,div.header{
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90%;
+    }
+    .footer p{
+      font-size: 10px;
+    }
+    .left,.right{
+      width:100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .feedback{
+      padding:7.5px;
+      font-size: 12.5px;
+    }
+    textarea{
+      height:75px;
+    }
+    #submit{
+      font-size: 18px;
+      padding: 10px;
+    }
+    .navitems{
+      cursor: pointer;
+      color: white;
+      display: none;
+      margin:0;
+      text-align: center;
+      padding-bottom: 10px;
+      padding-top: 5px;
+      background-color: rgb(30,30,30);
+      margin-bottom: 0.5%;
+    }
+    .navitems:hover{
+      background-color: #43C6AC;
+    }
+    #menubutton{
+      display: block;
+    }
+    #navbar{
+      position: fixed;
+      text-align: center;
+      top:0%;
+      width: 100%;
+    }
+    .box{
+      width: 100%;
+      height: 50vh;
+      -webkit-box-shadow: none;
+    }
+}
