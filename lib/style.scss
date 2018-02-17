@@ -10,16 +10,6 @@ $baseSize: 1em;
 $headerSize: 2em;
 $letterSpacing: 0.075em;
 
-
-#load{
-  position: absolute;
-  z-index: 125;
-  @include transition(all 1.5s);
-  height: 100vh;
-  width: 100%;
-  @include bgGrad(#8ea7d7, #a3d7d9);
-}
-
 body::-webkit-scrollbar {
   width: 0.65em;
 }
@@ -42,7 +32,6 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: white;
   margin: 0;
-  overflow: hidden;
 }
 
 p,
@@ -57,7 +46,7 @@ a {
   @include links;
 
   &:visited {
-    color: $light;
+    color: $dark;
   }
 }
 
@@ -102,7 +91,9 @@ p {
   line-height: 2em;
   margin-top: 0;
 }
+
 .nav {
+  color: $dark;
   @include transition(all, 0.15s);
   width: auto;
   position: fixed;
@@ -112,7 +103,12 @@ p {
   margin: 2.5% 2.5% 2.5% 0;
 
   &:after {
-    margin-top: 7.5%;
+    margin-top: -15% !important;
+    height: 12.5px!important;
+  }
+
+  &:hover::after {
+    opacity: 1!important;
   }
   @include laptop {
     font-size: $baseSize;
@@ -127,7 +123,8 @@ p {
   left: 2.5%;
 }
 
-#nav-home,#nav-top {
+#nav-home,
+#nav-top {
   bottom: 0;
   right: 0;
 }
@@ -170,9 +167,11 @@ p {
 
 .proj-item {
   @include transition(all 0.25s);
-  @include boxshadow(0 0 25px 0 rgba(16, 29, 54, 0.45));
+  @include boxshadow(0 0 25px 0 rgba(16, 29, 54, 0.15));
   border-radius: 0;
-
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   &:hover {
     border-radius: 30px;
   }
@@ -183,16 +182,22 @@ p {
   padding-left: 2.5%;
 
   h2 {
+    margin-bottom: 2.5%;
+    font-weight: 400;
     display: inline-block;
     position: relative;
     margin-top: 0;
-    font-size: $headerSize*1.25;
+    font-size: $headerSize*1.5;
     letter-spacing: 0.25rem;
-    color: $light;
+    color: $dark;
     @include laptop {
       font-size: $headerSize;
     }
+    &:after {
+      margin: -1.35rem 0% 0% 0.25rem;
+    }
   }
+
   a {
     @include transition(all 0.45s);
     display: flex;
@@ -206,12 +211,15 @@ p {
     border: 2px $light solid;
     font-weight: 700;
     font-size: $baseSize*0.9;
-    margin-top: 12.25%;
+    margin-top: 10%;
     overflow: hidden;
+    color: $light;
+    letter-spacing: 0.15rem;
     @include laptop {
       font-size: $baseSize*0.8;
       max-width: 125px;
     }
+
     &:after {
       @include transition(all 0.45s);
       content: '';
@@ -225,9 +233,11 @@ p {
       border-bottom: 75px solid $light;
       @include transform(translateX(-100%));
     }
-    &:hover{
+
+    &:hover {
       color: white;
     }
+
     &:hover:after {
       @include transform(translateX(0));
     }
@@ -240,8 +250,9 @@ p {
       font-size: $baseSize;
     }
   }
+
   &:hover h2:after {
-    width: 100%;
+    opacity: 1;
   }
 }
 
@@ -255,62 +266,78 @@ p {
     }
   }
 }
-.container{
+
+.container {
   opacity: 0;
 }
 
-.proj-sec{
-  .row{
-    &:hover h2:after{
-      width: 20%;
+.proj-sec {
+  .row {
+    &:hover h2:after {
+      opacity: 1;
     }
     margin-bottom: 5%;
   }
   display: flex;
   flex-flow: column;
   overflow: visible;
-  .title{
+
+  .title {
     width: 75%;
     margin: auto;
-  }
-  .container{
-    &:hover .bg{
-      opacity: 0.9
-    }
-    &:hover h1{
-      color: $dark;
+    a{
+      color: $light;
     }
   }
-  a{
+
+  .container {
+    h1 {
+      background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  a {
     font-weight: 400;
   }
-  h1{
+
+  h1 {
     font-size: $headerSize*3.5;
     color: $light;
     margin-top: -5%;
-    margin-bottom: 0%;
+    margin-bottom: 0;
     @include laptop {
       font-size: $headerSize*2.5;
     }
   }
-  h2{
+
+  h2 {
+    display: inline-block;
     font-weight: 400;
-    font-size: $headerSize*1.75;
+    font-size: $headerSize*1.5;
     color: $dark;
     margin-top: 0.5%;
     margin-bottom: 3.5%;
-    &:after{
-      width: 7.5%;
-      margin-top: 1.25%;
-    }
     @include laptop {
       font-size: $headerSize*1.25;
     }
   }
-
-  p{
+  h3 {
+    display: inline-block;
+    font-weight: 400;
+    font-size: $headerSize*0.85;
+    color: $dark;
+    margin: 0%;
+    @include laptop {
+      font-size: $headerSize*0.7;
+    }
+  }
+  p {
     font-size: $baseSize*1.25;
-    b,q{
+
+    b,
+    q {
       color: $light;
       font-weight: 600;
     }
@@ -318,29 +345,24 @@ p {
       font-size: $baseSize*1.05;
     }
   }
-  .bg{
-    @include transition(opacity 0.15s);
-    opacity: 0;
-    height: 40vh;
-    width: 40vw;
-    background-color: $light;
-    position: absolute;
-    z-index: -1;
-    right: 0%;
-    top: 20%;
-  }
-  img{
+
+  img {
+    transition: all 0.25s;
+    &:hover {
+      border-radius: 30px;
+    }
     width: 100%;
-    height: 100%;
-    @include boxshadow(0 0 45px 0 rgba(16, 29, 54, 0.25));
+    @include boxshadow(0 0 45px 0 rgba(16, 29, 54, 0.15));
   }
 }
+
 #footer {
   position: relative;
   padding-top: 5%;
   padding-left: 2.5%;
   padding-bottom: 2.5%;
-  span{
+
+  span {
     color: $dark;
     font-size: $baseSize*1.15;
     font-weight: 400;
@@ -353,6 +375,31 @@ p {
   }
 }
 
+ul {
+  list-style: none;
+  margin: 5% 0% 5% 0%;
+  padding: 0;
+  font-size: $baseSize*1.075;
+  font-weight: 300;
+  li {
+    line-height: 1.35rem;
+    margin: 0 0 1em;
+    padding-left: 1.5em;
+    position: relative;
+    &:after {
+      content: '';
+      height: 0.45em;
+      width: 0.45em;
+      background: $light;
+      display: block;
+      position: absolute;
+      transform: rotate(45deg);
+      top: 0.35em;
+      left: 0;
+    }
+  }
+}
+
 .left,
 .right {
   width: 100%;
@@ -361,9 +408,10 @@ p {
   a {
     transition: color 0.25s;
     color: $light;
-    index:10;
-    padding:0.5%;
-    i{
+    index: 10;
+    padding: 0.5%;
+
+    i {
       cursor: pointer;
     }
   }
@@ -388,6 +436,7 @@ p {
     @include laptop {
       font-size: $headerSize*1;
     }
+
     &:hover {
       color: lighten($light, 15%);
     }
@@ -412,19 +461,22 @@ p {
     left: 0;
   }
 }
-.underline2{
+
+.underline2 {
   &:after {
     @include transition(all 0.25s);
     content: '';
+    z-index: -1;
     position: absolute;
-    width: 40%;
-    height: 5px;
+    width: 100%;
+    height: 20px;
     display: block;
-    margin-top: 7.5%;
+    opacity: 0;
     left: 0;
     background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
   }
 }
+
 .slideUp {
   @include animation(1s slideUp ease-in-out forwards);
 }
