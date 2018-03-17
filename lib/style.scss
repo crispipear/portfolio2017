@@ -161,8 +161,11 @@ p {
 
 .proj-des,
 .proj-item {
-  width: 100%;
+  max-width: 100%;
   height: 50vh;
+  @include laptop{
+    height: 40vh;
+  }
 }
 
 .proj-item {
@@ -217,7 +220,8 @@ p {
     letter-spacing: 0.15rem;
     @include laptop {
       font-size: $baseSize*0.8;
-      max-width: 125px;
+      padding: 3%;
+      max-width: 135px;
     }
 
     &:after {
@@ -300,6 +304,15 @@ p {
 
   a {
     font-weight: 400;
+    color: $light;
+  }
+  a img{
+    cursor: pointer;
+    filter: grayscale(100%);
+    &:hover{
+      filter: none;
+      border-radius: 25px;
+    }
   }
 
   h1 {
@@ -318,7 +331,7 @@ p {
     font-size: $headerSize*1.5;
     color: $dark;
     margin-top: 0.5%;
-    margin-bottom: 3.5%;
+    margin-bottom: 2.75%;
     @include laptop {
       font-size: $headerSize*1.25;
     }
@@ -347,10 +360,9 @@ p {
   }
 
   img {
+    width: 100%;
+    height: 100%;
     transition: all 0.25s;
-    &:hover {
-      border-radius: 30px;
-    }
     width: 100%;
     @include boxshadow(0 0 45px 0 rgba(16, 29, 54, 0.15));
   }
@@ -397,6 +409,9 @@ ul {
       top: 0.35em;
       left: 0;
     }
+  }
+  @include laptop{
+    font-size: $baseSize*0.95;
   }
 }
 
