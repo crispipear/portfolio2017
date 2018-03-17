@@ -21,7 +21,6 @@
   <title>Su Li Portfolio - UX Designer &amp; Front End Developer</title>
   <link href="lib/style.css" type="text/css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="files/favicon.ico">
 </head>
 
@@ -31,46 +30,45 @@
   <a id="nav-about" class="underline2 nav">about</a>
   <div id="particle"></div>
   <section id="landpg">
-    <h1>SU LI</h1>
+    <h1 id="fullPgTitle">SU LI</h1>
     <p>UX Designer &amp; Front End Developer</p>
     <span id="scroll"></span>
   </section>
   <section id="projs" class="projs">
     <div class="container">
-      <div class="row">
+      <div class="proj-des row">
         <div id="w_tn" class="proj-item col-7"></div>
-        <div class="proj-des col-5">
-          <h2 class="underline2">Waves</h2>
+        <div class="col-5">
+          <h2 class="underline2">WAVES</h2>
           <p>//video prototype, mobile app prototype</p>
-          <p>Video prototype of mobile app and public art installation that brings public awareness to stress.</p>
+          <p>Public installation concept integrated with mobile app that brings public awareness to stress.</p>
           <a href="pages/waves.html">SEE PROJECT &#x27F6;</a>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="projs">
-    <div class="container">
-      <div class="row">
+      <div class="proj-des row">
         <div id="e_tn" class="proj-item col-7"></div>
-        <div class="proj-des col-5">
-          <h2 class="underline2">Eatlixir</h2>
+        <div class="col-5">
+          <h2 class="underline2">EATLIXIR</h2>
           <p>//web design & development</p>
           <p>Web platform concept that provides meidicinal diet information inspired by Chinese herbology.</p>
           <a href="pages/eatlixir.html">SEE PROJECT &#x27F6;</a>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="projs">
-    <div class="container">
-      <div class="row">
+      <div class="proj-des row">
         <div id="ph_tn" class="proj-item col-7"></div>
-        <div class="proj-des col-5">
-          <h2 class="underline2">Pocket Husky</h2>
+        <div class="col-5">
+          <h2 class="underline2">POCKET HUSKY</h2>
           <p>//mobile app prototype</p>
           <p>Mobile app concept that engages student interaction and exploration on the UW Bothell campus.</p>
           <a href="pages/pockethusky.html">SEE PROJECT &#x27F6;</a>
         </div>
+      </div>
+      <div class="counter">
+        <h1 id="projNum">01</h1>
+        <span>&#9644;</span>
+        <span>&#9644;</span>
+        <span>&#9644;</span>
+        <i class="fas fa-hand-point-left"></i>
       </div>
     </div>
   </section>
@@ -88,11 +86,12 @@
         </div>
         <div class="right col-4">
           <p>Learn more about me: </p>
-          <a href="https://www.behance.net/suli7497807f" target="_blank"><i class="fa fa-behance" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-          <a href="https://codepen.io/crispipear/" target="_blank"><i class="fa fa-codepen" aria-hidden="true"></i></a>
-          <a href="https://github.com/crispipear" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a href="mailto:suli7497@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://www.behance.net/suli7497807f" target="_blank"><i class="fab fa-behance"></i></a>
+          <a href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://codepen.io/crispipear/" target="_blank"><i class="fab fa-codepen"></i></a>
+          <a href="https://github.com/crispipear" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:suli7497@gmail.com"><i class="far fa-envelope"></i></a>
+          <a href="https://www.instagram.com/crispipear/"><i class="fab fa-instagram"></i></a>
           <p>Some stuff that I know: </p>
           <i class="devicon-html5-plain-wordmark"></i>
           <i class="devicon-css3-plain-wordmark"></i>
@@ -116,9 +115,10 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 <script src="lib/behavior.js"></script>
 <script>
-  !function(){var e=!1;$(document).on("mousewheel DOMMouseScroll",function(t){if(t.preventDefault(),!e){e=!0,setTimeout(function(){e=!1},250);var n=t.originalEvent.wheelDelta||-t.originalEvent.detail,o=document.getElementsByTagName("section");if(n<0)for(l=0;l<o.length&&!((i=o[l].getClientRects()[0].top)>=40);l++);else for(var l=o.length-1;l>=0;l--){var i=o[l].getClientRects()[0].top;if(i<-20)break}l>=0&&l<o.length&&$("html,body").animate({scrollTop:o[l].offsetTop},750)}})}();
+  !function(){var e=!1;$(document).on("mousewheel DOMMouseScroll",function(t){if(t.preventDefault(),!e){e=!0,setTimeout(function(){e=!1},250);var n=t.originalEvent.wheelDelta||-t.originalEvent.detail,o=document.getElementsByTagName("section");if(n<0)for(l=0;l<o.length&&!((i=o[l].getClientRects()[0].top)>=40);l++);else for(var l=o.length-1;l>=0;l--){var i=o[l].getClientRects()[0].top;if(i<-20)break}l>=0&&l<o.length&&$("html,body").animate({scrollTop:o[l].offsetTop},500)}})}();
 </script>
 
 </html>

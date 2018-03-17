@@ -129,22 +129,22 @@ p {
   right: 0;
 }
 
-#landpg {
-  h1 {
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    font-size: $headerSize*17;
-    font-weight: 200;
-    margin: 0;
-    background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    @include laptop {
-      font-size: $headerSize*11.25;
-    }
+#fullPgTitle {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  font-size: $headerSize*17;
+  font-weight: 200;
+  margin: 0;
+  background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include laptop {
+    font-size: $headerSize*11.25;
   }
+}
 
+#landpg {
   p {
     font-size: $headerSize*1.75;
     text-align: center;
@@ -158,7 +158,6 @@ p {
     }
   }
 }
-
 .proj-des,
 .proj-item {
   max-width: 100%;
@@ -167,7 +166,28 @@ p {
     height: 40vh;
   }
 }
-
+.counter{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 2.5%;
+  span{
+    transition: all 0.2s;
+    margin: 0% 0.25% 0% 0.25%;
+    cursor: pointer;
+    font-size: 25px;
+    color: #dddddd;
+    &:hover{
+      color: #7592cb!important;
+    }
+  }
+  svg{
+    color: #bbbbbb;
+    font-size: $headerSize*0.75;
+    margin: 0.25% 0% 0% 0.25%;
+  }
+}
 .proj-item {
   @include transition(all 0.25s);
   @include boxshadow(0 0 25px 0 rgba(16, 29, 54, 0.15));
@@ -214,13 +234,13 @@ p {
     border: 2px $light solid;
     font-weight: 700;
     font-size: $baseSize*0.9;
-    margin-top: 10%;
+    margin-top: 7.5%;
     overflow: hidden;
     color: $light;
     letter-spacing: 0.15rem;
     @include laptop {
-      font-size: $baseSize*0.8;
-      padding: 3%;
+      font-size: $baseSize*0.75;
+      padding: 2.5%;
       max-width: 135px;
     }
 
@@ -248,7 +268,7 @@ p {
   }
 
   p {
-    margin-top: 7.5%;
+    margin-top: 5%;
     font-size: $baseSize*1.25;
     @include laptop {
       font-size: $baseSize;
@@ -274,7 +294,10 @@ p {
 .container {
   opacity: 0;
 }
-
+#projNum{
+  display: inline-block;
+  margin: 0% 0.5% 0% 0%;
+}
 .proj-sec {
   .row {
     &:hover h2:after {
@@ -292,9 +315,21 @@ p {
     a{
       color: $light;
     }
+    b{
+      color: $dark;
+      transition: 0.25s color;
+    }
+    &:hover{
+      b{
+        color: $light;
+      }
+    }
   }
-
-  .container {
+  #fullPgTitle{
+    line-height: 20rem;
+    opacity: 0.25;
+  }
+.container {
     h1 {
       background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
       -webkit-background-clip: text;
@@ -426,7 +461,7 @@ ul {
     index: 10;
     padding: 0.5%;
 
-    i {
+    svg, svg path{
       cursor: pointer;
     }
   }
@@ -442,7 +477,7 @@ ul {
     }
   }
 
-  i {
+  i,svg {
     color: $light;
     transition: all 0.25s;
     font-size: $headerSize*1.5;
@@ -496,7 +531,7 @@ ul {
   @include animation(1s slideUp ease-in-out forwards);
 }
 
-.slideIn {
-  z-index: 5;
-  @include animation(1s slideIn ease-in-out forwards);
+.fadeIn {
+  @include animation(0.5s fadeIn ease-in-out forwards);
+
 }
