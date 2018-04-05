@@ -11,6 +11,10 @@ $baseSize: 1em;
 $headerSize: 2em;
 $letterSpacing: 0.075em;
 
+@font-face {
+    font-family: playlist;
+    src: url(playlist.otf);
+}
 body::-webkit-scrollbar {
   width: 0.65em;
 }
@@ -135,18 +139,21 @@ p {
   }
 }
 
-#fullPgTitle {
+.fullPgTitle {
+  font-family: playlist;
   text-align: center;
+  text-transform: capitalize;
   width: 100%;
   position: absolute;
-  font-size: $headerSize*17;
+  font-size: $headerSize*20;
   font-weight: 200;
   margin: 0;
   background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: 0.025em;
   @include laptop {
-    font-size: $headerSize*11.25;
+    font-size: $headerSize*15;
   }
 }
 
@@ -361,12 +368,21 @@ p {
       }
     }
   }
-  #fullPgTitle{
-    line-height: 20rem;
+  .fullPgTitle{
     opacity: 0.25;
-    font-size: $headerSize*10.5;
+    font-size: $headerSize*15;
     @include laptop{
-      font-size: $headerSize*7.5;
+      font-size: $headerSize*11;
+    }
+  }
+  #phTitle{
+    height: 100vh;
+    padding-top: 22.5rem;
+    line-height: 22.5rem;
+    font-size: 25rem;
+    @include laptop{
+      line-height: 15rem;
+      font-size: 17.5rem;
     }
   }
 .container {

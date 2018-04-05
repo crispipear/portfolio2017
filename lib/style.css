@@ -88,6 +88,10 @@
   100% {
     opacity: 1; } }
 
+@font-face {
+  font-family: playlist;
+  src: url(playlist.otf); }
+
 body::-webkit-scrollbar {
   width: 0.65em; }
 
@@ -202,19 +206,22 @@ p {
 #nav-top:after {
   margin-top: -20.25% !important; }
 
-#fullPgTitle {
+.fullPgTitle {
+  font-family: playlist;
   text-align: center;
+  text-transform: capitalize;
   width: 100%;
   position: absolute;
-  font-size: 34em;
+  font-size: 40em;
   font-weight: 200;
   margin: 0;
   background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.025em; }
   @media (min-width: 1024px) and (max-width: 1550px) {
-    #fullPgTitle {
-      font-size: 22.5em; } }
+    .fullPgTitle {
+      font-size: 30em; } }
 
 #landpg p {
   font-size: 3.5em;
@@ -406,13 +413,21 @@ p {
       transition: 0.25s color; }
     .proj-sec .title:hover b {
       color: #7592cb; }
-  .proj-sec #fullPgTitle {
-    line-height: 20rem;
+  .proj-sec .fullPgTitle {
     opacity: 0.25;
-    font-size: 21em; }
+    font-size: 30em; }
     @media (min-width: 1024px) and (max-width: 1550px) {
-      .proj-sec #fullPgTitle {
-        font-size: 15em; } }
+      .proj-sec .fullPgTitle {
+        font-size: 22em; } }
+  .proj-sec #phTitle {
+    height: 100vh;
+    padding-top: 22.5rem;
+    line-height: 22.5rem;
+    font-size: 25rem; }
+    @media (min-width: 1024px) and (max-width: 1550px) {
+      .proj-sec #phTitle {
+        line-height: 15rem;
+        font-size: 17.5rem; } }
   .proj-sec .container h1 {
     background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
     -webkit-background-clip: text;
