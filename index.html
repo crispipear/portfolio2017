@@ -36,6 +36,8 @@
   </section>
   <section id="projs" class="projs">
     <div class="container">
+      <span class="arrows" id="a-left"></span>
+      <span class="arrows" id="a-right"></span>
       <div class="proj-des row">
         <div id="w_tn" class="proj-item col-7"></div>
         <div class="col-5">
@@ -68,7 +70,6 @@
         <span>&#9644;</span>
         <span>&#9644;</span>
         <span>&#9644;</span>
-        <i class="fas fa-hand-point-left"></i>
       </div>
     </div>
   </section>
@@ -117,8 +118,5 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 <script src="lib/behavior.js"></script>
-<script>
-  !function(){var e=!1;$(document).on("mousewheel DOMMouseScroll",function(t){if(t.preventDefault(),!e){e=!0,setTimeout(function(){e=!1},250);var n=t.originalEvent.wheelDelta||-t.originalEvent.detail,o=document.getElementsByTagName("section");if(n<0)for(l=0;l<o.length&&!((i=o[l].getClientRects()[0].top)>=40);l++);else for(var l=o.length-1;l>=0;l--){var i=o[l].getClientRects()[0].top;if(i<-20)break}l>=0&&l<o.length&&$("html,body").animate({scrollTop:o[l].offsetTop},500)}})}();
-</script>
-
+<script src="../lib/scroll.js"></script>
 </html>
