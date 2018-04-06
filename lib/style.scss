@@ -6,7 +6,6 @@
 $dark: #1f1f1f;
 $light: #7592cb;
 $light2: #a3d7d9;
-$baseText: 'Roboto';
 $baseSize: 1em;
 $headerSize: 2em;
 $letterSpacing: 0.075em;
@@ -28,7 +27,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 * {
-  font-family: $baseText;
+  font-family: 'Roboto', '微软雅黑';
   font-size: $baseSize;
   cursor: default;
   letter-spacing: $letterSpacing;
@@ -83,7 +82,9 @@ a {
     border-color: $dark;
   }
 }
+#scroll2{
 
+}
 section {
   @include full;
 }
@@ -120,10 +121,6 @@ p {
   }
 }
 
-#nav-about {
-  right: 0;
-}
-
 #nav-work {
   left: 2.5%;
 }
@@ -140,6 +137,7 @@ p {
 }
 
 .fullPgTitle {
+  opacity: 0.25;
   font-family: playlist;
   text-align: center;
   text-transform: capitalize;
@@ -156,21 +154,142 @@ p {
     font-size: $headerSize*15;
   }
 }
+a.cotButton {
+  @include transition(all 0.45s);
+  display: flex;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  max-width: 145px;
+  padding: 2.5%;
+  border: 2px $light solid;
+  font-weight: 700;
+  font-size: $baseSize*0.9;
+  margin-top: 7.5%;
+  overflow: hidden;
+  color: $light;
+  letter-spacing: 0.15rem;
+  @include laptop {
+    font-size: $baseSize*0.75;
+    padding: 2.5%;
+    max-width: 135px;
+  }
 
-#landpg {
-  p {
-    font-size: $headerSize*1.75;
-    text-align: center;
-    width: 100%;
+  &:after {
+    @include transition(all 0.45s);
+    content: '';
     position: absolute;
-    margin: 0;
-    color: $dark;
-    @include laptop {
-      line-height: 1.5em;
-      font-size: $headerSize*1.25;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -75px;
+    border-right: 75px solid transparent;
+    border-bottom: 75px solid $light;
+    @include transform(translateX(-100%));
+  }
+
+  &:hover {
+    color: white;
+    @include boxshadow(0 0 15px 0 rgba(16, 29, 54, 0.25));
+  }
+
+  &:hover:after {
+    @include transform(translateX(0));
+  }
+}
+#landpg {
+  .about {
+    opacity: 0;
+    width: 100%;
+    #aboutName{
+      font-size: $headerSize!important;
+    }
+    p {
+      font-weight: 400;
+      margin: 0% 0% 2.5% 5%;
+      color: $dark;
+      font-size: $baseSize*1.5;
+      @include laptop {
+        font-size: $baseSize*1.15;
+      }
+      a,svg{
+        vertical-align: middle;
+      }
+      svg{
+        font-size: $baseSize*1.15;
+        color: $light;
+        margin-right: 2.75%;
+        line-height: 1.25em;
+      }
+      a{
+        letter-spacing: 0.15em;
+        color: $dark;
+        font-size: $baseSize*0.9;
+        @include transition(color 0.25s);
+        &:hover{
+          color:$light;
+        }
+      }
+      img{
+        border-radius: 50%;
+        width: 20%;
+        vertical-align: middle;
+      }
+
+      #scroll2{
+        font-size: $baseSize*0.75;
+        max-width: 45%;
+        padding: 0.5%;
+        color: $light;
+        &:hover{
+          color: white;
+        }
+      }
     }
   }
 }
+/////////LANDPG ANIMATION////////////
+.bubble {
+  letter-spacing: 0.115em;
+  opacity: 0;
+  float: left;
+  display: block;
+  position: relative;
+  max-width: 100%;
+  padding: 3.5%;
+  margin: 3.5% 0% 3.5% 0%;
+  float: left;
+  vertical-align: middle;
+  font-size: $baseSize*1.15;
+  font-weight: 300;
+  color: white;
+  text-align: left;
+  background-color: $light;
+  @include boxshadow(0 0 15px 0 rgba(9, 19, 38, 0.25));
+  @include laptop {
+    font-size: $baseSize*0.95;
+  }
+}
+.bubble:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 0;
+  left: -12.5px;
+  border-style: solid;
+  border-width: 7px 12.5px 7px 0;
+  border-color: transparent $light;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+/////////////////////////////////////
+
 .proj-des{
   max-width: 90%;
   margin: auto;
@@ -207,17 +326,15 @@ p {
   align-items: center;
   text-align: center;
   margin-top: 1.5%;
-  span{
+  div{
+    width: 25px;
+    height: 10px;
     transition: all 0.2s;
     margin: 0% 0.25% 0% 0.25%;
     cursor: pointer;
-    font-size: 30px;
-    color: #dddddd;
+    background-color: #dddddd;
     &:hover{
-      color: #7592cb!important;
-    }
-    @include laptop{
-      font-size: 25px;
+      background-color: #7592cb!important;
     }
   }
   svg{
@@ -263,53 +380,6 @@ p {
     }
   }
 
-  a {
-    @include transition(all 0.45s);
-    display: flex;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-    align-items: center;
-    justify-content: center;
-    max-width: 145px;
-    padding: 2.5%;
-    border: 2px $light solid;
-    font-weight: 700;
-    font-size: $baseSize*0.9;
-    margin-top: 7.5%;
-    overflow: hidden;
-    color: $light;
-    letter-spacing: 0.15rem;
-    @include laptop {
-      font-size: $baseSize*0.75;
-      padding: 2.5%;
-      max-width: 135px;
-    }
-
-    &:after {
-      @include transition(all 0.45s);
-      content: '';
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: -75px;
-      border-right: 75px solid transparent;
-      border-bottom: 75px solid $light;
-      @include transform(translateX(-100%));
-    }
-
-    &:hover {
-      color: white;
-      @include boxshadow(0 0 15px 0 rgba(16, 29, 54, 0.25));
-    }
-
-    &:hover:after {
-      @include transform(translateX(0));
-    }
-  }
-
   p {
     margin-top: 5%;
     font-size: $baseSize*1.25;
@@ -323,16 +393,6 @@ p {
   }
 }
 
-#about {
-  h1 {
-    font-size: $headerSize*2;
-    margin-bottom: 1.5%;
-    color: $light;
-    @include laptop {
-      font-size: $headerSize*1.5;
-    }
-  }
-}
 
 .container {
   opacity: 0;
@@ -369,7 +429,6 @@ p {
     }
   }
   .fullPgTitle{
-    opacity: 0.25;
     font-size: $headerSize*15;
     @include laptop{
       font-size: $headerSize*11;
@@ -506,48 +565,6 @@ ul {
   }
 }
 
-.left,
-.right {
-  width: 100%;
-  height: 50vh;
-
-  a {
-    transition: color 0.25s;
-    color: $light;
-    index: 10;
-    padding: 0.5%;
-
-    svg, svg path{
-      cursor: pointer;
-    }
-  }
-
-  p {
-    font-weight: 400;
-    line-height: 3rem;
-    color: $dark;
-    font-size: $baseSize*1.45;
-    @include laptop {
-      font-size: $baseSize*1.15;
-      line-height: 2rem;
-    }
-  }
-
-  i,svg {
-    color: $light;
-    transition: all 0.25s;
-    font-size: $headerSize*1.5;
-    padding: 1.5%;
-    line-height: 1.25em;
-    @include laptop {
-      font-size: $headerSize*1;
-    }
-
-    &:hover {
-      color: lighten($light, 15%);
-    }
-  }
-}
 
 .underline {
   &:after {
@@ -586,7 +603,9 @@ ul {
 .slideUp {
   @include animation(1s slideUp ease-in-out forwards);
 }
-
+.chat {
+  @include animation(0.75s chat ease-in-out forwards);
+}
 .fadeIn {
   @include animation(0.5s fadeIn ease-in-out forwards);
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!-- Designed and Developed by Su Li 2017🍐 -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -20,20 +21,38 @@
   <meta name="twitter:image" content="http://suyli.me/files/favicon.ico" />
   <title>Su Li Portfolio - UX Designer &amp; Front End Developer</title>
   <link href="lib/style.css" type="text/css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="icon" href="files/favicon.ico">
 </head>
 
 <body>
-  <a id="nav-home" class="underline2 nav">home</a>
+  <!-- <a id="nav-home" class="underline2 nav">home</a>
   <a id="nav-work" class="underline2 nav">work</a>
-  <a id="nav-about" class="underline2 nav">about</a>
+  <a id="nav-about" class="underline2 nav">about</a> -->
   <div id="particle"></div>
-  <section id="landpg">
-    <h1 class="fullPgTitle">Su Li</h1>
-    <p></p>
-    <span id="scroll"></span>
-  </section>
+<section id="landpg">
+  <h1 class="fullPgTitle">Su Li</h1>
+  <div class="container" style="opacity:1">
+    <div class="row">
+      <div class="col-6">
+        <div class="bubbles">
+          <div class="bubble">Hi there! My name is Su 🍐</div>
+          <div class="bubble">I'm a UX Designer & Front End Developer.</div>
+          <div class="bubble">Former <b>Interactive Web Designer</b> at iSoftStone North America.</div>
+          <div class="bubble">Currently an undergraduate student at University of Washington studying <b>Interactive Media Design</b>.</div>
+          <div class="bubble">Feel free to contact me if you got any questions 😎</div>
+        </div>
+      </div>
+      <div class="about col-6">
+        <p id="aboutName">Su Li/李素莹 <img src="../files/avatar.jpg"></p>
+        <p><i class="fab fa-linkedin"></i><a class="underline"  href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank">LinkedIn</a></p>
+        <p><i class="fab fa-behance-square"></i><a class="underline" href="https://www.behance.net/suli7497807f" target="_blank">Behance</a></p>
+        <p><i class="fab fa-github-square"></i><a class="underline"  href="https://github.com/crispipear" target="_blank">Github</a></p>
+        <p><i class="fas fa-envelope-square"></i><a class="underline"  href="mailto:suli7497@gmail.com">suli7497@gmail.com</a>(ENG/中文)</p>
+        <p><a class="cotButton" id="scroll2">see my work &darr;	</a></p>
+      </div>
+    </div>
+  </div>
+</section>
   <section id="projs" class="projs">
     <div class="container">
       <span class="arrows" id="a-left"></span>
@@ -44,7 +63,7 @@
           <h2 class="underline2">WAVES</h2>
           <p>//video prototype, mobile app prototype</p>
           <p>Public installation concept integrated with mobile app that brings public awareness to stress.</p>
-          <a href="pages/waves.html">SEE PROJECT &#x27F6;</a>
+          <a class="cotButton" href="pages/waves.html">SEE PROJECT &#x27F6;</a>
         </div>
       </div>
       <div class="proj-des row">
@@ -53,7 +72,7 @@
           <h2 class="underline2">EATLIXIR</h2>
           <p>//web design & development</p>
           <p>Web platform concept that provides meidicinal diet information inspired by Chinese herbology.</p>
-          <a href="pages/eatlixir.html">SEE PROJECT &#x27F6;</a>
+          <a class="cotButton" href="pages/eatlixir.html">SEE PROJECT &#x27F6;</a>
         </div>
       </div>
       <div class="proj-des row">
@@ -62,55 +81,18 @@
           <h2 class="underline2">POCKET HUSKY</h2>
           <p>//mobile app prototype</p>
           <p>Mobile app concept that engages student interaction and exploration on the UW Bothell campus.</p>
-          <a href="pages/pockethusky.html">SEE PROJECT &#x27F6;</a>
+          <a class="cotButton" href="pages/pockethusky.html">SEE PROJECT &#x27F6;</a>
         </div>
       </div>
       <div class="counter">
         <h1 id="projNum">01</h1>
-        <span>&#9644;</span>
-        <span>&#9644;</span>
-        <span>&#9644;</span>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   </section>
-  <section id="about">
-    <div class="container" style="max-width: 1280px">
-      <div class="row">
-        <h1>Who is Su?</h1>
-      </div>
-      <div class="row">
-        <div class="left col-8">
-          <p>Former <a style="cursor:default">Interactive/Web Designer</a> at <a style="cursor:default">iSoftStone North America</a></p>
-          <p>Undergraduate student at University of Washington studying <a style="cursor:default">Interactive Media Design</a>.</p>
-          <p><a class="underline" href="https://www.behance.net/suli7497807f" target="_blank">Check out my Behance</a> for more visual design work, <a class="underline" href="files/suli_resume.pdf" target="_blank">See my r&#233;sum&#233; here</a>.</p>
-          <p>Got more questions? <a class="underline" href="mailto:suli7497@gmail.com">Shoot me an email</a>(ENG/&#20013;&#25991;)</p>
-        </div>
-        <div class="right col-4">
-          <p>Learn more about me: </p>
-          <a href="https://www.behance.net/suli7497807f" target="_blank"><i class="fab fa-behance"></i></a>
-          <a href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://codepen.io/crispipear/" target="_blank"><i class="fab fa-codepen"></i></a>
-          <a href="https://github.com/crispipear" target="_blank"><i class="fab fa-github"></i></a>
-          <a href="mailto:suli7497@gmail.com"><i class="far fa-envelope"></i></a>
-          <a href="https://www.instagram.com/crispipear/"><i class="fab fa-instagram"></i></a>
-          <p>Some stuff that I know: </p>
-          <i class="devicon-html5-plain-wordmark"></i>
-          <i class="devicon-css3-plain-wordmark"></i>
-          <i class="devicon-javascript-plain"></i>
-          <i class="devicon-php-plain"></i>
-          <i class="devicon-jquery-plain-wordmark"></i>
-          <i class="devicon-react-original-wordmark"></i>
-          <i class="devicon-gulp-plain"></i>
-          <i class="devicon-sass-original"></i>
-          <i class="devicon-csharp-plain"></i>
-          <i class="devicon-java-plain"></i>
-          <i class="devicon-photoshop-line"></i>
-          <i class="devicon-illustrator-line"></i>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div id = "footer" style = "margin-top: -9%">
+  <div id="footer" style="margin-top: -9%">
     <span>2017 &copy; Design and Development by Su Li</span>
   </div>
 </body>
@@ -119,4 +101,5 @@
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 <script src="lib/behavior.js"></script>
 <script src="../lib/scroll.js"></script>
+
 </html>
