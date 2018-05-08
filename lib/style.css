@@ -123,7 +123,7 @@
 
 @font-face {
   font-family: playlist;
-  src: url(playlist.otf); }
+  src: url("playlist.otf"); }
 
 body::-webkit-scrollbar {
   width: 0.65em; }
@@ -187,6 +187,9 @@ a {
   box-sizing: border-box; }
   #scroll:hover {
     border-color: #1f1f1f; }
+  @media only screen and (max-width: 1023px) {
+    #scroll {
+      display: none; } }
 
 section {
   width: 100%;
@@ -278,6 +281,9 @@ p {
   @media (min-width: 1024px) and (max-width: 1550px) {
     .fullPgTitle {
       font-size: 30em; } }
+  @media only screen and (max-width: 1023px) {
+    .fullPgTitle {
+      font-size: 10em; } }
 
 a.cotButton {
   -webkit-transition: all 0.45s;
@@ -327,20 +333,32 @@ a.cotButton {
     -webkit-transform: translateX(0);
     transform: translateX(0); }
 
+@media only screen and (max-width: 1023px) {
+  #landpg {
+    height: auto; } }
+
 #landpg .about {
   opacity: 0;
   width: 100%; }
+  @media only screen and (max-width: 1023px) {
+    #landpg .about {
+      margin-top: 15px; } }
   #landpg .about #aboutName {
     font-size: 2em !important; }
   #landpg .about p {
     font-weight: 400;
-    margin: 0% 0% 2.5% 5%;
+    margin: 0 0 2.5% 5%;
     color: #1f1f1f;
     font-size: 1.5em; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       #landpg .about p {
         font-size: 1.15em; } }
-    #landpg .about p a, #landpg .about p svg {
+    @media only screen and (max-width: 1023px) {
+      #landpg .about p {
+        text-align: center;
+        font-size: 1.15em; } }
+    #landpg .about p a,
+    #landpg .about p svg {
       vertical-align: middle; }
     #landpg .about p svg {
       font-size: 1.15em;
@@ -366,6 +384,19 @@ a.cotButton {
       color: #7592cb; }
       #landpg .about p #scroll2:hover {
         color: white; }
+      @media only screen and (max-width: 1023px) {
+        #landpg .about p #scroll2 {
+          font-size: 0.65em;
+          margin: 7.5% auto;
+          padding: 0.25%; } }
+
+@media only screen and (max-width: 1023px) {
+  .bubbles {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
 
 .bubble {
   letter-spacing: 0.115em;
@@ -375,7 +406,7 @@ a.cotButton {
   position: relative;
   max-width: 100%;
   padding: 3.5%;
-  margin: 3.5% 0% 3.5% 0%;
+  margin: 3.5% 0;
   float: left;
   vertical-align: middle;
   font-size: 1.15em;
@@ -389,6 +420,12 @@ a.cotButton {
   @media (min-width: 1024px) and (max-width: 1550px) {
     .bubble {
       font-size: 0.95em; } }
+  @media only screen and (max-width: 1023px) {
+    .bubble {
+      margin: 5px;
+      line-height: 20px;
+      font-size: 0.75em;
+      width: 85%; } }
 
 .bubble:after {
   content: "";
@@ -405,14 +442,6 @@ a.cotButton {
   width: 0;
   z-index: 1; }
 
-.proj-des {
-  max-width: 90%;
-  margin: auto; }
-
-.proj-item {
-  max-width: 100%;
-  height: 50vh; }
-
 .arrows {
   position: absolute;
   cursor: pointer;
@@ -425,18 +454,22 @@ a.cotButton {
   transition: all 0.2s; }
   .arrows:hover {
     border-color: #7592cb !important; }
+  @media only screen and (max-width: 1023px) {
+    .arrows {
+      width: 15px;
+      height: 15px; } }
 
 #a-left {
   -ms-transform: rotate(-315deg);
   -webkit-transform: rotate(-315deg);
   transform: rotate(-315deg);
-  left: 0%; }
+  left: 0; }
 
 #a-right {
   -ms-transform: rotate(225deg);
   -webkit-transform: rotate(225deg);
   transform: rotate(225deg);
-  right: 0%; }
+  right: 0; }
 
 .counter {
   justify-content: center;
@@ -448,7 +481,7 @@ a.cotButton {
     width: 25px;
     height: 10px;
     transition: all 0.2s;
-    margin: 0% 0.25% 0% 0.25%;
+    margin: 0 0.25%;
     cursor: pointer;
     background-color: #dddddd; }
     .counter div:hover {
@@ -456,9 +489,11 @@ a.cotButton {
   .counter svg {
     color: #bbbbbb;
     font-size: 1.5em;
-    margin: 0.25% 0% 0% 0.25%; }
+    margin: 0.25% 0 0 0.25%; }
 
 .proj-item {
+  max-width: 100%;
+  height: 50vh;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
   -webkit-box-shadow: 0 0 25px 0 rgba(16, 29, 54, 0.15);
@@ -468,12 +503,27 @@ a.cotButton {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
+  @media only screen and (max-width: 1023px) {
+    .proj-item {
+      height: 30vh;
+      margin-bottom: 15px; } }
   .proj-item:hover {
     border-radius: 30px; }
 
+@media only screen and (max-width: 1023px) {
+  #projs {
+    height: auto;
+    text-align: center;
+    padding-bottom: 15%; }
+    #projs .cotButton {
+      margin: 15px auto;
+      font-size: 0.75em; } }
+
 .proj-des {
   box-sizing: border-box;
-  padding-left: 2.5%; }
+  padding-left: 2.5%;
+  max-width: 90%;
+  margin: auto; }
   .proj-des h2 {
     margin-bottom: 2.5%;
     font-weight: 400;
@@ -486,18 +536,24 @@ a.cotButton {
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-des h2 {
         font-size: 2em; } }
+    @media only screen and (max-width: 1023px) {
+      .proj-des h2 {
+        font-size: 2em; } }
     .proj-des h2:after {
-      margin: -1.5rem 0% 0% 0.25rem; }
+      margin: -1.5rem 0 0 0.25rem; }
       @media (min-width: 1024px) and (max-width: 1550px) {
         .proj-des h2:after {
           height: 1rem;
-          margin: -1rem 0% 0% 0.15rem; } }
+          margin: -1rem 0 0 0.15rem; } }
   .proj-des p {
     margin-top: 5%;
     font-size: 1.25em; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-des p {
         font-size: 1em; } }
+    @media only screen and (max-width: 1023px) {
+      .proj-des p {
+        font-size: 0.9em; } }
   .proj-des:hover h2:after {
     opacity: 1; }
 
@@ -506,7 +562,7 @@ a.cotButton {
 
 #projNum {
   display: inline-block;
-  margin: 0% 0.5% 0% 0%; }
+  margin: 0 0.5% 0 0; }
 
 .proj-sec {
   display: flex;
@@ -526,11 +582,20 @@ a.cotButton {
       transition: 0.25s color; }
     .proj-sec .title:hover b {
       color: #7592cb; }
+    @media only screen and (max-width: 1023px) {
+      .proj-sec .title {
+        width: 100%;
+        margin: 15% auto auto auto; } }
   .proj-sec .fullPgTitle {
-    font-size: 30em; }
+    font-size: 30em;
+    margin: auto; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec .fullPgTitle {
         font-size: 22em; } }
+    @media only screen and (max-width: 1023px) {
+      .proj-sec .fullPgTitle {
+        font-size: 5em !important;
+        line-height: 1em !important; } }
   .proj-sec #phTitle {
     height: 100vh;
     padding-top: 22.5rem;
@@ -547,20 +612,6 @@ a.cotButton {
   .proj-sec a {
     font-weight: 400;
     color: #7592cb; }
-  .proj-sec a img {
-    cursor: pointer;
-    filter: grayscale(100%); }
-    .proj-sec a img:hover {
-      filter: none;
-      border-radius: 25px; }
-  .proj-sec h1 {
-    font-size: 7em;
-    color: #7592cb;
-    margin-top: -5%;
-    margin-bottom: 0; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      .proj-sec h1 {
-        font-size: 5em; } }
   .proj-sec h2 {
     display: inline-block;
     font-weight: 400;
@@ -571,15 +622,21 @@ a.cotButton {
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
         font-size: 2.5em; } }
+    @media only screen and (max-width: 1023px) {
+      .proj-sec h2 {
+        font-size: 2em; } }
   .proj-sec h3 {
     display: inline-block;
     font-weight: 400;
     font-size: 1.7em;
     color: #1f1f1f;
-    margin: 0%; }
+    margin: 0; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h3 {
         font-size: 1.4em; } }
+    @media only screen and (max-width: 1023px) {
+      .proj-sec h3 {
+        font-size: 1.3em; } }
   .proj-sec p {
     font-size: 1.25em; }
     .proj-sec p b,
@@ -590,13 +647,22 @@ a.cotButton {
       .proj-sec p {
         font-size: 1.05em; } }
   .proj-sec img {
-    width: 100%;
     height: 100%;
     transition: all 0.25s;
     width: 100%;
     -webkit-box-shadow: 0 0 45px 0 rgba(16, 29, 54, 0.15);
     -moz-box-shadow: 0 0 45px 0 rgba(16, 29, 54, 0.15);
     box-shadow: 0 0 45px 0 rgba(16, 29, 54, 0.15); }
+  @media only screen and (max-width: 1023px) {
+    .proj-sec {
+      width: 90%;
+      margin: auto;
+      overflow: hidden; }
+      .proj-sec div {
+        flex: 100% !important; }
+      .proj-sec .row p {
+        flex: 100% !important;
+        font-size: 1em; } }
 
 #footer {
   padding-top: 5%;
@@ -613,10 +679,16 @@ a.cotButton {
     @media (min-width: 1024px) and (max-width: 1550px) {
       #footer span {
         font-size: 1em; } }
+    @media only screen and (max-width: 1023px) {
+      #footer span {
+        font-size: 0.9em; } }
+  @media only screen and (max-width: 1023px) {
+    #footer {
+      text-align: center; } }
 
 ul {
   list-style: none;
-  margin: 5% 0% 5% 0%;
+  margin: 5% 0;
   padding: 0;
   font-size: 1.075em;
   font-weight: 300; }
@@ -674,6 +746,11 @@ ul {
   column-gap: 0; }
   .masonry:hover img {
     opacity: 0.75; }
+  @media only screen and (max-width: 1023px) {
+    .masonry {
+      padding-top: 25%;
+      column-count: 2;
+      margin: 0 2.5px; } }
 
 .item {
   break-inside: avoid;
@@ -702,30 +779,36 @@ ul {
   transition: all 0.2s;
   z-index: -1;
   position: fixed;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(31, 31, 31, 0.95); }
+  background-color: rgba(31, 31, 31, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .modal-img {
-  width: 85%;
-  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2.5% auto 2.5% auto; }
+  width: 100%;
+  height: 90%; }
   .modal-img img {
+    margin: auto;
     display: block;
-    max-width: 100%;
-    max-height: 100%; }
+    max-height: 95%; }
 
 .modal-des {
-  margin: 1.5% auto 0% auto;
+  margin: 0;
   color: white;
   float: left;
   font-size: 1.05em; }
+  @media (min-width: 1024px) and (max-width: 1550px) {
+    .modal-des {
+      font-size: 0.9em; } }
 
 #modal-close {
   cursor: pointer;

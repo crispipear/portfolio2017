@@ -9,11 +9,11 @@ $light2: #a3d7d9;
 $baseSize: 1em;
 $headerSize: 2em;
 $letterSpacing: 0.075em;
-
 @font-face {
-    font-family: playlist;
-    src: url(playlist.otf);
+  font-family: playlist;
+  src: url("playlist.otf");
 }
+
 body::-webkit-scrollbar {
   width: 0.65em;
 }
@@ -63,7 +63,7 @@ a {
   z-index: -4;
 }
 
-#scroll{
+#scroll {
   cursor: pointer;
   position: absolute;
   bottom: 7.5%;
@@ -81,7 +81,12 @@ a {
   &:hover {
     border-color: $dark;
   }
+
+  @include mobile{
+    display: none;
+  }
 }
+
 section {
   @include full;
 }
@@ -94,15 +99,18 @@ p {
   line-height: 2em;
   margin-top: 0;
 }
-.nav2{
+
+.nav2 {
   width: auto;
   z-index: 50;
   color: $dark;
   letter-spacing: $letterSpacing*3.5;
   font-size: $baseSize*1.15;
+
   &:hover::after {
     opacity: 1!important;
   }
+
   &:after {
     margin-top: -3.5% !important;
     height: 15px!important;
@@ -144,21 +152,25 @@ p {
   bottom: 0;
   right: 0;
 }
-#nav-top{
+
+#nav-top {
   &:after {
     margin-top: -20.25% !important;
   }
 }
+
 #nav-vd {
   position: absolute;
   bottom: 5%;
   right: 5%;
 }
+
 #nav-ixd {
   position: absolute;
   top: 5%;
   right: 5%;
 }
+
 .fullPgTitle {
   opacity: 0.25;
   font-family: playlist;
@@ -176,7 +188,11 @@ p {
   @include laptop {
     font-size: $headerSize*15;
   }
+  @include mobile {
+    font-size: $headerSize*5;
+  }
 }
+
 a.cotButton {
   @include transition(all 0.45s);
   display: flex;
@@ -223,58 +239,95 @@ a.cotButton {
     @include transform(translateX(0));
   }
 }
+
 #landpg {
+  @include mobile {
+    height: auto;
+  }
+
   .about {
+    @include mobile {
+      margin-top: 15px;
+    }
     opacity: 0;
     width: 100%;
-    #aboutName{
+
+    #aboutName {
       font-size: $headerSize!important;
     }
+
     p {
       font-weight: 400;
-      margin: 0% 0% 2.5% 5%;
+      margin: 0 0 2.5% 5%;
       color: $dark;
       font-size: $baseSize*1.5;
       @include laptop {
         font-size: $baseSize*1.15;
       }
-      a,svg{
+      @include mobile {
+        text-align: center;
+        font-size: $baseSize*1.15;
+      }
+
+      a,
+      svg {
         vertical-align: middle;
       }
-      svg{
+
+      svg {
         font-size: $baseSize*1.15;
         color: $light;
         margin-right: 2.75%;
         line-height: 1.25em;
       }
-      a{
+
+      a {
         letter-spacing: 0.15em;
         color: $dark;
         font-size: $baseSize*0.9;
         @include transition(color 0.25s);
-        &:hover{
-          color:$light;
+
+        &:hover {
+          color: $light;
         }
       }
-      img{
+
+      img {
         border-radius: 50%;
         width: 20%;
         vertical-align: middle;
       }
 
-      #scroll2{
+      #scroll2 {
         font-size: $baseSize*0.75;
         max-width: 45%;
         padding: 0.5%;
         color: $light;
-        &:hover{
+
+        &:hover {
           color: white;
+        }
+        @include mobile {
+          font-size: $baseSize*0.65;
+          margin: 7.5% auto;
+          padding: 0.25%;
         }
       }
     }
   }
 }
 /////////LANDPG ANIMATION////////////
+
+.bubbles {
+  @include mobile {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .bubble {
   letter-spacing: 0.115em;
   opacity: 0;
@@ -283,7 +336,7 @@ a.cotButton {
   position: relative;
   max-width: 100%;
   padding: 3.5%;
-  margin: 3.5% 0% 3.5% 0%;
+  margin: 3.5% 0;
   float: left;
   vertical-align: middle;
   font-size: $baseSize*1.15;
@@ -295,7 +348,14 @@ a.cotButton {
   @include laptop {
     font-size: $baseSize*0.95;
   }
+  @include mobile {
+    margin: 5px;
+    line-height: 20px;
+    font-size: $baseSize*0.75;
+    width: 85%;
+  }
 }
+
 .bubble:after {
   content: "";
   position: absolute;
@@ -313,74 +373,100 @@ a.cotButton {
 }
 /////////////////////////////////////
 
-.proj-des{
-  max-width: 90%;
-  margin: auto;
-}
-.proj-item {
-  max-width: 100%;
-  height: 50vh;
-}
-.arrows{
+.arrows {
   position: absolute;
   cursor: pointer;
-  top:40%;
+  top: 40%;
   box-sizing: border-box;
   border-left: 3px solid #cdcdcd;
   border-bottom: 3px solid #cdcdcd;
   width: 30px;
   height: 30px;
   transition: all 0.2s;
-  &:hover{
+
+  &:hover {
     border-color: $light!important;
   }
+  @include mobile {
+    width: 15px;
+    height: 15px;
+  }
 }
-#a-left{
+
+#a-left {
   @include transform(rotate(-315deg));
-  left:0%;
+  left: 0;
 }
-#a-right{
+
+#a-right {
   @include transform(rotate(225deg));
-  right: 0%;
+  right: 0;
 }
-.counter{
+
+.counter {
   justify-content: center;
   display: flex;
   align-items: center;
   text-align: center;
   margin-top: 1.5%;
-  div{
+
+  div {
     width: 25px;
     height: 10px;
     transition: all 0.2s;
-    margin: 0% 0.25% 0% 0.25%;
+    margin: 0 0.25%;
     cursor: pointer;
     background-color: #dddddd;
-    &:hover{
+
+    &:hover {
       background-color: #7592cb!important;
     }
   }
-  svg{
+
+  svg {
     color: #bbbbbb;
     font-size: $headerSize*0.75;
-    margin: 0.25% 0% 0% 0.25%;
+    margin: 0.25% 0 0 0.25%;
   }
 }
+
 .proj-item {
+  max-width: 100%;
+  height: 50vh;
+  @include mobile {
+    height: 30vh;
+    margin-bottom: 15px;
+  }
   @include transition(all 0.25s);
   @include boxshadow(0 0 25px 0 rgba(16, 29, 54, 0.15));
   border-radius: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
   &:hover {
     border-radius: 30px;
+  }
+}
+
+#projs {
+  @include mobile {
+    height: auto;
+    text-align: center;
+
+    .cotButton {
+      margin: 15px auto;
+      font-size: $baseSize*0.75;
+    }
+    padding-bottom: 15%;
   }
 }
 
 .proj-des {
   box-sizing: border-box;
   padding-left: 2.5%;
+  max-width: 90%;
+  margin: auto;
 
   h2 {
     margin-bottom: 2.5%;
@@ -394,11 +480,15 @@ a.cotButton {
     @include laptop {
       font-size: $headerSize;
     }
+    @include mobile {
+      font-size: $headerSize;
+    }
+
     &:after {
-      margin: -1.5rem 0% 0% 0.25rem;
-      @include laptop{
+      margin: -1.5rem 0 0 0.25rem;
+      @include laptop {
         height: 1rem;
-        margin: -1rem 0% 0% 0.15rem;
+        margin: -1rem 0 0 0.15rem;
       }
     }
   }
@@ -409,6 +499,9 @@ a.cotButton {
     @include laptop {
       font-size: $baseSize;
     }
+    @include mobile {
+      font-size: $baseSize*0.9;
+    }
   }
 
   &:hover h2:after {
@@ -416,14 +509,15 @@ a.cotButton {
   }
 }
 
-
 .container {
   opacity: 0;
 }
-#projNum{
+
+#projNum {
   display: inline-block;
-  margin: 0% 0.5% 0% 0%;
+  margin: 0 0.5% 0 0;
 }
+
 .proj-sec {
   .row {
     &:hover h2:after {
@@ -438,36 +532,51 @@ a.cotButton {
   .title {
     width: 75%;
     margin: auto;
-    a{
+
+    a {
       color: $light;
     }
-    b{
+
+    b {
       color: $dark;
       transition: 0.25s color;
     }
-    &:hover{
-      b{
+
+    &:hover {
+      b {
         color: $light;
       }
     }
-  }
-  .fullPgTitle{
-    font-size: $headerSize*15;
-    @include laptop{
-      font-size: $headerSize*11;
+    @include mobile{
+      width: 100%;
+      margin: 15% auto auto auto;
     }
   }
-  #phTitle{
+
+  .fullPgTitle {
+    font-size: $headerSize*15;
+    margin: auto;
+    @include laptop {
+      font-size: $headerSize*11;
+    }
+    @include mobile {
+      font-size: $baseSize*5!important;
+      line-height: $baseSize!important;
+    }
+  }
+
+  #phTitle {
     height: 100vh;
     padding-top: 22.5rem;
     line-height: 22.5rem;
     font-size: 25rem;
-    @include laptop{
+    @include laptop {
       line-height: 15rem;
       font-size: 17.5rem;
     }
   }
-.container {
+
+  .container {
     h1 {
       background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
       -webkit-background-clip: text;
@@ -478,24 +587,6 @@ a.cotButton {
   a {
     font-weight: 400;
     color: $light;
-  }
-  a img{
-    cursor: pointer;
-    filter: grayscale(100%);
-    &:hover{
-      filter: none;
-      border-radius: 25px;
-    }
-  }
-
-  h1 {
-    font-size: $headerSize*3.5;
-    color: $light;
-    margin-top: -5%;
-    margin-bottom: 0;
-    @include laptop {
-      font-size: $headerSize*2.5;
-    }
   }
 
   h2 {
@@ -508,17 +599,25 @@ a.cotButton {
     @include laptop {
       font-size: $headerSize*1.25;
     }
+    @include mobile{
+      font-size: $headerSize;
+    }
   }
+
   h3 {
     display: inline-block;
     font-weight: 400;
     font-size: $headerSize*0.85;
     color: $dark;
-    margin: 0%;
+    margin: 0;
     @include laptop {
       font-size: $headerSize*0.7;
     }
+    @include mobile{
+      font-size: $headerSize*0.65;
+    }
   }
+
   p {
     font-size: $baseSize*1.25;
 
@@ -531,13 +630,23 @@ a.cotButton {
       font-size: $baseSize*1.05;
     }
   }
-
-  img {
-    width: 100%;
+  img{
     height: 100%;
     transition: all 0.25s;
     width: 100%;
     @include boxshadow(0 0 45px 0 rgba(16, 29, 54, 0.15));
+  }
+  @include mobile{
+    div{
+      flex: 100%!important;
+    }
+    .row p{
+      flex: 100%!important;
+      font-size: $baseSize;
+    }
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
   }
 }
 
@@ -546,6 +655,7 @@ a.cotButton {
   padding-left: 2.5%;
   padding-bottom: 2.5%;
   z-index: 5;
+
   span {
     color: $dark;
     font-size: $baseSize*1.15;
@@ -556,20 +666,28 @@ a.cotButton {
     @include laptop {
       font-size: $baseSize;
     }
+    @include mobile {
+      font-size: $baseSize*0.9;
+    }
+  }
+  @include mobile {
+    text-align: center;
   }
 }
 
 ul {
   list-style: none;
-  margin: 5% 0% 5% 0%;
+  margin: 5% 0;
   padding: 0;
   font-size: $baseSize*1.075;
   font-weight: 300;
+
   li {
     line-height: 1.35rem;
     margin: 0 0 1em;
     padding-left: 1.5em;
     position: relative;
+
     &:after {
       content: '';
       height: 0.45em;
@@ -582,11 +700,10 @@ ul {
       left: 0;
     }
   }
-  @include laptop{
+  @include laptop {
     font-size: $baseSize*0.95;
   }
 }
-
 
 .underline {
   &:after {
@@ -622,21 +739,31 @@ ul {
   }
 }
 ///////////image grid//////////////////
+
 .masonry {
   padding-top: 7.5%;
   column-count: 4;
   column-gap: 0;
-  &:hover img{
+
+  &:hover img {
     opacity: 0.75;
   }
+  @include mobile {
+    padding-top: 25%;
+    column-count: 2;
+    margin: 0 2.5px;
+  }
 }
+
 .item {
   break-inside: avoid;
   box-sizing: border-box;
   padding: 2.5%;
-  img{
+
+  img {
     @include transition(all 0.35s);
-    &:hover{
+
+    &:hover {
       border-radius: 25px;
       opacity: 1;
     }
@@ -644,7 +771,8 @@ ul {
     max-width: 100%;
   }
 }
-#projs2{
+
+#projs2 {
   justify-content: flex-start;
   height: auto;
   min-height: 100vh;
@@ -652,57 +780,71 @@ ul {
   flex-direction: column;
   padding-bottom: 10vh;
 }
-.modal{
+
+.modal {
   opacity: 0;
   @include transition(all 0.2s);
   z-index: -1;
   position: fixed;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba($dark, 0.95);
-}
-.modal-img{
-  width: 85%;
-  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2.5% auto 2.5% auto;
-  img{
+}
+
+.modal-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+
+  img {
+    margin: auto;
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 95%;
   }
 }
-.modal-des{
-  margin: 1.5% auto 0% auto;
+
+.modal-des {
+  margin: 0;
   color: white;
   float: left;
   font-size: $baseSize*1.05;
+  @include laptop {
+    font-size: $baseSize*0.9;
+  }
 }
-#modal-close{
+
+#modal-close {
   cursor: pointer;
   color: white;
   font-size: $headerSize;
   position: absolute;
   right: 2.5%;
-  top:5%;
+  top: 5%;
   @include transition(all 0.15s);
-  &:hover{
+
+  &:hover {
     opacity: 0.5;
   }
 }
 //////////////////////////////////////
+
 .slideUp {
   @include animation(1s slideUp ease-in-out forwards);
 }
+
 .chat {
   @include animation(0.75s chat ease-in-out forwards);
 }
+
 .fadeIn {
   @include animation(0.5s fadeIn ease-in-out forwards);
-
 }
