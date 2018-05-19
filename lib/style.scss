@@ -1,18 +1,16 @@
 // Designed and Developed by Su Li 2017🍐
 @import url( 'https://fonts.googleapis.com/css?family=Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
 @import "mixins";
 @import "keyframes";
 @import url("subasecss.css");
-$dark: #1f1f1f;
-$light: #7592cb;
-$light2: #a3d7d9;
+$dark: #121212;
+$text: #ffffff;
+$key1: #e6456a;
+$key2: #4fdace;
 $baseSize: 1em;
 $headerSize: 2em;
-$letterSpacing: 0.075em;
-@font-face {
-  font-family: playlist;
-  src: url("playlist.otf");
-}
+$letterSpacing: 1px;
 
 body::-webkit-scrollbar {
   width: 0.65em;
@@ -23,23 +21,24 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: $light;
+  background-color: #454545;
 }
 
 * {
-  font-family: 'Roboto', '微软雅黑';
+  font-family: 'Roboto Mono', '微软雅黑';
   font-size: $baseSize;
   cursor: default;
   letter-spacing: $letterSpacing;
 }
 
 body {
-  background-color: white;
+  background-color: $dark;
   margin: 0;
 }
 
 p,
 span {
+  color: $text;
   text-align: left;
   font-size: $baseSize;
 }
@@ -47,14 +46,16 @@ span {
 a {
   display: inline-block;
   position: relative;
+  color: $text!important;
   @include links;
 
   &:visited {
-    color: $dark;
+    color: $text;
   }
 }
 
 #particle {
+  opacity: 0.5;
   position: fixed;
   top: 0;
   right: 0;
@@ -63,29 +64,6 @@ a {
   z-index: -4;
 }
 
-#scroll {
-  cursor: pointer;
-  position: absolute;
-  bottom: 7.5%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 3px solid $light;
-  border-bottom: 3px solid $light;
-  @include transform(rotate(-45deg));
-  @include transition(all 0.25s);
-  @include animation(scrollbtn 2s infinite);
-  box-sizing: border-box;
-
-  &:hover {
-    border-color: $dark;
-  }
-
-  @include mobile{
-    display: none;
-  }
-}
 
 section {
   @include full;
@@ -93,7 +71,7 @@ section {
 
 h1,
 p {
-  letter-spacing: $letterSpacing*1.5;
+  letter-spacing: $letterSpacing;
   font-size: $baseSize*2.5;
   font-weight: 300;
   line-height: 2em;
@@ -103,8 +81,7 @@ p {
 .nav2 {
   width: auto;
   z-index: 50;
-  color: $dark;
-  letter-spacing: $letterSpacing*3.5;
+  color: $text;
   font-size: $baseSize*1.15;
 
   &:hover::after {
@@ -121,12 +98,11 @@ p {
 }
 
 .nav {
-  color: $dark;
+  color: $text;
   @include transition(all, 0.15s);
   width: auto;
   position: fixed;
   z-index: 50;
-  letter-spacing: $letterSpacing*3.5;
   font-size: $baseSize*1.15;
   margin: 2.5% 2.5% 2.5% 0;
 
@@ -172,206 +148,116 @@ p {
 }
 
 .fullPgTitle {
-  opacity: 0.25;
-  font-family: playlist;
-  text-align: center;
-  text-transform: capitalize;
-  width: 100%;
-  position: absolute;
-  font-size: $headerSize*20;
-  font-weight: 200;
-  margin: 0;
-  background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 0.025em;
-  @include laptop {
-    font-size: $headerSize*15;
-  }
-  @include mobile {
-    font-size: $headerSize*5;
-  }
+  width: 80%;
+  text-align: left;
+  margin: 0.5% 0;
+  color: $text;
+  font-size: 125px;
+  position: relative;
+  font-weight: 300;
+   &:before, &:after{
+     content: attr(data-text);
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+   }
+   &:before{
+     left: 5px;
+     text-shadow: -3px 5px 0 $key1;
+     background: $dark;
+     animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
+
+   }
+   &:after{
+     left: 5px;
+     text-shadow: 3px -5px 0 $key2;
+     background: $dark;
+     clip: rect(50px, 750px, 75px, 0);
+     animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
+   }
 }
 
 a.cotButton {
   @include transition(all 0.45s);
-  display: flex;
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-  max-width: 145px;
-  padding: 2.5%;
-  border: 2px $light solid;
-  font-weight: 700;
-  font-size: $baseSize*0.9;
+  font-size: $baseSize;
   margin-top: 7.5%;
-  overflow: hidden;
-  color: $light;
-  letter-spacing: 0.15rem;
   @include laptop {
     font-size: $baseSize*0.75;
     padding: 2.5%;
     max-width: 135px;
   }
-
-  &:after {
-    @include transition(all 0.45s);
-    content: '';
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: -75px;
-    border-right: 75px solid transparent;
-    border-bottom: 75px solid $light;
-    @include transform(translateX(-100%));
-  }
-
-  &:hover {
-    color: white;
-    @include boxshadow(0 0 15px 0 rgba(16, 29, 54, 0.25));
-  }
-
-  &:hover:after {
-    @include transform(translateX(0));
-  }
 }
-
-#landpg {
-  @include mobile {
-    height: auto;
-  }
-
-  .about {
-    @include mobile {
-      margin-top: 15px;
-    }
-    opacity: 0;
-    width: 100%;
-
-    #aboutName {
-      font-size: $headerSize!important;
-    }
-
-    p {
-      font-weight: 400;
-      margin: 0 0 2.5% 5%;
-      color: $dark;
-      font-size: $baseSize*1.5;
-      @include laptop {
-        font-size: $baseSize*1.15;
-      }
-      @include mobile {
-        text-align: center;
-        font-size: $baseSize*1.15;
-      }
-
-      a,
-      svg {
-        vertical-align: middle;
-      }
-
-      svg {
-        font-size: $baseSize*1.15;
-        color: $light;
-        margin-right: 2.75%;
-        line-height: 1.25em;
-      }
-
-      a {
-        letter-spacing: 0.15em;
-        color: $dark;
-        font-size: $baseSize*0.9;
-        @include transition(color 0.25s);
-
-        &:hover {
-          color: $light;
-        }
-      }
-
-      img {
-        border-radius: 50%;
-        width: 20%;
-        vertical-align: middle;
-      }
-
-      #scroll2 {
-        font-size: $baseSize*0.75;
-        max-width: 45%;
-        padding: 0.5%;
-        color: $light;
-
-        &:hover {
-          color: white;
-        }
-        @include mobile {
-          font-size: $baseSize*0.65;
-          margin: 7.5% auto;
-          padding: 0.25%;
-        }
-      }
-    }
-  }
-}
-/////////LANDPG ANIMATION////////////
-
-.bubbles {
-  @include mobile {
-    width: 100%;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.bubble {
-  letter-spacing: 0.115em;
-  opacity: 0;
-  float: left;
-  display: block;
-  position: relative;
-  max-width: 100%;
-  padding: 3.5%;
-  margin: 3.5% 0;
-  float: left;
-  vertical-align: middle;
-  font-size: $baseSize*1.15;
-  font-weight: 300;
-  color: white;
-  text-align: left;
-  background-color: $light;
-  @include boxshadow(0 0 15px 0 rgba(9, 19, 38, 0.25));
-  @include laptop {
-    font-size: $baseSize*0.95;
-  }
-  @include mobile {
-    margin: 5px;
-    line-height: 20px;
-    font-size: $baseSize*0.75;
-    width: 85%;
-  }
-}
-
-.bubble:after {
-  content: "";
+.about{
+  width: 45%;
+  display: flex;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  height: 0;
-  left: -12.5px;
-  border-style: solid;
-  border-width: 7px 12.5px 7px 0;
-  border-color: transparent $light;
-  display: block;
-  width: 0;
-  z-index: 1;
+  right: 7.5%;
+  bottom: 7.5%;
+  flex-direction: column;
+  p{
+    text-align: right;
+    display: block;
+  }
+  #aboutName img{
+    width: 150px;
+    border-radius: 50%;
+  }
 }
-/////////////////////////////////////
+#landpg{
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  h1,p{
+    font-family: 'Roboto Mono', monospace, '微软雅黑';
+    color: white;
+    width: auto;
+    position: relative;
+    display: inline-block;
+  }
+  p{
+    font-size: 20px;
+    margin: 2.5% 0% 0% 8.5%;
+    @include laptop{
+      font-size: 15px
+    }
+  }
+
+}
+.glitch-title{
+  margin: 0% 0% 0% 7.5%;
+  line-height: 175px;
+  position: relative;
+  font-weight: 300;
+  font-size: 150px;
+   &:before, &:after{
+     content: attr(data-text);
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+   }
+   &:before{
+     left: 5px;
+     text-shadow: -3px 5px 0 $key1;
+     background: $dark;
+     animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
+
+   }
+   &:after{
+     left: 5px;
+     text-shadow: 3px -5px 0 $key2;
+     background: $dark;
+     clip: rect(50px, 750px, 75px, 0);
+     animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
+   }
+   @include laptop{
+     font-size: 125px;
+     line-height: 125px;
+   }
+}
 
 .arrows {
   position: absolute;
@@ -385,7 +271,7 @@ a.cotButton {
   transition: all 0.2s;
 
   &:hover {
-    border-color: $light!important;
+    border-color: $key1!important;
   }
   @include mobile {
     width: 15px;
@@ -416,10 +302,10 @@ a.cotButton {
     transition: all 0.2s;
     margin: 0 0.25%;
     cursor: pointer;
-    background-color: #dddddd;
+    background-color: #4b4b4b;
 
     &:hover {
-      background-color: #7592cb!important;
+      background-color: $key2!important;
     }
   }
 
@@ -476,7 +362,7 @@ a.cotButton {
     margin-top: 0;
     font-size: $headerSize*1.5;
     letter-spacing: 0.25rem;
-    color: $dark;
+    color: $text;
     @include laptop {
       font-size: $headerSize;
     }
@@ -514,6 +400,7 @@ a.cotButton {
 }
 
 #projNum {
+  color: $text;
   display: inline-block;
   margin: 0 0.5% 0 0;
 }
@@ -531,21 +418,10 @@ a.cotButton {
 
   .title {
     width: 75%;
-    margin: auto;
-
-    a {
-      color: $light;
-    }
-
+    float: right;
     b {
-      color: $dark;
+      color: $key2;
       transition: 0.25s color;
-    }
-
-    &:hover {
-      b {
-        color: $light;
-      }
     }
     @include mobile{
       width: 100%;
@@ -553,47 +429,19 @@ a.cotButton {
     }
   }
 
-  .fullPgTitle {
-    font-size: $headerSize*15;
-    margin: auto;
-    @include laptop {
-      font-size: $headerSize*11;
-    }
-    @include mobile {
-      font-size: $baseSize*5!important;
-      line-height: $baseSize!important;
-    }
-  }
-
-  #phTitle {
-    height: 100vh;
-    padding-top: 22.5rem;
-    line-height: 22.5rem;
-    font-size: 25rem;
-    @include laptop {
-      line-height: 15rem;
-      font-size: 17.5rem;
-    }
-  }
-
   .container {
     h1 {
-      background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
+      background: -webkit-linear-gradient(left, $key1, $key2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-  }
-
-  a {
-    font-weight: 400;
-    color: $light;
   }
 
   h2 {
     display: inline-block;
     font-weight: 400;
     font-size: $headerSize*1.5;
-    color: $dark;
+    color: $text;
     margin-top: 0.5%;
     margin-bottom: 2.75%;
     @include laptop {
@@ -608,7 +456,7 @@ a.cotButton {
     display: inline-block;
     font-weight: 400;
     font-size: $headerSize*0.85;
-    color: $dark;
+    color: $text;
     margin: 0;
     @include laptop {
       font-size: $headerSize*0.7;
@@ -617,13 +465,20 @@ a.cotButton {
       font-size: $headerSize*0.65;
     }
   }
-
+  a img{
+    filter: grayscale(100%);
+    cursor: pointer;
+    &:hover{
+      border-radius: 25px;
+      filter: none;
+    }
+  }
   p {
     font-size: $baseSize*1.25;
 
     b,
     q {
-      color: $light;
+      color: $key1;
       font-weight: 600;
     }
     @include laptop {
@@ -657,8 +512,8 @@ a.cotButton {
   z-index: 5;
 
   span {
-    color: $dark;
-    font-size: $baseSize*1.15;
+    color: $text;
+    font-size: $baseSize;
     font-weight: 400;
     letter-spacing: $letterSpacing*1.5;
     width: auto;
@@ -692,7 +547,7 @@ ul {
       content: '';
       height: 0.45em;
       width: 0.45em;
-      background: $light;
+      background: $key1;
       display: block;
       position: absolute;
       transform: rotate(45deg);
@@ -705,37 +560,12 @@ ul {
   }
 }
 
-.underline {
-  &:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    display: block;
-    margin-top: 0;
-    right: 0;
-    background: $light;
-    @include transition(width .3s ease);
-  }
-
-  &:hover:after {
-    width: 100%;
-    left: 0;
-  }
-}
-
-.underline2 {
-  &:after {
-    @include transition(all 0.25s);
-    content: '';
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 1.5rem;
-    display: block;
-    opacity: 0;
-    left: 0;
-    background: -webkit-linear-gradient(left, #8ea7d7, #a3d7d9);
+.underline, a.cotButton {
+  @include transition(all 0.25s);
+  letter-spacing: $letterSpacing*2.5;
+  text-decoration: underline;
+  &:hover {
+    background-color: $key1;
   }
 }
 ///////////image grid//////////////////

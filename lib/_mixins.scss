@@ -12,7 +12,7 @@
 @mixin links {
   cursor: pointer;
   text-decoration: none;
-  color: $light;
+  color: $key1;
   display: inline-block;
 }
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
