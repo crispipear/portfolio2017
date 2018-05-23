@@ -1,12 +1,11 @@
 // Designed and Developed by Su Li 2017🍐
-@import url( 'https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
 @import "mixins";
 @import "keyframes";
 @import url("subasecss.css");
 $dark: #121212;
 $text: #ffffff;
-$key1: #e6456a;
+$key1: #d44b53;
 $key2: #4fdace;
 $baseSize: 1em;
 $headerSize: 2em;
@@ -25,7 +24,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 * {
-  font-family: 'Roboto Mono', '微软雅黑';
+  font-family: 'Roboto Mono', monospace, '微软雅黑';
   font-size: $baseSize;
   cursor: default;
   letter-spacing: $letterSpacing;
@@ -181,10 +180,10 @@ p {
 
 a.cotButton {
   @include transition(all 0.45s);
-  font-size: $baseSize;
+  font-size: $baseSize*1.15;
   margin-top: 7.5%;
   @include laptop {
-    font-size: $baseSize*0.75;
+    font-size: $baseSize*0.85;
     padding: 2.5%;
     max-width: 135px;
   }
@@ -201,7 +200,9 @@ a.cotButton {
     display: block;
   }
   #aboutName img{
-    width: 150px;
+    margin-left: 1.5%;
+    vertical-align: middle;
+    width: 100px;
     border-radius: 50%;
   }
 }
@@ -210,27 +211,39 @@ a.cotButton {
   justify-content: flex-start;
   align-items: flex-start;
   h1,p{
-    font-family: 'Roboto Mono', monospace, '微软雅黑';
     color: white;
     width: auto;
     position: relative;
     display: inline-block;
   }
+  b{
+    font-weight: 300;
+    color: $key2;
+  }
   p{
+    a{
+      line-height: $baseSize*1.25;
+      font-size: 90%;
+    }
     font-size: 20px;
-    margin: 2.5% 0% 0% 8.5%;
     @include laptop{
       font-size: 15px
     }
   }
-
+  h1.glitch-title{
+    font-size: 150px;
+    line-height: 150px;
+    margin-bottom: 30px;
+  }
+  p.glitch-title{
+    margin-left: 8%;
+    font-size: 25px;
+  }
 }
 .glitch-title{
   margin: 0% 0% 0% 7.5%;
-  line-height: 175px;
   position: relative;
   font-weight: 300;
-  font-size: 150px;
    &:before, &:after{
      content: attr(data-text);
      position: absolute;
@@ -342,7 +355,7 @@ a.cotButton {
 
     .cotButton {
       margin: 15px auto;
-      font-size: $baseSize*0.75;
+      font-size: $baseSize*0.95;
     }
     padding-bottom: 15%;
   }
@@ -356,7 +369,7 @@ a.cotButton {
 
   h2 {
     margin-bottom: 2.5%;
-    font-weight: 400;
+    font-weight: 300;
     display: inline-block;
     position: relative;
     margin-top: 0;
@@ -420,7 +433,6 @@ a.cotButton {
     width: 75%;
     float: right;
     b {
-      color: $key2;
       transition: 0.25s color;
     }
     @include mobile{
@@ -429,23 +441,15 @@ a.cotButton {
     }
   }
 
-  .container {
-    h1 {
-      background: -webkit-linear-gradient(left, $key1, $key2);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
   h2 {
     display: inline-block;
-    font-weight: 400;
-    font-size: $headerSize*1.5;
+    font-weight: 300;
+    font-size: $headerSize*1.25;
     color: $text;
     margin-top: 0.5%;
     margin-bottom: 2.75%;
     @include laptop {
-      font-size: $headerSize*1.25;
+      font-size: $headerSize*1.15;
     }
     @include mobile{
       font-size: $headerSize;
@@ -454,7 +458,7 @@ a.cotButton {
 
   h3 {
     display: inline-block;
-    font-weight: 400;
+    font-weight: 300;
     font-size: $headerSize*0.85;
     color: $text;
     margin: 0;
@@ -475,14 +479,16 @@ a.cotButton {
   }
   p {
     font-size: $baseSize*1.25;
-
     b,
     q {
-      color: $key1;
-      font-weight: 600;
+      color: $key2;
+      font-weight: 400;
     }
     @include laptop {
       font-size: $baseSize*1.05;
+    }
+    a{
+      line-height: 125%;
     }
   }
   img{
@@ -514,7 +520,7 @@ a.cotButton {
   span {
     color: $text;
     font-size: $baseSize;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: $letterSpacing*1.5;
     width: auto;
     height: auto;
@@ -538,6 +544,7 @@ ul {
   font-weight: 300;
 
   li {
+    color: white;
     line-height: 1.35rem;
     margin: 0 0 1em;
     padding-left: 1.5em;
@@ -561,9 +568,19 @@ ul {
 }
 
 .underline, a.cotButton {
+  padding: 0px;
+  font-weight: 300;
   @include transition(all 0.25s);
   letter-spacing: $letterSpacing*2.5;
-  text-decoration: underline;
+  &:before{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    content: "";
+    height: 1px;
+    background: white;
+  }
   &:hover {
     background-color: $key1;
   }

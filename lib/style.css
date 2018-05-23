@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400");
 @import url("subasecss.css");
 @-webkit-keyframes scrollbtn {
@@ -180,99 +179,99 @@
 
 @-webkit-keyframes glitch-anim-1 {
   0% {
-    clip: rect(20px, 9999px, 136px, 0); }
+    clip: rect(145px, 9999px, 16px, 0); }
   10% {
-    clip: rect(130px, 9999px, 80px, 0); }
+    clip: rect(124px, 9999px, 58px, 0); }
   20% {
-    clip: rect(129px, 9999px, 66px, 0); }
+    clip: rect(102px, 9999px, 145px, 0); }
   30% {
-    clip: rect(57px, 9999px, 93px, 0); }
+    clip: rect(155px, 9999px, 94px, 0); }
   40% {
-    clip: rect(14px, 9999px, 88px, 0); }
+    clip: rect(84px, 9999px, 88px, 0); }
   50% {
-    clip: rect(27px, 9999px, 87px, 0); }
+    clip: rect(112px, 9999px, 35px, 0); }
   60% {
-    clip: rect(171px, 9999px, 116px, 0); }
+    clip: rect(118px, 9999px, 98px, 0); }
   70% {
-    clip: rect(162px, 9999px, 31px, 0); }
+    clip: rect(9px, 9999px, 47px, 0); }
   80% {
-    clip: rect(109px, 9999px, 154px, 0); }
+    clip: rect(101px, 9999px, 102px, 0); }
   90% {
-    clip: rect(46px, 9999px, 21px, 0); }
+    clip: rect(36px, 9999px, 117px, 0); }
   100% {
-    clip: rect(107px, 9999px, 172px, 0); } }
+    clip: rect(133px, 9999px, 155px, 0); } }
 
 @-moz-keyframes glitch-anim-1 {
   0% {
-    clip: rect(106px, 9999px, 27px, 0); }
+    clip: rect(106px, 9999px, 119px, 0); }
   10% {
-    clip: rect(87px, 9999px, 68px, 0); }
+    clip: rect(110px, 9999px, 2px, 0); }
   20% {
-    clip: rect(161px, 9999px, 34px, 0); }
+    clip: rect(54px, 9999px, 56px, 0); }
   30% {
-    clip: rect(113px, 9999px, 21px, 0); }
+    clip: rect(66px, 9999px, 35px, 0); }
   40% {
-    clip: rect(127px, 9999px, 145px, 0); }
+    clip: rect(40px, 9999px, 114px, 0); }
   50% {
-    clip: rect(18px, 9999px, 84px, 0); }
+    clip: rect(53px, 9999px, 158px, 0); }
   60% {
-    clip: rect(40px, 9999px, 95px, 0); }
+    clip: rect(145px, 9999px, 37px, 0); }
   70% {
-    clip: rect(90px, 9999px, 18px, 0); }
+    clip: rect(163px, 9999px, 163px, 0); }
   80% {
-    clip: rect(135px, 9999px, 71px, 0); }
+    clip: rect(34px, 9999px, 156px, 0); }
   90% {
-    clip: rect(97px, 9999px, 84px, 0); }
+    clip: rect(163px, 9999px, 77px, 0); }
   100% {
-    clip: rect(16px, 9999px, 20px, 0); } }
+    clip: rect(1px, 9999px, 8px, 0); } }
 
 @-ms-keyframes glitch-anim-1 {
   0% {
-    clip: rect(175px, 9999px, 20px, 0); }
+    clip: rect(103px, 9999px, 4px, 0); }
   10% {
-    clip: rect(15px, 9999px, 18px, 0); }
+    clip: rect(121px, 9999px, 37px, 0); }
   20% {
-    clip: rect(169px, 9999px, 121px, 0); }
+    clip: rect(102px, 9999px, 79px, 0); }
   30% {
-    clip: rect(20px, 9999px, 32px, 0); }
+    clip: rect(106px, 9999px, 15px, 0); }
   40% {
-    clip: rect(88px, 9999px, 49px, 0); }
+    clip: rect(60px, 9999px, 37px, 0); }
   50% {
-    clip: rect(92px, 9999px, 35px, 0); }
+    clip: rect(109px, 9999px, 112px, 0); }
   60% {
-    clip: rect(172px, 9999px, 170px, 0); }
+    clip: rect(73px, 9999px, 90px, 0); }
   70% {
-    clip: rect(38px, 9999px, 161px, 0); }
+    clip: rect(35px, 9999px, 137px, 0); }
   80% {
-    clip: rect(101px, 9999px, 124px, 0); }
+    clip: rect(57px, 9999px, 81px, 0); }
   90% {
-    clip: rect(33px, 9999px, 42px, 0); }
+    clip: rect(148px, 9999px, 51px, 0); }
   100% {
-    clip: rect(79px, 9999px, 3px, 0); } }
+    clip: rect(24px, 9999px, 29px, 0); } }
 
 @keyframes glitch-anim-1 {
   0% {
-    clip: rect(93px, 9999px, 28px, 0); }
+    clip: rect(42px, 9999px, 37px, 0); }
   10% {
-    clip: rect(97px, 9999px, 157px, 0); }
+    clip: rect(74px, 9999px, 52px, 0); }
   20% {
-    clip: rect(144px, 9999px, 103px, 0); }
+    clip: rect(141px, 9999px, 61px, 0); }
   30% {
-    clip: rect(93px, 9999px, 21px, 0); }
+    clip: rect(42px, 9999px, 93px, 0); }
   40% {
-    clip: rect(130px, 9999px, 50px, 0); }
+    clip: rect(3px, 9999px, 166px, 0); }
   50% {
-    clip: rect(172px, 9999px, 91px, 0); }
+    clip: rect(28px, 9999px, 119px, 0); }
   60% {
-    clip: rect(171px, 9999px, 108px, 0); }
+    clip: rect(6px, 9999px, 47px, 0); }
   70% {
-    clip: rect(93px, 9999px, 9px, 0); }
+    clip: rect(151px, 9999px, 95px, 0); }
   80% {
-    clip: rect(5px, 9999px, 150px, 0); }
+    clip: rect(118px, 9999px, 92px, 0); }
   90% {
-    clip: rect(27px, 9999px, 80px, 0); }
+    clip: rect(114px, 9999px, 103px, 0); }
   100% {
-    clip: rect(165px, 9999px, 68px, 0); } }
+    clip: rect(129px, 9999px, 157px, 0); } }
 
 body::-webkit-scrollbar {
   width: 0.65em; }
@@ -284,7 +283,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #454545; }
 
 * {
-  font-family: 'Roboto Mono', '微软雅黑';
+  font-family: 'Roboto Mono', monospace, '微软雅黑';
   font-size: 1em;
   cursor: default;
   letter-spacing: 1px; }
@@ -305,7 +304,7 @@ a {
   color: #ffffff !important;
   cursor: pointer;
   text-decoration: none;
-  color: #e6456a;
+  color: #d44b53;
   display: inline-block; }
   a:visited {
     color: #ffffff; }
@@ -407,7 +406,7 @@ p {
     height: 100%; }
   .fullPgTitle:before {
     left: 5px;
-    text-shadow: -3px 5px 0 #e6456a;
+    text-shadow: -3px 5px 0 #d44b53;
     background: #121212;
     animation: glitch-anim-1 1.5s infinite linear alternate-reverse; }
   .fullPgTitle:after {
@@ -420,11 +419,11 @@ p {
 a.cotButton {
   -webkit-transition: all 0.45s;
   transition: all 0.45s;
-  font-size: 1em;
+  font-size: 1.15em;
   margin-top: 7.5%; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     a.cotButton {
-      font-size: 0.75em;
+      font-size: 0.85em;
       padding: 2.5%;
       max-width: 135px; } }
 
@@ -439,7 +438,9 @@ a.cotButton {
     text-align: right;
     display: block; }
   .about #aboutName img {
-    width: 150px;
+    margin-left: 1.5%;
+    vertical-align: middle;
+    width: 100px;
     border-radius: 50%; }
 
 #landpg {
@@ -447,24 +448,33 @@ a.cotButton {
   justify-content: flex-start;
   align-items: flex-start; }
   #landpg h1, #landpg p {
-    font-family: 'Roboto Mono', monospace, '微软雅黑';
     color: white;
     width: auto;
     position: relative;
     display: inline-block; }
+  #landpg b {
+    font-weight: 300;
+    color: #4fdace; }
   #landpg p {
-    font-size: 20px;
-    margin: 2.5% 0% 0% 8.5%; }
+    font-size: 20px; }
+    #landpg p a {
+      line-height: 1.25em;
+      font-size: 90%; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       #landpg p {
         font-size: 15px; } }
+  #landpg h1.glitch-title {
+    font-size: 150px;
+    line-height: 150px;
+    margin-bottom: 30px; }
+  #landpg p.glitch-title {
+    margin-left: 8%;
+    font-size: 25px; }
 
 .glitch-title {
   margin: 0% 0% 0% 7.5%;
-  line-height: 175px;
   position: relative;
-  font-weight: 300;
-  font-size: 150px; }
+  font-weight: 300; }
   .glitch-title:before, .glitch-title:after {
     content: attr(data-text);
     position: absolute;
@@ -474,7 +484,7 @@ a.cotButton {
     height: 100%; }
   .glitch-title:before {
     left: 5px;
-    text-shadow: -3px 5px 0 #e6456a;
+    text-shadow: -3px 5px 0 #d44b53;
     background: #121212;
     animation: glitch-anim-1 1.5s infinite linear alternate-reverse; }
   .glitch-title:after {
@@ -499,7 +509,7 @@ a.cotButton {
   height: 30px;
   transition: all 0.2s; }
   .arrows:hover {
-    border-color: #e6456a !important; }
+    border-color: #d44b53 !important; }
   @media only screen and (max-width: 1023px) {
     .arrows {
       width: 15px;
@@ -563,7 +573,7 @@ a.cotButton {
     padding-bottom: 15%; }
     #projs .cotButton {
       margin: 15px auto;
-      font-size: 0.75em; } }
+      font-size: 0.95em; } }
 
 .proj-des {
   box-sizing: border-box;
@@ -572,7 +582,7 @@ a.cotButton {
   margin: auto; }
   .proj-des h2 {
     margin-bottom: 2.5%;
-    font-weight: 400;
+    font-weight: 300;
     display: inline-block;
     position: relative;
     margin-top: 0;
@@ -623,32 +633,27 @@ a.cotButton {
     width: 75%;
     float: right; }
     .proj-sec .title b {
-      color: #4fdace;
       transition: 0.25s color; }
     @media only screen and (max-width: 1023px) {
       .proj-sec .title {
         width: 100%;
         margin: 15% auto auto auto; } }
-  .proj-sec .container h1 {
-    background: -webkit-linear-gradient(left, #e6456a, #4fdace);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
   .proj-sec h2 {
     display: inline-block;
-    font-weight: 400;
-    font-size: 3em;
+    font-weight: 300;
+    font-size: 2.5em;
     color: #ffffff;
     margin-top: 0.5%;
     margin-bottom: 2.75%; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
-        font-size: 2.5em; } }
+        font-size: 2.3em; } }
     @media only screen and (max-width: 1023px) {
       .proj-sec h2 {
         font-size: 2em; } }
   .proj-sec h3 {
     display: inline-block;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.7em;
     color: #ffffff;
     margin: 0; }
@@ -668,11 +673,13 @@ a.cotButton {
     font-size: 1.25em; }
     .proj-sec p b,
     .proj-sec p q {
-      color: #e6456a;
-      font-weight: 600; }
+      color: #4fdace;
+      font-weight: 400; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec p {
         font-size: 1.05em; } }
+    .proj-sec p a {
+      line-height: 125%; }
   .proj-sec img {
     height: 100%;
     transition: all 0.25s;
@@ -699,7 +706,7 @@ a.cotButton {
   #footer span {
     color: #ffffff;
     font-size: 1em;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1.5px;
     width: auto;
     height: auto; }
@@ -720,6 +727,7 @@ ul {
   font-size: 1.075em;
   font-weight: 300; }
   ul li {
+    color: white;
     line-height: 1.35rem;
     margin: 0 0 1em;
     padding-left: 1.5em;
@@ -728,7 +736,7 @@ ul {
       content: '';
       height: 0.45em;
       width: 0.45em;
-      background: #e6456a;
+      background: #d44b53;
       display: block;
       position: absolute;
       transform: rotate(45deg);
@@ -739,12 +747,21 @@ ul {
       font-size: 0.95em; } }
 
 .underline, a.cotButton {
+  padding: 0px;
+  font-weight: 300;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
-  letter-spacing: 2.5px;
-  text-decoration: underline; }
+  letter-spacing: 2.5px; }
+  .underline:before, a.cotButton:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    content: "";
+    height: 1px;
+    background: white; }
   .underline:hover, a.cotButton:hover {
-    background-color: #e6456a; }
+    background-color: #d44b53; }
 
 .masonry {
   padding-top: 7.5%;
