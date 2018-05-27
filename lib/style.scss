@@ -1,5 +1,5 @@
 // Designed and Developed by Su Li 2017🍐
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
+@import url( 'https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
 @import "mixins";
 @import "keyframes";
 @import url("subasecss.css");
@@ -63,38 +63,18 @@ a {
   z-index: -4;
 }
 
-
 section {
   @include full;
 }
 
 h1,
 p {
-  letter-spacing: $letterSpacing;
   font-size: $baseSize*2.5;
   font-weight: 300;
   line-height: 2em;
   margin-top: 0;
 }
 
-.nav2 {
-  width: auto;
-  z-index: 50;
-  color: $text;
-  font-size: $baseSize*1.15;
-
-  &:hover::after {
-    opacity: 1!important;
-  }
-
-  &:after {
-    margin-top: -3.5% !important;
-    height: 15px!important;
-  }
-  @include laptop {
-    font-size: $baseSize;
-  }
-}
 
 .nav {
   color: $text;
@@ -117,7 +97,19 @@ p {
     font-size: $baseSize;
   }
 }
-
+#homeNav{
+  position: fixed;
+  right: 7.5%;
+  top: 7.5%;
+  font-weight: 300;
+  z-index: 100;
+  width: 50%;
+  text-align: right;
+  a{
+    text-transform: uppercase;
+    margin-left: 2.5%;
+  }
+}
 #nav-work {
   left: 2.5%;
 }
@@ -134,18 +126,6 @@ p {
   }
 }
 
-#nav-vd {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-}
-
-#nav-ixd {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-}
-
 a.cotButton {
   @include transition(all 0.45s);
   font-size: $baseSize*1.15;
@@ -155,175 +135,188 @@ a.cotButton {
     padding: 2.5%;
   }
 }
-.about{
-  width: 45%;
-  display: flex;
-  position: absolute;
-  right: 7.5%;
-  bottom: 7.5%;
-  flex-direction: column;
-  p{
-    text-align: right;
-    display: block;
-  }
-  #aboutName img{
-    margin-left: 1.5%;
-    vertical-align: middle;
-    width: 100px;
-    border-radius: 50%;
-  }
-}
-#landpg{
+
+#landpg {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  h1,p{
+
+  h1,
+  p {
     color: white;
     width: auto;
     position: relative;
     display: inline-block;
   }
-  b{
+
+  b {
     font-weight: 300;
     color: $key2;
   }
-  p{
-    a{
-      line-height: $baseSize*1.25;
-      font-size: 90%;
+  .about {
+    width: 45%;
+    display: flex;
+    position: absolute;
+    right: 7.5%;
+    bottom: 7.5%;
+    flex-direction: column;
+
+    p {
+      text-align: right;
+      display: block;
+      a {
+        line-height: $baseSize*1.25;
+        font-size: 90%;
+      }
+      font-size: 20px;
+      @include laptop {
+        font-size: 15px;
+      }
     }
-    font-size: 20px;
-    @include laptop{
-      font-size: 15px
+
+    #aboutName img {
+      margin-left: 1.5%;
+      vertical-align: middle;
+      width: 100px;
+      border-radius: 50%;
     }
   }
-  h1.glitch-title{
-    font-size: 150px;
-    line-height: 150px;
-    margin-bottom: 30px;
-    @include laptop{
-      font-size: 125px;
-      line-height: 125px;
+  .landpgTitle {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0% 0% 7.5%;
+    h1 {
+      font-size: 175px;
+      line-height: 175px;
+      margin-bottom: 30px;
+      @include laptop {
+        font-size: 125px;
+        line-height: 125px;
+      }
     }
-  }
-  p.glitch-title{
-    margin-left: 8%;
-    font-size: 25px;
-    @include laptop{
+    p {
+      color: $key2;
+      padding-left: 2%;
       font-size: 20px;
       line-height: 75px;
+      @include laptop {
+        font-size: 17px;
+      }
+    }
+    a{
+      width: inherit;
     }
   }
 }
-.glitch-title{
-  margin: 0% 0% 0% 7.5%;
+
+.glitch-title {
+  margin: 0%;
   position: relative;
   font-weight: 300;
-   &:before, &:after{
-     content: attr(data-text);
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-   }
-   &:before{
-     left: 5px;
-     text-shadow: -3px 5px 0 $key1;
-     background: $dark;
-     animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
-
-   }
-   &:after{
-     left: 5px;
-     text-shadow: 3px -5px 0 $key2;
-     background: $dark;
-     clip: rect(50px, 750px, 75px, 0);
-     animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
-   }
-   @include laptop{
-     font-size: 125px;
-     line-height: 125px;
-   }
-}
-
-.arrows {
-  position: absolute;
-  cursor: pointer;
-  top: 40%;
-  box-sizing: border-box;
-  border-left: 3px solid #cdcdcd;
-  border-bottom: 3px solid #cdcdcd;
-  width: 30px;
-  height: 30px;
-  transition: all 0.2s;
-
-  &:hover {
-    border-color: $key1!important;
+  &:after,
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
-  @include mobile {
-    width: 15px;
-    height: 15px;
+  &:before {
+    left: 5px;
+    text-shadow: -3px 5px 0 $key1;
+    background: $dark;
+    animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
+  }
+
+  &:after {
+    left: 5px;
+    text-shadow: 3px -5px 0 $key2;
+    background: $dark;
+    clip: rect(50px, 750px, 75px, 0);
+    animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
+  }
+  @include laptop {
+    font-size: 125px;
+    line-height: 125px;
   }
 }
 
-#a-left {
-  @include transform(rotate(-315deg));
-  left: 0;
-}
-
-#a-right {
-  @include transform(rotate(225deg));
-  right: 0;
-}
-
-.counter {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-top: 1.5%;
-
-  div {
-    width: 25px;
-    height: 10px;
-    transition: all 0.2s;
-    margin: 0 0.25%;
-    cursor: pointer;
-    background-color: #4b4b4b;
-
-    &:hover {
-      background-color: $key2!important;
-    }
-  }
-
-  svg {
-    color: #bbbbbb;
-    font-size: $headerSize*0.75;
-    margin: 0.25% 0 0 0.25%;
-  }
-}
 
 .proj-item {
-  max-width: 100%;
-  height: 50vh;
-  @include mobile {
-    height: 30vh;
-    margin-bottom: 15px;
-  }
+  margin-left: 150px;
+  margin-top: -50px;
+  position: relative;
+  width: 700px;
+  height: 500px;
   @include transition(all 0.25s);
-  @include boxshadow(0 0 25px 0 rgba(16, 29, 54, 0.15));
-  border-radius: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
-  &:hover {
-    border-radius: 30px;
+  @include laptop{
+    width: 500px;
+    height: 300px;
+  }
+  .proj-info{
+    padding: 25px;
+    position: absolute;
+    left: -150px;
+    bottom: -50px;
+    width: 350px;
+    height: 200px;
+    background-color: rgba(white, 0.9);
+    @include boxshadow(0 0 45px 0 rgba(16, 54, 38, 0.25));
+    @include laptop{
+      width: 250px;
+      height: 150px;
+    }
+    p{
+      font-weight: 400;
+      margin: 0% 0% 5% 0%;
+      color: $dark;
+      font-size: $baseSize;
+      span{
+        color: inherit;
+      }
+      @include laptop{
+        font-size: $baseSize*0.8;
+      }
+    }
+  }
+  a{
+    position: absolute;
+    right: 0px;
+    bottom: -50px;
   }
 }
-
+.proj-menu{
+  margin-left: 50px;
+  width: 35%;
+  float: left;
+  color: $text;
+  h3{
+    margin: 0px 0px 50px 0px;
+    @include transition(all 0.4s);
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 25px;
+    transform-origin: left;
+    @include laptop{
+      font-size: 18px;
+    }
+  }
+  .focus{
+    @include transition(opacity 0.2s);
+    opacity: 0;
+  }
+}
 #projs {
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   @include mobile {
     height: auto;
     text-align: center;
@@ -335,6 +328,7 @@ a.cotButton {
     padding-bottom: 15%;
   }
 }
+
 .fullPgTitle {
   width: 80%;
   text-align: left;
@@ -343,78 +337,36 @@ a.cotButton {
   font-size: 125px;
   position: relative;
   font-weight: 300;
-   &:before, &:after{
-     content: attr(data-text);
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-   }
-   &:before{
-     left: 5px;
-     text-shadow: -3px 5px 0 $key1;
-     background: $dark;
-     animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
 
-   }
-   &:after{
-     left: 5px;
-     text-shadow: 3px -5px 0 $key2;
-     background: $dark;
-     clip: rect(50px, 750px, 75px, 0);
-     animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
-   }
-   @include laptop{
-     font-size: 100px;
-   }
-}
-.proj-des {
-  box-sizing: border-box;
-  padding-left: 2.5%;
-  max-width: 90%;
-  margin: auto;
-
-  h2 {
-    margin-bottom: 2.5%;
-    font-weight: 300;
-    display: inline-block;
-    position: relative;
-    margin-top: 0;
-    font-size: $headerSize*1.5;
-    letter-spacing: 0.25rem;
-    color: $key2;
-    @include laptop {
-      font-size: $headerSize;
-    }
-    @include mobile {
-      font-size: $headerSize;
-    }
-
-    &:after {
-      margin: -1.5rem 0 0 0.25rem;
-      @include laptop {
-        height: 1rem;
-        margin: -1rem 0 0 0.15rem;
-      }
-    }
+  &:after,
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 
-  p {
-    margin-top: 5%;
-    font-size: $baseSize*1.25;
-    @include laptop {
-      font-size: $baseSize*0.9;
-    }
-    @include mobile {
-      font-size: $baseSize*0.9;
-    }
+  &:before {
+    left: 5px;
+    text-shadow: -3px 5px 0 $key1;
+    background: $dark;
+    animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
   }
 
-  &:hover h2:after {
-    opacity: 1;
+  &:after {
+    left: 5px;
+    text-shadow: 3px -5px 0 $key2;
+    background: $dark;
+    clip: rect(50px, 750px, 75px, 0);
+    animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
+  }
+  @include laptop {
+    font-size: 100px;
   }
 }
+
 
 .container {
   opacity: 0;
@@ -440,15 +392,16 @@ a.cotButton {
   .title {
     width: 75%;
     float: right;
+
     b {
       transition: 0.25s color;
     }
-    @include laptop{
+    @include laptop {
       font-size: $baseSize*0.9;
     }
-    @include mobile{
+    @include mobile {
       width: 100%;
-      margin: 15% auto auto auto;
+      margin: 15% auto auto;
     }
   }
 
@@ -462,7 +415,7 @@ a.cotButton {
     @include laptop {
       font-size: $headerSize*1.15;
     }
-    @include mobile{
+    @include mobile {
       font-size: $headerSize;
     }
   }
@@ -476,20 +429,24 @@ a.cotButton {
     @include laptop {
       font-size: $headerSize*0.7;
     }
-    @include mobile{
+    @include mobile {
       font-size: $headerSize*0.65;
     }
   }
-  a img{
+
+  a img {
     filter: grayscale(100%);
     cursor: pointer;
-    &:hover{
+
+    &:hover {
       border-radius: 25px;
       filter: none;
     }
   }
+
   p {
     font-size: $baseSize*1.25;
+
     b,
     q {
       color: $key2;
@@ -498,21 +455,23 @@ a.cotButton {
     @include laptop {
       font-size: $baseSize*1.05;
     }
-    a{
+
+    a {
       line-height: 125%;
     }
   }
-  img{
+
+  img {
     height: 100%;
     transition: all 0.25s;
     width: 100%;
-    @include boxshadow(0 0 45px 0 rgba(16, 29, 54, 0.15));
   }
-  @include mobile{
-    div{
+  @include mobile {
+    div {
       flex: 100%!important;
     }
-    .row p{
+
+    .row p {
       flex: 100%!important;
       font-size: $baseSize;
     }
@@ -577,20 +536,23 @@ ul {
   }
 }
 
-.underline, a.cotButton {
-  padding: 0px;
+.underline,
+a.cotButton {
+  padding: 0;
   font-weight: 300;
-  @include transition(all 0.25s);
   letter-spacing: $letterSpacing*2.5;
-  &:before{
+  @include transition(all 0.25s);
+
+  &:before {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
     content: "";
     height: 1px;
     background: white;
   }
+
   &:hover {
     background-color: $key1;
   }
@@ -598,12 +560,12 @@ ul {
 ///////////image grid//////////////////
 
 .masonry {
-  padding-top: 7.5%;
+  padding-top: 10%;
   column-count: 4;
   column-gap: 0;
 
   &:hover img {
-    opacity: 0.5;
+    opacity: 0.75;
   }
   @include mobile {
     padding-top: 25%;

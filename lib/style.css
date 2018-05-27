@@ -179,99 +179,99 @@
 
 @-webkit-keyframes glitch-anim-1 {
   0% {
-    clip: rect(150px, 9999px, 114px, 0); }
+    clip: rect(68px, 9999px, 119px, 0); }
   10% {
-    clip: rect(18px, 9999px, 16px, 0); }
+    clip: rect(146px, 9999px, 37px, 0); }
   20% {
-    clip: rect(3px, 9999px, 112px, 0); }
+    clip: rect(38px, 9999px, 138px, 0); }
   30% {
-    clip: rect(13px, 9999px, 173px, 0); }
+    clip: rect(4px, 9999px, 168px, 0); }
   40% {
-    clip: rect(58px, 9999px, 76px, 0); }
+    clip: rect(122px, 9999px, 163px, 0); }
   50% {
-    clip: rect(51px, 9999px, 60px, 0); }
+    clip: rect(47px, 9999px, 57px, 0); }
   60% {
-    clip: rect(39px, 9999px, 13px, 0); }
+    clip: rect(89px, 9999px, 150px, 0); }
   70% {
-    clip: rect(99px, 9999px, 26px, 0); }
+    clip: rect(127px, 9999px, 21px, 0); }
   80% {
-    clip: rect(104px, 9999px, 80px, 0); }
+    clip: rect(113px, 9999px, 62px, 0); }
   90% {
-    clip: rect(156px, 9999px, 16px, 0); }
+    clip: rect(76px, 9999px, 116px, 0); }
   100% {
-    clip: rect(14px, 9999px, 80px, 0); } }
+    clip: rect(157px, 9999px, 38px, 0); } }
 
 @-moz-keyframes glitch-anim-1 {
   0% {
-    clip: rect(72px, 9999px, 35px, 0); }
+    clip: rect(125px, 9999px, 102px, 0); }
   10% {
-    clip: rect(11px, 9999px, 165px, 0); }
+    clip: rect(159px, 9999px, 164px, 0); }
   20% {
-    clip: rect(42px, 9999px, 130px, 0); }
+    clip: rect(42px, 9999px, 153px, 0); }
   30% {
-    clip: rect(155px, 9999px, 73px, 0); }
+    clip: rect(116px, 9999px, 146px, 0); }
   40% {
-    clip: rect(5px, 9999px, 174px, 0); }
+    clip: rect(156px, 9999px, 151px, 0); }
   50% {
-    clip: rect(137px, 9999px, 88px, 0); }
+    clip: rect(128px, 9999px, 125px, 0); }
   60% {
-    clip: rect(33px, 9999px, 32px, 0); }
+    clip: rect(133px, 9999px, 134px, 0); }
   70% {
-    clip: rect(141px, 9999px, 113px, 0); }
+    clip: rect(102px, 9999px, 167px, 0); }
   80% {
-    clip: rect(25px, 9999px, 115px, 0); }
+    clip: rect(154px, 9999px, 95px, 0); }
   90% {
-    clip: rect(157px, 9999px, 42px, 0); }
+    clip: rect(66px, 9999px, 40px, 0); }
   100% {
-    clip: rect(136px, 9999px, 101px, 0); } }
+    clip: rect(73px, 9999px, 173px, 0); } }
 
 @-ms-keyframes glitch-anim-1 {
   0% {
-    clip: rect(162px, 9999px, 99px, 0); }
+    clip: rect(136px, 9999px, 117px, 0); }
   10% {
-    clip: rect(95px, 9999px, 54px, 0); }
+    clip: rect(137px, 9999px, 87px, 0); }
   20% {
-    clip: rect(54px, 9999px, 167px, 0); }
+    clip: rect(49px, 9999px, 132px, 0); }
   30% {
-    clip: rect(62px, 9999px, 108px, 0); }
+    clip: rect(57px, 9999px, 77px, 0); }
   40% {
-    clip: rect(35px, 9999px, 39px, 0); }
+    clip: rect(124px, 9999px, 169px, 0); }
   50% {
-    clip: rect(53px, 9999px, 106px, 0); }
+    clip: rect(12px, 9999px, 37px, 0); }
   60% {
-    clip: rect(40px, 9999px, 11px, 0); }
+    clip: rect(148px, 9999px, 22px, 0); }
   70% {
-    clip: rect(51px, 9999px, 94px, 0); }
+    clip: rect(68px, 9999px, 43px, 0); }
   80% {
-    clip: rect(116px, 9999px, 38px, 0); }
+    clip: rect(28px, 9999px, 26px, 0); }
   90% {
-    clip: rect(43px, 9999px, 130px, 0); }
+    clip: rect(161px, 9999px, 20px, 0); }
   100% {
-    clip: rect(93px, 9999px, 139px, 0); } }
+    clip: rect(121px, 9999px, 22px, 0); } }
 
 @keyframes glitch-anim-1 {
   0% {
-    clip: rect(159px, 9999px, 149px, 0); }
+    clip: rect(156px, 9999px, 72px, 0); }
   10% {
-    clip: rect(173px, 9999px, 87px, 0); }
+    clip: rect(174px, 9999px, 30px, 0); }
   20% {
-    clip: rect(16px, 9999px, 52px, 0); }
+    clip: rect(101px, 9999px, 159px, 0); }
   30% {
-    clip: rect(48px, 9999px, 40px, 0); }
+    clip: rect(132px, 9999px, 100px, 0); }
   40% {
-    clip: rect(8px, 9999px, 121px, 0); }
+    clip: rect(168px, 9999px, 84px, 0); }
   50% {
-    clip: rect(106px, 9999px, 76px, 0); }
+    clip: rect(123px, 9999px, 105px, 0); }
   60% {
-    clip: rect(52px, 9999px, 73px, 0); }
+    clip: rect(160px, 9999px, 151px, 0); }
   70% {
-    clip: rect(108px, 9999px, 93px, 0); }
+    clip: rect(80px, 9999px, 146px, 0); }
   80% {
-    clip: rect(127px, 9999px, 46px, 0); }
+    clip: rect(81px, 9999px, 43px, 0); }
   90% {
-    clip: rect(21px, 9999px, 10px, 0); }
+    clip: rect(57px, 9999px, 171px, 0); }
   100% {
-    clip: rect(101px, 9999px, 46px, 0); } }
+    clip: rect(70px, 9999px, 114px, 0); } }
 
 body::-webkit-scrollbar {
   width: 0.65em; }
@@ -330,25 +330,10 @@ section {
 
 h1,
 p {
-  letter-spacing: 1px;
   font-size: 2.5em;
   font-weight: 300;
   line-height: 2em;
   margin-top: 0; }
-
-.nav2 {
-  width: auto;
-  z-index: 50;
-  color: #ffffff;
-  font-size: 1.15em; }
-  .nav2:hover::after {
-    opacity: 1 !important; }
-  .nav2:after {
-    margin-top: -3.5% !important;
-    height: 15px !important; }
-  @media (min-width: 1024px) and (max-width: 1550px) {
-    .nav2 {
-      font-size: 1em; } }
 
 .nav {
   color: #ffffff;
@@ -368,6 +353,18 @@ p {
     .nav {
       font-size: 1em; } }
 
+#homeNav {
+  position: fixed;
+  right: 7.5%;
+  top: 7.5%;
+  font-weight: 300;
+  z-index: 100;
+  width: 50%;
+  text-align: right; }
+  #homeNav a {
+    text-transform: uppercase;
+    margin-left: 2.5%; }
+
 #nav-work {
   left: 2.5%; }
 
@@ -379,16 +376,6 @@ p {
 #nav-top:after {
   margin-top: -20.25% !important; }
 
-#nav-vd {
-  position: absolute;
-  bottom: 5%;
-  right: 5%; }
-
-#nav-ixd {
-  position: absolute;
-  top: 5%;
-  right: 5%; }
-
 a.cotButton {
   -webkit-transition: all 0.45s;
   transition: all 0.45s;
@@ -399,27 +386,12 @@ a.cotButton {
       font-size: 0.85em;
       padding: 2.5%; } }
 
-.about {
-  width: 45%;
-  display: flex;
-  position: absolute;
-  right: 7.5%;
-  bottom: 7.5%;
-  flex-direction: column; }
-  .about p {
-    text-align: right;
-    display: block; }
-  .about #aboutName img {
-    margin-left: 1.5%;
-    vertical-align: middle;
-    width: 100px;
-    border-radius: 50%; }
-
 #landpg {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; }
-  #landpg h1, #landpg p {
+  #landpg h1,
+  #landpg p {
     color: white;
     width: auto;
     position: relative;
@@ -427,35 +399,57 @@ a.cotButton {
   #landpg b {
     font-weight: 300;
     color: #4fdace; }
-  #landpg p {
-    font-size: 20px; }
-    #landpg p a {
-      line-height: 1.25em;
-      font-size: 90%; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      #landpg p {
-        font-size: 15px; } }
-  #landpg h1.glitch-title {
-    font-size: 150px;
-    line-height: 150px;
-    margin-bottom: 30px; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      #landpg h1.glitch-title {
-        font-size: 125px;
-        line-height: 125px; } }
-  #landpg p.glitch-title {
-    margin-left: 8%;
-    font-size: 25px; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      #landpg p.glitch-title {
-        font-size: 20px;
-        line-height: 75px; } }
+  #landpg .about {
+    width: 45%;
+    display: flex;
+    position: absolute;
+    right: 7.5%;
+    bottom: 7.5%;
+    flex-direction: column; }
+    #landpg .about p {
+      text-align: right;
+      display: block;
+      font-size: 20px; }
+      #landpg .about p a {
+        line-height: 1.25em;
+        font-size: 90%; }
+      @media (min-width: 1024px) and (max-width: 1550px) {
+        #landpg .about p {
+          font-size: 15px; } }
+    #landpg .about #aboutName img {
+      margin-left: 1.5%;
+      vertical-align: middle;
+      width: 100px;
+      border-radius: 50%; }
+  #landpg .landpgTitle {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 5% 0% 0% 7.5%; }
+    #landpg .landpgTitle h1 {
+      font-size: 175px;
+      line-height: 175px;
+      margin-bottom: 30px; }
+      @media (min-width: 1024px) and (max-width: 1550px) {
+        #landpg .landpgTitle h1 {
+          font-size: 125px;
+          line-height: 125px; } }
+    #landpg .landpgTitle p {
+      color: #4fdace;
+      padding-left: 2%;
+      font-size: 20px;
+      line-height: 75px; }
+      @media (min-width: 1024px) and (max-width: 1550px) {
+        #landpg .landpgTitle p {
+          font-size: 17px; } }
+    #landpg .landpgTitle a {
+      width: inherit; }
 
 .glitch-title {
-  margin: 0% 0% 0% 7.5%;
+  margin: 0%;
   position: relative;
   font-weight: 300; }
-  .glitch-title:before, .glitch-title:after {
+  .glitch-title:after, .glitch-title:before {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -478,73 +472,76 @@ a.cotButton {
       font-size: 125px;
       line-height: 125px; } }
 
-.arrows {
-  position: absolute;
-  cursor: pointer;
-  top: 40%;
-  box-sizing: border-box;
-  border-left: 3px solid #cdcdcd;
-  border-bottom: 3px solid #cdcdcd;
-  width: 30px;
-  height: 30px;
-  transition: all 0.2s; }
-  .arrows:hover {
-    border-color: #d44b53 !important; }
-  @media only screen and (max-width: 1023px) {
-    .arrows {
-      width: 15px;
-      height: 15px; } }
-
-#a-left {
-  -ms-transform: rotate(-315deg);
-  -webkit-transform: rotate(-315deg);
-  transform: rotate(-315deg);
-  left: 0; }
-
-#a-right {
-  -ms-transform: rotate(225deg);
-  -webkit-transform: rotate(225deg);
-  transform: rotate(225deg);
-  right: 0; }
-
-.counter {
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-top: 1.5%; }
-  .counter div {
-    width: 25px;
-    height: 10px;
-    transition: all 0.2s;
-    margin: 0 0.25%;
-    cursor: pointer;
-    background-color: #4b4b4b; }
-    .counter div:hover {
-      background-color: #4fdace !important; }
-  .counter svg {
-    color: #bbbbbb;
-    font-size: 1.5em;
-    margin: 0.25% 0 0 0.25%; }
-
 .proj-item {
-  max-width: 100%;
-  height: 50vh;
+  margin-left: 150px;
+  margin-top: -50px;
+  position: relative;
+  width: 700px;
+  height: 500px;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
-  -webkit-box-shadow: 0 0 25px 0 rgba(16, 29, 54, 0.15);
-  -moz-box-shadow: 0 0 25px 0 rgba(16, 29, 54, 0.15);
-  box-shadow: 0 0 25px 0 rgba(16, 29, 54, 0.15);
-  border-radius: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
-  @media only screen and (max-width: 1023px) {
+  @media (min-width: 1024px) and (max-width: 1550px) {
     .proj-item {
-      height: 30vh;
-      margin-bottom: 15px; } }
-  .proj-item:hover {
-    border-radius: 30px; }
+      width: 500px;
+      height: 300px; } }
+  .proj-item .proj-info {
+    padding: 25px;
+    position: absolute;
+    left: -150px;
+    bottom: -50px;
+    width: 350px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
+    -moz-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
+    box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25); }
+    @media (min-width: 1024px) and (max-width: 1550px) {
+      .proj-item .proj-info {
+        width: 250px;
+        height: 150px; } }
+    .proj-item .proj-info p {
+      font-weight: 400;
+      margin: 0% 0% 5% 0%;
+      color: #121212;
+      font-size: 1em; }
+      .proj-item .proj-info p span {
+        color: inherit; }
+      @media (min-width: 1024px) and (max-width: 1550px) {
+        .proj-item .proj-info p {
+          font-size: 0.8em; } }
+  .proj-item a {
+    position: absolute;
+    right: 0px;
+    bottom: -50px; }
+
+.proj-menu {
+  margin-left: 50px;
+  width: 35%;
+  float: left;
+  color: #ffffff; }
+  .proj-menu h3 {
+    margin: 0px 0px 50px 0px;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: 25px;
+    transform-origin: left; }
+    @media (min-width: 1024px) and (max-width: 1550px) {
+      .proj-menu h3 {
+        font-size: 18px; } }
+  .proj-menu .focus {
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    opacity: 0; }
+
+#projs .container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 @media only screen and (max-width: 1023px) {
   #projs {
@@ -563,7 +560,7 @@ a.cotButton {
   font-size: 125px;
   position: relative;
   font-weight: 300; }
-  .fullPgTitle:before, .fullPgTitle:after {
+  .fullPgTitle:after, .fullPgTitle:before {
     content: attr(data-text);
     position: absolute;
     top: 0;
@@ -584,44 +581,6 @@ a.cotButton {
   @media (min-width: 1024px) and (max-width: 1550px) {
     .fullPgTitle {
       font-size: 100px; } }
-
-.proj-des {
-  box-sizing: border-box;
-  padding-left: 2.5%;
-  max-width: 90%;
-  margin: auto; }
-  .proj-des h2 {
-    margin-bottom: 2.5%;
-    font-weight: 300;
-    display: inline-block;
-    position: relative;
-    margin-top: 0;
-    font-size: 3em;
-    letter-spacing: 0.25rem;
-    color: #4fdace; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      .proj-des h2 {
-        font-size: 2em; } }
-    @media only screen and (max-width: 1023px) {
-      .proj-des h2 {
-        font-size: 2em; } }
-    .proj-des h2:after {
-      margin: -1.5rem 0 0 0.25rem; }
-      @media (min-width: 1024px) and (max-width: 1550px) {
-        .proj-des h2:after {
-          height: 1rem;
-          margin: -1rem 0 0 0.15rem; } }
-  .proj-des p {
-    margin-top: 5%;
-    font-size: 1.25em; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      .proj-des p {
-        font-size: 0.9em; } }
-    @media only screen and (max-width: 1023px) {
-      .proj-des p {
-        font-size: 0.9em; } }
-  .proj-des:hover h2:after {
-    opacity: 1; }
 
 .container {
   opacity: 0; }
@@ -650,7 +609,7 @@ a.cotButton {
     @media only screen and (max-width: 1023px) {
       .proj-sec .title {
         width: 100%;
-        margin: 15% auto auto auto; } }
+        margin: 15% auto auto; } }
   .proj-sec h2 {
     display: inline-block;
     font-weight: 300;
@@ -696,10 +655,7 @@ a.cotButton {
   .proj-sec img {
     height: 100%;
     transition: all 0.25s;
-    width: 100%;
-    -webkit-box-shadow: 0 0 45px 0 rgba(16, 29, 54, 0.15);
-    -moz-box-shadow: 0 0 45px 0 rgba(16, 29, 54, 0.15);
-    box-shadow: 0 0 45px 0 rgba(16, 29, 54, 0.15); }
+    width: 100%; }
   @media only screen and (max-width: 1023px) {
     .proj-sec {
       width: 90%;
@@ -758,29 +714,32 @@ ul {
     ul {
       font-size: 0.95em; } }
 
-.underline, a.cotButton {
-  padding: 0px;
+.underline,
+a.cotButton {
+  padding: 0;
   font-weight: 300;
+  letter-spacing: 2.5px;
   -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  letter-spacing: 2.5px; }
-  .underline:before, a.cotButton:before {
+  transition: all 0.25s; }
+  .underline:before,
+  a.cotButton:before {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0px;
+    bottom: 0;
     content: "";
     height: 1px;
     background: white; }
-  .underline:hover, a.cotButton:hover {
+  .underline:hover,
+  a.cotButton:hover {
     background-color: #d44b53; }
 
 .masonry {
-  padding-top: 7.5%;
+  padding-top: 10%;
   column-count: 4;
   column-gap: 0; }
   .masonry:hover img {
-    opacity: 0.5; }
+    opacity: 0.75; }
   @media only screen and (max-width: 1023px) {
     .masonry {
       padding-top: 25%;

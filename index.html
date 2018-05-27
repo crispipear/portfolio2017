@@ -6,29 +6,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="I'm an Interaction Designer in Seattle who likes to make life easier. My work involves UI/UX Design, Web Design and Front-end Development">
+  <meta name="description" content="UX Designer and Front End Developer from Seattle, Washington.">
   <meta name="author" content="Su Li">
-  <meta name="keywords" content="Design, Interaction Designer, UI/UX Design, Interaction Design, Web Design, Web Development, Front-end Development, Design Portfolio, Portfolio">
+  <meta name="keywords" content="Design, UX Designer, Front End Developer, UI/UX Design, Interaction Design, Web Design, Web Development, Front End Development, Design Portfolio, Portfolio">
   <meta name="copyright" content="Copyright 2017 Su Li" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Su Li - UX Designer &amp; Front End Developer" />
-  <meta property="og:description" content="I'm an Interactive Designer in Seattle who likes to make life easier. My work involves UI/UX Design, Web Design and Front-end Development" />
+  <meta property="og:site_name" content="Su Li Portfolio" />
+  <meta property="og:description" content="UX Designer and Front End Developer from Seattle, Washington." />
   <meta property="og:image" content="http://suyli.me/files/favicon.ico" />
   <meta property="og:url" content="http://suyli.me" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Su Li - UX Designer &amp; Front End Developer" />
-  <meta name="twitter:description" content="I'm an Interactive Designer in Seattle who likes to make life easier. My work involves UI/UX Design, Web Design and Front-end Development" />
+  <meta name="twitter:title" content="Su Li Portfolio" />
+  <meta name="twitter:description" content="UX Designer and Front End Developer from Seattle, Washington." />
   <meta name="twitter:image" content="http://suyli.me/files/favicon.ico" />
-  <title>Su Li Portfolio - UX Designer &amp; Front End Developer</title>
+  <title>Su Li Portfolio</title>
   <link href="lib/style.css" type="text/css" rel="stylesheet">
   <link rel="icon" href="files/favicon.ico">
 </head>
 
 <body>
   <div id="particle"></div>
+  <div id="homeNav">
+    <a class="underline" id="nav-top">home</a>
+    <a class="underline" id="nav-ixd">projects</a>
+    <a class="underline" id="nav-vd">visuals</a>
+  </div>
   <section id="landpg">
-    <h1 style="margin-top: 7.5%" class="glitch-title" data-text="Su Li">Su Li</h1>
-    <p class="glitch-title" data-text="UX Designer & Front End Developer">UX Designer &amp; Front End Developer</p>
+    <div class="landpgTitle">
+      <h1 class="glitch-title" data-text="Su Li">Su Li</h1>
+      <p>UX Designer &amp; Front End Developer</p>
+    </div>
       <div class="about">
       <p id="aboutName">Su Li/李素莹 <img src="../files/avatar.jpg"></p>
       <p>Former <b>Interactive Web Designer</b> at iSoftStone North America. Currently an undergraduate student at University of Washington studying <b>Interactive Media Design</b></p>
@@ -41,46 +48,18 @@
   </section>
   <section id="projs" class="projs">
     <div class="container">
-      <span class="arrows" id="a-left"></span>
-      <span class="arrows" id="a-right"></span>
-      <div class="proj-des row">
-        <div id="w_tn" class="proj-item col-7"></div>
-        <div class="proj-info col-5">
-          <h2>WAVES</h2>
-          <p>//video and mobile app prototype</p>
-          <p>Public installation concept integrated with mobile app that brings public awareness to stress.</p>
-          <a class="cotButton" href="pages/waves.html">SEE PROJECT &#x27F6;</a>
-        </div>
+      <div class="proj-menu">
       </div>
-      <div class="proj-des row">
-        <div id="e_tn" class="proj-item col-7"></div>
-        <div class="proj-info col-5">
-          <h2>EATLIXIR</h2>
-          <p>//web design & development</p>
-          <p>Web platform concept that provides meidicinal diet information inspired by Chinese herbology.</p>
-          <a class="cotButton" href="pages/eatlixir.html">SEE PROJECT &#x27F6;</a>
+      <div class="proj-item">
+        <div class="proj-info">
+          <p class="proj-type">//<span></span></p>
+          <p class="proj-des"></p>
         </div>
-      </div>
-      <div class="proj-des row">
-        <div id="ph_tn" class="proj-item col-7"></div>
-        <div class="proj-info col-5">
-          <h2>POCKET HUSKY</h2>
-          <p>//ux research, mobile app prototype</p>
-          <p>Mobile app concept that engages student interaction and exploration on the UW Bothell campus.</p>
-          <a class="cotButton" href="pages/pockethusky.html">SEE PROJECT &#x27F6;</a>
-        </div>
-      </div>
-      <div class="counter">
-        <h1 id="projNum">01</h1>
-        <div></div>
-        <div></div>
-        <div></div>
+        <a class="cotButton">SEE PROJECT &#x27F6;</a>
       </div>
     </div>
-    <a class="nav2 underline" id="nav-vd">visual design &darr;</a>
   </section>
   <section id="projs2" class="projs">
-    <a class="nav2 underline" id="nav-ixd">ux design &amp; dev &uarr;</a>
     <div class="container">
       <div class="masonry">
         <div class="item"><img src="files/vd/1.png" alt="Astronomy infographic about Jovian Planets" /></div>
@@ -112,6 +91,6 @@
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 <script src="lib/behavior.js"></script>
-<script src="../lib/scroll.js"></script>
-
+<script src="lib/index.js"></script>
+<script src="lib/scroll.js"></script>
 </html>
