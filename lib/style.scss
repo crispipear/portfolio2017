@@ -157,12 +157,15 @@ a.cotButton {
   }
   p {
     margin: 0%;
-    color: $key2;
     padding-left: 1%;
     font-size: 20px;
     line-height: 75px;
     @include laptop {
       font-size: 17px;
+    }
+    b{
+      font-weight: 300;
+      color: $key2;
     }
     a{
       margin: 2.5% 25px 0% 0%;
@@ -245,7 +248,7 @@ a.cotButton {
   background-size: cover;
   background-repeat: no-repeat;
   @include laptop{
-    width: 500px;
+    width: 450px;
     height: 300px;
   }
   .proj-info{
@@ -411,7 +414,7 @@ a.cotButton {
 
   h3 {
     display: inline-block;
-    margin: 2.5% 0%;
+    margin: 0% 0% 1.5% 0%;
     font-weight: 300;
     font-size: $headerSize*0.85;
     color: $text;
@@ -473,6 +476,11 @@ a.cotButton {
 }
 #design{
   color: $text;
+  h1{
+    @include laptop{
+      font-size: $headerSize
+    }
+  }
   a{
     margin: 0%;
     float: right;
@@ -543,7 +551,6 @@ a.cotButton {
 ///////////image grid//////////////////
 
 .masonry {
-  padding-top: 10%;
   column-count: 4;
   column-gap: 0;
 
@@ -582,6 +589,11 @@ a.cotButton {
   display: flex;
   flex-direction: column;
   padding-bottom: 10vh;
+  h1{
+    font-size: $headerSize*1.5;
+    margin: 7.5% 0% 2.5% 1%;
+    color: white;
+  }
 }
 
 .modal {
