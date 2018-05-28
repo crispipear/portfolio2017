@@ -26,24 +26,12 @@
 
 <body>
   <div id="particle"></div>
-  <div id="homeNav">
-    <a class="underline" id="nav-top">home</a>
-    <a class="underline" id="nav-ixd">projects</a>
-    <a class="underline" id="nav-vd">visuals</a>
-  </div>
+  <a id="nav-top" class="underline nav">&uarr;	top</a>
   <section id="landpg">
-    <div class="landpgTitle">
+    <div class="container landpgTitle" style="opacity: 1">
       <h1 class="glitch-title" data-text="Su Li">Su Li</h1>
       <p>UX Designer &amp; Front End Developer</p>
-    </div>
-      <div class="about">
-      <p id="aboutName">Su Li/李素莹 <img src="../files/avatar.jpg"></p>
-      <p>Former <b>Interactive Web Designer</b> at iSoftStone North America. Currently an undergraduate student at University of Washington studying <b>Interactive Media Design</b></p>
-      <p><a class="underline" href="../files/suli_resume.pdf" target="_blank">resume</a>
-      <a class="underline" href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank">linkedin</a>
-      <a class="underline" href="https://www.behance.net/suli7497807f" target="_blank">behance</a>
-      <a class="underline" href="https://github.com/crispipear" target="_blank">github</a>
-      <a class="underline" href="mailto:suli7497@gmail.com">email</a></p>
+      <p><a id="nav-ixd" class="cotButton">MY WORK &#x2193;</a><a id="nav-about" class="cotButton">ABOUT ME &#x2193;</a></p>
     </div>
   </section>
   <section id="projs" class="projs">
@@ -59,30 +47,28 @@
       </div>
     </div>
   </section>
-  <section id="projs2" class="projs">
+  <section id="design">
     <div class="container">
-      <div class="masonry">
-        <div class="item"><img src="files/vd/1.png" alt="Astronomy infographic about Jovian Planets" /></div>
-        <div class="item"><img src="files/vd/2.png" alt="Mobile music player app UI concept" /></div>
-        <div class="item"><img src="files/vd/3.png" alt="Weather mobile app UI concept" /></div>
-        <div class="item"><img src="files/vd/4.png" alt="UWB Hackathon Series event poster" /></div>
-        <div class="item"><img src="files/vd/5.jpg" alt="UWB Hackathon Series logo" /></div>
-        <div class="item"><img src="files/vd/6.png" alt="UWB Hackathon Series event flyer" /></div>
-        <div class="item"><img src="files/vd/7.png" alt="UWB Hackathon Series event flyer" /></div>
-        <div class="item"><img src="files/vd/8.png" alt="UWB Billiard Club logo" /></div>
-        <div class="item"><img src="files/vd/9.png" alt="UWB IMD Senior design show poster entry" /></div>
-        <div class="item"><img src="files/vd/11.jpg" alt="Logistics poster for climate change data" /></div>
-        <div class="item"><img src="files/vd/10.png" alt="UWB IMD Senior design show poster entry" /></div>
+      <h1>What about my visual design work?</h1>
+      <a href="pages/visualdesign.html" class="cotButton">CHECK THEM OUT &#x27F6;</a>
+
+    </div>
+  </section>
+  <section id="about">
+    <div class="container">
+      <div class="about">
+        <p id="aboutName">Hello, my name is Su Li/李素莹 <img src="../files/avatar.jpg"></p>
+        <p>- Currently an undergraduate student at University of Washington studying <b>Interactive Media Design</b>.</p>
+        <p>- Worked with: <b>iSoftStone North America</b>, <b>Boeing</b>, <b>Digital Future Lab</b></p>
+        <p>- On my way of becoming a Full Stack Web Developer &#x1F60E; </p>
+        <p><a class="underline" href="../files/suli_resume.pdf" target="_blank">resume</a>
+          <a class="underline" href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank">linkedin</a>
+          <a class="underline" href="https://www.behance.net/suli7497807f" target="_blank">behance</a>
+          <a class="underline" href="https://github.com/crispipear" target="_blank">github</a>
+          <a class="underline" href="mailto:suli7497@gmail.com">email</a></p>
       </div>
     </div>
   </section>
-  <div class="modal">
-    <span id="modal-close">&#x2715;</span>
-    <div class="modal-img">
-      <img src="" />
-    </div>
-    <p class="modal-des"></p>
-  </div>
   <div id="footer" style="margin-top: -9%">
     <span></span>
   </div>
@@ -93,4 +79,5 @@
 <script src="lib/behavior.js"></script>
 <script src="lib/index.js"></script>
 <script src="lib/scroll.js"></script>
+
 </html>

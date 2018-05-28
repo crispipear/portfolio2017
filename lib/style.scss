@@ -3,7 +3,7 @@
 @import "mixins";
 @import "keyframes";
 @import url("subasecss.css");
-$dark: #121212;
+$dark: #090909;
 $text: #ffffff;
 $key1: #d44b53;
 $key2: #4fdace;
@@ -40,6 +40,7 @@ span {
   color: $text;
   text-align: left;
   font-size: $baseSize;
+  margin-bottom: 1.5%;
 }
 
 a {
@@ -72,7 +73,7 @@ p {
   font-size: $baseSize*2.5;
   font-weight: 300;
   line-height: 2em;
-  margin-top: 0;
+  margin-top: 0%;
 }
 
 
@@ -97,23 +98,9 @@ p {
     font-size: $baseSize;
   }
 }
-#homeNav{
-  position: fixed;
-  right: 7.5%;
-  top: 7.5%;
-  font-weight: 300;
-  z-index: 100;
-  width: 50%;
-  text-align: right;
-  a{
-    text-transform: uppercase;
-    margin-left: 2.5%;
-  }
-}
 #nav-work {
   left: 2.5%;
 }
-
 #nav-home,
 #nav-top {
   bottom: 0;
@@ -121,6 +108,7 @@ p {
 }
 
 #nav-top {
+  opacity: 0;
   &:after {
     margin-top: -20.25% !important;
   }
@@ -138,9 +126,8 @@ a.cotButton {
 
 #landpg {
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
-
   h1,
   p {
     color: white;
@@ -148,65 +135,33 @@ a.cotButton {
     position: relative;
     display: inline-block;
   }
-
-  b {
-    font-weight: 300;
-    color: $key2;
-  }
-  .about {
-    width: 45%;
-    display: flex;
-    position: absolute;
-    right: 7.5%;
-    bottom: 7.5%;
-    flex-direction: column;
-
-    p {
-      text-align: right;
-      display: block;
-      a {
-        line-height: $baseSize*1.25;
-        font-size: 90%;
-      }
-      font-size: 20px;
-      @include laptop {
-        font-size: 15px;
-      }
+  h1 {
+    font-size: 175px;
+    line-height: 175px;
+    margin-bottom: 30px;
+    @include laptop {
+      font-size: 125px;
+      line-height: 125px;
     }
-
-    #aboutName img {
-      margin-left: 1.5%;
-      vertical-align: middle;
-      width: 100px;
-      border-radius: 50%;
+  }
+  p {
+    margin: 0%;
+    color: $key2;
+    padding-left: 1%;
+    font-size: 20px;
+    line-height: 75px;
+    @include laptop {
+      font-size: 17px;
+    }
+    a{
+      margin: 2.5% 25px 0% 0%;
+      font-size: $baseSize*0.9;
+      line-height: $baseSize*1.25;
     }
   }
   .landpgTitle {
-    width: 50%;
     display: flex;
     flex-direction: column;
-    margin: 5% 0% 0% 7.5%;
-    h1 {
-      font-size: 175px;
-      line-height: 175px;
-      margin-bottom: 30px;
-      @include laptop {
-        font-size: 125px;
-        line-height: 125px;
-      }
-    }
-    p {
-      color: $key2;
-      padding-left: 2%;
-      font-size: 20px;
-      line-height: 75px;
-      @include laptop {
-        font-size: 17px;
-      }
-    }
-    a{
-      width: inherit;
-    }
   }
 }
 
@@ -242,10 +197,34 @@ a.cotButton {
     line-height: 125px;
   }
 }
+#design{
+  height: 50vh;
+}
+.about {
+  p {
+    display: block;
+    a {
+      line-height: $baseSize*1.25;
+      font-size: 90%;
+    }
+    b{
+      font-weight: 300;
+      color: $key2;
+    }
+    font-size: 20px;
+    @include laptop {
+      font-size: 15px;
+    }
+  }
 
-
+  #aboutName img {
+    margin-left: 1.5%;
+    vertical-align: middle;
+    width: 100px;
+    border-radius: 50%;
+  }
+}
 .proj-item {
-  margin-left: 150px;
   margin-top: -50px;
   position: relative;
   width: 700px;
@@ -270,6 +249,8 @@ a.cotButton {
     @include laptop{
       width: 250px;
       height: 150px;
+      left: -100px;
+      bottom: -50px;
     }
     p{
       font-weight: 400;
@@ -291,7 +272,6 @@ a.cotButton {
   }
 }
 .proj-menu{
-  margin-left: 50px;
   width: 35%;
   float: left;
   color: $text;
@@ -315,7 +295,7 @@ a.cotButton {
   .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   @include mobile {
     height: auto;
@@ -480,16 +460,21 @@ a.cotButton {
     overflow: hidden;
   }
 }
-
+#design{
+  color: $text;
+  a{
+    margin: 0%;
+    float: right;
+  }
+}
 #footer {
-  padding-top: 5%;
-  padding-left: 2.5%;
-  padding-bottom: 2.5%;
   z-index: 5;
-
+  margin: 0%!important;
+  text-align: center;
+  padding: 1.5%;
   span {
-    color: $text;
-    font-size: $baseSize;
+    color: rgba($text, 0.5);
+    font-size: $baseSize*0.9;
     font-weight: 300;
     width: auto;
     height: auto;
@@ -514,22 +499,10 @@ ul {
 
   li {
     color: white;
-    line-height: 1.35rem;
+    line-height: $baseSize*2;
     margin: 0 0 1em;
     padding-left: 1.5em;
     position: relative;
-
-    &:after {
-      content: '';
-      height: 0.45em;
-      width: 0.45em;
-      background: $key1;
-      display: block;
-      position: absolute;
-      transform: rotate(45deg);
-      top: 0.35em;
-      left: 0;
-    }
   }
   @include laptop {
     font-size: $baseSize*0.95;
@@ -538,7 +511,7 @@ ul {
 
 .underline,
 a.cotButton {
-  padding: 0;
+  padding: 2px 0;
   font-weight: 300;
   letter-spacing: $letterSpacing*2.5;
   @include transition(all 0.25s);
@@ -552,9 +525,8 @@ a.cotButton {
     height: 1px;
     background: white;
   }
-
   &:hover {
-    background-color: $key1;
+    background-color: rgba($key1, 0.75);
   }
 }
 ///////////image grid//////////////////
@@ -565,7 +537,8 @@ a.cotButton {
   column-gap: 0;
 
   &:hover img {
-    opacity: 0.75;
+    filter: grayscale(100%) brightness(50%);
+
   }
   @include mobile {
     padding-top: 25%;
@@ -584,7 +557,7 @@ a.cotButton {
 
     &:hover {
       border-radius: 25px;
-      opacity: 1;
+      filter: none;
     }
     cursor: pointer;
     max-width: 100%;
@@ -657,11 +630,7 @@ a.cotButton {
 //////////////////////////////////////
 
 .slideUp {
-  @include animation(1s slideUp ease-in-out forwards);
-}
-
-.chat {
-  @include animation(0.75s chat ease-in-out forwards);
+  @include animation(0.75s slideUp ease-in-out forwards);
 }
 
 .fadeIn {
