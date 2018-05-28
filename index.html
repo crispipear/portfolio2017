@@ -13,12 +13,12 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Su Li Portfolio" />
   <meta property="og:description" content="UX Designer and Front End Developer from Seattle, Washington." />
-  <meta property="og:image" content="http://suyli.me/files/favicon.ico" />
-  <meta property="og:url" content="http://suyli.me" />
+  <meta property="og:image" content="http://syli.me/files/favicon.ico" />
+  <meta property="og:url" content="http://syli.me" />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Su Li Portfolio" />
   <meta name="twitter:description" content="UX Designer and Front End Developer from Seattle, Washington." />
-  <meta name="twitter:image" content="http://suyli.me/files/favicon.ico" />
+  <meta name="twitter:image" content="http://syli.me/files/favicon.ico" />
   <title>Su Li Portfolio</title>
   <link href="lib/style.css" type="text/css" rel="stylesheet">
   <link rel="icon" href="files/favicon.ico">
@@ -26,11 +26,13 @@
 
 <body>
   <div id="particle"></div>
+  <div id="loader"></div>
   <a id="nav-top" class="underline nav">&uarr;	top</a>
   <section id="landpg">
     <div class="container landpgTitle" style="opacity: 1">
       <h1 class="glitch-title" data-text="Su Li">Su Li</h1>
       <p>UX Designer &amp; Front End Developer</p>
+      <p>Might be obsessed with empty spaces</p>
       <p><a id="nav-ixd" class="cotButton">MY WORK &#x2193;</a><a id="nav-about" class="cotButton">ABOUT ME &#x2193;</a></p>
     </div>
   </section>
@@ -43,14 +45,14 @@
           <p class="proj-type">//<span></span></p>
           <p class="proj-des"></p>
         </div>
-        <a class="cotButton">SEE PROJECT &#x27F6;</a>
+        <a class="exitPage cotButton">SEE PROJECT &#x27F6;</a>
       </div>
     </div>
   </section>
   <section id="design">
     <div class="container">
       <h1>What about my visual design work?</h1>
-      <a href="pages/visualdesign.html" class="cotButton">CHECK THEM OUT &#x27F6;</a>
+      <a data-href="pages/visualdesign.html" class="exitPage cotButton">CHECK THEM OUT &#x27F6;</a>
 
     </div>
   </section>
@@ -59,8 +61,9 @@
       <div class="about">
         <p id="aboutName">Hello, my name is Su Li/李素莹 <img src="../files/avatar.jpg"></p>
         <p>- Currently an undergraduate student at University of Washington studying <b>Interactive Media Design</b>.</p>
-        <p>- Worked with: <b>iSoftStone North America</b>, <b>Boeing</b>, <b>Digital Future Lab</b></p>
-        <p>- On my way of becoming a Full Stack Web Developer &#x1F60E; </p>
+        <p>- On my way to becoming a Full Stack Web Developer &#x1F60E;.</p>
+        <p>- Previously worked with: <b>iSoftStone North America</b>, <b>Boeing</b>, <b>Digital Future Lab</b>.</p>
+        <p>- I also like &#127918;games, &#127928;guitar, &#127929;piano and &#127831;food.</p>
         <p><a class="underline" href="../files/suli_resume.pdf" target="_blank">resume</a>
           <a class="underline" href="https://www.linkedin.com/in/su-li-4b3403130" target="_blank">linkedin</a>
           <a class="underline" href="https://www.behance.net/suli7497807f" target="_blank">behance</a>
@@ -76,8 +79,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
-<script src="lib/behavior.js"></script>
 <script src="lib/index.js"></script>
+<script src="lib/behavior.js"></script>
 <script src="lib/scroll.js"></script>
 
 </html>

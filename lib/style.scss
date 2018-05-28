@@ -31,6 +31,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body {
+  overflow: hidden;
   background-color: $dark;
   margin: 0;
 }
@@ -76,6 +77,16 @@ p {
   margin-top: 0%;
 }
 
+#loader{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: lighten($dark, 5%);
+  z-index: 100;
+  @include transition(all 0.75s);
+}
 
 .nav {
   color: $text;
@@ -390,8 +401,6 @@ a.cotButton {
     font-weight: 300;
     font-size: $headerSize*1.25;
     color: $key2;
-    margin-top: 0.5%;
-    margin-bottom: 2.75%;
     @include laptop {
       font-size: $headerSize*1.15;
     }
@@ -402,10 +411,10 @@ a.cotButton {
 
   h3 {
     display: inline-block;
+    margin: 2.5% 0%;
     font-weight: 300;
     font-size: $headerSize*0.85;
     color: $text;
-    margin: 0;
     @include laptop {
       font-size: $headerSize*0.7;
     }
@@ -440,7 +449,9 @@ a.cotButton {
       line-height: 125%;
     }
   }
-
+  .col-12, .col-6{
+    margin: 0% 0% 2.5% 0%;
+  }
   img {
     height: 100%;
     transition: all 0.25s;
