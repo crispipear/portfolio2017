@@ -232,7 +232,6 @@ a.cotButton {
   }
 }
 .proj-item {
-  margin-right: -250px;
   position: relative;
   width: 750px;
   height: 500px;
@@ -668,9 +667,6 @@ a.cotButton {
 
 .slideUp {
   @include animation(0.5s slideUp ease-in-out forwards);
-}
-.slideIn{
-  @include animation(0.75s slideIn ease-in-out forwards);
 }
 .fadeIn {
   @include animation(0.5s fadeIn ease-in-out forwards);
