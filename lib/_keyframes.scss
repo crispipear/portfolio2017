@@ -40,6 +40,16 @@
     opacity: 1;
   }
 }
+@include keyframes (slideIn) {
+  0%{
+    margin-right: -250px;
+    opacity: 0;
+  }
+  100%{
+    margin-right: 0px;
+    opacity: 1;
+  }
+}
 @include keyframes (glitch-anim-2) {
   0% {
     clip: rect(50px, 750px, 80px, 0);

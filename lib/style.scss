@@ -136,17 +136,14 @@ a.cotButton {
 }
 
 #landpg {
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   h1,
   p {
     color: white;
     width: auto;
     position: relative;
-    display: inline-block;
   }
   h1 {
+    display: inline-block;
     font-size: 175px;
     line-height: 175px;
     margin-bottom: 30px;
@@ -173,10 +170,6 @@ a.cotButton {
       line-height: $baseSize*1.25;
     }
   }
-  .landpgTitle {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .glitch-title {
@@ -196,7 +189,7 @@ a.cotButton {
     left: 5px;
     text-shadow: -3px 5px 0 $key1;
     background: $dark;
-    animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
+    animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
   }
 
   &:after {
@@ -239,17 +232,30 @@ a.cotButton {
   }
 }
 .proj-item {
-  margin-top: -50px;
+  margin-right: -250px;
   position: relative;
-  width: 700px;
+  width: 750px;
   height: 500px;
   @include transition(all 0.25s);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   @include laptop{
     width: 450px;
     height: 300px;
+  }
+  .proj-bg, .proj-bg div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .proj-bg{
+    overflow: hidden;
+  }
+  .proj-bg div{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include transition(transform 1s);
   }
   .proj-info{
     padding: 25px;
@@ -258,7 +264,7 @@ a.cotButton {
     bottom: -50px;
     width: 350px;
     height: 200px;
-    background-color: rgba(white, 0.9);
+    background-color: rgba(white, 0.8);
     @include boxshadow(0 0 45px 0 rgba(16, 54, 38, 0.25));
     @include laptop{
       width: 250px;
@@ -286,23 +292,31 @@ a.cotButton {
   }
 }
 .proj-menu{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 35%;
+  // height: 40vh;
+  // overflow: hidden;
   float: left;
   color: $text;
   h3{
-    margin: 0px 0px 50px 0px;
+    margin: 0px 0px 40px 0px;
     @include transition(all 0.4s);
     cursor: pointer;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 20px;
     transform-origin: left;
     @include laptop{
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   .focus{
     @include transition(opacity 0.2s);
     opacity: 0;
+  }
+  div{
+    @include transition(all 1.5s ease-out);
   }
 }
 #projs {
@@ -331,7 +345,7 @@ a.cotButton {
   font-size: 125px;
   position: relative;
   font-weight: 300;
-
+  overflow: hidden;
   &:after,
   &:before {
     content: attr(data-text);
@@ -650,12 +664,14 @@ a.cotButton {
     opacity: 0.5;
   }
 }
-//////////////////////////////////////
+//////////////animations////////////////////
 
 .slideUp {
-  @include animation(0.75s slideUp ease-in-out forwards);
+  @include animation(0.5s slideUp ease-in-out forwards);
 }
-
+.slideIn{
+  @include animation(0.75s slideIn ease-in-out forwards);
+}
 .fadeIn {
   @include animation(0.5s fadeIn ease-in-out forwards);
 }
