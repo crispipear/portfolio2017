@@ -1,12 +1,13 @@
 // Designed and Developed by Su Li 2017🍐
 @import url( 'https://fonts.googleapis.com/css?family=Roboto+Mono:300,400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
 @import "mixins";
 @import "keyframes";
 @import url("subasecss.css");
-$dark: #090909;
-$text: #ffffff;
+$bg: #090909;
+$text: #f4f4f4;
 $key1: #d44b53;
-$key2: #4fdace;
+$key2: #3bd2c5;
 $baseSize: 1em;
 $headerSize: 2em;
 $letterSpacing: 1px;
@@ -32,7 +33,7 @@ body::-webkit-scrollbar-thumb {
 
 body {
   overflow: hidden;
-  background-color: $dark;
+  background-color: $bg;
   margin: 0;
 }
 
@@ -83,7 +84,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  background: lighten($dark, 5%);
+  background: lighten($bg, 5%);
   z-index: 100;
   @include transition(all 0.75s);
 }
@@ -138,7 +139,7 @@ a.cotButton {
 #landpg {
   h1,
   p {
-    color: white;
+    color: $text;
     width: auto;
     position: relative;
   }
@@ -188,14 +189,14 @@ a.cotButton {
   &:before {
     left: 5px;
     text-shadow: -3px 5px 0 $key1;
-    background: $dark;
+    background: $bg;
     animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
   }
 
   &:after {
     left: 5px;
     text-shadow: 3px -5px 0 $key2;
-    background: $dark;
+    background: $bg;
     clip: rect(50px, 750px, 75px, 0);
     animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
   }
@@ -263,7 +264,7 @@ a.cotButton {
     bottom: -50px;
     width: 350px;
     height: 200px;
-    background-color: rgba(white, 0.8);
+    background-color: rgba($text, 0.8);
     @include boxshadow(0 0 45px 0 rgba(16, 54, 38, 0.25));
     @include laptop{
       width: 250px;
@@ -274,7 +275,7 @@ a.cotButton {
     p{
       font-weight: 400;
       margin: 0% 0% 5% 0%;
-      color: $dark;
+      color: $bg;
       font-size: $baseSize;
       span{
         color: inherit;
@@ -337,7 +338,6 @@ a.cotButton {
 }
 
 .fullPgTitle {
-  width: 80%;
   text-align: left;
   margin: 0.5% 0;
   color: $text;
@@ -358,14 +358,14 @@ a.cotButton {
   &:before {
     left: 5px;
     text-shadow: -3px 5px 0 $key1;
-    background: $dark;
+    background: $bg;
     animation: glitch-anim-1 1.5s infinite linear alternate-reverse;
   }
 
   &:after {
     left: 5px;
     text-shadow: 3px -5px 0 $key2;
-    background: $dark;
+    background: $bg;
     clip: rect(50px, 750px, 75px, 0);
     animation: glitch-anim-2 1.5s infinite linear alternate-reverse;
   }
@@ -395,22 +395,6 @@ a.cotButton {
   display: flex;
   flex-flow: column;
   overflow: visible;
-
-  .title {
-    width: 75%;
-    float: right;
-
-    b {
-      transition: 0.25s color;
-    }
-    @include laptop {
-      font-size: $baseSize*0.9;
-    }
-    @include mobile {
-      width: 100%;
-      margin: 15% auto auto;
-    }
-  }
 
   h2 {
     display: inline-block;
@@ -448,21 +432,23 @@ a.cotButton {
       filter: none;
     }
   }
-
+  a {
+    line-height: $baseSize*1.25;
+  }
+  p,b,q,li,ul{
+    letter-spacing: 0.075rem;
+    font-family: "Roboto";
+  }
   p {
     font-size: $baseSize*1.25;
-
     b,
     q {
       color: $key2;
       font-weight: 400;
     }
     @include laptop {
-      font-size: $baseSize*1.05;
-    }
-
-    a {
-      line-height: 125%;
+      font-size: $baseSize;
+      line-height: $baseSize*2
     }
   }
   .col-12, .col-6{
@@ -473,6 +459,24 @@ a.cotButton {
     transition: all 0.25s;
     width: 100%;
   }
+
+    .title {
+      width: 75%;
+      float: right;
+      p,b{
+        font-family: "Roboto Mono";
+      }
+      b {
+        transition: 0.25s color;
+      }
+      @include laptop {
+        font-size: $baseSize*0.9;
+      }
+      @include mobile {
+        width: 100%;
+        margin: 15% auto auto;
+      }
+    }
   @include mobile {
     div {
       flex: 100%!important;
@@ -528,9 +532,8 @@ ul {
   padding: 0;
   font-size: $baseSize*1.075;
   font-weight: 300;
-
   li {
-    color: white;
+    color: $text;
     line-height: $baseSize*2;
     margin: 0 0 1em;
     padding-left: 1.5em;
@@ -555,7 +558,7 @@ a.cotButton {
     bottom: 0;
     content: "";
     height: 1px;
-    background: white;
+    background: $text;
   }
   &:hover {
     background-color: rgba($key1, 0.75);
@@ -605,7 +608,7 @@ a.cotButton {
   h1{
     font-size: $headerSize*1.5;
     margin: 7.5% 0% 2.5% 1%;
-    color: white;
+    color: $text;
   }
 }
 
@@ -618,7 +621,7 @@ a.cotButton {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($dark, 0.95);
+  background-color: rgba($bg, 0.95);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -642,7 +645,7 @@ a.cotButton {
 
 .modal-des {
   margin: 0;
-  color: white;
+  color: $text;
   float: left;
   font-size: $baseSize*1.05;
   @include laptop {
@@ -652,7 +655,7 @@ a.cotButton {
 
 #modal-close {
   cursor: pointer;
-  color: white;
+  color: $text;
   font-size: $headerSize;
   position: absolute;
   right: 2.5%;
@@ -661,6 +664,32 @@ a.cotButton {
 
   &:hover {
     opacity: 0.5;
+  }
+}
+
+.contents{
+  background-color: $text;
+  .proj-sec{
+    b,h2,q, h3{
+      color: darken($key2, 10%)
+    }
+    p, li{
+      color: $bg;
+      font-weight: 400;
+    }
+  }
+  .fullPgTitle{
+    color: $bg;
+    &:before, &:after{
+      background: $text;
+    }
+  }
+  .underline{
+    font-weight: 400;
+    color: $bg!important;
+    &:hover{
+      color: $text!important;
+    }
   }
 }
 //////////////animations////////////////////

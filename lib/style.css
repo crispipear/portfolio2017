@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300,400");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400");
 @import url("subasecss.css");
 @-webkit-keyframes scrollbtn {
   0% {
@@ -179,99 +180,99 @@
 
 @-webkit-keyframes glitch-anim-1 {
   0% {
-    clip: rect(77px, 9999px, 90px, 0); }
+    clip: rect(56px, 9999px, 174px, 0); }
   10% {
-    clip: rect(150px, 9999px, 11px, 0); }
+    clip: rect(34px, 9999px, 129px, 0); }
   20% {
-    clip: rect(42px, 9999px, 138px, 0); }
+    clip: rect(123px, 9999px, 25px, 0); }
   30% {
-    clip: rect(74px, 9999px, 3px, 0); }
+    clip: rect(99px, 9999px, 127px, 0); }
   40% {
-    clip: rect(164px, 9999px, 156px, 0); }
+    clip: rect(106px, 9999px, 112px, 0); }
   50% {
-    clip: rect(9px, 9999px, 112px, 0); }
+    clip: rect(37px, 9999px, 106px, 0); }
   60% {
-    clip: rect(34px, 9999px, 11px, 0); }
+    clip: rect(130px, 9999px, 98px, 0); }
   70% {
-    clip: rect(138px, 9999px, 11px, 0); }
+    clip: rect(71px, 9999px, 152px, 0); }
   80% {
-    clip: rect(120px, 9999px, 24px, 0); }
+    clip: rect(21px, 9999px, 14px, 0); }
   90% {
-    clip: rect(42px, 9999px, 151px, 0); }
+    clip: rect(166px, 9999px, 59px, 0); }
   100% {
-    clip: rect(140px, 9999px, 61px, 0); } }
+    clip: rect(132px, 9999px, 24px, 0); } }
 
 @-moz-keyframes glitch-anim-1 {
   0% {
-    clip: rect(65px, 9999px, 164px, 0); }
+    clip: rect(86px, 9999px, 33px, 0); }
   10% {
-    clip: rect(89px, 9999px, 175px, 0); }
+    clip: rect(129px, 9999px, 152px, 0); }
   20% {
-    clip: rect(111px, 9999px, 93px, 0); }
+    clip: rect(123px, 9999px, 93px, 0); }
   30% {
-    clip: rect(37px, 9999px, 63px, 0); }
+    clip: rect(19px, 9999px, 22px, 0); }
   40% {
-    clip: rect(140px, 9999px, 122px, 0); }
+    clip: rect(48px, 9999px, 71px, 0); }
   50% {
-    clip: rect(159px, 9999px, 63px, 0); }
+    clip: rect(2px, 9999px, 170px, 0); }
   60% {
-    clip: rect(28px, 9999px, 154px, 0); }
+    clip: rect(96px, 9999px, 84px, 0); }
   70% {
-    clip: rect(75px, 9999px, 22px, 0); }
+    clip: rect(41px, 9999px, 96px, 0); }
   80% {
-    clip: rect(149px, 9999px, 115px, 0); }
+    clip: rect(100px, 9999px, 116px, 0); }
   90% {
-    clip: rect(31px, 9999px, 23px, 0); }
+    clip: rect(86px, 9999px, 75px, 0); }
   100% {
-    clip: rect(126px, 9999px, 121px, 0); } }
+    clip: rect(147px, 9999px, 55px, 0); } }
 
 @-ms-keyframes glitch-anim-1 {
   0% {
-    clip: rect(93px, 9999px, 71px, 0); }
+    clip: rect(67px, 9999px, 8px, 0); }
   10% {
-    clip: rect(90px, 9999px, 110px, 0); }
+    clip: rect(110px, 9999px, 8px, 0); }
   20% {
-    clip: rect(16px, 9999px, 60px, 0); }
+    clip: rect(100px, 9999px, 38px, 0); }
   30% {
-    clip: rect(164px, 9999px, 133px, 0); }
+    clip: rect(5px, 9999px, 62px, 0); }
   40% {
-    clip: rect(103px, 9999px, 45px, 0); }
+    clip: rect(98px, 9999px, 17px, 0); }
   50% {
-    clip: rect(152px, 9999px, 95px, 0); }
+    clip: rect(174px, 9999px, 114px, 0); }
   60% {
-    clip: rect(104px, 9999px, 114px, 0); }
+    clip: rect(3px, 9999px, 89px, 0); }
   70% {
-    clip: rect(139px, 9999px, 136px, 0); }
+    clip: rect(24px, 9999px, 80px, 0); }
   80% {
-    clip: rect(128px, 9999px, 133px, 0); }
+    clip: rect(161px, 9999px, 44px, 0); }
   90% {
-    clip: rect(89px, 9999px, 92px, 0); }
+    clip: rect(175px, 9999px, 102px, 0); }
   100% {
-    clip: rect(7px, 9999px, 126px, 0); } }
+    clip: rect(24px, 9999px, 16px, 0); } }
 
 @keyframes glitch-anim-1 {
   0% {
-    clip: rect(57px, 9999px, 149px, 0); }
+    clip: rect(35px, 9999px, 141px, 0); }
   10% {
-    clip: rect(50px, 9999px, 141px, 0); }
+    clip: rect(110px, 9999px, 105px, 0); }
   20% {
-    clip: rect(144px, 9999px, 164px, 0); }
+    clip: rect(172px, 9999px, 156px, 0); }
   30% {
-    clip: rect(156px, 9999px, 107px, 0); }
+    clip: rect(139px, 9999px, 1px, 0); }
   40% {
-    clip: rect(119px, 9999px, 33px, 0); }
+    clip: rect(10px, 9999px, 66px, 0); }
   50% {
-    clip: rect(103px, 9999px, 47px, 0); }
+    clip: rect(53px, 9999px, 103px, 0); }
   60% {
-    clip: rect(173px, 9999px, 141px, 0); }
+    clip: rect(93px, 9999px, 34px, 0); }
   70% {
-    clip: rect(41px, 9999px, 14px, 0); }
+    clip: rect(140px, 9999px, 24px, 0); }
   80% {
-    clip: rect(108px, 9999px, 37px, 0); }
+    clip: rect(101px, 9999px, 68px, 0); }
   90% {
-    clip: rect(135px, 9999px, 116px, 0); }
+    clip: rect(169px, 9999px, 45px, 0); }
   100% {
-    clip: rect(167px, 9999px, 65px, 0); } }
+    clip: rect(98px, 9999px, 151px, 0); } }
 
 body::-webkit-scrollbar {
   width: 0.65em; }
@@ -295,7 +296,7 @@ body {
 
 p,
 span {
-  color: #ffffff;
+  color: #f4f4f4;
   text-align: left;
   font-size: 1em;
   margin-bottom: 1.5%; }
@@ -303,13 +304,13 @@ span {
 a {
   display: inline-block;
   position: relative;
-  color: #ffffff !important;
+  color: #f4f4f4 !important;
   cursor: pointer;
   text-decoration: none;
   color: #d44b53;
   display: inline-block; }
   a:visited {
-    color: #ffffff; }
+    color: #f4f4f4; }
 
 #particle {
   opacity: 0.5;
@@ -349,7 +350,7 @@ p {
   transition: all 0.75s; }
 
 .nav {
-  color: #ffffff;
+  color: #f4f4f4;
   -webkit-transition: all, 0.15s;
   transition: all, 0.15s;
   width: auto;
@@ -391,7 +392,7 @@ a.cotButton {
 
 #landpg h1,
 #landpg p {
-  color: white;
+  color: #f4f4f4;
   width: auto;
   position: relative; }
 
@@ -415,7 +416,7 @@ a.cotButton {
       font-size: 17px; } }
   #landpg p b {
     font-weight: 300;
-    color: #4fdace; }
+    color: #3bd2c5; }
   #landpg p a {
     margin: 2.5% 25px 0% 0%;
     font-size: 0.9em;
@@ -439,7 +440,7 @@ a.cotButton {
     animation: glitch-anim-1 2.5s infinite linear alternate-reverse; }
   .glitch-title:after {
     left: 5px;
-    text-shadow: 3px -5px 0 #4fdace;
+    text-shadow: 3px -5px 0 #3bd2c5;
     background: #090909;
     clip: rect(50px, 750px, 75px, 0);
     animation: glitch-anim-2 1.5s infinite linear alternate-reverse; }
@@ -459,7 +460,7 @@ a.cotButton {
     font-size: 90%; }
   .about p b {
     font-weight: 300;
-    color: #4fdace; }
+    color: #3bd2c5; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     .about p {
       font-size: 15px; } }
@@ -501,7 +502,7 @@ a.cotButton {
     bottom: -50px;
     width: 350px;
     height: 200px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(244, 244, 244, 0.8);
     -webkit-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
     -moz-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
     box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25); }
@@ -532,7 +533,7 @@ a.cotButton {
   flex-direction: column;
   width: 35%;
   float: left;
-  color: #ffffff; }
+  color: #f4f4f4; }
   .proj-menu h3 {
     margin: 0px 0px 40px 0px;
     -webkit-transition: all 0.4s;
@@ -567,10 +568,9 @@ a.cotButton {
       font-size: 0.95em; } }
 
 .fullPgTitle {
-  width: 80%;
   text-align: left;
   margin: 0.5% 0;
-  color: #ffffff;
+  color: #f4f4f4;
   font-size: 125px;
   position: relative;
   font-weight: 300;
@@ -589,7 +589,7 @@ a.cotButton {
     animation: glitch-anim-1 1.5s infinite linear alternate-reverse; }
   .fullPgTitle:after {
     left: 5px;
-    text-shadow: 3px -5px 0 #4fdace;
+    text-shadow: 3px -5px 0 #3bd2c5;
     background: #090909;
     clip: rect(50px, 750px, 75px, 0);
     animation: glitch-anim-2 1.5s infinite linear alternate-reverse; }
@@ -601,7 +601,7 @@ a.cotButton {
   opacity: 0; }
 
 #projNum {
-  color: #ffffff;
+  color: #f4f4f4;
   display: inline-block;
   margin: 0 0.5% 0 0; }
 
@@ -613,23 +613,11 @@ a.cotButton {
     margin-bottom: 5%; }
     .proj-sec .row:hover h2:after {
       opacity: 1; }
-  .proj-sec .title {
-    width: 75%;
-    float: right; }
-    .proj-sec .title b {
-      transition: 0.25s color; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      .proj-sec .title {
-        font-size: 0.9em; } }
-    @media only screen and (max-width: 1023px) {
-      .proj-sec .title {
-        width: 100%;
-        margin: 15% auto auto; } }
   .proj-sec h2 {
     display: inline-block;
     font-weight: 300;
     font-size: 2.5em;
-    color: #4fdace; }
+    color: #3bd2c5; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
         font-size: 2.3em; } }
@@ -641,7 +629,7 @@ a.cotButton {
     margin: 0% 0% 1.5% 0%;
     font-weight: 300;
     font-size: 1.7em;
-    color: #ffffff; }
+    color: #f4f4f4; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h3 {
         font-size: 1.4em; } }
@@ -654,23 +642,41 @@ a.cotButton {
     .proj-sec a img:hover {
       border-radius: 25px;
       filter: none; }
+  .proj-sec a {
+    line-height: 1.25em; }
+  .proj-sec p, .proj-sec b, .proj-sec q, .proj-sec li, .proj-sec ul {
+    letter-spacing: 0.075rem;
+    font-family: "Roboto"; }
   .proj-sec p {
     font-size: 1.25em; }
     .proj-sec p b,
     .proj-sec p q {
-      color: #4fdace;
+      color: #3bd2c5;
       font-weight: 400; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec p {
-        font-size: 1.05em; } }
-    .proj-sec p a {
-      line-height: 125%; }
+        font-size: 1em;
+        line-height: 2em; } }
   .proj-sec .col-12, .proj-sec .col-6 {
     margin: 0% 0% 2.5% 0%; }
   .proj-sec img {
     height: 100%;
     transition: all 0.25s;
     width: 100%; }
+  .proj-sec .title {
+    width: 75%;
+    float: right; }
+    .proj-sec .title p, .proj-sec .title b {
+      font-family: "Roboto Mono"; }
+    .proj-sec .title b {
+      transition: 0.25s color; }
+    @media (min-width: 1024px) and (max-width: 1550px) {
+      .proj-sec .title {
+        font-size: 0.9em; } }
+    @media only screen and (max-width: 1023px) {
+      .proj-sec .title {
+        width: 100%;
+        margin: 15% auto auto; } }
   @media only screen and (max-width: 1023px) {
     .proj-sec {
       width: 90%;
@@ -683,7 +689,7 @@ a.cotButton {
         font-size: 1em; } }
 
 #design {
-  color: #ffffff; }
+  color: #f4f4f4; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     #design h1 {
       font-size: 2em; } }
@@ -697,7 +703,7 @@ a.cotButton {
   text-align: center;
   padding: 1.5%; }
   #footer span {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(244, 244, 244, 0.5);
     font-size: 0.9em;
     font-weight: 300;
     width: auto;
@@ -719,7 +725,7 @@ ul {
   font-size: 1.075em;
   font-weight: 300; }
   ul li {
-    color: white;
+    color: #f4f4f4;
     line-height: 2em;
     margin: 0 0 1em;
     padding-left: 1.5em;
@@ -743,7 +749,7 @@ a.cotButton {
     bottom: 0;
     content: "";
     height: 1px;
-    background: white; }
+    background: #f4f4f4; }
   .underline:hover,
   a.cotButton:hover {
     background-color: rgba(212, 75, 83, 0.75); }
@@ -782,7 +788,7 @@ a.cotButton {
   #projs2 h1 {
     font-size: 3em;
     margin: 7.5% 0% 2.5% 1%;
-    color: white; }
+    color: #f4f4f4; }
 
 .modal {
   opacity: 0;
@@ -814,7 +820,7 @@ a.cotButton {
 
 .modal-des {
   margin: 0;
-  color: white;
+  color: #f4f4f4;
   float: left;
   font-size: 1.05em; }
   @media (min-width: 1024px) and (max-width: 1550px) {
@@ -823,7 +829,7 @@ a.cotButton {
 
 #modal-close {
   cursor: pointer;
-  color: white;
+  color: #f4f4f4;
   font-size: 2em;
   position: absolute;
   right: 2.5%;
@@ -832,6 +838,23 @@ a.cotButton {
   transition: all 0.15s; }
   #modal-close:hover {
     opacity: 0.5; }
+
+.contents {
+  background-color: #f4f4f4; }
+  .contents .proj-sec b, .contents .proj-sec h2, .contents .proj-sec q, .contents .proj-sec h3 {
+    color: #29b1a6; }
+  .contents .proj-sec p, .contents .proj-sec li {
+    color: #090909;
+    font-weight: 400; }
+  .contents .fullPgTitle {
+    color: #090909; }
+    .contents .fullPgTitle:before, .contents .fullPgTitle:after {
+      background: #f4f4f4; }
+  .contents .underline {
+    font-weight: 400;
+    color: #090909 !important; }
+    .contents .underline:hover {
+      color: #f4f4f4 !important; }
 
 .slideUp {
   -webkit-animation: 0.5s slideUp ease-in-out forwards;
