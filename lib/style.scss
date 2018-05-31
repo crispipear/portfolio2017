@@ -667,6 +667,20 @@ a.cotButton {
     opacity: 0.5;
   }
 }
+.iframeWrapper{
+  position: relative;
+  padding-bottom: 100%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .contents{
   background-color: $text;
@@ -691,6 +705,9 @@ a.cotButton {
     &:hover{
       color: $text!important;
     }
+  }
+  #footer span{
+    color: $bg;
   }
 }
 //////////////animations////////////////////
