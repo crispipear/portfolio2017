@@ -391,14 +391,13 @@ a.cotButton {
     &:hover h2:after {
       opacity: 1;
     }
-    margin-bottom: 5%;
+    margin-bottom: 2.5%;
   }
   display: flex;
   flex-flow: column;
   overflow: visible;
 
   h2 {
-    display: inline-block;
     font-weight: 300;
     font-size: $headerSize*1.25;
     color: $key2;
@@ -411,7 +410,6 @@ a.cotButton {
   }
 
   h3 {
-    display: inline-block;
     margin: 0% 0% 1.5% 0%;
     font-weight: 300;
     font-size: $headerSize*0.85;
@@ -453,7 +451,7 @@ a.cotButton {
     }
   }
   .col-12, .col-6{
-    margin: 0% 0% 2.5% 0%;
+    margin: 0% 0% 2% 0%;
   }
   img {
     height: 100%;
@@ -549,7 +547,7 @@ ul {
 a.cotButton {
   padding: 2px 0;
   font-weight: 300;
-  letter-spacing: $letterSpacing*2.5;
+  letter-spacing: $letterSpacing*1.5;
   @include transition(all 0.25s);
 
   &:before {
@@ -669,7 +667,7 @@ a.cotButton {
 }
 .iframeWrapper{
   position: relative;
-  padding-bottom: 100%;
+  padding-bottom: 925px;
   padding-top: 35px;
   height: 0;
   overflow: hidden;
@@ -702,6 +700,9 @@ a.cotButton {
   .underline{
     font-weight: 400;
     color: $bg!important;
+    &:before{
+      background: $bg;
+    }
     &:hover{
       color: $text!important;
     }
