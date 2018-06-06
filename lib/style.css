@@ -180,99 +180,99 @@
 
 @-webkit-keyframes glitch-anim-1 {
   0% {
-    clip: rect(130px, 9999px, 16px, 0); }
+    clip: rect(13px, 9999px, 175px, 0); }
   10% {
-    clip: rect(10px, 9999px, 73px, 0); }
+    clip: rect(9px, 9999px, 110px, 0); }
   20% {
-    clip: rect(115px, 9999px, 87px, 0); }
+    clip: rect(31px, 9999px, 106px, 0); }
   30% {
-    clip: rect(136px, 9999px, 168px, 0); }
+    clip: rect(115px, 9999px, 67px, 0); }
   40% {
-    clip: rect(114px, 9999px, 146px, 0); }
+    clip: rect(120px, 9999px, 78px, 0); }
   50% {
-    clip: rect(73px, 9999px, 144px, 0); }
+    clip: rect(72px, 9999px, 134px, 0); }
   60% {
-    clip: rect(12px, 9999px, 171px, 0); }
+    clip: rect(155px, 9999px, 101px, 0); }
   70% {
-    clip: rect(60px, 9999px, 86px, 0); }
+    clip: rect(47px, 9999px, 58px, 0); }
   80% {
-    clip: rect(94px, 9999px, 150px, 0); }
+    clip: rect(95px, 9999px, 56px, 0); }
   90% {
-    clip: rect(105px, 9999px, 138px, 0); }
+    clip: rect(68px, 9999px, 88px, 0); }
   100% {
-    clip: rect(47px, 9999px, 31px, 0); } }
+    clip: rect(116px, 9999px, 121px, 0); } }
 
 @-moz-keyframes glitch-anim-1 {
   0% {
-    clip: rect(20px, 9999px, 4px, 0); }
+    clip: rect(41px, 9999px, 82px, 0); }
   10% {
-    clip: rect(122px, 9999px, 5px, 0); }
+    clip: rect(122px, 9999px, 171px, 0); }
   20% {
-    clip: rect(75px, 9999px, 7px, 0); }
+    clip: rect(113px, 9999px, 52px, 0); }
   30% {
-    clip: rect(132px, 9999px, 71px, 0); }
+    clip: rect(7px, 9999px, 169px, 0); }
   40% {
-    clip: rect(121px, 9999px, 148px, 0); }
+    clip: rect(109px, 9999px, 36px, 0); }
   50% {
-    clip: rect(94px, 9999px, 157px, 0); }
+    clip: rect(10px, 9999px, 9px, 0); }
   60% {
-    clip: rect(142px, 9999px, 94px, 0); }
+    clip: rect(24px, 9999px, 133px, 0); }
   70% {
-    clip: rect(69px, 9999px, 95px, 0); }
+    clip: rect(38px, 9999px, 85px, 0); }
   80% {
-    clip: rect(131px, 9999px, 124px, 0); }
+    clip: rect(53px, 9999px, 104px, 0); }
   90% {
-    clip: rect(129px, 9999px, 74px, 0); }
+    clip: rect(62px, 9999px, 93px, 0); }
   100% {
-    clip: rect(165px, 9999px, 143px, 0); } }
+    clip: rect(18px, 9999px, 103px, 0); } }
 
 @-ms-keyframes glitch-anim-1 {
   0% {
-    clip: rect(69px, 9999px, 106px, 0); }
+    clip: rect(160px, 9999px, 107px, 0); }
   10% {
-    clip: rect(24px, 9999px, 65px, 0); }
+    clip: rect(94px, 9999px, 134px, 0); }
   20% {
-    clip: rect(132px, 9999px, 134px, 0); }
+    clip: rect(146px, 9999px, 168px, 0); }
   30% {
-    clip: rect(137px, 9999px, 130px, 0); }
+    clip: rect(63px, 9999px, 40px, 0); }
   40% {
-    clip: rect(128px, 9999px, 8px, 0); }
+    clip: rect(18px, 9999px, 115px, 0); }
   50% {
-    clip: rect(10px, 9999px, 62px, 0); }
+    clip: rect(51px, 9999px, 123px, 0); }
   60% {
-    clip: rect(82px, 9999px, 40px, 0); }
+    clip: rect(22px, 9999px, 102px, 0); }
   70% {
-    clip: rect(132px, 9999px, 107px, 0); }
+    clip: rect(18px, 9999px, 9px, 0); }
   80% {
-    clip: rect(36px, 9999px, 122px, 0); }
+    clip: rect(72px, 9999px, 11px, 0); }
   90% {
-    clip: rect(136px, 9999px, 59px, 0); }
+    clip: rect(141px, 9999px, 23px, 0); }
   100% {
-    clip: rect(130px, 9999px, 122px, 0); } }
+    clip: rect(156px, 9999px, 157px, 0); } }
 
 @keyframes glitch-anim-1 {
   0% {
-    clip: rect(62px, 9999px, 26px, 0); }
+    clip: rect(58px, 9999px, 6px, 0); }
   10% {
-    clip: rect(39px, 9999px, 146px, 0); }
+    clip: rect(8px, 9999px, 27px, 0); }
   20% {
-    clip: rect(114px, 9999px, 175px, 0); }
+    clip: rect(174px, 9999px, 149px, 0); }
   30% {
-    clip: rect(80px, 9999px, 57px, 0); }
+    clip: rect(70px, 9999px, 49px, 0); }
   40% {
-    clip: rect(100px, 9999px, 81px, 0); }
+    clip: rect(127px, 9999px, 137px, 0); }
   50% {
-    clip: rect(29px, 9999px, 75px, 0); }
+    clip: rect(72px, 9999px, 116px, 0); }
   60% {
-    clip: rect(86px, 9999px, 38px, 0); }
+    clip: rect(140px, 9999px, 87px, 0); }
   70% {
-    clip: rect(57px, 9999px, 41px, 0); }
+    clip: rect(81px, 9999px, 140px, 0); }
   80% {
-    clip: rect(75px, 9999px, 117px, 0); }
+    clip: rect(134px, 9999px, 61px, 0); }
   90% {
-    clip: rect(154px, 9999px, 153px, 0); }
+    clip: rect(151px, 9999px, 101px, 0); }
   100% {
-    clip: rect(86px, 9999px, 67px, 0); } }
+    clip: rect(21px, 9999px, 165px, 0); } }
 
 body::-webkit-scrollbar {
   width: 0.65em; }
@@ -401,19 +401,12 @@ a.cotButton {
   font-size: 175px;
   line-height: 175px;
   margin-bottom: 30px; }
-  @media (min-width: 1024px) and (max-width: 1550px) {
-    #landpg h1 {
-      font-size: 125px;
-      line-height: 125px; } }
 
 #landpg p {
   margin: 0%;
   padding-left: 1%;
   font-size: 20px;
   line-height: 75px; }
-  @media (min-width: 1024px) and (max-width: 1550px) {
-    #landpg p {
-      font-size: 17px; } }
   #landpg p b {
     font-weight: 300;
     color: #3bd2c5; }
@@ -421,6 +414,33 @@ a.cotButton {
     margin: 2.5% 25px 0% 0%;
     font-size: 0.9em;
     line-height: 1.25em; }
+
+@media (min-width: 1024px) and (max-width: 1550px) {
+  #landpg .landpgTitle p {
+    font-size: 17px; }
+  #landpg .landpgTitle h1 {
+    font-size: 125px;
+    line-height: 125px; } }
+
+@media only screen and (max-width: 1023px) {
+  #landpg .landpgTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    height: 100vh;
+    text-align: center; }
+    #landpg .landpgTitle p, #landpg .landpgTitle a {
+      margin: 5px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 30px; }
+    #landpg .landpgTitle h1 {
+      font-size: 75px;
+      margin: 0%;
+      line-height: 100px; } }
 
 .glitch-title {
   margin: 0%;
@@ -470,6 +490,18 @@ a.cotButton {
   vertical-align: middle;
   width: 100px;
   border-radius: 50%; }
+
+@media (min-width: 1024px) and (max-width: 1550px) {
+  .about p {
+    font-size: 16px; } }
+
+@media only screen and (max-width: 1023px) {
+  .about {
+    padding: 15px; }
+    .about p {
+      font-size: 13px; }
+    .about #aboutName img {
+      width: 50px; } }
 
 .proj-item {
   position: relative;
@@ -553,6 +585,29 @@ a.cotButton {
     -webkit-transition: all 1.5s ease-out;
     transition: all 1.5s ease-out; }
 
+@media only screen and (max-width: 1023px) {
+  .projs {
+    height: 100vh !important; }
+    .projs .proj-item {
+      width: 95%;
+      margin: 0% 2.5% 0% 2.5%;
+      position: absolute;
+      height: 50vh; }
+    .projs .proj-info {
+      display: none; }
+    .projs .proj-menu {
+      text-align: center;
+      width: 100%;
+      height: 100vh;
+      z-index: 5; }
+      .projs .proj-menu h3 {
+        font-size: 12px;
+        text-shadow: 1px 1px #090909;
+        transform-origin: center;
+        margin-bottom: 25px; }
+    .projs a {
+      z-index: 10; } }
+
 #projs .container {
   display: flex;
   align-items: center;
@@ -560,9 +615,7 @@ a.cotButton {
 
 @media only screen and (max-width: 1023px) {
   #projs {
-    height: auto;
-    text-align: center;
-    padding-bottom: 15%; }
+    height: auto; }
     #projs .cotButton {
       margin: 15px auto;
       font-size: 0.95em; } }
@@ -597,6 +650,10 @@ a.cotButton {
   @media (min-width: 1024px) and (max-width: 1550px) {
     .fullPgTitle {
       font-size: 100px; } }
+  @media only screen and (max-width: 1023px) {
+    .fullPgTitle {
+      font-size: 50px;
+      line-height: 65px; } }
 
 .container {
   opacity: 0; }
@@ -621,9 +678,6 @@ a.cotButton {
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
         font-size: 2.3em; } }
-    @media only screen and (max-width: 1023px) {
-      .proj-sec h2 {
-        font-size: 2em; } }
   .proj-sec h3 {
     margin: 0% 0% 1.5% 0%;
     font-weight: 300;
@@ -632,9 +686,6 @@ a.cotButton {
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h3 {
         font-size: 1.4em; } }
-    @media only screen and (max-width: 1023px) {
-      .proj-sec h3 {
-        font-size: 1.3em; } }
   .proj-sec a img {
     filter: grayscale(100%);
     cursor: pointer; }
@@ -672,10 +723,8 @@ a.cotButton {
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec .title {
         font-size: 0.9em; } }
-    @media only screen and (max-width: 1023px) {
-      .proj-sec .title {
-        width: 100%;
-        margin: 15% auto auto; } }
+  .proj-sec #antie {
+    font-size: 75px; }
   @media only screen and (max-width: 1023px) {
     .proj-sec {
       width: 90%;
@@ -683,9 +732,21 @@ a.cotButton {
       overflow: hidden; }
       .proj-sec div {
         flex: 100% !important; }
-      .proj-sec .row p {
+      .proj-sec .row p, .proj-sec li {
         flex: 100% !important;
-        font-size: 1em; } }
+        font-size: 13px;
+        line-height: 23px; }
+      .proj-sec h2 {
+        font-size: 20px; }
+      .proj-sec h3 {
+        font-size: 16px; }
+      .proj-sec .title {
+        width: 100%;
+        margin: 0%; }
+      .proj-sec .fullPgTitle {
+        margin-top: 7.5%; }
+      .proj-sec #antie {
+        font-size: 25px; } }
 
 #design {
   color: #f4f4f4; }
@@ -695,6 +756,11 @@ a.cotButton {
   #design a {
     margin: 0%;
     float: right; }
+  @media only screen and (max-width: 1023px) {
+    #design h1 {
+      font-size: 20px; }
+    #design h1, #design a {
+      margin: 15px; } }
 
 #footer {
   z-index: 5;
@@ -712,7 +778,7 @@ a.cotButton {
         font-size: 0.8em; } }
     @media only screen and (max-width: 1023px) {
       #footer span {
-        font-size: 0.8em; } }
+        font-size: 0.7em; } }
   @media only screen and (max-width: 1023px) {
     #footer {
       text-align: center; } }
@@ -725,7 +791,7 @@ ul {
   font-weight: 300; }
   ul li {
     color: #f4f4f4;
-    line-height: 2em;
+    line-height: 1.25em;
     margin: 0 0 1em;
     padding-left: 1.5em;
     position: relative; }
@@ -752,6 +818,10 @@ a.cotButton {
   .underline:hover,
   a.cotButton:hover {
     background-color: rgba(212, 75, 83, 0.75); }
+  @media only screen and (max-width: 1023px) {
+    .underline,
+    a.cotButton {
+      font-size: 13px; } }
 
 .masonry {
   column-count: 4;
@@ -850,6 +920,9 @@ a.cotButton {
     left: 0;
     width: 100%;
     height: 100%; }
+  @media only screen and (max-width: 1023px) {
+    .iframeWrapper iframe {
+      transform: scale(0.75); } }
 
 .contents {
   background-color: #f4f4f4; }
