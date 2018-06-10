@@ -4,7 +4,7 @@
 @import "mixins";
 @import "keyframes";
 @import url("subasecss.css");
-$bg: #090909;
+$bg: #06090f;
 $text: #f4f4f4;
 $key1: #d44b53;
 $key2: #3bd2c5;
@@ -84,12 +84,13 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  background: lighten($bg, 5%);
+  background: lighten($bg, 1.5%);
   z-index: 100;
   @include transition(all 0.75s);
 }
 
 .nav {
+  text-transform: uppercase;
   color: $text;
   @include transition(all, 0.15s);
   width: auto;
