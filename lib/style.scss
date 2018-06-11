@@ -5,11 +5,11 @@
 @import "keyframes";
 @import url("subasecss.css");
 $bg: #06090f;
-$text: #f4f4f4;
+$text: #fbfbfb;
 $key1: #d44b53;
 $key2: #3bd2c5;
 $baseSize: 1em;
-$headerSize: 2em;
+$headerSize: 1.5em;
 $letterSpacing: 1px;
 
 body::-webkit-scrollbar {
@@ -55,7 +55,12 @@ a {
     color: $text;
   }
 }
-
+#home .container{
+  max-width: 75%;
+  @include mobile{
+    max-width: none;
+  }
+}
 #particle {
   opacity: 0.5;
   position: fixed;
@@ -405,7 +410,7 @@ a.cotButton {
 .fullPgTitle {
   display: inline-block;
   text-align: left;
-  margin: 0.5% 0;
+  margin: 0.5% 0% 0.5% -10px;
   color: $text;
   font-size: 125px;
   position: relative;
@@ -441,6 +446,7 @@ a.cotButton {
   @include mobile{
     font-size: 50px;
     line-height: 65px;
+    margin: 0.5% 0%;
   }
 }
 
@@ -465,23 +471,22 @@ a.cotButton {
   display: flex;
   flex-flow: column;
   overflow: visible;
-
+  h2,h3{
+    font-weight: 400;
+  }
   h2 {
-    font-weight: 300;
-    font-size: $headerSize*1.25;
+    font-size: $headerSize;
     color: $key2;
     @include laptop {
-      font-size: $headerSize*1.15;
+      font-size: $headerSize*0.9;
     }
   }
 
   h3 {
-    margin: 0% 0% 1.5% 0%;
-    font-weight: 300;
-    font-size: $headerSize*0.85;
+    font-size: $baseSize*1.25;
     color: $text;
     @include laptop {
-      font-size: $headerSize*0.7;
+      font-size: $baseSize*1.05;
     }
   }
 
@@ -502,7 +507,7 @@ a.cotButton {
     font-family: "Roboto";
   }
   p {
-    font-size: $baseSize*1.25;
+    font-size: $baseSize*1.15;
     b,
     q {
       color: $key2;
@@ -514,7 +519,7 @@ a.cotButton {
     }
   }
   .col-12, .col-6{
-    margin: 0% 0% 2% 0%;
+    margin: 0% 0% 1.5% 0%;
   }
   img {
     height: 100%;
@@ -523,10 +528,11 @@ a.cotButton {
   }
 
     .title {
-      width: 75%;
       float: right;
+      width: 80%;
       p,b{
         font-family: "Roboto Mono";
+        font-size: $baseSize*1.1;
       }
       b {
         transition: 0.25s color;
@@ -560,7 +566,7 @@ a.cotButton {
       margin: 0%;
     }
     .fullPgTitle{
-      margin-top: 7.5%;
+      margin-top: 20%;
     }
     #antie{
       font-size: 25px;
@@ -593,8 +599,8 @@ a.cotButton {
 #footer {
   z-index: 5;
   margin: 0%!important;
+  padding: 7.5% 0% 1.5% 0%;
   text-align: center;
-  padding: 1.5%;
   span {
     color: rgba($text, 0.5);
     font-size: $baseSize*0.9;

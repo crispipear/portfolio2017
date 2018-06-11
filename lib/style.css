@@ -180,99 +180,99 @@
 
 @-webkit-keyframes glitch-anim-1 {
   0% {
-    clip: rect(53px, 9999px, 149px, 0); }
+    clip: rect(135px, 9999px, 22px, 0); }
   10% {
-    clip: rect(14px, 9999px, 94px, 0); }
+    clip: rect(83px, 9999px, 84px, 0); }
   20% {
-    clip: rect(34px, 9999px, 50px, 0); }
+    clip: rect(161px, 9999px, 86px, 0); }
   30% {
-    clip: rect(94px, 9999px, 85px, 0); }
+    clip: rect(84px, 9999px, 128px, 0); }
   40% {
-    clip: rect(86px, 9999px, 59px, 0); }
+    clip: rect(127px, 9999px, 147px, 0); }
   50% {
-    clip: rect(64px, 9999px, 40px, 0); }
+    clip: rect(119px, 9999px, 163px, 0); }
   60% {
-    clip: rect(132px, 9999px, 151px, 0); }
+    clip: rect(107px, 9999px, 26px, 0); }
   70% {
-    clip: rect(39px, 9999px, 98px, 0); }
+    clip: rect(2px, 9999px, 52px, 0); }
   80% {
-    clip: rect(104px, 9999px, 169px, 0); }
+    clip: rect(49px, 9999px, 102px, 0); }
   90% {
-    clip: rect(52px, 9999px, 92px, 0); }
+    clip: rect(1px, 9999px, 130px, 0); }
   100% {
-    clip: rect(11px, 9999px, 96px, 0); } }
+    clip: rect(104px, 9999px, 58px, 0); } }
 
 @-moz-keyframes glitch-anim-1 {
   0% {
-    clip: rect(60px, 9999px, 37px, 0); }
+    clip: rect(80px, 9999px, 28px, 0); }
   10% {
-    clip: rect(106px, 9999px, 117px, 0); }
+    clip: rect(96px, 9999px, 13px, 0); }
   20% {
-    clip: rect(145px, 9999px, 18px, 0); }
+    clip: rect(50px, 9999px, 63px, 0); }
   30% {
-    clip: rect(51px, 9999px, 5px, 0); }
+    clip: rect(98px, 9999px, 89px, 0); }
   40% {
-    clip: rect(161px, 9999px, 161px, 0); }
+    clip: rect(148px, 9999px, 139px, 0); }
   50% {
-    clip: rect(76px, 9999px, 2px, 0); }
+    clip: rect(59px, 9999px, 7px, 0); }
   60% {
-    clip: rect(105px, 9999px, 168px, 0); }
+    clip: rect(113px, 9999px, 61px, 0); }
   70% {
-    clip: rect(8px, 9999px, 159px, 0); }
+    clip: rect(88px, 9999px, 24px, 0); }
   80% {
-    clip: rect(17px, 9999px, 154px, 0); }
+    clip: rect(169px, 9999px, 106px, 0); }
   90% {
-    clip: rect(143px, 9999px, 143px, 0); }
+    clip: rect(25px, 9999px, 38px, 0); }
   100% {
-    clip: rect(162px, 9999px, 89px, 0); } }
+    clip: rect(95px, 9999px, 137px, 0); } }
 
 @-ms-keyframes glitch-anim-1 {
   0% {
-    clip: rect(123px, 9999px, 171px, 0); }
+    clip: rect(51px, 9999px, 74px, 0); }
   10% {
-    clip: rect(140px, 9999px, 16px, 0); }
+    clip: rect(35px, 9999px, 46px, 0); }
   20% {
-    clip: rect(118px, 9999px, 39px, 0); }
+    clip: rect(21px, 9999px, 73px, 0); }
   30% {
-    clip: rect(144px, 9999px, 161px, 0); }
+    clip: rect(62px, 9999px, 109px, 0); }
   40% {
-    clip: rect(81px, 9999px, 87px, 0); }
+    clip: rect(73px, 9999px, 103px, 0); }
   50% {
-    clip: rect(113px, 9999px, 13px, 0); }
+    clip: rect(37px, 9999px, 149px, 0); }
   60% {
-    clip: rect(51px, 9999px, 76px, 0); }
+    clip: rect(112px, 9999px, 165px, 0); }
   70% {
-    clip: rect(64px, 9999px, 37px, 0); }
+    clip: rect(170px, 9999px, 125px, 0); }
   80% {
-    clip: rect(142px, 9999px, 62px, 0); }
+    clip: rect(25px, 9999px, 136px, 0); }
   90% {
-    clip: rect(39px, 9999px, 168px, 0); }
+    clip: rect(8px, 9999px, 165px, 0); }
   100% {
-    clip: rect(66px, 9999px, 68px, 0); } }
+    clip: rect(123px, 9999px, 73px, 0); } }
 
 @keyframes glitch-anim-1 {
   0% {
-    clip: rect(66px, 9999px, 165px, 0); }
+    clip: rect(159px, 9999px, 86px, 0); }
   10% {
-    clip: rect(114px, 9999px, 104px, 0); }
+    clip: rect(143px, 9999px, 47px, 0); }
   20% {
-    clip: rect(168px, 9999px, 129px, 0); }
+    clip: rect(170px, 9999px, 35px, 0); }
   30% {
-    clip: rect(170px, 9999px, 104px, 0); }
+    clip: rect(59px, 9999px, 46px, 0); }
   40% {
-    clip: rect(56px, 9999px, 97px, 0); }
+    clip: rect(103px, 9999px, 171px, 0); }
   50% {
-    clip: rect(116px, 9999px, 17px, 0); }
+    clip: rect(106px, 9999px, 67px, 0); }
   60% {
-    clip: rect(81px, 9999px, 81px, 0); }
+    clip: rect(127px, 9999px, 66px, 0); }
   70% {
-    clip: rect(139px, 9999px, 157px, 0); }
+    clip: rect(137px, 9999px, 125px, 0); }
   80% {
-    clip: rect(154px, 9999px, 166px, 0); }
+    clip: rect(48px, 9999px, 43px, 0); }
   90% {
-    clip: rect(42px, 9999px, 159px, 0); }
+    clip: rect(49px, 9999px, 107px, 0); }
   100% {
-    clip: rect(167px, 9999px, 93px, 0); } }
+    clip: rect(33px, 9999px, 133px, 0); } }
 
 body::-webkit-scrollbar {
   width: 0.65em; }
@@ -296,7 +296,7 @@ body {
 
 p,
 span {
-  color: #f4f4f4;
+  color: #fbfbfb;
   text-align: left;
   font-size: 1em;
   margin-bottom: 1.5%; }
@@ -304,13 +304,19 @@ span {
 a {
   display: inline-block;
   position: relative;
-  color: #f4f4f4 !important;
+  color: #fbfbfb !important;
   cursor: pointer;
   text-decoration: none;
   color: #d44b53;
   display: inline-block; }
   a:visited {
-    color: #f4f4f4; }
+    color: #fbfbfb; }
+
+#home .container {
+  max-width: 75%; }
+  @media only screen and (max-width: 1023px) {
+    #home .container {
+      max-width: none; } }
 
 #particle {
   opacity: 0.5;
@@ -351,7 +357,7 @@ p {
 
 .nav {
   text-transform: uppercase;
-  color: #f4f4f4;
+  color: #fbfbfb;
   -webkit-transition: all, 0.15s;
   transition: all, 0.15s;
   width: auto;
@@ -393,7 +399,7 @@ a.cotButton {
 
 #landpg h1,
 #landpg p {
-  color: #f4f4f4;
+  color: #fbfbfb;
   width: auto;
   position: relative; }
 
@@ -535,7 +541,7 @@ a.cotButton {
     bottom: -50px;
     width: 350px;
     height: 200px;
-    background-color: rgba(244, 244, 244, 0.8);
+    background-color: rgba(251, 251, 251, 0.8);
     -webkit-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
     -moz-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
     box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25); }
@@ -566,7 +572,7 @@ a.cotButton {
   flex-direction: column;
   width: 35%;
   float: left;
-  color: #f4f4f4; }
+  color: #fbfbfb; }
   .proj-menu h3 {
     margin: 0px 0px 40px 0px;
     -webkit-transition: all 0.4s;
@@ -624,8 +630,8 @@ a.cotButton {
 .fullPgTitle {
   display: inline-block;
   text-align: left;
-  margin: 0.5% 0;
-  color: #f4f4f4;
+  margin: 0.5% 0% 0.5% -10px;
+  color: #fbfbfb;
   font-size: 125px;
   position: relative;
   font-weight: 300;
@@ -654,13 +660,14 @@ a.cotButton {
   @media only screen and (max-width: 1023px) {
     .fullPgTitle {
       font-size: 50px;
-      line-height: 65px; } }
+      line-height: 65px;
+      margin: 0.5% 0%; } }
 
 .container {
   opacity: 0; }
 
 #projNum {
-  color: #f4f4f4;
+  color: #fbfbfb;
   display: inline-block;
   margin: 0 0.5% 0 0; }
 
@@ -672,21 +679,20 @@ a.cotButton {
     margin-bottom: 2.5%; }
     .proj-sec .row:hover h2:after {
       opacity: 1; }
+  .proj-sec h2, .proj-sec h3 {
+    font-weight: 400; }
   .proj-sec h2 {
-    font-weight: 300;
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: #3bd2c5; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
-        font-size: 2.3em; } }
+        font-size: 1.35em; } }
   .proj-sec h3 {
-    margin: 0% 0% 1.5% 0%;
-    font-weight: 300;
-    font-size: 1.7em;
-    color: #f4f4f4; }
+    font-size: 1.25em;
+    color: #fbfbfb; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h3 {
-        font-size: 1.4em; } }
+        font-size: 1.05em; } }
   .proj-sec a img {
     filter: grayscale(100%);
     cursor: pointer; }
@@ -699,7 +705,7 @@ a.cotButton {
     letter-spacing: 0.075rem;
     font-family: "Roboto"; }
   .proj-sec p {
-    font-size: 1.25em; }
+    font-size: 1.15em; }
     .proj-sec p b,
     .proj-sec p q {
       color: #3bd2c5;
@@ -709,16 +715,17 @@ a.cotButton {
         font-size: 1em;
         line-height: 2em; } }
   .proj-sec .col-12, .proj-sec .col-6 {
-    margin: 0% 0% 2% 0%; }
+    margin: 0% 0% 1.5% 0%; }
   .proj-sec img {
     height: 100%;
     transition: all 0.25s;
     width: 100%; }
   .proj-sec .title {
-    width: 75%;
-    float: right; }
+    float: right;
+    width: 80%; }
     .proj-sec .title p, .proj-sec .title b {
-      font-family: "Roboto Mono"; }
+      font-family: "Roboto Mono";
+      font-size: 1.1em; }
     .proj-sec .title b {
       transition: 0.25s color; }
     @media (min-width: 1024px) and (max-width: 1550px) {
@@ -745,15 +752,15 @@ a.cotButton {
         width: 100%;
         margin: 0%; }
       .proj-sec .fullPgTitle {
-        margin-top: 7.5%; }
+        margin-top: 20%; }
       .proj-sec #antie {
         font-size: 25px; } }
 
 #design {
-  color: #f4f4f4; }
+  color: #fbfbfb; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     #design h1 {
-      font-size: 2em; } }
+      font-size: 1.5em; } }
   #design a {
     margin: 0%;
     float: right; }
@@ -766,10 +773,10 @@ a.cotButton {
 #footer {
   z-index: 5;
   margin: 0% !important;
-  text-align: center;
-  padding: 1.5%; }
+  padding: 7.5% 0% 1.5% 0%;
+  text-align: center; }
   #footer span {
-    color: rgba(244, 244, 244, 0.5);
+    color: rgba(251, 251, 251, 0.5);
     font-size: 0.9em;
     font-weight: 300;
     width: auto;
@@ -791,7 +798,7 @@ ul {
   font-size: 1.075em;
   font-weight: 300; }
   ul li {
-    color: #f4f4f4;
+    color: #fbfbfb;
     line-height: 1.25em;
     margin: 0 0 1em;
     padding-left: 1.5em;
@@ -815,7 +822,7 @@ a.cotButton {
     bottom: 0;
     content: "";
     height: 1px;
-    background: #f4f4f4; }
+    background: #fbfbfb; }
   .underline:hover,
   a.cotButton:hover {
     background-color: rgba(212, 75, 83, 0.75); }
@@ -856,9 +863,9 @@ a.cotButton {
   flex-direction: column;
   padding-bottom: 10vh; }
   #projs2 h1 {
-    font-size: 3em;
+    font-size: 2.25em;
     margin: 7.5% 0% 2.5% 1%;
-    color: #f4f4f4; }
+    color: #fbfbfb; }
 
 .modal {
   opacity: 0;
@@ -890,7 +897,7 @@ a.cotButton {
 
 .modal-des {
   margin: 0;
-  color: #f4f4f4;
+  color: #fbfbfb;
   float: left;
   font-size: 1.05em; }
   @media (min-width: 1024px) and (max-width: 1550px) {
@@ -899,8 +906,8 @@ a.cotButton {
 
 #modal-close {
   cursor: pointer;
-  color: #f4f4f4;
-  font-size: 2em;
+  color: #fbfbfb;
+  font-size: 1.5em;
   position: absolute;
   right: 2.5%;
   top: 5%;
@@ -926,7 +933,7 @@ a.cotButton {
       transform: scale(0.75); } }
 
 .contents {
-  background-color: #f4f4f4; }
+  background-color: #fbfbfb; }
   .contents .proj-sec b, .contents .proj-sec h2, .contents .proj-sec q, .contents .proj-sec h3 {
     color: #29b1a6; }
   .contents .proj-sec p, .contents .proj-sec li {
@@ -935,14 +942,14 @@ a.cotButton {
   .contents .fullPgTitle {
     color: #06090f; }
     .contents .fullPgTitle:before, .contents .fullPgTitle:after {
-      background: #f4f4f4; }
+      background: #fbfbfb; }
   .contents .underline {
     font-weight: 400;
     color: #06090f !important; }
     .contents .underline:before {
       background: #06090f; }
     .contents .underline:hover {
-      color: #f4f4f4 !important; }
+      color: #fbfbfb !important; }
   .contents #footer span {
     color: #06090f; }
 

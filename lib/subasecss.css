@@ -1,7 +1,7 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -21,17 +21,17 @@
 .col{
  flex: 1;
 }
-.col-1{flex: 0 0 6.33333%}
-.col-2{flex: 0 0 14.66666%}
-.col-3{flex: 0 0 21.99999%}
-.col-4{flex: 0 0 31.33333%}
-.col-5{flex: 0 0 39.66666%}
-.col-6{flex: 0 0 47.99999%}
-.col-7{flex: 0 0 56.33333%}
-.col-8{flex: 0 0 66.66666%}
-.col-9{flex: 0 0 74.99999%}
-.col-10{flex: 0 0 83.33333%}
-.col-11{flex: 0 0 91.66666%}
+.col-1{flex: 0 0 7.33333%}
+.col-2{flex: 0 0 15.66666%}
+.col-3{flex: 0 0 24%}
+.col-4{flex: 0 0 32.33333%}
+.col-5{flex: 0 0 40.66666%}
+.col-6{flex: 0 0 49%}
+.col-7{flex: 0 0 57.33333%}
+.col-8{flex: 0 0 65.66666%}
+.col-9{flex: 0 0 74%}
+.col-10{flex: 0 0 82.33333%}
+.col-11{flex: 0 0 90.66666%}
 .col-12,.col-full{flex: 0 0 100%}
 
 p{
