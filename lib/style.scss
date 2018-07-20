@@ -62,13 +62,31 @@ a {
   }
 }
 #particle {
-  opacity: 0.5;
+  opacity: 0.35;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  z-index: -4;
+  body {
+    margin: 0%;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: #06090f;
+  }
+
+  canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  img {
+    display: none;
+  }
 }
 
 section {
@@ -143,8 +161,10 @@ a.cotButton {
 }
 
 #landpg {
+  text-align: center;
   h1,
   p {
+    text-align: center;
     color: $text;
     width: auto;
     position: relative;
@@ -174,6 +194,7 @@ a.cotButton {
     @include laptop{
       p{
         font-size: 17px;
+        line-height: 50px;
       }
       h1{
         font-size: 125px;
