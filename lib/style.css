@@ -180,99 +180,99 @@
 
 @-webkit-keyframes glitch-anim-1 {
   0% {
-    clip: rect(67px, 9999px, 101px, 0); }
+    clip: rect(73px, 9999px, 111px, 0); }
   10% {
-    clip: rect(144px, 9999px, 3px, 0); }
+    clip: rect(79px, 9999px, 11px, 0); }
   20% {
-    clip: rect(110px, 9999px, 90px, 0); }
+    clip: rect(173px, 9999px, 77px, 0); }
   30% {
-    clip: rect(105px, 9999px, 108px, 0); }
+    clip: rect(50px, 9999px, 71px, 0); }
   40% {
-    clip: rect(120px, 9999px, 23px, 0); }
+    clip: rect(2px, 9999px, 100px, 0); }
   50% {
-    clip: rect(125px, 9999px, 159px, 0); }
+    clip: rect(52px, 9999px, 74px, 0); }
   60% {
-    clip: rect(80px, 9999px, 106px, 0); }
+    clip: rect(153px, 9999px, 137px, 0); }
   70% {
-    clip: rect(36px, 9999px, 7px, 0); }
+    clip: rect(165px, 9999px, 102px, 0); }
   80% {
-    clip: rect(88px, 9999px, 6px, 0); }
+    clip: rect(16px, 9999px, 142px, 0); }
   90% {
-    clip: rect(77px, 9999px, 14px, 0); }
+    clip: rect(62px, 9999px, 75px, 0); }
   100% {
-    clip: rect(96px, 9999px, 46px, 0); } }
+    clip: rect(63px, 9999px, 68px, 0); } }
 
 @-moz-keyframes glitch-anim-1 {
   0% {
-    clip: rect(103px, 9999px, 81px, 0); }
+    clip: rect(89px, 9999px, 69px, 0); }
   10% {
-    clip: rect(74px, 9999px, 36px, 0); }
+    clip: rect(139px, 9999px, 173px, 0); }
   20% {
-    clip: rect(27px, 9999px, 87px, 0); }
+    clip: rect(1px, 9999px, 83px, 0); }
   30% {
-    clip: rect(61px, 9999px, 83px, 0); }
+    clip: rect(122px, 9999px, 73px, 0); }
   40% {
-    clip: rect(7px, 9999px, 23px, 0); }
+    clip: rect(142px, 9999px, 102px, 0); }
   50% {
-    clip: rect(97px, 9999px, 138px, 0); }
+    clip: rect(57px, 9999px, 92px, 0); }
   60% {
-    clip: rect(105px, 9999px, 89px, 0); }
+    clip: rect(123px, 9999px, 41px, 0); }
   70% {
-    clip: rect(54px, 9999px, 146px, 0); }
+    clip: rect(30px, 9999px, 66px, 0); }
   80% {
-    clip: rect(155px, 9999px, 48px, 0); }
+    clip: rect(65px, 9999px, 169px, 0); }
   90% {
-    clip: rect(160px, 9999px, 125px, 0); }
+    clip: rect(70px, 9999px, 91px, 0); }
   100% {
-    clip: rect(126px, 9999px, 29px, 0); } }
+    clip: rect(70px, 9999px, 7px, 0); } }
 
 @-ms-keyframes glitch-anim-1 {
   0% {
-    clip: rect(173px, 9999px, 5px, 0); }
+    clip: rect(23px, 9999px, 48px, 0); }
   10% {
-    clip: rect(94px, 9999px, 162px, 0); }
+    clip: rect(32px, 9999px, 105px, 0); }
   20% {
-    clip: rect(138px, 9999px, 37px, 0); }
+    clip: rect(141px, 9999px, 173px, 0); }
   30% {
-    clip: rect(150px, 9999px, 21px, 0); }
+    clip: rect(63px, 9999px, 94px, 0); }
   40% {
-    clip: rect(63px, 9999px, 113px, 0); }
+    clip: rect(17px, 9999px, 126px, 0); }
   50% {
-    clip: rect(148px, 9999px, 49px, 0); }
+    clip: rect(24px, 9999px, 46px, 0); }
   60% {
-    clip: rect(118px, 9999px, 71px, 0); }
+    clip: rect(42px, 9999px, 54px, 0); }
   70% {
-    clip: rect(58px, 9999px, 6px, 0); }
+    clip: rect(69px, 9999px, 33px, 0); }
   80% {
-    clip: rect(40px, 9999px, 79px, 0); }
+    clip: rect(111px, 9999px, 36px, 0); }
   90% {
-    clip: rect(85px, 9999px, 93px, 0); }
+    clip: rect(153px, 9999px, 142px, 0); }
   100% {
-    clip: rect(115px, 9999px, 146px, 0); } }
+    clip: rect(17px, 9999px, 37px, 0); } }
 
 @keyframes glitch-anim-1 {
   0% {
-    clip: rect(89px, 9999px, 148px, 0); }
+    clip: rect(58px, 9999px, 1px, 0); }
   10% {
-    clip: rect(86px, 9999px, 22px, 0); }
+    clip: rect(132px, 9999px, 37px, 0); }
   20% {
-    clip: rect(69px, 9999px, 162px, 0); }
+    clip: rect(128px, 9999px, 133px, 0); }
   30% {
-    clip: rect(106px, 9999px, 40px, 0); }
+    clip: rect(48px, 9999px, 160px, 0); }
   40% {
-    clip: rect(5px, 9999px, 39px, 0); }
+    clip: rect(111px, 9999px, 121px, 0); }
   50% {
-    clip: rect(102px, 9999px, 91px, 0); }
+    clip: rect(12px, 9999px, 156px, 0); }
   60% {
-    clip: rect(85px, 9999px, 29px, 0); }
+    clip: rect(143px, 9999px, 129px, 0); }
   70% {
-    clip: rect(33px, 9999px, 74px, 0); }
+    clip: rect(46px, 9999px, 157px, 0); }
   80% {
-    clip: rect(26px, 9999px, 82px, 0); }
+    clip: rect(134px, 9999px, 113px, 0); }
   90% {
-    clip: rect(103px, 9999px, 28px, 0); }
+    clip: rect(63px, 9999px, 119px, 0); }
   100% {
-    clip: rect(36px, 9999px, 65px, 0); } }
+    clip: rect(53px, 9999px, 93px, 0); } }
 
 body::-webkit-scrollbar {
   width: 0.65em; }
@@ -296,7 +296,7 @@ body {
 
 p,
 span {
-  color: #fbfbfb;
+  color: #f2f2f2;
   text-align: left;
   font-size: 1em;
   margin-bottom: 1.5%; }
@@ -304,13 +304,13 @@ span {
 a {
   display: inline-block;
   position: relative;
-  color: #fbfbfb !important;
+  color: #f2f2f2 !important;
   cursor: pointer;
   text-decoration: none;
-  color: #d44b53;
+  color: #50f0a8;
   display: inline-block; }
   a:visited {
-    color: #fbfbfb; }
+    color: #f2f2f2; }
 
 #home .container {
   max-width: 75%; }
@@ -319,7 +319,7 @@ a {
       max-width: none; } }
 
 #particle {
-  opacity: 0.6;
+  opacity: 0.5;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -371,7 +371,7 @@ p {
 
 .nav {
   text-transform: uppercase;
-  color: #fbfbfb;
+  color: #f2f2f2;
   -webkit-transition: all, 0.15s;
   transition: all, 0.15s;
   width: auto;
@@ -416,7 +416,7 @@ a.cotButton {
   #landpg h1,
   #landpg p {
     text-align: center;
-    color: #fbfbfb;
+    color: #f2f2f2;
     width: auto;
     position: relative; }
   #landpg h1 {
@@ -430,8 +430,13 @@ a.cotButton {
     font-size: 20px;
     line-height: 75px; }
     #landpg p b {
-      font-weight: 300;
-      color: #3bd2c5; }
+      background: #50f0a8;
+      background: -webkit-linear-gradient(145deg, #50f0a8, #5888f4);
+      background: -o-linear-gradient(145deg, #50f0a8, #5888f4);
+      background: -moz-linear-gradient(145deg, #50f0a8, #5888f4);
+      background: linear-gradient(145deg, #50f0a8, #5888f4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
     #landpg p a {
       margin: 2.5% 25px 0% 0%;
       font-size: 0.9em;
@@ -476,12 +481,12 @@ a.cotButton {
     height: 100%; }
   .glitch-title:before {
     left: 5px;
-    text-shadow: -3px 5px 0 #d44b53;
+    text-shadow: -3px 5px 0 #50f0a8;
     background: #06090f;
     animation: glitch-anim-1 2.5s infinite linear alternate-reverse; }
   .glitch-title:after {
     left: 5px;
-    text-shadow: 3px -5px 0 #3bd2c5;
+    text-shadow: 3px -5px 0 #5888f4;
     background: #06090f;
     clip: rect(50px, 750px, 75px, 0);
     animation: glitch-anim-2 1.5s infinite linear alternate-reverse; }
@@ -500,8 +505,13 @@ a.cotButton {
     line-height: 1.25em;
     font-size: 90%; }
   .about p b {
-    font-weight: 300;
-    color: #3bd2c5; }
+    background: #50f0a8;
+    background: -webkit-linear-gradient(145deg, #50f0a8, #5888f4);
+    background: -o-linear-gradient(145deg, #50f0a8, #5888f4);
+    background: -moz-linear-gradient(145deg, #50f0a8, #5888f4);
+    background: linear-gradient(145deg, #50f0a8, #5888f4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     .about p {
       font-size: 15px; } }
@@ -555,7 +565,7 @@ a.cotButton {
     bottom: -50px;
     width: 350px;
     height: 200px;
-    background-color: rgba(251, 251, 251, 0.8);
+    background-color: rgba(242, 242, 242, 0.8);
     -webkit-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
     -moz-box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25);
     box-shadow: 0 0 45px 0 rgba(16, 54, 38, 0.25); }
@@ -586,8 +596,9 @@ a.cotButton {
   flex-direction: column;
   width: 35%;
   float: left;
-  color: #fbfbfb; }
+  color: #f2f2f2; }
   .proj-menu h3 {
+    opacity: 0.6;
     margin: 0px 0px 40px 0px;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -645,7 +656,7 @@ a.cotButton {
   display: inline-block;
   text-align: left;
   margin: 0.5% 0% 0.5% -10px;
-  color: #fbfbfb;
+  color: #f2f2f2;
   font-size: 125px;
   position: relative;
   font-weight: 300;
@@ -659,12 +670,12 @@ a.cotButton {
     height: 100%; }
   .fullPgTitle:before {
     left: 5px;
-    text-shadow: -3px 5px 0 #d44b53;
+    text-shadow: -3px 5px 0 #50f0a8;
     background: #06090f;
     animation: glitch-anim-1 1.5s infinite linear alternate-reverse; }
   .fullPgTitle:after {
     left: 5px;
-    text-shadow: 3px -5px 0 #3bd2c5;
+    text-shadow: 3px -5px 0 #5888f4;
     background: #06090f;
     clip: rect(50px, 750px, 75px, 0);
     animation: glitch-anim-2 1.5s infinite linear alternate-reverse; }
@@ -681,7 +692,7 @@ a.cotButton {
   opacity: 0; }
 
 #projNum {
-  color: #fbfbfb;
+  color: #f2f2f2;
   display: inline-block;
   margin: 0 0.5% 0 0; }
 
@@ -697,13 +708,13 @@ a.cotButton {
     font-weight: 400; }
   .proj-sec h2 {
     font-size: 1.5em;
-    color: #3bd2c5; }
+    color: #5888f4; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
         font-size: 1.35em; } }
   .proj-sec h3 {
     font-size: 1.25em;
-    color: #fbfbfb; }
+    color: #f2f2f2; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h3 {
         font-size: 1.05em; } }
@@ -722,7 +733,7 @@ a.cotButton {
     font-size: 1.15em; }
     .proj-sec p b,
     .proj-sec p q {
-      color: #3bd2c5;
+      color: #5888f4;
       font-weight: 400; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec p {
@@ -771,7 +782,7 @@ a.cotButton {
         font-size: 25px; } }
 
 #design {
-  color: #fbfbfb; }
+  color: #f2f2f2; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     #design h1 {
       font-size: 1.5em; } }
@@ -793,7 +804,7 @@ a.cotButton {
   transform: translate(-50%, -50%);
   z-index: 50; }
   #footer span {
-    color: rgba(251, 251, 251, 0.5);
+    color: rgba(242, 242, 242, 0.5);
     font-size: 0.9em;
     font-weight: 300;
     width: auto;
@@ -815,7 +826,7 @@ ul {
   font-size: 1.075em;
   font-weight: 300; }
   ul li {
-    color: #fbfbfb;
+    color: #f2f2f2;
     line-height: 1.25em;
     margin: 0 0 1em;
     padding-left: 1.5em;
@@ -838,16 +849,17 @@ a.cotButton {
     right: 0;
     bottom: 0;
     content: "";
-    height: 1px;
-    background: #fbfbfb;
-    transition: all 0.3s;
+    height: 2px;
+    background: #f2f2f2;
+    transition: all 0.4s;
+    background: #50f0a8;
+    background: -webkit-linear-gradient(145deg, #50f0a8, #5888f4);
+    background: -o-linear-gradient(145deg, #50f0a8, #5888f4);
+    background: -moz-linear-gradient(145deg, #50f0a8, #5888f4);
+    background: linear-gradient(145deg, #50f0a8, #5888f4);
     width: 25%; }
-  .underline:hover,
-  a.cotButton:hover {
-    color: #3bd2c5 !important; }
   .underline:hover:before,
   a.cotButton:hover:before {
-    background: #3bd2c5;
     width: 100%; }
   @media only screen and (max-width: 1023px) {
     .underline,
@@ -888,7 +900,7 @@ a.cotButton {
   #projs2 h1 {
     font-size: 2.25em;
     margin: 7.5% 0% 2.5% 1%;
-    color: #fbfbfb; }
+    color: #f2f2f2; }
 
 .modal {
   opacity: 0;
@@ -920,7 +932,7 @@ a.cotButton {
 
 .modal-des {
   margin: 0;
-  color: #fbfbfb;
+  color: #f2f2f2;
   float: left;
   font-size: 1.05em; }
   @media (min-width: 1024px) and (max-width: 1550px) {
@@ -929,7 +941,7 @@ a.cotButton {
 
 #modal-close {
   cursor: pointer;
-  color: #fbfbfb;
+  color: #f2f2f2;
   font-size: 1.5em;
   position: absolute;
   right: 2.5%;
@@ -956,23 +968,23 @@ a.cotButton {
       transform: scale(0.75); } }
 
 .contents {
-  background-color: #fbfbfb; }
+  background-color: #f2f2f2; }
   .contents .proj-sec b, .contents .proj-sec h2, .contents .proj-sec q, .contents .proj-sec h3 {
-    color: #29b1a6; }
+    color: #2866f1; }
   .contents .proj-sec p, .contents .proj-sec li {
     color: #06090f;
     font-weight: 400; }
   .contents .fullPgTitle {
     color: #06090f !important; }
     .contents .fullPgTitle:before, .contents .fullPgTitle:after {
-      background: #fbfbfb; }
+      background: #f2f2f2; }
   .contents .underline {
     font-weight: 400;
     color: #06090f !important; }
     .contents .underline:before {
       background: #06090f; }
     .contents .underline:hover {
-      color: #fbfbfb !important; }
+      color: #f2f2f2 !important; }
   .contents #footer span {
     color: #06090f; }
 

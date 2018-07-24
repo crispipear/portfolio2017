@@ -5,9 +5,9 @@
 @import "keyframes";
 @import url("subasecss.css");
 $bg: #06090f;
-$text: #fbfbfb;
-$key1: #d44b53;
-$key2: #3bd2c5;
+$text: #f2f2f2;
+$key1: #50f0a8;
+$key2: #5888f4;
 $baseSize: 1em;
 $headerSize: 1.5em;
 $letterSpacing: 1px;
@@ -62,7 +62,7 @@ a {
   }
 }
 #particle {
-  opacity: 0.6;
+  opacity: 0.5;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -181,8 +181,9 @@ a.cotButton {
     font-size: 20px;
     line-height: 75px;
     b{
-      font-weight: 300;
-      color: $key2;
+      @include bgGrad($key1, $key2)
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     a{
       margin: 2.5% 25px 0% 0%;
@@ -268,8 +269,9 @@ a.cotButton {
       font-size: 90%;
     }
     b{
-      font-weight: 300;
-      color: $key2;
+      @include bgGrad($key1, $key2)
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     font-size: 20px;
     @include laptop {
@@ -367,6 +369,7 @@ a.cotButton {
   float: left;
   color: $text;
   h3{
+    opacity: 0.6;
     margin: 0px 0px 40px 0px;
     @include transition(all 0.4s);
     cursor: pointer;
@@ -674,16 +677,13 @@ a.cotButton {
     right: 0;
     bottom: 0;
     content: "";
-    height: 1px;
+    height: 2px;
     background: $text;
-    transition: all 0.3s;
+    transition: all 0.4s;
+    @include bgGrad($key1, $key2)
     width: 25%;
   }
-  &:hover{
-    color: $key2!important;
-  }
   &:hover:before{
-    background: $key2;
     width: 100%;
   }
   @include mobile{
