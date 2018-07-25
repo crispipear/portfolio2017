@@ -7,13 +7,13 @@
 $bg: #fcfcfc;
 $text: #121212;
 $key1: #5888f4;
-$key2: #42da96;
-$baseSize: 1em;
-$headerSize: 1.5em;
+$key2: #3dcb8b;
+$baseSize: 1rem;
+$headerSize: 1.5rem;
 $letterSpacing: 1px;
 
 body::-webkit-scrollbar {
-  width: 0.65em;
+  width: 0.5em;
 }
 
 body::-webkit-scrollbar-track {
@@ -21,7 +21,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #454545;
+  background-color: rgba($key1,0.75);
 }
 
 * {
@@ -62,7 +62,7 @@ a {
   }
 }
 #particle {
-  opacity: 0.5;
+  opacity: 0.6;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -161,25 +161,22 @@ a.cotButton {
 }
 
 #landpg {
-  text-align: center;
   h1,
   p {
-    text-align: center;
     color: $text;
     width: auto;
     position: relative;
   }
   h1 {
     display: inline-block;
-    font-size: 175px;
-    line-height: 175px;
-    margin-bottom: 30px;
+    margin-bottom: 7.5%;
+    line-height: 0;
+    font-size: $headerSize*5;
   }
   p {
-    margin: 0%;
+    margin: 1% 0%;
     padding-left: 1%;
-    font-size: 20px;
-    line-height: 75px;
+    font-size: $baseSize*1.15;
     b{
       @include bgGrad($key1, $key2)
       -webkit-background-clip: text;
@@ -194,12 +191,10 @@ a.cotButton {
   .landpgTitle{
     @include laptop{
       p{
-        font-size: 17px;
-        line-height: 50px;
+        font-size: $baseSize;
       }
       h1{
-        font-size: 125px;
-        line-height: 125px;
+        font-size: $headerSize*3.5;
       }
     }
     @include mobile{
@@ -233,18 +228,18 @@ a.cotButton {
   p {
     display: block;
     a {
-      line-height: $baseSize*1.25;
-      font-size: 90%;
+      line-height: $baseSize*1.15;
+      font-size: 95%;
     }
     b{
       @include bgGrad($key1, $key2)
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      font-size: $baseSize*1.05;
     }
-    font-size: 20px;
-    @include laptop {
-      font-size: 15px;
-    }
+    font-size: $baseSize*1.05;
+    line-height: $baseSize*2.25;
+    margin-bottom: 3.5%
   }
 
   #aboutName img {
@@ -254,14 +249,25 @@ a.cotButton {
     border-radius: 50%;
   }
   @include laptop{
+    #aboutName img{
+      width: 85px
+    }
     p{
-      font-size: 16px;
+      font-size: $baseSize*0.9;
+      line-height: $baseSize*1.65;
+      b{
+        font-size: $baseSize*0.9
+      }
     }
   }
   @include mobile{
     padding: 15px;
     p{
       font-size: 13px;
+      line-height: 25px;
+      b{
+        font-size: 13px;
+      }
     }
     #aboutName img{
       width: 50px;
@@ -337,8 +343,7 @@ a.cotButton {
   float: left;
   color: $text;
   h3{
-    opacity: 0.6;
-    margin: 0px 0px 40px 0px;
+    margin: 7.5% 0%;
     @include transition(all 0.4s);
     cursor: pointer;
     font-weight: 300;
@@ -351,6 +356,7 @@ a.cotButton {
   .focus{
     @include transition(opacity 0.2s);
     opacity: 0;
+    color: $key1
   }
   div{
     @include transition(all 1.5s ease-out);
@@ -375,6 +381,7 @@ a.cotButton {
       z-index: 5;
       h3{
         font-size: 12px;
+        font-weight: 400;
         text-shadow: 1px 1px $bg;
         transform-origin: center;
         margin-bottom: 25px;
@@ -568,7 +575,7 @@ a.cotButton {
   transform: translate(-50%, -50%);
   z-index: 50;
   span {
-    color: rgba($text, 0.5);
+    color: $text;
     font-size: $baseSize*0.9;
     font-weight: 300;
     width: auto;
@@ -606,7 +613,7 @@ ul {
 .underline,
 a.cotButton {
   padding: 2px 0;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: $letterSpacing*1.5;
   @include transition(all 0.25s);
   &:before {

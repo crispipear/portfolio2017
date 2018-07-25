@@ -180,112 +180,112 @@
 
 @-webkit-keyframes glitch-anim-1 {
   0% {
-    clip: rect(174px, 9999px, 32px, 0); }
+    clip: rect(160px, 9999px, 30px, 0); }
   10% {
-    clip: rect(154px, 9999px, 128px, 0); }
+    clip: rect(105px, 9999px, 49px, 0); }
   20% {
-    clip: rect(45px, 9999px, 50px, 0); }
+    clip: rect(119px, 9999px, 53px, 0); }
   30% {
-    clip: rect(74px, 9999px, 37px, 0); }
+    clip: rect(88px, 9999px, 53px, 0); }
   40% {
-    clip: rect(145px, 9999px, 136px, 0); }
+    clip: rect(39px, 9999px, 162px, 0); }
   50% {
-    clip: rect(113px, 9999px, 96px, 0); }
+    clip: rect(2px, 9999px, 132px, 0); }
   60% {
-    clip: rect(14px, 9999px, 26px, 0); }
+    clip: rect(9px, 9999px, 62px, 0); }
   70% {
-    clip: rect(82px, 9999px, 89px, 0); }
+    clip: rect(143px, 9999px, 2px, 0); }
   80% {
-    clip: rect(27px, 9999px, 63px, 0); }
+    clip: rect(70px, 9999px, 12px, 0); }
   90% {
-    clip: rect(62px, 9999px, 58px, 0); }
+    clip: rect(23px, 9999px, 28px, 0); }
   100% {
-    clip: rect(147px, 9999px, 170px, 0); } }
+    clip: rect(18px, 9999px, 15px, 0); } }
 
 @-moz-keyframes glitch-anim-1 {
   0% {
-    clip: rect(39px, 9999px, 35px, 0); }
+    clip: rect(99px, 9999px, 3px, 0); }
   10% {
-    clip: rect(99px, 9999px, 37px, 0); }
+    clip: rect(102px, 9999px, 170px, 0); }
   20% {
-    clip: rect(111px, 9999px, 60px, 0); }
+    clip: rect(15px, 9999px, 77px, 0); }
   30% {
-    clip: rect(22px, 9999px, 101px, 0); }
+    clip: rect(150px, 9999px, 151px, 0); }
   40% {
-    clip: rect(167px, 9999px, 80px, 0); }
+    clip: rect(82px, 9999px, 153px, 0); }
   50% {
-    clip: rect(36px, 9999px, 37px, 0); }
+    clip: rect(23px, 9999px, 49px, 0); }
   60% {
-    clip: rect(21px, 9999px, 61px, 0); }
+    clip: rect(115px, 9999px, 88px, 0); }
   70% {
-    clip: rect(62px, 9999px, 81px, 0); }
+    clip: rect(161px, 9999px, 104px, 0); }
   80% {
-    clip: rect(123px, 9999px, 31px, 0); }
+    clip: rect(101px, 9999px, 14px, 0); }
   90% {
-    clip: rect(97px, 9999px, 52px, 0); }
+    clip: rect(4px, 9999px, 121px, 0); }
   100% {
-    clip: rect(88px, 9999px, 29px, 0); } }
+    clip: rect(138px, 9999px, 138px, 0); } }
 
 @-ms-keyframes glitch-anim-1 {
   0% {
-    clip: rect(53px, 9999px, 129px, 0); }
+    clip: rect(170px, 9999px, 18px, 0); }
   10% {
-    clip: rect(172px, 9999px, 85px, 0); }
+    clip: rect(16px, 9999px, 173px, 0); }
   20% {
-    clip: rect(142px, 9999px, 45px, 0); }
+    clip: rect(53px, 9999px, 46px, 0); }
   30% {
-    clip: rect(99px, 9999px, 103px, 0); }
+    clip: rect(105px, 9999px, 144px, 0); }
   40% {
-    clip: rect(166px, 9999px, 59px, 0); }
+    clip: rect(28px, 9999px, 167px, 0); }
   50% {
-    clip: rect(173px, 9999px, 38px, 0); }
+    clip: rect(64px, 9999px, 169px, 0); }
   60% {
-    clip: rect(120px, 9999px, 65px, 0); }
+    clip: rect(31px, 9999px, 73px, 0); }
   70% {
-    clip: rect(32px, 9999px, 173px, 0); }
+    clip: rect(29px, 9999px, 87px, 0); }
   80% {
-    clip: rect(139px, 9999px, 145px, 0); }
+    clip: rect(38px, 9999px, 34px, 0); }
   90% {
-    clip: rect(34px, 9999px, 66px, 0); }
+    clip: rect(92px, 9999px, 35px, 0); }
   100% {
-    clip: rect(32px, 9999px, 26px, 0); } }
+    clip: rect(1px, 9999px, 87px, 0); } }
 
 @keyframes glitch-anim-1 {
   0% {
-    clip: rect(162px, 9999px, 137px, 0); }
+    clip: rect(84px, 9999px, 169px, 0); }
   10% {
-    clip: rect(94px, 9999px, 66px, 0); }
+    clip: rect(173px, 9999px, 132px, 0); }
   20% {
-    clip: rect(103px, 9999px, 1px, 0); }
+    clip: rect(153px, 9999px, 128px, 0); }
   30% {
-    clip: rect(108px, 9999px, 175px, 0); }
+    clip: rect(25px, 9999px, 4px, 0); }
   40% {
-    clip: rect(14px, 9999px, 156px, 0); }
+    clip: rect(24px, 9999px, 17px, 0); }
   50% {
-    clip: rect(131px, 9999px, 12px, 0); }
+    clip: rect(123px, 9999px, 157px, 0); }
   60% {
-    clip: rect(114px, 9999px, 144px, 0); }
+    clip: rect(130px, 9999px, 146px, 0); }
   70% {
-    clip: rect(96px, 9999px, 158px, 0); }
+    clip: rect(108px, 9999px, 136px, 0); }
   80% {
-    clip: rect(109px, 9999px, 144px, 0); }
+    clip: rect(29px, 9999px, 126px, 0); }
   90% {
-    clip: rect(28px, 9999px, 152px, 0); }
+    clip: rect(23px, 9999px, 50px, 0); }
   100% {
-    clip: rect(69px, 9999px, 11px, 0); } }
+    clip: rect(84px, 9999px, 49px, 0); } }
 
 body::-webkit-scrollbar {
-  width: 0.65em; }
+  width: 0.5em; }
 
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.25); }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #454545; }
+  background-color: rgba(88, 136, 244, 0.75); }
 
 * {
   font-family: 'Roboto Mono', monospace, '微软雅黑';
-  font-size: 1em;
+  font-size: 1rem;
   cursor: default;
   letter-spacing: 1px; }
 
@@ -298,7 +298,7 @@ p,
 span {
   color: #121212;
   text-align: left;
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 1.5%; }
 
 a {
@@ -319,7 +319,7 @@ a {
       max-width: none; } }
 
 #particle {
-  opacity: 0.5;
+  opacity: 0.6;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -353,7 +353,7 @@ section {
 
 h1,
 p {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   font-weight: 300;
   line-height: 2em;
   margin-top: 0%; }
@@ -377,7 +377,7 @@ p {
   width: auto;
   position: fixed;
   z-index: 50;
-  font-size: 1.15em;
+  font-size: 1.15rem;
   margin: 2.5% 2.5% 2.5% 0; }
   .nav:after {
     margin-top: -10.75% !important;
@@ -386,7 +386,7 @@ p {
     opacity: 1 !important; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     .nav {
-      font-size: 1em; } }
+      font-size: 1rem; } }
 
 #nav-work {
   left: 2.5%; }
@@ -404,90 +404,88 @@ p {
 a.cotButton {
   -webkit-transition: all 0.45s;
   transition: all 0.45s;
-  font-size: 1.15em;
+  font-size: 1.15rem;
   margin-top: 7.5%; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     a.cotButton {
-      font-size: 0.85em;
+      font-size: 0.85rem;
       padding: 2.5%; } }
 
-#landpg {
-  text-align: center; }
-  #landpg h1,
-  #landpg p {
-    text-align: center;
-    color: #121212;
-    width: auto;
-    position: relative; }
-  #landpg h1 {
-    display: inline-block;
-    font-size: 175px;
-    line-height: 175px;
-    margin-bottom: 30px; }
-  #landpg p {
-    margin: 0%;
-    padding-left: 1%;
-    font-size: 20px;
-    line-height: 75px; }
-    #landpg p b {
-      background: #5888f4;
-      background: -webkit-linear-gradient(145deg, #5888f4, #42da96);
-      background: -o-linear-gradient(145deg, #5888f4, #42da96);
-      background: -moz-linear-gradient(145deg, #5888f4, #42da96);
-      background: linear-gradient(145deg, #5888f4, #42da96);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
-    #landpg p a {
-      margin: 2.5% 25px 0% 0%;
-      font-size: 0.9em;
-      line-height: 1.25em; }
-  @media (min-width: 1024px) and (max-width: 1550px) {
-    #landpg .landpgTitle p {
-      font-size: 17px;
-      line-height: 50px; }
+#landpg h1,
+#landpg p {
+  color: #121212;
+  width: auto;
+  position: relative; }
+
+#landpg h1 {
+  display: inline-block;
+  margin-bottom: 7.5%;
+  line-height: 0;
+  font-size: 7.5rem; }
+
+#landpg p {
+  margin: 1% 0%;
+  padding-left: 1%;
+  font-size: 1.15rem; }
+  #landpg p b {
+    background: #5888f4;
+    background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: -moz-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: linear-gradient(145deg, #5888f4, #3dcb8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  #landpg p a {
+    margin: 2.5% 25px 0% 0%;
+    font-size: 0.9rem;
+    line-height: 1.25rem; }
+
+@media (min-width: 1024px) and (max-width: 1550px) {
+  #landpg .landpgTitle p {
+    font-size: 1rem; }
+  #landpg .landpgTitle h1 {
+    font-size: 5.25rem; } }
+
+@media only screen and (max-width: 1023px) {
+  #landpg .landpgTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 100%;
+    height: 100vh;
+    text-align: center; }
+    #landpg .landpgTitle p, #landpg .landpgTitle a {
+      margin: 5px;
+      text-align: center;
+      font-size: 13px;
+      line-height: 30px; }
     #landpg .landpgTitle h1 {
-      font-size: 125px;
-      line-height: 125px; } }
-  @media only screen and (max-width: 1023px) {
-    #landpg .landpgTitle {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 15px;
-      width: 100%;
-      height: 100vh;
-      text-align: center; }
-      #landpg .landpgTitle p, #landpg .landpgTitle a {
-        margin: 5px;
-        text-align: center;
-        font-size: 13px;
-        line-height: 30px; }
-      #landpg .landpgTitle h1 {
-        font-size: 75px;
-        margin: 0%;
-        line-height: 100px; } }
+      font-size: 75px;
+      margin: 0%;
+      line-height: 100px; } }
 
 #design {
   height: 50vh; }
 
 .about p {
   display: block;
-  font-size: 20px; }
+  font-size: 1.05rem;
+  line-height: 2.25rem;
+  margin-bottom: 3.5%; }
   .about p a {
-    line-height: 1.25em;
-    font-size: 90%; }
+    line-height: 1.15rem;
+    font-size: 95%; }
   .about p b {
     background: #5888f4;
-    background: -webkit-linear-gradient(145deg, #5888f4, #42da96);
-    background: -o-linear-gradient(145deg, #5888f4, #42da96);
-    background: -moz-linear-gradient(145deg, #5888f4, #42da96);
-    background: linear-gradient(145deg, #5888f4, #42da96);
+    background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: -moz-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: linear-gradient(145deg, #5888f4, #3dcb8b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
-  @media (min-width: 1024px) and (max-width: 1550px) {
-    .about p {
-      font-size: 15px; } }
+    -webkit-text-fill-color: transparent;
+    font-size: 1.05rem; }
 
 .about #aboutName img {
   margin-left: 1.5%;
@@ -496,14 +494,22 @@ a.cotButton {
   border-radius: 50%; }
 
 @media (min-width: 1024px) and (max-width: 1550px) {
+  .about #aboutName img {
+    width: 85px; }
   .about p {
-    font-size: 16px; } }
+    font-size: 0.9rem;
+    line-height: 1.65rem; }
+    .about p b {
+      font-size: 0.9rem; } }
 
 @media only screen and (max-width: 1023px) {
   .about {
     padding: 15px; }
     .about p {
-      font-size: 13px; }
+      font-size: 13px;
+      line-height: 25px; }
+      .about p b {
+        font-size: 13px; }
     .about #aboutName img {
       width: 50px; } }
 
@@ -552,12 +558,12 @@ a.cotButton {
       font-weight: 400;
       margin: 0% 0% 5% 0%;
       color: #121212;
-      font-size: 1em; }
+      font-size: 1rem; }
       .proj-item .proj-info p span {
         color: inherit; }
       @media (min-width: 1024px) and (max-width: 1550px) {
         .proj-item .proj-info p {
-          font-size: 0.8em; } }
+          font-size: 0.8rem; } }
   .proj-item a {
     position: absolute;
     right: 0px;
@@ -571,8 +577,7 @@ a.cotButton {
   float: left;
   color: #121212; }
   .proj-menu h3 {
-    opacity: 0.6;
-    margin: 0px 0px 40px 0px;
+    margin: 7.5% 0%;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     cursor: pointer;
@@ -585,7 +590,8 @@ a.cotButton {
   .proj-menu .focus {
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s;
-    opacity: 0; }
+    opacity: 0;
+    color: #5888f4; }
   .proj-menu div {
     -webkit-transition: all 1.5s ease-out;
     transition: all 1.5s ease-out; }
@@ -607,6 +613,7 @@ a.cotButton {
       z-index: 5; }
       .projs .proj-menu h3 {
         font-size: 12px;
+        font-weight: 400;
         text-shadow: 1px 1px #fcfcfc;
         transform-origin: center;
         margin-bottom: 25px; }
@@ -623,17 +630,17 @@ a.cotButton {
     height: auto; }
     #projs .cotButton {
       margin: 15px auto;
-      font-size: 0.95em; } }
+      font-size: 0.95rem; } }
 
 .fullPgTitle {
   display: inline-block;
   text-align: left;
   margin: 0.5% 0% 0.5% -10px;
   background: #5888f4;
-  background: -webkit-linear-gradient(145deg, #5888f4, #42da96);
-  background: -o-linear-gradient(145deg, #5888f4, #42da96);
-  background: -moz-linear-gradient(145deg, #5888f4, #42da96);
-  background: linear-gradient(145deg, #5888f4, #42da96);
+  background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
+  background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
+  background: -moz-linear-gradient(145deg, #5888f4, #3dcb8b);
+  background: linear-gradient(145deg, #5888f4, #3dcb8b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 125px;
@@ -664,17 +671,17 @@ a.cotButton {
   .proj-sec h2, .proj-sec h3 {
     font-weight: 400; }
   .proj-sec h2 {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     color: #5888f4; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h2 {
-        font-size: 1.35em; } }
+        font-size: 1.35rem; } }
   .proj-sec h3 {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     color: #121212; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h3 {
-        font-size: 1.05em; } }
+        font-size: 1.05rem; } }
   .proj-sec a img {
     filter: grayscale(100%);
     cursor: pointer; }
@@ -682,20 +689,20 @@ a.cotButton {
       border-radius: 25px;
       filter: none; }
   .proj-sec a {
-    line-height: 1.25em; }
+    line-height: 1.25rem; }
   .proj-sec p, .proj-sec b, .proj-sec q, .proj-sec li, .proj-sec ul {
     letter-spacing: 0.075rem;
     font-family: "Roboto"; }
   .proj-sec p {
-    font-size: 1.15em; }
+    font-size: 1.15rem; }
     .proj-sec p b,
     .proj-sec p q {
       color: #5888f4;
       font-weight: 400; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec p {
-        font-size: 1em;
-        line-height: 2em; } }
+        font-size: 1rem;
+        line-height: 2rem; } }
   .proj-sec .col-12, .proj-sec .col-6 {
     margin: 0% 0% 1.5% 0%; }
   .proj-sec img {
@@ -707,12 +714,12 @@ a.cotButton {
     width: 80%; }
     .proj-sec .title p, .proj-sec .title b {
       font-family: "Roboto Mono";
-      font-size: 1.1em; }
+      font-size: 1.1rem; }
     .proj-sec .title b {
       transition: 0.25s color; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec .title {
-        font-size: 0.9em; } }
+        font-size: 0.9rem; } }
   .proj-sec #antie {
     font-size: 75px; }
   @media only screen and (max-width: 1023px) {
@@ -742,7 +749,7 @@ a.cotButton {
   color: #121212; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     #design h1 {
-      font-size: 1.5em; } }
+      font-size: 1.5rem; } }
   #design a {
     margin: 0%;
     float: right; }
@@ -761,17 +768,17 @@ a.cotButton {
   transform: translate(-50%, -50%);
   z-index: 50; }
   #footer span {
-    color: rgba(18, 18, 18, 0.5);
-    font-size: 0.9em;
+    color: #121212;
+    font-size: 0.9rem;
     font-weight: 300;
     width: auto;
     height: auto; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       #footer span {
-        font-size: 0.8em; } }
+        font-size: 0.8rem; } }
     @media only screen and (max-width: 1023px) {
       #footer span {
-        font-size: 0.7em; } }
+        font-size: 0.7rem; } }
   @media only screen and (max-width: 1023px) {
     #footer {
       text-align: center; } }
@@ -780,22 +787,22 @@ ul {
   list-style: none;
   margin: 5% 0;
   padding: 0;
-  font-size: 1.075em;
+  font-size: 1.075rem;
   font-weight: 300; }
   ul li {
     color: #121212;
-    line-height: 1.25em;
+    line-height: 1.25rem;
     margin: 0 0 1em;
     padding-left: 1.5em;
     position: relative; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     ul {
-      font-size: 0.95em; } }
+      font-size: 0.95rem; } }
 
 .underline,
 a.cotButton {
   padding: 2px 0;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1.5px;
   -webkit-transition: all 0.25s;
   transition: all 0.25s; }
@@ -810,10 +817,10 @@ a.cotButton {
     transition: all 0.4s;
     width: 100%;
     background: #5888f4;
-    background: -webkit-linear-gradient(145deg, #5888f4, #42da96);
-    background: -o-linear-gradient(145deg, #5888f4, #42da96);
-    background: -moz-linear-gradient(145deg, #5888f4, #42da96);
-    background: linear-gradient(145deg, #5888f4, #42da96);
+    background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: -moz-linear-gradient(145deg, #5888f4, #3dcb8b);
+    background: linear-gradient(145deg, #5888f4, #3dcb8b);
     width: 20px; }
   .underline:hover:before,
   a.cotButton:hover:before {
@@ -855,7 +862,7 @@ a.cotButton {
   flex-direction: column;
   padding-bottom: 10vh; }
   #projs2 h1 {
-    font-size: 2.25em;
+    font-size: 2.25rem;
     margin: 7.5% 0% 2.5% 1%;
     color: #121212; }
 
@@ -891,15 +898,15 @@ a.cotButton {
   margin: 0;
   color: #121212;
   float: left;
-  font-size: 1.05em; }
+  font-size: 1.05rem; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     .modal-des {
-      font-size: 0.9em; } }
+      font-size: 0.9rem; } }
 
 #modal-close {
   cursor: pointer;
   color: #121212;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   position: absolute;
   right: 2.5%;
   top: 5%;
