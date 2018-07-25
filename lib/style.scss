@@ -107,7 +107,7 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  background: lighten($bg, 1.5%);
+  @include bgGrad(lighten($key1, 15%), lighten($key2, 15%));
   z-index: 100;
   @include transition(all 0.75s);
 }
@@ -189,6 +189,10 @@ a.cotButton {
     }
   }
   .landpgTitle{
+    p, h1{
+      margin-left: 25%;
+      opacity: 0;
+    }
     @include laptop{
       p{
         font-size: $baseSize;
