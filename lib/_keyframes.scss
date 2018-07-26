@@ -22,14 +22,12 @@
     opacity: 1;
   }
 }
-@include keyframes (chat) {
+@include keyframes (onLoad) {
   0% {
-    left: -12.5%;
-    opacity: 0;
+    width: 100%;
   }
   100% {
-    left: 1.5%;
-    opacity: 1;
+    width: 0%;
   }
 }
 @include keyframes (fadeIn) {
@@ -38,34 +36,5 @@
   }
   100%{
     opacity: 1;
-  }
-}
-@include keyframes (glitch-anim-2) {
-  0% {
-    clip: rect(50px, 750px, 80px, 0);
-  }
-  20% {
-    clip: rect(30px, 750px, 15px, 0);
-  }
-  40% {
-    clip: rect(135px, 750px, 175px, 0);
-  }
-  60% {
-    clip: rect(30px, 750px, 15px, 0);
-  }
-  80% {
-    clip: rect(75px, 750px, 100px, 0);
-  }
-  100% {
-    clip: rect(125px, 750px, 5px, 0);
-  }
-}
-
-@include keyframes (glitch-anim-1) {
-  $steps: 10;
-  @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
-      clip: rect(random(175)+px, 9999px, random(175)+px, 0);
-    }
   }
 }
