@@ -62,7 +62,6 @@ a {
   }
 }
 #particle {
-  opacity: 0.75;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -98,7 +97,7 @@ h1,
 p {
   font-size: $baseSize*2.5;
   font-weight: 300;
-  line-height: 2em;
+  line-height: 1.5em;
   margin-top: 0%;
 }
 
@@ -162,56 +161,57 @@ a.cotButton {
 }
 
 #landpg {
-  h1,
-  p {
-    color: $text;
-    width: max-content;
-    position: relative;
-  }
-  h1 {
-    display: inline-block;
-    margin-bottom: 0%;
-    font-size: $headerSize*5;
-  }
-  p {
-    margin: 1% 0%;
-    padding-left: 1%;
-    font-size: $baseSize*1.15;
-    b{
-      @include bgGrad($key1, $key2)
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    a{
-      margin: 2.5% 25px 0% 0%;
-      font-size: $baseSize*0.9;
-      line-height: $baseSize*1.25;
-    }
-  }
   .landpgTitle{
-    @include laptop{
-      p, h1{
-        &:after{
-          content: "";
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          @include bgGrad(lighten($key1, 15%), lighten($key2, 15%));
-        }
+    h1,
+    p {
+      color: $text;
+      width: max-content;
+      position: relative;
+    }
+    p, h1{
+      &:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include bgGrad(lighten($key1, 15%), lighten($key2, 15%));
       }
+    }
+    h1 {
+      display: inline-block;
+      margin-bottom: 0%;
+      font-size: $headerSize*5;
+      &:after{
+        animation: 0.3s ease-in-out 1.25s onLoad forwards;
+      }
+    }
+    p {
+      margin: 1.5% 0%;
+      padding-left: 0.75%;
+      font-size: $baseSize*1.25;
+      &:after{
+        animation: 0.3s ease-in-out 1.55s onLoad forwards;
+      }
+      b{
+        font-size: 100%;
+        @include bgGrad($key1, $key2)
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      a{
+        margin: 2.5% 25px 0% 0%;
+        font-size: $baseSize;
+        line-height: $baseSize*1.5;
+      }
+    }
+    @include laptop{
       p{
         font-size: $baseSize;
-        &:after{
-          animation: 0.35s ease-in-out 1.75s onLoad forwards;
-        }
       }
       h1{
         font-size: $headerSize*3.5;
-        &:after{
-          animation: 0.35s ease-in-out 1.25s onLoad forwards;
-        }
       }
     }
     @include mobile{
@@ -247,6 +247,7 @@ a.cotButton {
     a {
       line-height: $baseSize*1.15;
       font-size: 95%;
+      margin-right: 0.5%;
     }
     b{
       @include bgGrad($key1, $key2)
@@ -256,7 +257,7 @@ a.cotButton {
     }
     font-size: $baseSize*1.05;
     line-height: $baseSize*2.25;
-    margin-bottom: 3.5%
+    margin-bottom: 1.25%;
   }
 
   #aboutName img {
@@ -272,15 +273,13 @@ a.cotButton {
     p{
       font-size: $baseSize*0.9;
       line-height: $baseSize*1.65;
+      margin-bottom: 2%;
       b{
         font-size: $baseSize*0.9
       }
     }
   }
   @include mobile{
-    .row div{
-      flex: 0 0 100%
-    }
     padding: 15px;
     p{
       font-size: 13px;
@@ -324,9 +323,9 @@ a.cotButton {
     position: absolute;
     left: -150px;
     bottom: -50px;
-    width: 350px;
+    width: 300px;
     height: 200px;
-    background-color: rgba($bg, 0.95);
+    background-color: rgba($bg, 0.9);
     @include boxshadow(0 0 20px 0 rgba(16, 54, 38, 0.15));
     @include laptop{
       width: 250px;
@@ -338,7 +337,8 @@ a.cotButton {
       font-weight: 400;
       margin: 0% 0% 5% 0%;
       color: $text;
-      font-size: $baseSize;
+      font-size: $baseSize*0.95;
+      line-height: 1.75rem;
       span{
         color: inherit;
       }
@@ -429,16 +429,15 @@ a.cotButton {
 .fullPgTitle {
   display: inline-block;
   text-align: left;
-  margin: 0.5% 0% 0.5% -10px;
   @include bgGrad($key1, $key2)
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 125px;
+  font-size: $headerSize*2.5;
   position: relative;
   font-weight: 300;
   overflow: hidden;
   @include laptop {
-    font-size: 100px;
+    font-size: $headerSize;
   }
   @include mobile{
     font-size: 50px;
@@ -523,6 +522,7 @@ a.cotButton {
       p,b{
         font-family: "Roboto Mono";
         font-size: $baseSize*1.1;
+        line-height: 2rem;
       }
       b {
         transition: 0.25s color;
@@ -632,24 +632,24 @@ ul {
 
 .underline,
 a.cotButton {
-  padding: 2px 0;
+  padding: 3px 0;
   font-weight: 400;
   letter-spacing: $letterSpacing*1.5;
   @include transition(all 0.25s);
   &:before {
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
     content: "";
     height: 2px;
     background: $text;
-    transition: all 0.4s;
+    transition: all 0.3s;
     width: 100%;
+    z-index: -1;
     @include bgGrad($key1, $key2);
-    width: 20px;
   }
   &:hover:before{
-    width: 100%;
+    width: 40%;
   }
   @include mobile{
     font-size: 13px;
@@ -776,31 +776,6 @@ a.cotButton {
   }
 }
 
-.contents{
-  // background-color: $text;
-  // .proj-sec{
-  //   b,h2,q, h3{
-  //     color: darken($key2, 10%)
-  //   }
-  //   p, li{
-  //     color: $bg;
-  //     font-weight: 400;
-  //   }
-  // }
-  // .fullPgTitle{
-  //   color: $bg!important;
-  //   &:before, &:after{
-  //     background: $text;
-  //   }
-  // }
-  // .underline{
-  //   font-weight: 400;
-  //   color: $bg!important;
-  // }
-  // #footer span{
-  //   color: $bg;
-  // }
-}
 //////////////animations////////////////////
 
 .slideUp {

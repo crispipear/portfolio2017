@@ -159,7 +159,6 @@ a {
       max-width: none; } }
 
 #particle {
-  opacity: 0.75;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -196,7 +195,7 @@ h1,
 p {
   font-size: 2.5rem;
   font-weight: 300;
-  line-height: 2em;
+  line-height: 1.5em;
   margin-top: 0%; }
 
 #loader {
@@ -256,22 +255,40 @@ a.cotButton {
       font-size: 0.85rem;
       padding: 2.5%; } }
 
-#landpg h1,
-#landpg p {
+#landpg .landpgTitle h1,
+#landpg .landpgTitle p {
   color: #121212;
   width: max-content;
   position: relative; }
 
-#landpg h1 {
+#landpg .landpgTitle p:after, #landpg .landpgTitle h1:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #a0bbf9;
+  background: -webkit-linear-gradient(145deg, #a0bbf9, #79dbaf);
+  background: -o-linear-gradient(145deg, #a0bbf9, #79dbaf);
+  background: -moz-linear-gradient(145deg, #a0bbf9, #79dbaf);
+  background: linear-gradient(145deg, #a0bbf9, #79dbaf); }
+
+#landpg .landpgTitle h1 {
   display: inline-block;
   margin-bottom: 0%;
   font-size: 7.5rem; }
+  #landpg .landpgTitle h1:after {
+    animation: 0.3s ease-in-out 1.25s onLoad forwards; }
 
-#landpg p {
-  margin: 1% 0%;
-  padding-left: 1%;
-  font-size: 1.15rem; }
-  #landpg p b {
+#landpg .landpgTitle p {
+  margin: 1.5% 0%;
+  padding-left: 0.75%;
+  font-size: 1.25rem; }
+  #landpg .landpgTitle p:after {
+    animation: 0.3s ease-in-out 1.55s onLoad forwards; }
+  #landpg .landpgTitle p b {
+    font-size: 100%;
     background: #5888f4;
     background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
     background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
@@ -279,32 +296,16 @@ a.cotButton {
     background: linear-gradient(145deg, #5888f4, #3dcb8b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
-  #landpg p a {
+  #landpg .landpgTitle p a {
     margin: 2.5% 25px 0% 0%;
-    font-size: 0.9rem;
-    line-height: 1.25rem; }
+    font-size: 1rem;
+    line-height: 1.5rem; }
 
 @media (min-width: 1024px) and (max-width: 1550px) {
-  #landpg .landpgTitle p:after, #landpg .landpgTitle h1:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #a0bbf9;
-    background: -webkit-linear-gradient(145deg, #a0bbf9, #79dbaf);
-    background: -o-linear-gradient(145deg, #a0bbf9, #79dbaf);
-    background: -moz-linear-gradient(145deg, #a0bbf9, #79dbaf);
-    background: linear-gradient(145deg, #a0bbf9, #79dbaf); }
   #landpg .landpgTitle p {
     font-size: 1rem; }
-    #landpg .landpgTitle p:after {
-      animation: 0.35s ease-in-out 1.75s onLoad forwards; }
   #landpg .landpgTitle h1 {
-    font-size: 5.25rem; }
-    #landpg .landpgTitle h1:after {
-      animation: 0.35s ease-in-out 1.25s onLoad forwards; } }
+    font-size: 5.25rem; } }
 
 @media only screen and (max-width: 1023px) {
   #landpg .landpgTitle {
@@ -333,10 +334,11 @@ a.cotButton {
   display: block;
   font-size: 1.05rem;
   line-height: 2.25rem;
-  margin-bottom: 3.5%; }
+  margin-bottom: 1.25%; }
   .about p a {
     line-height: 1.15rem;
-    font-size: 95%; }
+    font-size: 95%;
+    margin-right: 0.5%; }
   .about p b {
     background: #5888f4;
     background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
@@ -358,15 +360,14 @@ a.cotButton {
     width: 85px; }
   .about p {
     font-size: 0.9rem;
-    line-height: 1.65rem; }
+    line-height: 1.65rem;
+    margin-bottom: 2%; }
     .about p b {
       font-size: 0.9rem; } }
 
 @media only screen and (max-width: 1023px) {
   .about {
     padding: 15px; }
-    .about .row div {
-      flex: 0 0 100%; }
     .about p {
       font-size: 13px;
       line-height: 25px; }
@@ -404,9 +405,9 @@ a.cotButton {
     position: absolute;
     left: -150px;
     bottom: -50px;
-    width: 350px;
+    width: 300px;
     height: 200px;
-    background-color: rgba(252, 252, 252, 0.95);
+    background-color: rgba(252, 252, 252, 0.9);
     -webkit-box-shadow: 0 0 20px 0 rgba(16, 54, 38, 0.15);
     -moz-box-shadow: 0 0 20px 0 rgba(16, 54, 38, 0.15);
     box-shadow: 0 0 20px 0 rgba(16, 54, 38, 0.15); }
@@ -420,7 +421,8 @@ a.cotButton {
       font-weight: 400;
       margin: 0% 0% 5% 0%;
       color: #121212;
-      font-size: 1rem; }
+      font-size: 0.95rem;
+      line-height: 1.75rem; }
       .proj-item .proj-info p span {
         color: inherit; }
       @media (min-width: 1024px) and (max-width: 1550px) {
@@ -497,7 +499,6 @@ a.cotButton {
 .fullPgTitle {
   display: inline-block;
   text-align: left;
-  margin: 0.5% 0% 0.5% -10px;
   background: #5888f4;
   background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
   background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
@@ -505,13 +506,13 @@ a.cotButton {
   background: linear-gradient(145deg, #5888f4, #3dcb8b);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 125px;
+  font-size: 3.75rem;
   position: relative;
   font-weight: 300;
   overflow: hidden; }
   @media (min-width: 1024px) and (max-width: 1550px) {
     .fullPgTitle {
-      font-size: 100px; } }
+      font-size: 1.5rem; } }
   @media only screen and (max-width: 1023px) {
     .fullPgTitle {
       font-size: 50px;
@@ -576,7 +577,8 @@ a.cotButton {
     width: 80%; }
     .proj-sec .title p, .proj-sec .title b {
       font-family: "Roboto Mono";
-      font-size: 1.1rem; }
+      font-size: 1.1rem;
+      line-height: 2rem; }
     .proj-sec .title b {
       transition: 0.25s color; }
     @media (min-width: 1024px) and (max-width: 1550px) {
@@ -663,7 +665,7 @@ ul {
 
 .underline,
 a.cotButton {
-  padding: 2px 0;
+  padding: 3px 0;
   font-weight: 400;
   letter-spacing: 1.5px;
   -webkit-transition: all 0.25s;
@@ -671,22 +673,22 @@ a.cotButton {
   .underline:before,
   a.cotButton:before {
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
     content: "";
     height: 2px;
     background: #121212;
-    transition: all 0.4s;
+    transition: all 0.3s;
     width: 100%;
+    z-index: -1;
     background: #5888f4;
     background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
     background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
     background: -moz-linear-gradient(145deg, #5888f4, #3dcb8b);
-    background: linear-gradient(145deg, #5888f4, #3dcb8b);
-    width: 20px; }
+    background: linear-gradient(145deg, #5888f4, #3dcb8b); }
   .underline:hover:before,
   a.cotButton:hover:before {
-    width: 100%; }
+    width: 40%; }
   @media only screen and (max-width: 1023px) {
     .underline,
     a.cotButton {
