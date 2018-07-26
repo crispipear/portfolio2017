@@ -197,7 +197,7 @@ a.cotButton {
           height: 100%;
           position: absolute;
           bottom: 0;
-          right: 0;
+          left: 0;
           @include bgGrad(lighten($key1, 15%), lighten($key2, 15%));
         }
       }
@@ -588,6 +588,7 @@ a.cotButton {
 }
 #footer {
   margin: 0%!important;
+  pointer-events: none;
   padding: 7.5% 0% 1.5% 0%;
   text-align: center;
   position: absolute;
@@ -710,7 +711,7 @@ a.cotButton {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($bg, 0.95);
+  background-color: rgba($text, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
