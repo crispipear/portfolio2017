@@ -327,12 +327,9 @@ a.cotButton {
       margin: 0%;
       line-height: 100px; } }
 
-#design {
-  min-height: 25vh !important; }
-
 .about p {
   display: block;
-  font-size: 1.05rem;
+  font-size: 1.15rem;
   line-height: 2.25rem;
   margin-bottom: 1.25%; }
   .about p a {
@@ -347,7 +344,7 @@ a.cotButton {
     background: linear-gradient(145deg, #5888f4, #3dcb8b);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 1.05rem; }
+    font-size: 1.15rem; }
 
 .about #aboutName img {
   margin-left: 1.5%;
@@ -610,18 +607,22 @@ a.cotButton {
         font-size: 25px; } }
 
 #design {
-  color: #121212; }
-  @media (min-width: 1024px) and (max-width: 1550px) {
-    #design h1 {
-      font-size: 1.5rem; } }
+  color: #121212;
+  display: block !important; }
+  #design p {
+    font-size: 2.25rem;
+    width: 100%; }
   #design a {
-    margin: 0%;
-    float: right; }
+    font-size: 2.25rem;
+    margin: 0%; }
   @media only screen and (max-width: 1023px) {
-    #design h1 {
+    #design p {
       font-size: 20px; }
-    #design h1, #design a {
+    #design p, #design a {
       margin: 15px; } }
+  @media (min-width: 1024px) and (max-width: 1550px) {
+    #design p, #design a {
+      font-size: 1.5rem; } }
 
 #footer {
   margin: 0% !important;

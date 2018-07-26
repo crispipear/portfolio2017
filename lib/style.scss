@@ -237,10 +237,6 @@ a.cotButton {
     }
   }
 }
-
-#design{
-  min-height: 25vh!important;
-}
 .about {
   p {
     display: block;
@@ -253,9 +249,9 @@ a.cotButton {
       @include bgGrad($key1, $key2)
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      font-size: $baseSize*1.05;
+      font-size: $baseSize*1.15;
     }
-    font-size: $baseSize*1.05;
+    font-size: $baseSize*1.15;
     line-height: $baseSize*2.25;
     margin-bottom: 1.25%;
   }
@@ -568,21 +564,26 @@ a.cotButton {
 }
 #design{
   color: $text;
-  h1{
-    @include laptop{
-      font-size: $headerSize
-    }
+  display: block!important;
+  p{
+    font-size: $headerSize*1.5;
+    width: 100%;
   }
   a{
+    font-size: $headerSize*1.5;
     margin: 0%;
-    float: right;
   }
   @include mobile{
-    h1{
+    p{
       font-size: 20px;
     }
-    h1,a{
+    p,a{
       margin: 15px;
+    }
+  }
+  @include laptop{
+    p, a{
+      font-size: $headerSize
     }
   }
 }
