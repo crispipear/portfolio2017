@@ -8,7 +8,11 @@
     @content;
   }
 }
-
+@mixin desktop{
+  @media screen and (min-width: 1551px){
+    @content;
+  }
+}
 @mixin links {
   cursor: pointer;
   text-decoration: none;

@@ -5,7 +5,7 @@
 @import "keyframes";
 @import url("subasecss.css");
 $bg: #fcfcfc;
-$text: #121212;
+$text: #444444;
 $key1: #5888f4;
 $key2: #3dcb8b;
 $baseSize: 1rem;
@@ -184,7 +184,7 @@ a.cotButton {
       margin-bottom: 0%;
       font-size: $headerSize*5;
       &:after{
-        animation: 0.3s ease-in-out 1.25s onLoad forwards;
+        animation: 0.3s ease-in-out 1.35s onLoad forwards;
       }
     }
     p {
@@ -192,7 +192,7 @@ a.cotButton {
       padding-left: 0.75%;
       font-size: $baseSize*1.25;
       &:after{
-        animation: 0.3s ease-in-out 1.55s onLoad forwards;
+        animation: 0.3s ease-in-out 1.65s onLoad forwards;
       }
       b{
         font-size: 100%;
@@ -204,6 +204,15 @@ a.cotButton {
         margin: 2.5% 25px 0% 0%;
         font-size: $baseSize;
         line-height: $baseSize*1.5;
+      }
+    }
+    .right{
+      position: absolute;
+      right: 0;
+      bottom: -15%;
+      a{
+        display: block;
+        margin-top: 15%;
       }
     }
     @include laptop{
@@ -233,6 +242,9 @@ a.cotButton {
         font-size: 75px;
         margin: 0%;
         line-height: 100px;
+      }
+      .right{
+        position: static;
       }
     }
   }
@@ -633,24 +645,26 @@ ul {
 
 .underline,
 a.cotButton {
-  padding: 3px 0;
   font-weight: 400;
   letter-spacing: $letterSpacing*1.5;
   @include transition(all 0.25s);
   &:before {
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
     content: "";
-    height: 2px;
+    height: 3px;
     background: $text;
-    transition: all 0.3s;
+    transition: all 0.25s;
     width: 100%;
     z-index: -1;
     @include bgGrad($key1, $key2);
+    opacity: 0.3;
+    width: 15%;
   }
   &:hover:before{
-    width: 40%;
+    opacity: 0.75;
+    width: 100%;
   }
   @include mobile{
     font-size: 13px;

@@ -136,7 +136,7 @@ body {
 
 p,
 span {
-  color: #121212;
+  color: #444444;
   text-align: left;
   font-size: 1rem;
   margin-bottom: 1.5%; }
@@ -144,13 +144,13 @@ span {
 a {
   display: inline-block;
   position: relative;
-  color: #121212 !important;
+  color: #444444 !important;
   cursor: pointer;
   text-decoration: none;
   color: #5888f4;
   display: inline-block; }
   a:visited {
-    color: #121212; }
+    color: #444444; }
 
 #home .container {
   max-width: 75%; }
@@ -215,7 +215,7 @@ p {
 
 .nav {
   text-transform: uppercase;
-  color: #121212;
+  color: #444444;
   -webkit-transition: all, 0.15s;
   transition: all, 0.15s;
   width: auto;
@@ -257,7 +257,7 @@ a.cotButton {
 
 #landpg .landpgTitle h1,
 #landpg .landpgTitle p {
-  color: #121212;
+  color: #444444;
   width: max-content;
   position: relative; }
 
@@ -279,14 +279,14 @@ a.cotButton {
   margin-bottom: 0%;
   font-size: 7.5rem; }
   #landpg .landpgTitle h1:after {
-    animation: 0.3s ease-in-out 1.25s onLoad forwards; }
+    animation: 0.3s ease-in-out 1.35s onLoad forwards; }
 
 #landpg .landpgTitle p {
   margin: 1.5% 0%;
   padding-left: 0.75%;
   font-size: 1.25rem; }
   #landpg .landpgTitle p:after {
-    animation: 0.3s ease-in-out 1.55s onLoad forwards; }
+    animation: 0.3s ease-in-out 1.65s onLoad forwards; }
   #landpg .landpgTitle p b {
     font-size: 100%;
     background: #5888f4;
@@ -300,6 +300,14 @@ a.cotButton {
     margin: 2.5% 25px 0% 0%;
     font-size: 1rem;
     line-height: 1.5rem; }
+
+#landpg .landpgTitle .right {
+  position: absolute;
+  right: 0;
+  bottom: -15%; }
+  #landpg .landpgTitle .right a {
+    display: block;
+    margin-top: 15%; }
 
 @media (min-width: 1024px) and (max-width: 1550px) {
   #landpg .landpgTitle p {
@@ -325,7 +333,9 @@ a.cotButton {
     #landpg .landpgTitle h1 {
       font-size: 75px;
       margin: 0%;
-      line-height: 100px; } }
+      line-height: 100px; }
+    #landpg .landpgTitle .right {
+      position: static; } }
 
 .about p {
   display: block;
@@ -417,7 +427,7 @@ a.cotButton {
     .proj-item .proj-info p {
       font-weight: 400;
       margin: 0% 0% 5% 0%;
-      color: #121212;
+      color: #444444;
       font-size: 0.95rem;
       line-height: 1.75rem; }
       .proj-item .proj-info p span {
@@ -436,7 +446,7 @@ a.cotButton {
   flex-direction: column;
   width: 35%;
   float: left;
-  color: #121212; }
+  color: #444444; }
   .proj-menu h3 {
     margin: 7.5% 0%;
     -webkit-transition: all 0.4s;
@@ -520,7 +530,7 @@ a.cotButton {
   opacity: 0; }
 
 #projNum {
-  color: #121212;
+  color: #444444;
   display: inline-block;
   margin: 0 0.5% 0 0; }
 
@@ -538,7 +548,7 @@ a.cotButton {
         font-size: 1.35rem; } }
   .proj-sec h3 {
     font-size: 1.25rem;
-    color: #121212; }
+    color: #444444; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       .proj-sec h3 {
         font-size: 1.05rem; } }
@@ -607,7 +617,7 @@ a.cotButton {
         font-size: 25px; } }
 
 #design {
-  color: #121212;
+  color: #444444;
   display: block !important; }
   #design p {
     font-size: 2.25rem;
@@ -633,7 +643,7 @@ a.cotButton {
   width: 100%;
   z-index: 50; }
   #footer span {
-    color: #121212;
+    color: #444444;
     font-size: 0.9rem;
     font-weight: 300;
     width: auto;
@@ -655,7 +665,7 @@ ul {
   font-size: 1.075rem;
   font-weight: 300; }
   ul li {
-    color: #121212;
+    color: #444444;
     line-height: 1.25rem;
     margin: 0 0 1em;
     padding-left: 1.5em;
@@ -666,7 +676,6 @@ ul {
 
 .underline,
 a.cotButton {
-  padding: 3px 0;
   font-weight: 400;
   letter-spacing: 1.5px;
   -webkit-transition: all 0.25s;
@@ -674,22 +683,25 @@ a.cotButton {
   .underline:before,
   a.cotButton:before {
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
     content: "";
-    height: 2px;
-    background: #121212;
-    transition: all 0.3s;
+    height: 3px;
+    background: #444444;
+    transition: all 0.25s;
     width: 100%;
     z-index: -1;
     background: #5888f4;
     background: -webkit-linear-gradient(145deg, #5888f4, #3dcb8b);
     background: -o-linear-gradient(145deg, #5888f4, #3dcb8b);
     background: -moz-linear-gradient(145deg, #5888f4, #3dcb8b);
-    background: linear-gradient(145deg, #5888f4, #3dcb8b); }
+    background: linear-gradient(145deg, #5888f4, #3dcb8b);
+    opacity: 0.3;
+    width: 15%; }
   .underline:hover:before,
   a.cotButton:hover:before {
-    width: 40%; }
+    opacity: 0.75;
+    width: 100%; }
   @media only screen and (max-width: 1023px) {
     .underline,
     a.cotButton {
@@ -729,7 +741,7 @@ a.cotButton {
   #projs2 h1 {
     font-size: 2.25rem;
     margin: 7.5% 0% 2.5% 1%;
-    color: #121212; }
+    color: #444444; }
 
 .modal {
   opacity: 0;
@@ -741,7 +753,7 @@ a.cotButton {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(18, 18, 18, 0.9);
+  background-color: rgba(68, 68, 68, 0.9);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -761,7 +773,7 @@ a.cotButton {
 
 .modal-des {
   margin: 0;
-  color: #121212;
+  color: #444444;
   float: left;
   font-size: 1.05rem; }
   @media (min-width: 1024px) and (max-width: 1550px) {
@@ -770,7 +782,7 @@ a.cotButton {
 
 #modal-close {
   cursor: pointer;
-  color: #121212;
+  color: #444444;
   font-size: 1.5rem;
   position: absolute;
   right: 2.5%;
