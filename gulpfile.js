@@ -21,9 +21,9 @@ gulp.task('browserSync', function() {
 })
 gulp.task('watch', ['browserSync', 'sass'], function() {
   gulp.watch('lib/*.scss', ['sass']);
+  gulp.watch('*/*.html', browserSync.reload);
   gulp.watch('*.html', browserSync.reload);
-  gulp.watch('pages/*.html', browserSync.reload);
-  gulp.watch('files/*.png', browserSync.reload);
+  gulp.watch('*/files/*.png', browserSync.reload);
   gulp.watch('lib/*.js', browserSync.reload);
 })
 function onError(err) {

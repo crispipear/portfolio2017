@@ -16,7 +16,7 @@
 @mixin links {
   cursor: pointer;
   text-decoration: none;
-  color: $key1;
+  color: $text;
   display: inline-block;
 }
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {

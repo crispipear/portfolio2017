@@ -48,9 +48,7 @@ span {
 a {
   display: inline-block;
   position: relative;
-  color: $text!important;
   @include links;
-
   &:visited {
     color: $text;
   }
@@ -61,7 +59,8 @@ a {
     max-width: none;
   }
 }
-#particle {
+#background {
+  opacity: 0.75;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -134,8 +133,14 @@ p {
     font-size: $baseSize;
   }
 }
-#nav-work {
+#nav-back, #nav-work{
   left: 2.5%;
+}
+#nav-work{
+  color: text;
+}
+#nav-work {
+  color: white;
 }
 #nav-home,
 #nav-top {
@@ -159,7 +164,11 @@ a.cotButton {
     padding: 2.5%;
   }
 }
-
+.gradientText{
+  @include bgGrad($key1, $key2)
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 #landpg {
   .landpgTitle{
     h1,
@@ -196,13 +205,12 @@ a.cotButton {
       }
       b{
         font-size: 100%;
-        @include bgGrad($key1, $key2)
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @extend .gradientText;
       }
       a{
         margin: 2.5% 25px 0% 0%;
         font-size: $baseSize;
+        color: $text;
         line-height: $baseSize*1.5;
       }
     }
@@ -210,6 +218,9 @@ a.cotButton {
       position: absolute;
       right: 0;
       bottom: -15%;
+      &:after{
+        animation: 0.3s ease-in-out 1.85s onLoad forwards;
+      }
       a{
         display: block;
         margin-top: 15%;
@@ -250,32 +261,36 @@ a.cotButton {
   }
 }
 .about {
+  margin-top: 7.5%;
   p {
     display: block;
     a {
-      line-height: $baseSize*1.15;
-      font-size: 95%;
+      line-height: $baseSize*1.5;
       margin-right: 0.5%;
     }
-    b{
-      @include bgGrad($key1, $key2)
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    b, b a{
+      @extend .gradientText;
       font-size: $baseSize*1.15;
+      font-weight: 600;
     }
     font-size: $baseSize*1.15;
     line-height: $baseSize*2.25;
-    margin-bottom: 1.25%;
+    margin-bottom: 4%;
   }
 
-  #aboutName img {
-    margin-left: 1.5%;
-    vertical-align: middle;
-    width: 100px;
+  img {
+    max-width: 50%;
+    margin-bottom: 7.5%;
     border-radius: 50%;
   }
+  #aboutName{
+    font-size: $headerSize*1.75;
+    line-height: $headerSize*2.75;
+    font-weight: 400;
+    @extend .gradientText;
+  }
   @include laptop{
-    #aboutName img{
+    img{
       width: 85px
     }
     p{
@@ -296,135 +311,112 @@ a.cotButton {
         font-size: 13px;
       }
     }
-    #aboutName img{
+    img{
       width: 50px;
     }
   }
 }
-.proj-item {
-  position: relative;
-  width: 750px;
-  height: 500px;
-  @include transition(all 0.25s);
-  @include laptop{
-    width: 450px;
-    height: 300px;
+#projs {
+  flex-direction: column;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .proj-bg, .proj-bg div{
+  .proj-div{
+    @include box-shadow(0px, 5px, 20px, rgba($text, 0.25), false)
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+    width: 47.5%;
+    height: 50vh;
+    margin: 5% 0%;
+    background: $bg;
+    &:nth-child(even) {
+      margin-bottom: -25%;
+    }
+    &:hover .proj-bg{
+      transform: scale(1.15);
+    }
+    &:hover .proj-info h2, &:hover .proj-info p{
+      opacity: 1;
+    }
+    &:hover .proj-info{
+      background-color: rgba(lighten($text, 15%), 0.8);
+    }
+  }
+  .proj-info, .proj-bg{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
   }
-  .proj-bg{
-    overflow: hidden;
+  .proj-info{
+    @include transition(all 0.75s);
+    box-sizing: border-box;
+    z-index: 2;
+    padding: 7.5%;
+    h2, p{
+      @include transition(all 0.5s);
+      color: $bg;
+      opacity: 0;
+    }
+    h2{
+      font-size: $headerSize*1.75;
+      font-weight: 400;
+      margin: 0% 0% 5% 0%;
+    }
+    p{
+      font-size: $baseSize*1.25;
+      margin-bottom: 5%;
+      line-height: $baseSize*2.25;
+    }
+    .proj-type{
+      font-size: $baseSize;
+      line-height: $baseSize;
+    }
+    a{
+      position: absolute;
+      bottom: 7.5%;
+      right: 7.5%;
+      color: white!important;
+      padding: 2% 2.5%;
+      border: 1px solid white;
+      overflow: hidden;
+      transition: all 0.5s;
+      background-color: rgba(white, 0.05);
+      &:after{
+        transition: all 0.5s;
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: white;
+        transform: translateX(-100%)
+      }
+      &:hover:after{
+        animation: .75s ease-in-out flash forwards
+      }
+    }
   }
-  .proj-bg div{
+  .proj-bg{
+    z-index: 1;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @include transition(transform 1s);
+    @include transition(all 0.75s);
+    background-image: url('https://cdn-images-1.medium.com/max/1600/1*zVDcaM6mqhi9m0LP_Sq4Ag.jpeg');
   }
-  .proj-info{
-    padding: 25px;
-    position: absolute;
-    left: -150px;
-    bottom: -50px;
-    width: 300px;
-    height: 200px;
-    background-color: rgba($bg, 0.9);
-    @include boxshadow(0 0 20px 0 rgba(16, 54, 38, 0.15));
-    @include laptop{
-      width: 250px;
-      height: 150px;
-      left: -100px;
-      bottom: -50px;
-    }
-    p{
-      font-weight: 400;
-      margin: 0% 0% 5% 0%;
-      color: $text;
-      font-size: $baseSize*0.95;
-      line-height: 1.75rem;
-      span{
-        color: inherit;
-      }
-      @include laptop{
-        font-size: $baseSize*0.8;
-      }
-    }
-  }
-  a{
-    position: absolute;
-    right: 0px;
-    bottom: -50px;
-  }
-}
-.proj-menu{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 35%;
-  // height: 40vh;
-  // overflow: hidden;
-  float: left;
-  color: $text;
-  h3{
-    margin: 7.5% 0%;
-    @include transition(all 0.4s);
-    cursor: pointer;
-    font-weight: 300;
-    font-size: 20px;
-    transform-origin: left;
-    @include laptop{
-      font-size: 14px;
-    }
-  }
-  .focus{
-    @include transition(opacity 0.2s);
-    opacity: 0;
-    color: $key1
-  }
-  div{
-    @include transition(all 1.5s ease-out);
-  }
-}
-.projs{
-  @include mobile{
-    height: 100vh!important;
-    .proj-item{
-      width: 95%;
-      margin: 0% 2.5% 0% 2.5%;
-      position: absolute;
-      height: 50vh;
-    }
-    .proj-info{
-      display: none;
-    }
-    .proj-menu{
-      text-align: center;
-      width: 100%;
-      height: 100vh;
-      z-index: 5;
-      h3{
-        font-size: 12px;
-        font-weight: 400;
-        text-shadow: 1px 1px $bg;
-        transform-origin: center;
-        margin-bottom: 25px;
-      }
-    }
-    a{
-      z-index: 10;
-    }
-  }
-}
-#projs {
-  .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  h1{
+    margin: 5% 0%;
+    font-size: $headerSize*1.5;
+    @extend .gradientText;
   }
   @include mobile {
     height: auto;
@@ -434,175 +426,83 @@ a.cotButton {
     }
   }
 }
-.fullPgTitle {
-  display: inline-block;
-  text-align: left;
-  @include bgGrad($key1, $key2)
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: $headerSize*2.5;
-  position: relative;
-  font-weight: 300;
-  overflow: hidden;
-  @include laptop {
-    font-size: $headerSize;
-  }
-  @include mobile{
-    font-size: 50px;
-    line-height: 65px;
-    margin: 0.5% 0%;
-  }
-}
 
-
-.container {
+.contents .container {
   opacity: 0;
+  margin-top: 10%;
 }
 
-#projNum {
-  color: $text;
-  display: inline-block;
-  margin: 0 0.5% 0 0;
+.proj-header{
+  width: 100%;
+  height: 50vh;
+  background-color: red;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 5%
 }
-
-.proj-sec {
-  display: flex;
-  flex-flow: column;
-  overflow: visible;
-  h2,h3{
+.proj-header-des{
+  width: 100%;
+  h1{
+    @extend .gradientText;
+    display: inline-block;
+    font-size: $headerSize*2;
     font-weight: 400;
+    margin: 0% 0% 1% -0.25%;
   }
-  h2{
-    font-size: $headerSize;
-    color: $key1;
-    @include laptop {
+  p{
+    font-size: $headerSize*0.9;
+    margin-bottom: 2.5%;
+  }
+  .info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .info div{
+    width: 30%;
+    h2{
+      font-size: $headerSize*0.9;
+      display: inline-block;
+      @extend .gradientText;
+    }
+    p{
+      font-family: 'Roboto';
       font-size: $headerSize*0.9;
     }
   }
-
-  h3 {
-    font-size: $baseSize*1.25;
-    color: $text;
-    @include laptop {
-      font-size: $baseSize*1.05;
-    }
-  }
-
-  a img {
-    filter: grayscale(100%);
-    cursor: pointer;
-
-    &:hover {
-      border-radius: 25px;
-      filter: none;
-    }
-  }
-  a {
-    line-height: $baseSize*1.25;
-  }
-  p,b,q,li,ul{
-    letter-spacing: 0.075rem;
-    font-family: "Roboto";
-  }
-  p {
-    font-size: $baseSize*1.15;
-    b,
-    q {
-      color: $key1;
-      font-weight: 400;
-    }
-    @include laptop {
-      font-size: $baseSize;
-      line-height: $baseSize*2
-    }
-  }
-  .col-12, .col-6{
-    margin: 0% 0% 1.5% 0%;
-  }
-  img {
-    height: 100%;
-    transition: all 0.25s;
-    width: 100%;
-  }
-    .title {
-      float: right;
-      width: 80%;
-      p,b{
-        font-family: "Roboto Mono";
-        font-size: $baseSize*1.1;
-        line-height: 2rem;
-      }
-      b {
-        transition: 0.25s color;
-      }
-      @include laptop {
-        font-size: $baseSize*0.9;
-      }
-    }
-
-
-  #antie{
-    font-size: 75px
-  }
-  @include mobile {
-    div {
-      flex: 100%!important;
-    }
-    .row p, li{
-      flex: 100%!important;
-      font-size: 13px;
-      line-height: 23px;
-    }
-    h2{
-      font-size: 20px;
-    }
-    h3{
-      font-size: 16px;
-    }
-    .title{
-      width: 100%;
-      margin: 0%;
-    }
-    .fullPgTitle{
-      margin-top: 20%;
-    }
-    #antie{
-      font-size: 25px;
-    }
-    width: 90%;
-    margin: auto;
-    overflow: hidden;
-  }
 }
-#design{
-  color: $text;
-  display: block!important;
-  p{
-    font-size: $headerSize*1.5;
-    width: 100%;
-  }
-  a{
-    font-size: $headerSize*1.5;
-    margin: 0%;
-  }
-  @include mobile{
-    p{
-      font-size: 20px;
-    }
-    p,a{
-      margin: 15px;
-    }
-  }
-  @include laptop{
-    p, a{
-      font-size: $headerSize
-    }
-  }
+.proj-full-img{
+  max-width: 100%;
+  margin-bottom: 7.5%;
+  opacity: 0;
+  display: block;
+}
+.proj-sec, .proj-sec-center {
+  margin-bottom: 7.5%;
+   h1,p{
+     letter-spacing: $letterSpacing*1.5;
+   }
+   h1{
+     font-size: $headerSize*1.25;
+     font-weight: 400;
+   }
+   p{
+     font-family: 'Roboto';
+     font-size: $baseSize*1.25;
+     line-height: $baseSize*2.25;
+   }
+   img{
+     width: 100%;
+   }
+}
+.proj-sec-center{
+  text-align: center;
+  p{text-align: center;}
 }
 #footer {
   margin: 0%!important;
   pointer-events: none;
-  padding: 7.5% 0% 1.5% 0%;
+  padding: 5% 0% 1.5% 0%;
   text-align: center;
   position: absolute;
   width: 100%;
@@ -703,20 +603,6 @@ a.cotButton {
   }
 }
 
-#projs2 {
-  justify-content: flex-start;
-  height: auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 10vh;
-  h1{
-    font-size: $headerSize*1.5;
-    margin: 7.5% 0% 2.5% 1%;
-    color: $text;
-  }
-}
-
 .modal {
   opacity: 0;
   @include transition(all 0.2s);
@@ -789,13 +675,4 @@ a.cotButton {
       transform: scale(0.75);
     }
   }
-}
-
-//////////////animations////////////////////
-
-.slideUp {
-  @include animation(0.65s slideUp ease-in-out forwards);
-}
-.fadeIn {
-  @include animation(0.5s fadeIn ease-in-out forwards);
 }
