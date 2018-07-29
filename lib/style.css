@@ -338,7 +338,7 @@ a.cotButton {
     font-size: 100%; }
   #landpg .landpgTitle p a {
     margin: 2.5% 25px 0% 0%;
-    font-size: 1rem;
+    font-size: 1.15rem;
     color: #444444;
     line-height: 1.5rem; }
 
@@ -498,14 +498,14 @@ a.cotButton {
         background: white;
         transform: translateX(-100%); }
       #projs .proj-info a:hover:after {
-        animation: .75s ease-in-out flash forwards; }
+        animation: .5s ease-in-out flash forwards; }
   #projs .proj-bg {
     z-index: 1;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all 0.75s;
-    transition: all 0.75s;
+    -webkit-transition: all 1.5s;
+    transition: all 1.5s;
     background-image: url("https://cdn-images-1.medium.com/max/1600/1*zVDcaM6mqhi9m0LP_Sq4Ag.jpeg"); }
   #projs h1 {
     margin: 5% 0%;
@@ -530,7 +530,8 @@ a.cotButton {
   margin-bottom: 5%; }
 
 .proj-header-des {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 7.5%; }
   .proj-header-des h1 {
     display: inline-block;
     font-size: 3rem;
@@ -550,7 +551,8 @@ a.cotButton {
       display: inline-block; }
     .proj-header-des .info div p {
       font-family: 'Roboto';
-      font-size: 1.35rem; }
+      font-size: 1.15rem;
+      line-height: 2rem; }
 
 .proj-full-img {
   max-width: 100%;

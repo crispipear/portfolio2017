@@ -209,7 +209,7 @@ a.cotButton {
       }
       a{
         margin: 2.5% 25px 0% 0%;
-        font-size: $baseSize;
+        font-size: $baseSize*1.15;
         color: $text;
         line-height: $baseSize*1.5;
       }
@@ -401,7 +401,7 @@ a.cotButton {
         transform: translateX(-100%)
       }
       &:hover:after{
-        animation: .75s ease-in-out flash forwards
+        animation: .5s ease-in-out flash forwards
       }
     }
   }
@@ -410,7 +410,7 @@ a.cotButton {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @include transition(all 0.75s);
+    @include transition(all 1.5s);
     background-image: url('https://cdn-images-1.medium.com/max/1600/1*zVDcaM6mqhi9m0LP_Sq4Ag.jpeg');
   }
   h1{
@@ -442,6 +442,7 @@ a.cotButton {
 }
 .proj-header-des{
   width: 100%;
+  margin-bottom: 7.5%;
   h1{
     @extend .gradientText;
     display: inline-block;
@@ -467,7 +468,8 @@ a.cotButton {
     }
     p{
       font-family: 'Roboto';
-      font-size: $headerSize*0.9;
+      font-size: $baseSize*1.15;
+      line-height: $baseSize*2;
     }
   }
 }
