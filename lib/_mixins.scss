@@ -30,12 +30,12 @@
     box-shadow: $top $left $blur $color;
   }
 }
-@mixin bgGrad($color1, $color2) {
+@mixin bgGrad($deg, $color1, $color2) {
   background: $color1;
-  background: -webkit-linear-gradient(145deg, $color1, $color2);
-  background: -o-linear-gradient(145deg, $color1, $color2);
-  background: -moz-linear-gradient(145deg, $color1, $color2);
-  background: linear-gradient(145deg, $color1, $color2);
+  background: -webkit-linear-gradient($deg, $color1, $color2);
+  background: -o-linear-gradient($deg, $color1, $color2);
+  background: -moz-linear-gradient($deg, $color1, $color2);
+  background: linear-gradient($deg, $color1, $color2);
 }
 @mixin transition($transition...) {
   -webkit-transition: $transition;

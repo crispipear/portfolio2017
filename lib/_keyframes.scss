@@ -1,41 +1,9 @@
-@include keyframes(scrollbtn) {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-  }
-
-  20% {
-    transform: rotate(-45deg) translate(-10px, 10px);
-  }
-
-  40% {
-    transform: rotate(-45deg) translate(0, 0);
-  }
-}
-@include keyframes(slideUp) {
-  0% {
-    margin-top: 7.5%;
-    opacity: 0;
-  }
-
-  100% {
-    margin-top: 0%;
-    opacity: 1;
-  }
-}
 @include keyframes (onLoad) {
   0% {
     width: 100%;
   }
   100% {
     width: 0%;
-  }
-}
-@include keyframes (fadeIn) {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
   }
 }
 @include keyframes (flash) {
@@ -47,5 +15,16 @@
   }
   100%{
     transform: translateX(100%)
+  }
+}
+@include keyframes (flashText) {
+  0%{
+    color: white
+  }
+  50%{
+    color: black
+  }
+  100%{
+    color: white
   }
 }

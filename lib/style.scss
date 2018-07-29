@@ -17,11 +17,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.25);
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.35);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba($key1,0.75);
+  background-color: rgba($text, 0.9)
 }
 
 * {
@@ -60,7 +60,6 @@ a {
   }
 }
 #background {
-  opacity: 0.75;
   overflow: hidden;
   width: 100vw;
   height: 100vh;
@@ -95,7 +94,6 @@ section {
 h1,
 p {
   font-size: $baseSize*2.5;
-  font-weight: 300;
   line-height: 1.5em;
   margin-top: 0%;
 }
@@ -106,53 +104,30 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  @include bgGrad(lighten($key1, 15%), lighten($key2, 15%));
+  @include bgGrad(145deg, lighten($key1, 15%), lighten($key2, 15%));
   z-index: 100;
   @include transition(all 0.75s);
 }
 
 .nav {
-  text-transform: uppercase;
-  color: $text;
-  @include transition(all, 0.15s);
-  width: auto;
+  max-width: 25px;
+  cursor: pointer;
+  @include transition(all, 0.25s);
   position: fixed;
   z-index: 50;
-  font-size: $baseSize*1.15;
-  margin: 2.5% 2.5% 2.5% 0;
-
-  &:after {
-    margin-top: -10.75% !important;
-    height: 12.5px!important;
-  }
-
-  &:hover::after {
-    opacity: 1!important;
-  }
   @include laptop {
     font-size: $baseSize;
   }
 }
-#nav-back, #nav-work{
+#nav-back{
   left: 2.5%;
+  top: 5%;
 }
-#nav-work{
-  color: text;
-}
-#nav-work {
-  color: white;
-}
-#nav-home,
 #nav-top {
-  bottom: 0;
-  right: 0;
-}
-
-#nav-top {
+  transform: rotate(90deg);
+  bottom: 5%;
+  right: 2.5%;
   opacity: 0;
-  &:after {
-    margin-top: -20.25% !important;
-  }
 }
 
 a.cotButton {
@@ -165,74 +140,35 @@ a.cotButton {
   }
 }
 .gradientText{
-  @include bgGrad($key1, $key2)
+  @include bgGrad(90deg, $key1, $key2)
+  font-weight: 600;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 #landpg {
   .landpgTitle{
-    h1,
-    p {
-      color: $text;
-      width: max-content;
-      position: relative;
+    font-weight: 300;
+    p, p span{
+      font-size: $headerSize*1.75;
+      line-height: $headerSize*2.5;
     }
-    p, h1{
-      &:after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        @include bgGrad(lighten($key1, 15%), lighten($key2, 15%));
+    p{
+      &:first-child, &:last-child, &:last-child span{
+        font-size: $headerSize;
+      }
+      &:first-child{
+        font-weight: 400;
       }
     }
-    h1 {
-      display: inline-block;
-      margin-bottom: 0%;
-      font-size: $headerSize*5;
-      &:after{
-        animation: 0.3s ease-in-out 1.35s onLoad forwards;
-      }
+    p span{
+      @extend .gradientText;
     }
-    p {
-      margin: 1.5% 0%;
-      padding-left: 0.75%;
-      font-size: $baseSize*1.25;
-      &:after{
-        animation: 0.3s ease-in-out 1.65s onLoad forwards;
-      }
-      b{
-        font-size: 100%;
-        @extend .gradientText;
-      }
-      a{
-        margin: 2.5% 25px 0% 0%;
-        font-size: $baseSize;
-        color: $text;
-        line-height: $baseSize*1.5;
-      }
-    }
-    .right{
-      position: absolute;
-      right: 0;
-      bottom: -15%;
-      &:after{
-        animation: 0.3s ease-in-out 1.85s onLoad forwards;
-      }
-      a{
-        display: block;
-        margin-top: 15%;
+    .underline{
+      &:before {
+        bottom: 0.75rem;
       }
     }
     @include laptop{
-      p{
-        font-size: $baseSize;
-      }
-      h1{
-        font-size: $headerSize*3.5;
-      }
     }
     @include mobile{
       display: flex;
@@ -243,35 +179,19 @@ a.cotButton {
       width: 100%;
       height: 100vh;
       text-align: center;
-      p, a{
-        margin: 5px;
-        text-align: center;
-        font-size: 13px;
-        line-height: 30px;
-      }
-      h1{
-        font-size: 75px;
-        margin: 0%;
-        line-height: 100px;
-      }
-      .right{
-        position: static;
-      }
     }
   }
 }
 .about {
-  margin-top: 7.5%;
   p {
     display: block;
     a {
       line-height: $baseSize*1.5;
       margin-right: 0.5%;
     }
-    b, b a{
+    b, b a, a{
       @extend .gradientText;
       font-size: $baseSize*1.15;
-      font-weight: 600;
     }
     font-size: $baseSize*1.15;
     line-height: $baseSize*2.25;
@@ -280,14 +200,14 @@ a.cotButton {
 
   img {
     max-width: 50%;
-    margin-bottom: 7.5%;
+    margin-bottom: 5%;
     border-radius: 50%;
   }
   #aboutName{
-    font-size: $headerSize*1.75;
-    line-height: $headerSize*2.75;
-    font-weight: 400;
+    font-size: $headerSize*2.5;
+    line-height: $headerSize*3.25;
     @extend .gradientText;
+    font-weight: 400;
   }
   @include laptop{
     img{
@@ -343,21 +263,26 @@ a.cotButton {
     &:hover .proj-info h2, &:hover .proj-info p{
       opacity: 1;
     }
-    &:hover .proj-info{
-      background-color: rgba(lighten($text, 15%), 0.8);
+    &:hover .proj-info-bg{
+      opacity: 1;
     }
   }
-  .proj-info, .proj-bg{
+  .proj-info, .proj-bg, .proj-info-bg{
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
   }
-  .proj-info{
-    @include transition(all 0.75s);
-    box-sizing: border-box;
+  .proj-info-bg{
+    opacity: 0;
     z-index: 2;
+    @include transition(all 0.5s);
+    @include bgGrad(180deg, rgba($text, 0.8) 35%, rgba($text, 0) 100%)
+  }
+  .proj-info{
+    box-sizing: border-box;
+    z-index: 5;
     padding: 7.5%;
     h2, p{
       @include transition(all 0.5s);
@@ -373,6 +298,7 @@ a.cotButton {
       font-size: $baseSize*1.25;
       margin-bottom: 5%;
       line-height: $baseSize*2.25;
+      font-weight: 300;
     }
     .proj-type{
       font-size: $baseSize;
@@ -401,7 +327,10 @@ a.cotButton {
         transform: translateX(-100%)
       }
       &:hover:after{
-        animation: .75s ease-in-out flash forwards
+        animation: .5s ease-in-out flash forwards
+      }
+      &:hover{
+        animation: .5s ease-in-out flashText
       }
     }
   }
@@ -410,13 +339,13 @@ a.cotButton {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @include transition(all 0.75s);
+    @include transition(all 1s);
     background-image: url('https://cdn-images-1.medium.com/max/1600/1*zVDcaM6mqhi9m0LP_Sq4Ag.jpeg');
   }
   h1{
-    margin: 5% 0%;
-    font-size: $headerSize*1.5;
-    @extend .gradientText;
+    margin: 5% 0% 2.5% 0%;
+    font-size: $headerSize*1.15;
+    opacity: 0;
   }
   @include mobile {
     height: auto;
@@ -438,19 +367,20 @@ a.cotButton {
   background-color: red;
   background-position: center;
   background-size: cover;
-  margin-bottom: 5%
+  margin-bottom: 5%;
 }
 .proj-header-des{
   width: 100%;
+  margin-bottom: 7.5%;
+  opacity: 1!important;
   h1{
-    @extend .gradientText;
+    font-weight: 300;
     display: inline-block;
     font-size: $headerSize*2;
-    font-weight: 400;
     margin: 0% 0% 1% -0.25%;
   }
   p{
-    font-size: $headerSize*0.9;
+    font-size: $headerSize*0.75;
     margin-bottom: 2.5%;
   }
   .info{
@@ -467,7 +397,8 @@ a.cotButton {
     }
     p{
       font-family: 'Roboto';
-      font-size: $headerSize*0.9;
+      font-size: $baseSize*1.15;
+      line-height: $baseSize*2;
     }
   }
 }
@@ -487,6 +418,7 @@ a.cotButton {
      font-weight: 400;
    }
    p{
+     font-weight: 300;
      font-family: 'Roboto';
      font-size: $baseSize*1.25;
      line-height: $baseSize*2.25;
@@ -507,10 +439,11 @@ a.cotButton {
   position: absolute;
   width: 100%;
   z-index: 50;
+  opacity: 0.75;
   span {
+    font-weight: 400;
     color: $text;
-    font-size: $baseSize*0.9;
-    font-weight: 300;
+    font-size: $baseSize;
     width: auto;
     height: auto;
     @include laptop {
@@ -543,28 +476,29 @@ ul {
   }
 }
 
-.underline,
-a.cotButton {
+.underline{
   font-weight: 400;
   letter-spacing: $letterSpacing*1.5;
+  cursor: pointer;
   @include transition(all 0.25s);
+  display: inline-block;
+  position: relative;
   &:before {
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: 0;
     content: "";
     height: 3px;
-    background: $text;
+    background-color: lighten($text, 45%);
     transition: all 0.25s;
-    width: 100%;
+    width: 0%;
+    opacity: 0.5;
     z-index: -1;
-    @include bgGrad($key1, $key2);
-    opacity: 0.3;
-    width: 15%;
   }
   &:hover:before{
-    opacity: 0.75;
     width: 100%;
+    left: 0;
+    opacity: 1;
   }
   @include mobile{
     font-size: 13px;
