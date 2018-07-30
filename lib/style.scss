@@ -153,14 +153,41 @@ a.cotButton {
       line-height: $headerSize*2.5;
     }
     p{
+      position: relative;
+      display: inline-block;
+      &:after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        @include bgGrad(90deg, lighten($key1, 15%), lighten($key2, 15%));
+      }
       &:first-child, &:last-child, &:last-child span{
         font-size: $headerSize;
       }
+      &:last-child span{
+        font-weight: 600;
+      }
       &:first-child{
         font-weight: 400;
+        &:after{
+          animation: 0.35s ease-in-out onLoad 1.35s forwards;
+        }
+      }
+      &:nth-child(2):after{
+          animation: 0.35s ease-in-out onLoad 1.7s forwards;
+      }
+      &:nth-child(3):after{
+          animation: 0.35s ease-in-out onLoad 2.05s forwards;
+      }
+      &:nth-child(4):after{
+          animation: 0.35s ease-in-out onLoad 2.4s forwards;
       }
     }
     p span{
+      font-weight: 400;
       @extend .gradientText;
     }
     .underline{
@@ -169,6 +196,15 @@ a.cotButton {
       }
     }
     @include laptop{
+      p, p span{
+        font-size: $headerSize*1.15;
+        line-height: $headerSize*2;
+      }
+      p{
+        &:first-child, &:last-child, &:last-child span{
+          font-size: $headerSize*0.8;
+        }
+      }
     }
     @include mobile{
       display: flex;
@@ -182,8 +218,9 @@ a.cotButton {
     }
   }
 }
-.about {
+#about {
   p {
+    font-weight: 300;
     display: block;
     a {
       line-height: $baseSize*1.5;
@@ -199,27 +236,36 @@ a.cotButton {
   }
 
   img {
-    max-width: 50%;
+    max-width: 60%;
     margin-bottom: 5%;
     border-radius: 50%;
   }
+  .col-4, #aboutName{
+    text-align: center;
+  }
   #aboutName{
-    font-size: $headerSize*2.5;
-    line-height: $headerSize*3.25;
+    font-size: $headerSize*2.25;
+    line-height: $headerSize*3;
     @extend .gradientText;
     font-weight: 400;
+    margin-bottom: 7.5%;
   }
   @include laptop{
-    img{
-      width: 85px
-    }
-    p{
-      font-size: $baseSize*0.9;
-      line-height: $baseSize*1.65;
-      margin-bottom: 2%;
-      b{
-        font-size: $baseSize*0.9
+    p {
+      display: block;
+      a {
+        line-height: $baseSize*1.25;
+        margin-right: 0.5%;
       }
+      b, b a, a{
+        font-size: $baseSize;
+      }
+      font-size: $baseSize;
+      line-height: $baseSize*1.75;
+    }
+    #aboutName{
+      font-size: $headerSize*1.65;
+      line-height: $headerSize*2.5;
     }
   }
   @include mobile{
@@ -333,6 +379,24 @@ a.cotButton {
         animation: .5s ease-in-out flashText
       }
     }
+    @include laptop{
+      h2{
+        font-size: $headerSize*1.25;
+      }
+      .proj-type{
+        font-size: $baseSize*0.8
+      }
+      p{
+        font-size: $baseSize*0.9;
+        line-height: $baseSize*1.5;
+      }
+      a{
+        font-size: $baseSize*0.85;
+      }
+    }
+    @include mobile{
+
+    }
   }
   .proj-bg{
     z-index: 1;
@@ -404,12 +468,12 @@ a.cotButton {
 }
 .proj-full-img{
   max-width: 100%;
-  margin-bottom: 7.5%;
+  margin-bottom: 5%;
   opacity: 0;
   display: block;
 }
-.proj-sec, .proj-sec-center {
-  margin-bottom: 7.5%;
+.proj-sec{
+  margin-bottom: 5%;
    h1,p{
      letter-spacing: $letterSpacing*1.5;
    }
@@ -426,10 +490,6 @@ a.cotButton {
    img{
      width: 100%;
    }
-}
-.proj-sec-center{
-  text-align: center;
-  p{text-align: center;}
 }
 #footer {
   margin: 0%!important;
@@ -489,16 +549,14 @@ ul {
     bottom: 0;
     content: "";
     height: 3px;
-    background-color: lighten($text, 45%);
+    background-color: lighten($text, 50%);
     transition: all 0.25s;
     width: 0%;
-    opacity: 0.5;
     z-index: -1;
   }
   &:hover:before{
     width: 100%;
     left: 0;
-    opacity: 1;
   }
   @include mobile{
     font-size: 13px;

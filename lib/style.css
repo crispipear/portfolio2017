@@ -218,7 +218,7 @@ a.cotButton {
       font-size: 0.85rem;
       padding: 2.5%; } }
 
-.gradientText, #landpg .landpgTitle p span, .about p b, .about p b a, .about p a, .about #aboutName, .proj-header-des .info div h2 {
+.gradientText, #landpg .landpgTitle p span, #about p b, #about p b a, #about p a, #about #aboutName, .proj-header-des .info div h2 {
   background: #5888f4;
   background: -webkit-linear-gradient(90deg, #5888f4, #3dcb8b);
   background: -o-linear-gradient(90deg, #5888f4, #3dcb8b);
@@ -233,12 +233,45 @@ a.cotButton {
   #landpg .landpgTitle p, #landpg .landpgTitle p span {
     font-size: 2.625rem;
     line-height: 3.75rem; }
-  #landpg .landpgTitle p:first-child, #landpg .landpgTitle p:last-child, #landpg .landpgTitle p:last-child span {
-    font-size: 1.5rem; }
-  #landpg .landpgTitle p:first-child {
+  #landpg .landpgTitle p {
+    position: relative;
+    display: inline-block; }
+    #landpg .landpgTitle p:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #a0bbf9;
+      background: -webkit-linear-gradient(90deg, #a0bbf9, #79dbaf);
+      background: -o-linear-gradient(90deg, #a0bbf9, #79dbaf);
+      background: -moz-linear-gradient(90deg, #a0bbf9, #79dbaf);
+      background: linear-gradient(90deg, #a0bbf9, #79dbaf); }
+    #landpg .landpgTitle p:first-child, #landpg .landpgTitle p:last-child, #landpg .landpgTitle p:last-child span {
+      font-size: 1.5rem; }
+    #landpg .landpgTitle p:last-child span {
+      font-weight: 600; }
+    #landpg .landpgTitle p:first-child {
+      font-weight: 400; }
+      #landpg .landpgTitle p:first-child:after {
+        animation: 0.35s ease-in-out onLoad 1.35s forwards; }
+    #landpg .landpgTitle p:nth-child(2):after {
+      animation: 0.35s ease-in-out onLoad 1.7s forwards; }
+    #landpg .landpgTitle p:nth-child(3):after {
+      animation: 0.35s ease-in-out onLoad 2.05s forwards; }
+    #landpg .landpgTitle p:nth-child(4):after {
+      animation: 0.35s ease-in-out onLoad 2.4s forwards; }
+  #landpg .landpgTitle p span {
     font-weight: 400; }
   #landpg .landpgTitle .underline:before {
     bottom: 0.75rem; }
+  @media (min-width: 1024px) and (max-width: 1550px) {
+    #landpg .landpgTitle p, #landpg .landpgTitle p span {
+      font-size: 1.725rem;
+      line-height: 3rem; }
+    #landpg .landpgTitle p:first-child, #landpg .landpgTitle p:last-child, #landpg .landpgTitle p:last-child span {
+      font-size: 1.2rem; } }
   @media only screen and (max-width: 1023px) {
     #landpg .landpgTitle {
       display: flex;
@@ -250,46 +283,55 @@ a.cotButton {
       height: 100vh;
       text-align: center; } }
 
-.about p {
+#about p {
+  font-weight: 300;
   display: block;
   font-size: 1.15rem;
   line-height: 2.25rem;
   margin-bottom: 4%; }
-  .about p a {
+  #about p a {
     line-height: 1.5rem;
     margin-right: 0.5%; }
-  .about p b, .about p b a, .about p a {
+  #about p b, #about p b a, #about p a {
     font-size: 1.15rem; }
 
-.about img {
-  max-width: 50%;
+#about img {
+  max-width: 60%;
   margin-bottom: 5%;
   border-radius: 50%; }
 
-.about #aboutName {
-  font-size: 3.75rem;
-  line-height: 4.875rem;
-  font-weight: 400; }
+#about .col-4, #about #aboutName {
+  text-align: center; }
+
+#about #aboutName {
+  font-size: 3.375rem;
+  line-height: 4.5rem;
+  font-weight: 400;
+  margin-bottom: 7.5%; }
 
 @media (min-width: 1024px) and (max-width: 1550px) {
-  .about img {
-    width: 85px; }
-  .about p {
-    font-size: 0.9rem;
-    line-height: 1.65rem;
-    margin-bottom: 2%; }
-    .about p b {
-      font-size: 0.9rem; } }
+  #about p {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.75rem; }
+    #about p a {
+      line-height: 1.25rem;
+      margin-right: 0.5%; }
+    #about p b, #about p b a, #about p a {
+      font-size: 1rem; }
+  #about #aboutName {
+    font-size: 2.475rem;
+    line-height: 3.75rem; } }
 
 @media only screen and (max-width: 1023px) {
-  .about {
+  #about {
     padding: 15px; }
-    .about p {
+    #about p {
       font-size: 13px;
       line-height: 25px; }
-      .about p b {
+      #about p b {
         font-size: 13px; }
-    .about img {
+    #about img {
       width: 50px; } }
 
 #projs {
@@ -381,6 +423,16 @@ a.cotButton {
         animation: .5s ease-in-out flash forwards; }
       #projs .proj-info a:hover {
         animation: .5s ease-in-out flashText; }
+    @media (min-width: 1024px) and (max-width: 1550px) {
+      #projs .proj-info h2 {
+        font-size: 1.875rem; }
+      #projs .proj-info .proj-type {
+        font-size: 0.8rem; }
+      #projs .proj-info p {
+        font-size: 0.9rem;
+        line-height: 1.5rem; }
+      #projs .proj-info a {
+        font-size: 0.85rem; } }
   #projs .proj-bg {
     z-index: 1;
     background-position: center;
@@ -440,29 +492,24 @@ a.cotButton {
 
 .proj-full-img {
   max-width: 100%;
-  margin-bottom: 7.5%;
+  margin-bottom: 5%;
   opacity: 0;
   display: block; }
 
-.proj-sec, .proj-sec-center {
-  margin-bottom: 7.5%; }
-  .proj-sec h1, .proj-sec p, .proj-sec-center h1, .proj-sec-center p {
+.proj-sec {
+  margin-bottom: 5%; }
+  .proj-sec h1, .proj-sec p {
     letter-spacing: 1.5px; }
-  .proj-sec h1, .proj-sec-center h1 {
+  .proj-sec h1 {
     font-size: 1.875rem;
     font-weight: 400; }
-  .proj-sec p, .proj-sec-center p {
+  .proj-sec p {
     font-weight: 300;
     font-family: 'Roboto';
     font-size: 1.25rem;
     line-height: 2.25rem; }
-  .proj-sec img, .proj-sec-center img {
+  .proj-sec img {
     width: 100%; }
-
-.proj-sec-center {
-  text-align: center; }
-  .proj-sec-center p {
-    text-align: center; }
 
 #footer {
   margin: 0% !important;
@@ -519,15 +566,13 @@ ul {
     bottom: 0;
     content: "";
     height: 3px;
-    background-color: #b7b7b7;
+    background-color: #c4c4c4;
     transition: all 0.25s;
     width: 0%;
-    opacity: 0.5;
     z-index: -1; }
   .underline:hover:before {
     width: 100%;
-    left: 0;
-    opacity: 1; }
+    left: 0; }
   @media only screen and (max-width: 1023px) {
     .underline {
       font-size: 13px; } }
