@@ -66,6 +66,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
+  transition: all 0.25s;
   body {
     margin: 0%;
     position: relative;
@@ -110,9 +111,9 @@ p {
 }
 
 .nav {
-  max-width: 25px;
+  max-width: 40px;
   cursor: pointer;
-  @include transition(all, 0.25s);
+  @include transition(all, 0.5s);
   position: fixed;
   z-index: 50;
   @include laptop {
@@ -122,12 +123,18 @@ p {
 #nav-back{
   left: 2.5%;
   top: 5%;
+  &:hover{
+    transform: translateX(-30%);
+  }
 }
 #nav-top {
   transform: rotate(90deg);
   bottom: 5%;
   right: 2.5%;
   opacity: 0;
+  &:hover{
+    transform: rotate(90deg) translateX(-30%);
+  }
 }
 
 a.cotButton {
@@ -145,6 +152,17 @@ a.cotButton {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.reveal{
+  &:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    @include bgGrad(90deg, lighten($key1, 15%), lighten($key2, 15%));
+  }
+}
 #landpg {
   .landpgTitle{
     font-weight: 300;
@@ -155,15 +173,7 @@ a.cotButton {
     p{
       position: relative;
       display: inline-block;
-      &:after{
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        @include bgGrad(90deg, lighten($key1, 15%), lighten($key2, 15%));
-      }
+      @extend .reveal;
       &:first-child, &:last-child, &:last-child span{
         font-size: $headerSize;
       }
@@ -192,7 +202,7 @@ a.cotButton {
     }
     .underline{
       &:before {
-        bottom: 0.75rem;
+        bottom: 0.85rem;
       }
     }
     @include laptop{
@@ -425,46 +435,63 @@ a.cotButton {
   margin-top: 10%;
 }
 
-.proj-header{
-  width: 100%;
-  height: 50vh;
+.proj-header-img{
+  width: 40%;
+  height: 45vh;
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  @include box-shadow(0px, 5px, 40px, rgba($text, 0.35), false)
   background-color: red;
   background-position: center;
   background-size: cover;
-  margin-bottom: 5%;
 }
-.proj-header-des{
-  width: 100%;
-  margin-bottom: 7.5%;
+.proj-header-title{
+  width: 30%;
+  position: absolute;
+  top: 30%;
+  left: 15%;
   opacity: 1!important;
   h1{
     font-weight: 300;
     display: inline-block;
-    font-size: $headerSize*2;
-    margin: 0% 0% 1% -0.25%;
+    font-size: $headerSize*2.75;
+    line-height: $headerSize*3.5;
+    margin: 0% 0% 5% -1.5%;
   }
   p{
-    font-size: $headerSize*0.75;
-    margin-bottom: 2.5%;
+    font-size: $headerSize*0.65;
+    opacity: 0.75;
   }
-  .info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .info div{
-    width: 30%;
-    h2{
-      font-size: $headerSize*0.9;
-      display: inline-block;
-      @extend .gradientText;
-    }
-    p{
-      font-family: 'Roboto';
-      font-size: $baseSize*1.15;
-      line-height: $baseSize*2;
-    }
-  }
+}
+.proj-header-down{
+  width: 50px;
+  position: absolute;
+  right: 10%;
+  bottom: 35%;
+  transform: rotate(-90deg);
+}
+.proj-header-info{
+  width: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 15%;
+  left: 15%;
+  div{
+   width: 30%;
+   h2{
+     font-size: $headerSize*0.9;
+     display: inline-block;
+     @extend .gradientText;
+   }
+   p{
+     font-family: 'Roboto';
+     font-size: $baseSize*1.05;
+     line-height: $baseSize*2;
+   }
+ }
 }
 .proj-full-img{
   max-width: 100%;
@@ -474,18 +501,16 @@ a.cotButton {
 }
 .proj-sec{
   margin-bottom: 5%;
-   h1,p{
-     letter-spacing: $letterSpacing*1.5;
-   }
    h1{
-     font-size: $headerSize*1.25;
+     letter-spacing: $letterSpacing*1.5;
+     font-size: $headerSize;
      font-weight: 400;
    }
    p{
-     font-weight: 300;
      font-family: 'Roboto';
-     font-size: $baseSize*1.25;
-     line-height: $baseSize*2.25;
+     font-size: $baseSize*1.05;
+     line-height: $baseSize*2;
+     font-weight: 300;
    }
    img{
      width: 100%;
@@ -549,7 +574,7 @@ ul {
     bottom: 0;
     content: "";
     height: 3px;
-    background-color: lighten($text, 50%);
+    @include bgGrad(145deg, lighten($key1, 25%), lighten($key2, 25%));
     transition: all 0.25s;
     width: 0%;
     z-index: -1;
