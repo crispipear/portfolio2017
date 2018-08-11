@@ -28,3 +28,17 @@
     color: white
   }
 }
+@include keyframes (downArrow) {
+  0%{
+    transform: rotate(-90deg) translateX(0%);
+  }
+  50%{
+    transform: rotate(-90deg) translateX(-45%);
+  }
+  75%{
+    transform: rotate(-90deg) translateX(0%);
+  }
+  100%{
+    transform: rotate(-90deg) translateX(0%);
+  }
+}

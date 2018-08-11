@@ -229,6 +229,9 @@ a.cotButton {
   }
 }
 #about {
+  h1{
+    margin: 0% 0% 2.5% 0%;
+  }
   p {
     font-weight: 300;
     display: block;
@@ -246,7 +249,7 @@ a.cotButton {
   }
 
   img {
-    max-width: 60%;
+    max-width: 50%;
     margin-bottom: 5%;
     border-radius: 50%;
   }
@@ -254,11 +257,14 @@ a.cotButton {
     text-align: center;
   }
   #aboutName{
-    font-size: $headerSize*2.25;
-    line-height: $headerSize*3;
+    font-size: $headerSize*1.5;
+    line-height: $headerSize*2;
     @extend .gradientText;
     font-weight: 400;
     margin-bottom: 7.5%;
+  }
+  .col-4 p{
+    line-height: $baseSize;
   }
   @include laptop{
     p {
@@ -268,14 +274,14 @@ a.cotButton {
         margin-right: 0.5%;
       }
       b, b a, a{
-        font-size: $baseSize;
+        font-size: $baseSize*0.9;
       }
-      font-size: $baseSize;
-      line-height: $baseSize*1.75;
+      font-size: $baseSize*0.9;
+      line-height: $baseSize*1.5;
     }
     #aboutName{
-      font-size: $headerSize*1.65;
-      line-height: $headerSize*2.5;
+      font-size: $headerSize;
+      line-height: $headerSize*1.5;
     }
   }
   @include mobile{
@@ -418,8 +424,6 @@ a.cotButton {
   }
   h1{
     margin: 5% 0% 2.5% 0%;
-    font-size: $headerSize*1.15;
-    opacity: 0;
   }
   @include mobile {
     height: auto;
@@ -429,15 +433,19 @@ a.cotButton {
     }
   }
 }
-
+.secTitle{
+  font-size: $headerSize*1.5;
+  font-weight: 400;
+  @extend .gradientText
+}
 .contents .container {
   opacity: 0;
   margin-top: 10%;
 }
 
 .proj-header-img{
-  width: 40%;
-  height: 45vh;
+  width: 50%;
+  height: 60vh;
   position: absolute;
   top: 15%;
   right: 15%;
@@ -445,6 +453,12 @@ a.cotButton {
   background-color: red;
   background-position: center;
   background-size: cover;
+  opacity: 0.65;
+  transition: all 0.5s;
+  &:hover{
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 .proj-header-title{
   width: 30%;
@@ -457,7 +471,7 @@ a.cotButton {
     display: inline-block;
     font-size: $headerSize*2.75;
     line-height: $headerSize*3.5;
-    margin: 0% 0% 5% -1.5%;
+    margin: 0% 0% 5% -1%;
   }
   p{
     font-size: $headerSize*0.65;
@@ -468,10 +482,15 @@ a.cotButton {
   width: 50px;
   position: absolute;
   right: 10%;
-  bottom: 35%;
+  bottom: 25%;
   transform: rotate(-90deg);
+  cursor: pointer;
+  animation: 2s downArrow ease-in-out infinite;
 }
 .proj-header-info{
+  background-color: rgba(white, 0.95);
+  @include box-shadow(0px, 5px, 45px, rgba($text, 0.05), false);
+  padding: 2.5%;
   width: 45%;
   display: flex;
   flex-direction: row;
