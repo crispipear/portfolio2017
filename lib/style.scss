@@ -284,7 +284,8 @@ a.cotButton {
     }
     b, b a, a{
       @extend .gradientText;
-      font-size: $baseSize*1.05;
+      display: inline-block;
+      font-size: 100%;
     }
     font-size: $baseSize*1.05;
     line-height: $baseSize*2.05;
@@ -330,9 +331,6 @@ a.cotButton {
         line-height: $baseSize*1.15;
         margin-right: 0.5%;
       }
-      b, b a, a{
-        font-size: $baseSize*0.9;
-      }
       font-size: $baseSize*0.9;
       line-height: $baseSize*1.75;
     }
@@ -362,11 +360,14 @@ a.cotButton {
         line-height: 23px;
         margin-right: 0.5%;
       }
-      b, b a, a{
-        font-size: 13px;
-      }
       font-size: 13px;
       line-height: 23px;
+    }
+    .links p{
+      font-size: 14px;
+      a{
+        font-size: 100%
+      }
     }
     #aboutName{
       font-size: $headerSize;
@@ -414,6 +415,9 @@ a.cotButton {
       height: 35vh;
       &:nth-child(even) {
         margin: 5% 0%;
+      }
+      &:hover .proj-des{
+        opacity: 0!important
       }
     }
   }
@@ -570,6 +574,7 @@ a.cotButton {
     top: -15px;
   }
 }
+
 .proj-header-img{
   width: 50%;
   height: 60vh;

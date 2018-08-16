@@ -372,7 +372,8 @@ a.cotButton {
     line-height: 1.5rem;
     margin-right: 0.5%; }
   #about p b, #about p b a, #about p a {
-    font-size: 1.05rem; }
+    display: inline-block;
+    font-size: 100%; }
 
 #about .image {
   position: relative;
@@ -412,8 +413,6 @@ a.cotButton {
     #about p a {
       line-height: 1.15rem;
       margin-right: 0.5%; }
-    #about p b, #about p b a, #about p a {
-      font-size: 0.9rem; }
   #about #aboutName {
     font-size: 1.575rem;
     line-height: 2.25rem; } }
@@ -438,8 +437,10 @@ a.cotButton {
       #about .col-7 p a {
         line-height: 23px;
         margin-right: 0.5%; }
-      #about .col-7 p b, #about .col-7 p b a, #about .col-7 p a {
-        font-size: 13px; }
+    #about .links p {
+      font-size: 14px; }
+      #about .links p a {
+        font-size: 100%; }
     #about #aboutName {
       font-size: 1.5rem;
       line-height: 1.875rem; } }
@@ -479,7 +480,9 @@ a.cotButton {
         width: 100%;
         height: 35vh; }
         #projs .proj-div:nth-child(even) {
-          margin: 5% 0%; } }
+          margin: 5% 0%; }
+        #projs .proj-div:hover .proj-des {
+          opacity: 0 !important; } }
   #projs .proj-info, #projs .proj-bg, #projs .proj-info-bg {
     width: 100%;
     height: 100%;
