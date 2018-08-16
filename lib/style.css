@@ -92,43 +92,147 @@
 
 @-webkit-keyframes downArrow {
   0% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); }
   50% {
     transform: rotate(-90deg) translateX(-45%); }
   75% {
     transform: rotate(-90deg) translateX(0%); }
   100% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); } }
 
 @-moz-keyframes downArrow {
   0% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); }
   50% {
     transform: rotate(-90deg) translateX(-45%); }
   75% {
     transform: rotate(-90deg) translateX(0%); }
   100% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); } }
 
 @-ms-keyframes downArrow {
   0% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); }
   50% {
     transform: rotate(-90deg) translateX(-45%); }
   75% {
     transform: rotate(-90deg) translateX(0%); }
   100% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); } }
 
 @keyframes downArrow {
   0% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); }
   50% {
     transform: rotate(-90deg) translateX(-45%); }
   75% {
     transform: rotate(-90deg) translateX(0%); }
   100% {
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%); } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(35%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(35%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(35%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(35%); }
+  100% {
+    opacity: 1;
+    transform: translateY(0%); } }
+
+@-webkit-keyframes clip {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+
+@-moz-keyframes clip {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+
+@-ms-keyframes clip {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+
+@keyframes clip {
+  0% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); } }
+
+@-webkit-keyframes clipLeft {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+    clip-path: polygon(0 0, 0 0, 0 150%, 0 150%); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
+    clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%); } }
+
+@-moz-keyframes clipLeft {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+    clip-path: polygon(0 0, 0 0, 0 150%, 0 150%); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
+    clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%); } }
+
+@-ms-keyframes clipLeft {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+    clip-path: polygon(0 0, 0 0, 0 150%, 0 150%); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
+    clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%); } }
+
+@keyframes clipLeft {
+  0% {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+    clip-path: polygon(0 0, 0 0, 0 150%, 0 150%); }
+  100% {
+    -webkit-clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
+    clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%); } }
 
 body::-webkit-scrollbar {
   width: 0.5em; }
@@ -391,6 +495,11 @@ a.cotButton {
 #about .col-4, #about #aboutName {
   text-align: center; }
 
+#about .col-7 {
+  transform: translateX(25%);
+  opacity: 0;
+  transition: all 0.75s; }
+
 #about #aboutName {
   font-size: 2.25rem;
   line-height: 3rem;
@@ -438,7 +547,7 @@ a.cotButton {
         line-height: 23px;
         margin-right: 0.5%; }
     #about .links p {
-      font-size: 14px; }
+      font-size: 13px; }
       #about .links p a {
         font-size: 100%; }
     #about #aboutName {
@@ -454,6 +563,8 @@ a.cotButton {
     flex-direction: row;
     flex-wrap: wrap; }
   #projs .proj-div {
+    transform: translateY(50%);
+    transition: 1s transform;
     -webkit-box-shadow: 0px 5px 20px rgba(68, 68, 68, 0.25);
     -moz-box-shadow: 0px 5px 20px rgba(68, 68, 68, 0.25);
     box-shadow: 0px 5px 20px rgba(68, 68, 68, 0.25);
@@ -472,9 +583,6 @@ a.cotButton {
       opacity: 1; }
     #projs .proj-div:hover .proj-info-bg {
       opacity: 1; }
-    @media (min-width: 1024px) and (max-width: 1550px) {
-      #projs .proj-div {
-        height: 42.5vh; } }
     @media only screen and (max-width: 1023px) {
       #projs .proj-div {
         width: 100%;
@@ -550,14 +658,14 @@ a.cotButton {
         animation: .5s ease-in-out flashText; }
     @media (min-width: 1024px) and (max-width: 1550px) {
       #projs .proj-info h2 {
-        font-size: 1.875rem; }
-      #projs .proj-info .proj-type {
+        font-size: 1.725rem; }
+      #projs .proj-info .proj-type, #projs .proj-info .proj-des {
         font-size: 0.8rem; }
       #projs .proj-info p {
         font-size: 0.9rem;
         line-height: 1.5rem; }
       #projs .proj-info a {
-        font-size: 0.85rem; } }
+        font-size: 0.6rem; } }
     @media only screen and (max-width: 1023px) {
       #projs .proj-info h2 {
         opacity: 1; }
@@ -578,7 +686,7 @@ a.cotButton {
     -webkit-transition: all 1s;
     transition: all 1s; }
   #projs h1 {
-    margin: 5% 0% 5% 0%; }
+    margin: 5% 0% 0% 0%; }
   @media only screen and (max-width: 1023px) {
     #projs {
       height: auto; }
@@ -595,7 +703,8 @@ a.cotButton {
 
 .contents .container {
   opacity: 0;
-  margin-top: 10%; }
+  transform: translateY(50%);
+  transition: transform 1s; }
 
 .frame:before, #about .image:before, .proj-header-img:before {
   content: "";
@@ -615,7 +724,31 @@ a.cotButton {
   right: -15px;
   top: -15px; }
 
+.proj-header h1, .proj-header p, .proj-header h2 {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+
+@media (min-width: 1024px) and (max-width: 1550px) {
+  .proj-header .proj-header-img {
+    width: 40%;
+    height: 50vh; }
+  .proj-header .proj-header-title {
+    top: 27.5%; }
+    .proj-header .proj-header-title h1 {
+      font-size: 2.25rem;
+      margin: 0% 0% 1% -1%; }
+    .proj-header .proj-header-title p {
+      font-size: 0.9rem; }
+  .proj-header .proj-header-info {
+    width: 47.5%;
+    padding: 2%; }
+    .proj-header .proj-header-info h2 {
+      font-size: 1rem; }
+    .proj-header .proj-header-info p {
+      font-size: 0.85rem; } }
+
 .proj-header-img {
+  animation: 0.75s fadeIn ease-in-out 2s forwards;
   width: 50%;
   height: 60vh;
   position: absolute;
@@ -624,7 +757,7 @@ a.cotButton {
   background-color: red;
   background-position: center;
   background-size: cover;
-  opacity: 0.75;
+  opacity: 0;
   transition: all 0.5s; }
   .proj-header-img:hover {
     opacity: 1; }
@@ -640,10 +773,12 @@ a.cotButton {
     display: inline-block;
     font-size: 4.125rem;
     line-height: 5.25rem;
-    margin: 0% 0% 5% -1%; }
+    margin: 0% 0% 5% -1%;
+    animation: 0.75s clip ease-in-out 1.35s forwards; }
   .proj-header-title p {
     font-size: 0.975rem;
-    opacity: 0.75; }
+    opacity: 0.75;
+    animation: 0.5s clip ease-in-out 2s forwards; }
 
 .proj-header-down {
   width: 50px;
@@ -652,10 +787,14 @@ a.cotButton {
   bottom: 25%;
   transform: rotate(-90deg);
   cursor: pointer;
-  animation: 2s downArrow ease-in-out infinite; }
+  opacity: 0;
+  animation: 1.75s downArrow ease-in-out 2.5s infinite; }
 
 .proj-header-info {
-  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+  clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+  animation: 1s clipLeft ease-in-out 1.35s forwards;
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 0px 5px 45px rgba(68, 68, 68, 0.05);
   -moz-box-shadow: 0px 5px 45px rgba(68, 68, 68, 0.05);
   box-shadow: 0px 5px 45px rgba(68, 68, 68, 0.05);
@@ -671,11 +810,14 @@ a.cotButton {
     width: 30%; }
     .proj-header-info div h2 {
       font-size: 1.35rem;
-      display: inline-block; }
+      display: inline-block;
+      animation: 0.5s clip ease-in-out 2s forwards; }
     .proj-header-info div p {
+      font-weight: 300;
       font-family: 'Roboto';
       font-size: 1.05rem;
-      line-height: 2rem; }
+      line-height: 2rem;
+      animation: 0.5s clip ease-in-out 2s forwards; }
 
 .proj-full-img {
   max-width: 100%;
@@ -698,6 +840,12 @@ a.cotButton {
     font-weight: 300; }
   .proj-sec img {
     width: 100%; }
+  @media (min-width: 1024px) and (max-width: 1550px) {
+    .proj-sec h1 {
+      font-size: 1.35rem; }
+    .proj-sec p {
+      font-size: 0.9rem;
+      line-height: 1.75rem; } }
 
 #footer {
   margin: 0% !important;

@@ -30,6 +30,7 @@
 }
 @include keyframes (downArrow) {
   0%{
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%);
   }
   50%{
@@ -39,6 +40,37 @@
     transform: rotate(-90deg) translateX(0%);
   }
   100%{
+    opacity: 1;
     transform: rotate(-90deg) translateX(0%);
+  }
+}
+@include keyframes (fadeIn) {
+  0%{
+    opacity: 0;
+    transform: translateY(35%);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@include keyframes (clip){
+  0%{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  100%{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@include keyframes (clipLeft){
+  0%{
+    -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+    clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
+  }
+  100%{
+    -webkit-clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
+    clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
   }
 }
