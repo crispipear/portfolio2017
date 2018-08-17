@@ -6,8 +6,8 @@
 @import url("subasecss.css");
 $bg: #fcfcfc;
 $text: #444444;
-$key1: #5888f4;
-$key2: #3dcb8b;
+$key1: #8751de;
+$key2: #5888f4;
 $baseSize: 1rem;
 $headerSize: 1.5rem;
 $letterSpacing: 1px;
@@ -305,6 +305,9 @@ a.cotButton {
     align-items: center;
     display: flex;
     flex-direction: column;
+    transform: translateX(-25%);
+    opacity: 0;
+    transition: all 0.75s;
   }
   .col-4, #aboutName{
     text-align: center;
@@ -319,7 +322,7 @@ a.cotButton {
     line-height: $headerSize*2;
     @extend .gradientText;
     font-weight: 400;
-    margin-bottom: 7.5%;
+    margin: 2.5% 0% 7.5% 0%;
   }
   .links{
     display: flex;
@@ -612,13 +615,12 @@ a.cotButton {
   }
 }
 .proj-header-img{
-  animation: 0.75s fadeIn ease-in-out 2s forwards;
+  animation: 0.75s fadeIn ease-in-out 1.35s forwards;
   width: 50%;
   height: 60vh;
   position: absolute;
   top: 15%;
   right: 15%;
-  background-color: red;
   background-position: center;
   background-size: cover;
   opacity: 0;
@@ -645,7 +647,7 @@ a.cotButton {
   p{
     font-size: $headerSize*0.65;
     opacity: 0.75;
-    animation: 0.5s clip ease-in-out 2s forwards;
+    animation: 0.5s clip ease-in-out 1.35s forwards;
   }
 }
 .proj-header-down{
@@ -661,7 +663,7 @@ a.cotButton {
 .proj-header-info{
   -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
   clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
-  animation: 1s clipLeft ease-in-out 1.35s forwards;
+  animation: 1.5s clipLeft ease-in-out 1.6s forwards;
   background-color: rgba(white, 0.8);
   @include box-shadow(0px, 5px, 45px, rgba($text, 0.05), false);
   padding: 2.5%;
@@ -678,14 +680,14 @@ a.cotButton {
      font-size: $headerSize*0.9;
      display: inline-block;
      @extend .gradientText;
-     animation: 0.5s clip ease-in-out 2s forwards;
+     animation: 0.5s clip ease-in-out 2.25s forwards;
    }
    p{
      font-weight: 300;
      font-family: 'Roboto';
      font-size: $baseSize*1.05;
      line-height: $baseSize*2;
-     animation: 0.5s clip ease-in-out 2s forwards;
+     animation: 0.5s clip ease-in-out 2.25s forwards;
    }
  }
 }
