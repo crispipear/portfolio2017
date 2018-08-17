@@ -54,6 +54,7 @@
     transform: translateY(0%);
   }
 }
+
 @include keyframes (clip){
   0%{
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);

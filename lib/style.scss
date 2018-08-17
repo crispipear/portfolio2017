@@ -613,7 +613,7 @@ a.cotButton {
         line-height: $baseSize*1.5;
       }
       a{
-        font-size: $baseSize*0.6
+        font-size: $baseSize*0.75
       }
     }
     @include mobile{
@@ -701,6 +701,7 @@ a.cotButton {
       h1{
         font-size: $headerSize*1.5;
         margin: 0% 0% 1% -1%;
+        line-height: $headerSize*2
       }
       p{
         font-size: $baseSize*0.9
