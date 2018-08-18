@@ -273,7 +273,7 @@ a.cotButton {
   .landpgTitle{
     font-weight: 300;
     p, p span{
-      font-size: $headerSize*1.75;
+      font-size: $headerSize*1.5;
       line-height: $headerSize*2.5;
     }
     p{
@@ -729,7 +729,9 @@ a.cotButton {
   }
 }
 .proj-header-img{
-  animation: 0.75s fadeIn ease-in-out 1.35s forwards;
+  animation: 0.5s clipRight ease-in-out 1.35s forwards;
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   width: 50%;
   height: 60vh;
   position: absolute;
@@ -737,11 +739,6 @@ a.cotButton {
   right: 12.5%;
   background-position: center;
   background-size: cover;
-  opacity: 0;
-  transition: all 0.5s;
-  &:hover{
-    opacity: 1;
-  }
   @extend .frame;
 }
 .proj-header-title{
@@ -772,12 +769,12 @@ a.cotButton {
   transform: rotate(-90deg);
   cursor: pointer;
   opacity: 0;
-  animation: 1.75s downArrow ease-in-out 2.5s infinite;
+  animation: 1.75s downArrow ease-in-out 2.25s infinite;
 }
 .proj-header-info{
   -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
   clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
-  animation: 1.5s clipLeft ease-in-out 1.6s forwards;
+  animation: 1.5s clipLeft ease-in-out 1.75s forwards;
   background-color: rgba(white, 0.9);
   @include box-shadow(0px, 5px, 45px, rgba($text, 0.075), false);
   padding: 2.5%;
@@ -796,13 +793,13 @@ a.cotButton {
    h2{
      display: inline-block;
      @extend .gradientText;
-     animation: 0.5s clip ease-in-out 2.25s forwards;
+     animation: 0.5s clip ease-in-out 2.75s forwards;
    }
    p{
      font-weight: 300;
      font-family: 'Roboto';
      line-height: $baseSize*2;
-     animation: 0.5s clip ease-in-out 2.25s forwards;
+     animation: 0.5s clip ease-in-out 2.75s forwards;
    }
  }
 }
@@ -846,6 +843,7 @@ a.cotButton {
   min-height: 40vh;
   flex-direction: row;
   .prev, .next{
+    border: 1px lighten($text,55%) solid;
     width: 50%;
     height: 40vh;
     position: relative;
@@ -859,34 +857,39 @@ a.cotButton {
     }
     .info{
       transition: all 0.75s;
-      background-color: rgba(darken($text, 15%), 1);
+      // background-color: rgba(darken($text, 15%), 1);
+      background: $bg;
       z-index: 2;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       h1, span{
-        color: $bg;
         font-family: 'Roboto Mono';
       }
-      h1{font-size: $headerSize*1.5; font-weight: 300;}
+      h1{font-size: $headerSize*1.5; font-weight: 300; color: $text;}
       span{font-size: $headerSize; @extend .gradientText; font-weight: 400;}
     }
     .bg{
+      transform: scale(1.25);
       transition: transform 0.75s;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
     }
     &:hover{
-      .bg{transform: scale(1.1);}
+      .bg{transform: scale(1);}
       .info{background-color: rgba(darken($text, 15%), 0.25);}
       .info span{
          -webkit-background-clip: unset;
          -webkit-text-fill-color: $bg;
          background: none;
       }
+      h1{color: $bg}
     }
+  }
+  .prev{
+    border-right: none;
   }
 }
 #footer {
@@ -897,11 +900,10 @@ a.cotButton {
   position: absolute;
   width: 100%;
   // @include bgGrad(145deg, $key1, $key2);
-  background: darken($text, 10%);
 
   span {
-    font-weight: 300;
-    color: rgba($bg, 0.5);
+    font-weight: 400;
+    color: rgba($text, 0.75);
     font-size: $baseSize;
     width: auto;
     height: auto;
