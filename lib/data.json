@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "name": "Clinic+",
+      "type": "mobile application",
+      "des": "Technological system that optimizes clinic management and improves patient's clinic experience.",
+      "path": "clinicplus"
+    },
+    {
+      "name": "Waves",
+      "type": "mobile application, public installation",
+      "des": "Public installation integrated with mobile app that brings public awareness to stress.",
+      "path": "waves"
+    },
+    {
+      "name": "Eatlixir",
+      "type": "web platform",
+      "des": "Web platform that provides medicinal diet information inspired by Chinese herbology.",
+      "path": "eatlixir"
+    },
+    {
+      "name": "Pocket Husky",
+      "type": "mobile application",
+      "des": "Mobile app that engages student interaction and exploration on the UW Bothell campus.",
+      "path": "pockethusky"
+    },
+    {
+      "name": "Anti-Establishment",
+      "type": "marketing campaign, alternate reality game",
+      "des": "Identity created for an alternate reality game that centers around the topic of climate change.",
+      "path": "antiestablishment"
+    }
+  ]
+}

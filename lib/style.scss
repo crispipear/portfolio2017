@@ -132,23 +132,34 @@ p {
 }
 nav {
   position: fixed;
-  right: 25px;
-  top: 10px;
+  right: 35px;
+  top: 35px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 50;
 }
 #menu {
-  margin-right: 25px;
-  text-align: right;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
   a {
-    transform: translateX(25%);
+    transition: color 0.25s;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    transform: translateX(50%);
     opacity: 0;
     width: inherit;
     margin: 25px 10px;
     cursor: pointer;
+    letter-spacing: 0px;
+    font-family: 'Roboto Mono';
+    &:hover{
+      color:  lighten($text, 50%)
+    }
   }
 }
 #burger {
@@ -165,8 +176,6 @@ nav {
     height: 1px;
     background-color: $text;
     transition: all 0.3s ease-in-out;
-    &:nth-child(2) {
-    }
   }
 }
 .close-menu {
@@ -177,10 +186,21 @@ nav {
       animation: 0.3s menuItemsOut ease-in-out forwards;
     }
     &:nth-child(2) {
-      animation: 0.3s menuItemsOut ease-in-out 0.15s forwards;
+      animation: 0.3s menuItemsOut ease-in-out 0.2s forwards;
     }
     &:nth-child(3) {
-      animation: 0.3s menuItemsOut ease-in-out 0.25s forwards;
+      animation: 0.3s menuItemsOut ease-in-out 0.3s forwards;
+    }
+  }
+  &:hover{
+    span:nth-child(1){
+      transform: translateX(-15%)
+    }
+    span:nth-child(2){
+      transform: translateX(15%)
+    }
+    span:nth-child(3){
+      transform: translateX(-15%)
     }
   }
 }
@@ -198,7 +218,9 @@ nav {
       animation: 0.3s menuItemsIn ease-in-out 0.25s forwards;
     }
   }
+
   #burger span{
+    margin-left: 4px;
     &:nth-child(1){
       transform-origin: -2px;
       transform: rotate(45deg);
@@ -211,26 +233,6 @@ nav {
       transform-origin: -2px;
       transform: rotate(-45deg);
     }
-  }
-}
-@keyframes menuItemsIn {
-  0% {
-    transform: translateX(25%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-@keyframes menuItemsOut {
-  0% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(25%);
-    opacity: 0;
   }
 }
 
@@ -266,17 +268,7 @@ a.cotButton {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.reveal{
-  &:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    @include bgGrad(90deg, lighten($key1, 15%), lighten($key2, 15%));
-  }
-}
+
 #landpg {
   .landpgTitle{
     font-weight: 300;
@@ -285,9 +277,10 @@ a.cotButton {
       line-height: $headerSize*2.5;
     }
     p{
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
       position: relative;
       display: inline-block;
-      @extend .reveal;
       &:first-child, &:last-child, &:last-child span{
         font-size: $headerSize;
       }
@@ -295,19 +288,16 @@ a.cotButton {
         font-weight: 600;
       }
       &:first-child{
-        font-weight: 400;
-        &:after{
-          animation: 0.35s ease-in-out onLoad 1.35s forwards;
-        }
+        animation: 0.65s ease-in-out clip 1.35s forwards;
       }
-      &:nth-child(2):after{
-          animation: 0.35s ease-in-out onLoad 1.7s forwards;
+      &:nth-child(2){
+        animation: 0.65s ease-in-out clip 1.85s forwards;
       }
-      &:nth-child(3):after{
-          animation: 0.35s ease-in-out onLoad 2.05s forwards;
+      &:nth-child(3){
+        animation: 0.65s ease-in-out clip 2.35s forwards;
       }
-      &:nth-child(4):after{
-          animation: 0.35s ease-in-out onLoad 2.4s forwards;
+      &:nth-child(4){
+        animation: 0.65s ease-in-out clip 2.85s forwards;
       }
     }
     p span{
@@ -345,8 +335,9 @@ a.cotButton {
     line-height: $baseSize*1.75;
   }
   p{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     position: relative;
-    @extend .reveal;
     &:nth-child(2), &:nth-child(3){
       margin-bottom: 10%;
     }
@@ -365,16 +356,16 @@ a.cotButton {
       @extend .gradientText
     }
     &:first-child:after{
-      animation: 0.35s ease-in-out onLoad 1.35s forwards;
+      animation: 0.35s ease-in-out clip 1.35s forwards;
     }
     &:nth-child(2):after{
-      animation: 0.35s ease-in-out onLoad 1.7s forwards;
+      animation: 0.35s ease-in-out clip 1.7s forwards;
     }
     &:nth-child(3):after{
-      animation: 0.35s ease-in-out onLoad 2.05s forwards;
+      animation: 0.35s ease-in-out clip 2.05s forwards;
     }
     &:nth-child(4):after, &:last-child:after{
-      animation: 0.35s ease-in-out onLoad 2.4s forwards;
+      animation: 0.35s ease-in-out clip 2.4s forwards;
     }
   }
 }
@@ -385,11 +376,14 @@ a.cotButton {
     a {
       line-height: $baseSize*1.5;
       margin-right: 0.5%;
+      font-family: 'Roboto Mono';
     }
     b, b a, a{
-      @extend .gradientText;
       display: inline-block;
       font-size: 100%;
+    }
+    b{
+      @extend .gradientText;
     }
     font-size: $baseSize*1.05;
     line-height: $baseSize*2.05;
@@ -497,18 +491,21 @@ a.cotButton {
     flex-wrap: wrap;
   }
   .proj-div{
-    transform: translateY(50%);
     transition: 1s transform;
+    opacity: 0;
     @include box-shadow(0px, 5px, 20px, rgba($text, 0.25), false)
     overflow: hidden;
     position: relative;
-    opacity: 0;
     width: 47.5%;
     height: 50vh;
     margin: 5% 0%;
     background: $bg;
+    &:nth-child(odd) {
+      transform: translateX(-25%);
+    }
     &:nth-child(even) {
       margin-bottom: -25%;
+      transform: translateX(25%);
     }
     &:hover{
       .proj-bg{
@@ -558,6 +555,7 @@ a.cotButton {
       opacity: 0;
     }
     h2{
+      font-family: 'Roboto Mono';
       font-size: $headerSize*1.75;
       font-weight: 400;
       margin: 0% 0% 5% 0%;
@@ -642,6 +640,7 @@ a.cotButton {
     @include transition(all 1s);
   }
   h1{
+    opacity: 0;
     margin: 5% 0% 0% 0%;
   }
   @include mobile {
@@ -667,6 +666,9 @@ a.cotButton {
 }
 
 .frame{
+  &:before,&:after{
+    transition: all 0.35s;
+  }
   &:before{
     content: "";
     width: 100%;
@@ -684,6 +686,16 @@ a.cotButton {
     position: absolute;
     right: -15px;
     top: -15px;
+  }
+  &:hover{
+    &:before{
+      left: -25px;
+      bottom: -25px;
+    }
+    &:after{
+      right: -25px;
+      top: -25px;
+    }
   }
 }
 .proj-header{
@@ -710,11 +722,8 @@ a.cotButton {
     .proj-header-info{
       width: 47.5%;
       padding: 2%;
-      h2{
-        font-size: $baseSize
-      }
-      p{
-        font-size: $baseSize*0.85
+      h2, p{
+        font-size: $baseSize*0.9;
       }
     }
   }
@@ -725,7 +734,7 @@ a.cotButton {
   height: 60vh;
   position: absolute;
   top: 15%;
-  right: 15%;
+  right: 12.5%;
   background-position: center;
   background-size: cover;
   opacity: 0;
@@ -739,7 +748,7 @@ a.cotButton {
   width: 30%;
   position: absolute;
   top: 30%;
-  left: 15%;
+  left: 12.5%;
   opacity: 1!important;
   h1{
     font-weight: 300;
@@ -756,10 +765,10 @@ a.cotButton {
   }
 }
 .proj-header-down{
-  width: 50px;
+  width: 40px;
   position: absolute;
-  right: 10%;
-  bottom: 25%;
+  left: 12.5%;
+  top: 52.5%;
   transform: rotate(-90deg);
   cursor: pointer;
   opacity: 0;
@@ -769,8 +778,8 @@ a.cotButton {
   -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
   clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
   animation: 1.5s clipLeft ease-in-out 1.6s forwards;
-  background-color: rgba(white, 0.8);
-  @include box-shadow(0px, 5px, 45px, rgba($text, 0.05), false);
+  background-color: rgba(white, 0.9);
+  @include box-shadow(0px, 5px, 45px, rgba($text, 0.075), false);
   padding: 2.5%;
   width: 40%;
   display: flex;
@@ -778,11 +787,13 @@ a.cotButton {
   justify-content: space-between;
   position: absolute;
   bottom: 15%;
-  left: 15%;
+  left: 12.5%;
   div{
    width: 30%;
+   h2, p{
+     font-size: $baseSize*1.05;
+   }
    h2{
-     font-size: $headerSize*0.9;
      display: inline-block;
      @extend .gradientText;
      animation: 0.5s clip ease-in-out 2.25s forwards;
@@ -790,7 +801,6 @@ a.cotButton {
    p{
      font-weight: 300;
      font-family: 'Roboto';
-     font-size: $baseSize*1.05;
      line-height: $baseSize*2;
      animation: 0.5s clip ease-in-out 2.25s forwards;
    }
@@ -831,18 +841,67 @@ a.cotButton {
      }
    }
 }
+#projs-footer{
+  *{cursor: pointer;}
+  min-height: 40vh;
+  flex-direction: row;
+  .prev, .next{
+    width: 50%;
+    height: 40vh;
+    position: relative;
+    overflow: hidden;
+    div{
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    .info{
+      transition: all 0.75s;
+      background-color: rgba(darken($text, 15%), 1);
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h1, span{
+        color: $bg;
+        font-family: 'Roboto Mono';
+      }
+      h1{font-size: $headerSize*1.5; font-weight: 300;}
+      span{font-size: $headerSize; @extend .gradientText; font-weight: 400;}
+    }
+    .bg{
+      transition: transform 0.75s;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:hover{
+      .bg{transform: scale(1.1);}
+      .info{background-color: rgba(darken($text, 15%), 0.25);}
+      .info span{
+         -webkit-background-clip: unset;
+         -webkit-text-fill-color: $bg;
+         background: none;
+      }
+    }
+  }
+}
 #footer {
   margin: 0%!important;
   pointer-events: none;
-  padding: 2.5% 0% 1.5% 0%;
+  padding: 25px 0% 25px 0%;
   text-align: center;
   position: absolute;
   width: 100%;
-  z-index: 50;
-  opacity: 0.75;
+  // @include bgGrad(145deg, $key1, $key2);
+  background: darken($text, 10%);
+
   span {
-    font-weight: 400;
-    color: $text;
+    font-weight: 300;
+    color: rgba($bg, 0.5);
     font-size: $baseSize;
     width: auto;
     height: auto;
@@ -883,16 +942,16 @@ ul {
   @include transition(all 0.25s);
   display: inline-block;
   position: relative;
-  &:before {
+  &:before, &:after{
     position: absolute;
     right: 0;
     bottom: 0;
     content: "";
-    height: 3px;
-    @include bgGrad(145deg, lighten($key1, 25%), lighten($key2, 25%));
+    height: 2px;
     transition: all 0.25s;
-    width: 0%;
+    @include bgGrad(145deg, lighten($key1, 5%), lighten($key2, 5%));
     z-index: -1;
+    width: 0%;
   }
   &:hover:before{
     width: 100%;
