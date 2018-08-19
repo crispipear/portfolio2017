@@ -17,11 +17,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.35);
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: rgba($text, 0.9)
+  background-color: rgba($text, 1)
 }
 
 * {
@@ -497,8 +497,8 @@ a.cotButton {
     overflow: hidden;
     position: relative;
     width: 47.5%;
-    height: 50vh;
-    margin: 5% 0%;
+    height: 45vh;
+    margin: 2.5% 0%;
     background: $bg;
     &:nth-child(odd) {
       transform: translateX(-25%);
@@ -540,7 +540,7 @@ a.cotButton {
     opacity: 0;
     z-index: 2;
     @include transition(all 0.5s);
-    @include bgGrad(180deg, rgba($text, 0.8) 35%, rgba($text, 0) 100%)
+    @include bgGrad(180deg, rgba($text, 0.75) 35%, rgba($text, 0) 100%)
     @include mobile{
       opacity: 0.75;
     }
@@ -556,14 +556,14 @@ a.cotButton {
     }
     h2{
       font-family: 'Roboto Mono';
-      font-size: $headerSize*1.75;
+      font-size: $headerSize*1.25;
       font-weight: 400;
       margin: 0% 0% 5% 0%;
     }
     p{
-      font-size: $baseSize*1.25;
+      font-size: $baseSize;
       margin-bottom: 5%;
-      line-height: $baseSize*2.25;
+      line-height: $baseSize*2;
       font-weight: 300;
     }
     .proj-type{
@@ -576,10 +576,10 @@ a.cotButton {
       right: 7.5%;
       color: white!important;
       padding: 2% 2.5%;
-      border: 1px solid white;
+      border: 1px solid $bg;
       overflow: hidden;
       transition: all 0.5s;
-      background-color: rgba(white, 0.05);
+      background-color: rgba($text, 0.1);
       &:after{
         transition: all 0.5s;
         content: '';
@@ -704,31 +704,31 @@ a.cotButton {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   @include laptop{
-    .proj-header-img{
-      width: 40%;
-      height: 50vh;
-    }
     .proj-header-title{
-      top: 27.5%;
+      top: 22.5%;
       h1{
-        font-size: $headerSize*1.5;
-        margin: 0% 0% 1% -1%;
-        line-height: $headerSize*2
+        font-size: $headerSize*2.5;
+        line-height: $headerSize*3.5
       }
       p{
         font-size: $baseSize*0.9
       }
     }
+    .proj-header-down{
+      top: 47.5%;
+    }
     .proj-header-info{
-      width: 47.5%;
+      width: 50%;
       padding: 2%;
       h2, p{
         font-size: $baseSize*0.9;
+        line-height: $baseSize*1.75;
       }
     }
   }
 }
 .proj-header-img{
+  @include box-shadow(0px, 5px, 30px, rgba($text, 0.25), false);
   animation: 0.5s clipRight ease-in-out 1.35s forwards;
   -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
@@ -739,20 +739,21 @@ a.cotButton {
   right: 12.5%;
   background-position: center;
   background-size: cover;
-  @extend .frame;
+  opacity: 0.75;
+  transform: scale(1.15);
 }
 .proj-header-title{
-  width: 30%;
+  width: 100%;
   position: absolute;
-  top: 30%;
+  top: 27.5%;
   left: 12.5%;
   opacity: 1!important;
   h1{
     font-weight: 300;
     display: inline-block;
-    font-size: $headerSize*2.75;
-    line-height: $headerSize*3.5;
-    margin: 0% 0% 5% -1%;
+    font-size: $headerSize*3.5;
+    line-height: $headerSize*4.5;
+    margin: 0% 0% 1% -0.15%;
     animation: 0.75s clip ease-in-out 1.35s forwards;
   }
   p{
@@ -762,19 +763,20 @@ a.cotButton {
   }
 }
 .proj-header-down{
+  opacity: 0;
   width: 40px;
   position: absolute;
   left: 12.5%;
   top: 52.5%;
   transform: rotate(-90deg);
   cursor: pointer;
-  opacity: 0;
-  animation: 1.75s downArrow ease-in-out 2.25s infinite;
+  transition: opacity 0.5s;
+  animation: 1.75s downArrow ease-in-out infinite;
 }
 .proj-header-info{
   -webkit-clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
   clip-path: polygon(0 0, 0 0, 0 150%, 0 150%);
-  animation: 1.5s clipLeft ease-in-out 1.75s forwards;
+  animation: 1s clipLeft ease-in-out 1.75s forwards;
   background-color: rgba(white, 0.9);
   @include box-shadow(0px, 5px, 45px, rgba($text, 0.075), false);
   padding: 2.5%;
@@ -805,12 +807,11 @@ a.cotButton {
 }
 .proj-full-img{
   max-width: 100%;
-  margin-bottom: 5%;
   opacity: 0;
   display: block;
 }
 .proj-sec{
-  margin-bottom: 5%;
+  margin: 5% auto;
    h1{
      letter-spacing: $letterSpacing*1.5;
      font-size: $headerSize;
@@ -843,11 +844,12 @@ a.cotButton {
   min-height: 40vh;
   flex-direction: row;
   .prev, .next{
-    border: 1px lighten($text,55%) solid;
     width: 50%;
     height: 40vh;
     position: relative;
     overflow: hidden;
+    border-left: 1px darken($bg, 10%) solid;
+    border-top: 1px darken($bg, 10%) solid;
     div{
       width: 100%;
       height: 100%;
@@ -857,8 +859,7 @@ a.cotButton {
     }
     .info{
       transition: all 0.75s;
-      // background-color: rgba(darken($text, 15%), 1);
-      background: $bg;
+      background-color: rgba(darken($bg, 2.5%), 1);
       z-index: 2;
       display: flex;
       justify-content: center;
@@ -867,8 +868,9 @@ a.cotButton {
       h1, span{
         font-family: 'Roboto Mono';
       }
-      h1{font-size: $headerSize*1.5; font-weight: 300; color: $text;}
-      span{font-size: $headerSize; @extend .gradientText; font-weight: 400;}
+      h1{font-size: $headerSize*1.5; font-weight: 300;}
+      span{font-size: $headerSize; font-weight: 400;}
+      h1,span{ @extend .gradientText;}
     }
     .bg{
       transform: scale(1.25);
@@ -879,43 +881,57 @@ a.cotButton {
     }
     &:hover{
       .bg{transform: scale(1);}
-      .info{background-color: rgba(darken($text, 15%), 0.25);}
-      .info span{
+      .info{background-color: rgba(darken($bg, 40%), 0.5);}
+      .info h1,span{
          -webkit-background-clip: unset;
          -webkit-text-fill-color: $bg;
          background: none;
       }
-      h1{color: $bg}
     }
-  }
-  .prev{
-    border-right: none;
   }
 }
 #footer {
+  @include bgGrad(145deg, $key1, $key2);
   margin: 0%!important;
-  pointer-events: none;
-  padding: 25px 0% 25px 0%;
-  text-align: center;
+  padding: 50px 0%;
   position: absolute;
   width: 100%;
-  // @include bgGrad(145deg, $key1, $key2);
-
+  box-sizing: border-box;
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    transform: translateY(0%);
+  }
   span {
-    font-weight: 400;
-    color: rgba($text, 0.75);
+    font-weight: 300;
+    color: $bg;
     font-size: $baseSize;
-    width: auto;
-    height: auto;
-    @include laptop {
-      font-size: $baseSize*0.8;
+    margin-bottom: 0;
+    letter-spacing: 0.1rem;
+    span{
+      font-weight: 300;
+      font-size: 150%;
     }
-    @include mobile {
-      font-size: $baseSize*0.7;
+    a{
+      color: inherit;
+      font-size: 100%;
+      transition: all 0.25s;
+      &:hover{
+        opacity: 0.5;
+      }
     }
   }
   @include mobile {
-    text-align: center;
+    padding: 25px 0%;
+    .container{flex-direction: column; justify-content: center;}
+    span{font-size: $baseSize*0.75; text-align: center; &:first-child{margin-bottom: 10px}}
+
+  }
+  @include laptop {
+    padding: 40px 0%;
+    span{font-size: $baseSize*0.85;}
   }
 }
 

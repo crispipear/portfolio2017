@@ -22,18 +22,15 @@
 }
 @include keyframes (downArrow) {
   0%{
-    opacity: 0;
     transform: rotate(-90deg) translateX(0%);
   }
   50%{
-    opacity: 1;
     transform: rotate(-90deg) translateX(-45%);
   }
   75%{
     transform: rotate(-90deg) translateX(0%);
   }
   100%{
-    opacity: 1;
     transform: rotate(-90deg) translateX(0%);
   }
 }
@@ -74,8 +71,8 @@
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   }
   100%{
-    -webkit-clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
-    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    -webkit-clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
+    clip-path: polygon(0 0, 150% 0, 150% 150%, 0 150%);
   }
 }
 @keyframes menuItemsIn {
