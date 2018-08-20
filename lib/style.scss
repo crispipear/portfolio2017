@@ -4,7 +4,7 @@
 @import "mixins";
 @import "keyframes";
 @import url("subasecss.css");
-$bg: #fcfcfc;
+$bg: #fefefe;
 $text: #444444;
 $key1: #8751de;
 $key2: #5888f4;
@@ -659,7 +659,7 @@ a.cotButton {
     font-size: $headerSize;
   }
 }
-.contents .container {
+.contents .proj-sec {
   opacity: 0;
   transform: translateY(50%);
   transition: transform 1s;
@@ -747,7 +747,6 @@ a.cotButton {
   position: absolute;
   top: 27.5%;
   left: 12.5%;
-  opacity: 1!important;
   h1{
     font-weight: 300;
     display: inline-block;
@@ -810,34 +809,68 @@ a.cotButton {
   opacity: 0;
   display: block;
 }
+.proj-sec, .proj-ti{
+  h1{
+    letter-spacing: $letterSpacing*1.5;
+    font-size: $headerSize*0.9;
+    font-weight: 400;
+  }
+  .proj-center{
+    text-align: center;
+  }
+  p{
+    font-family: 'Roboto';
+    font-size: $baseSize*1.05;
+    line-height: $baseSize*2;
+    font-weight: 300;
+  }
+  @include laptop{
+    h1{
+      font-size: $baseSize*1.15;
+    }
+    p{
+      font-size: $baseSize*0.9;
+      line-height: $baseSize*1.75
+    }
+  }
+}
 .proj-sec{
+  @extend .container;
   margin: 5% auto;
-   h1{
-     letter-spacing: $letterSpacing*1.5;
-     font-size: $headerSize;
-     font-weight: 400;
-   }
-   .proj-center{
-     text-align: center;
-   }
-   p{
-     font-family: 'Roboto';
-     font-size: $baseSize*1.05;
-     line-height: $baseSize*2;
-     font-weight: 300;
-   }
    img{
      width: 100%;
+     margin-top: 2.5%;
    }
-   @include laptop{
-     h1{
-       font-size: $headerSize*0.9
-     }
-     p{
-       font-size: $baseSize*0.9;
-       line-height: $baseSize*1.75
-     }
-   }
+}
+.proj-ti{ //text image container
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  div, img{
+    width: 50%;
+    display: inline-block;
+    transition: transform 1s;
+  }
+  img{
+    height: 100%;
+  }
+  div{
+    background-color: darken($bg, 2.5%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0% 7.5%;
+  }
+  div:first-child, img:first-child{
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  div:last-child, img:last-child {
+    opacity: 0;
+    transform: translateX(30%);
+  }
 }
 #projs-footer{
   *{cursor: pointer;}
@@ -849,7 +882,6 @@ a.cotButton {
     position: relative;
     overflow: hidden;
     border-left: 1px darken($bg, 10%) solid;
-    border-top: 1px darken($bg, 10%) solid;
     div{
       width: 100%;
       height: 100%;
@@ -901,7 +933,6 @@ a.cotButton {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    opacity: 1;
     transform: translateY(0%);
   }
   span {
